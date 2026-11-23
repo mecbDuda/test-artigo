@@ -38,13 +38,18 @@ Autenticação: VAmPI usa JWT Bearer (login de `name1`); petclinic-rest e catwat
 
 ## Máquina
 
+Máquina usada no **estudo piloto** (2026-11-23, GitHub Codespace). A máquina da
+campanha completa deve ser registrada aqui quando ela for executada. A máquina
+anterior (preparação) era um Intel Core i5-13400F com WSL2/Ubuntu 24.04, 12 GB alocados.
+
 | Item | Valor |
 |---|---|
-| CPU | Intel Core i5-13400F (10 núcleos / 16 threads) |
-| RAM | 15,8 GB no host; 12 GB alocados ao WSL2 (`.wslconfig`) |
-| SO do host | Windows 11 Pro, build 10.0.26300 |
-| Ambiente Linux | WSL2, Ubuntu 24.04.5 LTS, kernel 5.15.167.4-microsoft-standard-WSL2 |
-| Docker | Docker Engine 29.1.3 nativo no WSL2 (pacote `docker.io` do Ubuntu), storage overlayfs |
-| Docker Compose | 2.40.3 |
-| Python | 3.12.3 (pyyaml 6.0.1, scipy 1.11.4) |
+| Ambiente | GitHub Codespace (VM Azure) |
+| CPU | AMD EPYC 7763, 2 vCPUs (`nproc` = 2) |
+| RAM | 7,8 GiB (`free -h`), sem swap |
+| SO | Ubuntu 24.04.5 LTS, kernel 6.8.0-1070-azure |
+| Docker | Docker Engine 29.9.2, storage overlayfs |
+| Docker Compose | v5.6.1 |
+| Python | 3.14.2 (pyyaml 6.0.3) |
 | curl | 8.5.0 |
+| Especificação do VAmPI | baixada de novo de `erev0s/VAmPI` (`openapi_specs/openapi3.yml`) em 2026-11-23: mesmo sha256 (`35200f35…`) do arquivo do repositório |
