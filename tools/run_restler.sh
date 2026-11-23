@@ -2,11 +2,11 @@
 # Executa o RESTler: compile -> test (smoke) -> fuzz, com o orçamento restante.
 # Variáveis: SCHEMA_PATH BASE_URL OUT_DIR BUDGET_SEC SEED [AUTH_HEADER] [RESTLER_IMAGE]
 #
-# ATENÇÃO: confira o caminho do binário dentro da imagem na primeira vez:
-#   docker run --rm --entrypoint ls mcr.microsoft.com/restlerfuzzer/restler:v8.5.0 -R /RESTler | head
+# Versão usada: v9.2.4 (a v8.5.0 quebrava no modo fuzz; ver docs/desvios.md, D11).
+# Caminho do binário conferido na imagem: /RESTler/restler/Restler.dll
 set -euo pipefail
 source "$(dirname "$0")/lib.sh"
-RESTLER_IMAGE="${RESTLER_IMAGE:-mcr.microsoft.com/restlerfuzzer/restler:v8.5.0}"
+RESTLER_IMAGE="${RESTLER_IMAGE:-mcr.microsoft.com/restlerfuzzer/restler:v9.2.4}"
 RESTLER_BIN="${RESTLER_BIN:-dotnet /RESTler/restler/Restler.dll}"
 
 host_port="${BASE_URL#http://}"; host="${host_port%%:*}"; port="${host_port##*:}"; port="${port%%/*}"
@@ -27,11 +27,16 @@ start=$SECONDS
 docker run --rm --network host -v "$OUT_DIR:/work" -w /work --entrypoint sh "$RESTLER_IMAGE" \
   -c "$RESTLER_BIN compile --api_spec $spec_in" > "$OUT_DIR/restler_compile.log" 2>&1
 
-# fixa a semente aleatória nas configurações do motor
-python3 - "$OUT_DIR/Compile/engine_settings.json" "$SEED" <<'PY'
+# fixa a semente aleatória nas configurações do motor.
+# Se o caminho base compilado for "/" (ex.: Swagger 2.0 com basePath "/"), o RESTler
+# gera URLs com barra dupla ("//config"); a opção "basepath" do motor o substitui
+# por "" sem alterar a especificação (docs/desvios.md, D13).
+python3 - "$OUT_DIR/Compile/engine_settings.json" "$SEED" "$OUT_DIR/Compile/grammar.py" <<'PY'
 import json, sys
-p, seed = sys.argv[1], int(sys.argv[2])
+p, seed, grammar = sys.argv[1], int(sys.argv[2]), sys.argv[3]
 s = json.load(open(p)); s["random_seed"] = seed
+if 'restler_basepath("/")' in open(grammar, encoding="utf-8").read():
+    s["basepath"] = ""
 json.dump(s, open(p, "w"), indent=2)
 PY
 

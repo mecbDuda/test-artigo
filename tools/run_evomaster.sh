@@ -12,14 +12,20 @@ EM_VERSION="${EM_VERSION:-v5.1.0}"
 auth_args=()
 [ -n "${AUTH_HEADER:-}" ] && auth_args=(--header0 "$AUTH_HEADER")
 
+# O EvoMaster acrescenta sozinho o caminho dos "servers"/basePath da especificação;
+# por isso recebe só a origem (esquema://host:porta) de BASE_URL. Com a URL completa,
+# no petclinic-rest ele chamava /petclinic/petclinic/... (docs/desvios.md, D14).
+target_origin="$(printf '%s' "$BASE_URL" | sed -E 's#^(https?://[^/]+).*#\1#')"
+
 mkdir -p "$OUT_DIR/generated_tests"
 run_limited "evomaster" "$((BUDGET_SEC + 120))" \
   -v "$OUT_DIR/generated_tests:/generated_tests" \
   "webfuzzing/evomaster:$EM_VERSION" \
     --blackBox true \
     --bbSwaggerUrl "$SCHEMA_URL" \
-    --bbTargetUrl "$BASE_URL" \
+    --bbTargetUrl "$target_origin" \
     --maxTime "${BUDGET_SEC}s" \
     --seed "$SEED" \
     --outputFormat JAVA_JUNIT_5 \
+    --outputFolder /generated_tests \
     ${auth_args[@]+"${auth_args[@]}"}
