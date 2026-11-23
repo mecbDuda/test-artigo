@@ -1,0 +1,104 @@
+Testing request: /createdb GET
+Testing request: /createdb GET
+Testing request: / GET
+Testing request: / GET
+Testing request: /users/v1 GET
+Testing request: /users/v1 GET
+Testing request: /users/v1/_debug GET
+Testing request: /users/v1/_debug GET
+Testing request: /users/v1/register POST
+Found 3 fuzzable blocks.
+Budget: 100 values per parameter.
+Fuzzing request block 18, type: restler_fuzzable_string
+Fuzzing request block 20, type: restler_fuzzable_string
+Fuzzing request block 22, type: restler_fuzzable_string
+Tested 300 combinations for request /users/v1/register POST, combination 1
+Testing request: /users/v1/register POST
+Testing request: /users/v1/register POST
+Testing request: /users/v1/register POST
+Testing request: /users/v1/register POST
+Testing request: /users/v1/register POST
+Testing request: /users/v1/register POST
+Testing request: /users/v1/register POST
+Testing request: /users/v1/register POST
+Testing request: /users/v1/login POST
+Found 2 fuzzable blocks.
+Budget: 100 values per parameter.
+Fuzzing request block 18, type: restler_fuzzable_string
+Fuzzing request block 20, type: restler_fuzzable_string
+Tested 200 combinations for request /users/v1/login POST, combination 1
+Testing request: /users/v1/login POST
+Testing request: /users/v1/login POST
+Testing request: /users/v1/login POST
+Testing request: /users/v1/login POST
+Testing request: /me GET
+Testing request: /me GET
+Testing request: /users/v1/fuzzstring GET
+Found 1 fuzzable blocks.
+Budget: 100 values per parameter.
+Fuzzing request block 7, type: restler_fuzzable_string
+
+Suspect sequence: 500
+GET /users/v1/fuzzstring
+
+Suspect sequence: 500
+GET /users/v1/fuzzstring
+Tested 100 combinations for request /users/v1/fuzzstring GET, combination 1
+Testing request: /users/v1/fuzzstring GET
+Testing request: /users/v1/fuzzstring GET
+Testing request: /users/v1/fuzzstring GET
+Testing request: /users/v1/fuzzstring DELETE
+Found 1 fuzzable blocks.
+Budget: 100 values per parameter.
+Fuzzing request block 7, type: restler_fuzzable_string
+Tested 100 combinations for request /users/v1/fuzzstring DELETE, combination 1
+Testing request: /users/v1/fuzzstring DELETE
+Testing request: /users/v1/fuzzstring DELETE
+Testing request: /users/v1/fuzzstring DELETE
+Testing request: /users/v1/fuzzstring/email PUT
+Found 2 fuzzable blocks.
+Budget: 100 values per parameter.
+Fuzzing request block 7, type: restler_fuzzable_string
+Fuzzing request block 20, type: restler_fuzzable_string
+
+Suspect sequence: Timeout
+PUT /users/v1/fuzzstring/email
+
+Suspect sequence: Timeout
+PUT /users/v1/fuzzstring/email
+
+Suspect sequence: Timeout
+PUT /users/v1/fuzzstring/email
+
+Suspect sequence: Timeout
+PUT /users/v1/fuzzstring/email
+
+Suspect sequence: Timeout
+PUT /users/v1/fuzzstring/email
+
+Suspect sequence: Timeout
+PUT /users/v1/fuzzstring/email
+
+Suspect sequence: Timeout
+PUT /users/v1/fuzzstring/email
+
+Suspect sequence: Timeout
+PUT /users/v1/fuzzstring/email
+
+Suspect sequence: Timeout
+PUT /users/v1/fuzzstring/email
+
+Suspect sequence: Timeout
+PUT /users/v1/fuzzstring/email
+
+Suspect sequence: Timeout
+PUT /users/v1/fuzzstring/email
+
+Suspect sequence: Timeout
+PUT /users/v1/fuzzstring/email
+
+Suspect sequence: Timeout
+PUT /users/v1/fuzzstring/email
+
+Suspect sequence: Timeout
+PUT /users/v1/fuzzstring/email

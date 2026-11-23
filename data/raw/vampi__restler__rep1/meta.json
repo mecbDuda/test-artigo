@@ -1,0 +1,11 @@
+{
+  "run_id": "vampi__restler__rep1",
+  "api": "vampi",
+  "tool": "restler",
+  "rep": 1,
+  "seed": 1001,
+  "budget_sec": 1800,
+  "start_ts": 1795463443.2384582,
+  "end_ts": 1795465270.0195854,
+  "schema_file": "apis/vampi/openapi3.yml"
+}

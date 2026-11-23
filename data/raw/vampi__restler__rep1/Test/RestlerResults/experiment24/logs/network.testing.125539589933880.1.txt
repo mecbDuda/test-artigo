@@ -1,0 +1,540 @@
+2026-11-23 19:50:48.302: Will refresh token: cat /work/token.txt
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 678e4a9c5d7505fed4c8ac4e1066dca6dd141189
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: '_debug'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.323: Sending: 'GET /users/v1/_debug HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 19e9d493-2994-4cac-bb16-eab7ca3e5e35\r\n\r\n'
+
+2026-11-23 19:50:48.332: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 382\r\nConnection: close\r\n\r\n{\n  "users": [\n    {\n      "admin": false,\n      "email": "mail1@mail.com",\n      "password": "pass1",\n      "username": "name1"\n    },\n    {\n      "admin": false,\n      "email": "mail2@mail.com",\n      "password": "pass2",\n      "username": "name2"\n    },\n    {\n      "admin": true,\n      "email": "admin@mail.com",\n      "password": "pass1",\n      "username": "admin"\n    }\n  ]\n}\n'
+
+
+Generation-1: Rendering Sequence-2
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 6bccc70cd68ca2aafa19dd26840560ab747d9ebb
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'me'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.343: Sending: 'GET /me HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 27c2ce26-f687-474d-b0dd-b0fda68b88a9\r\n\r\n'
+
+2026-11-23 19:50:48.355: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 95\r\nConnection: close\r\n\r\n{"data": {"admin": false, "email": "mail1@mail.com", "username": "name1"}, "status": "success"}'
+
+
+Generation-1: Rendering Sequence-3
+
+	Request: 1 (Remaining candidate combinations: 6)
+	Request hash: 79a2e16b2e4496f6746eb1f80defe4fddd9d0893
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [name1, fuzzstring, ...]
+		- restler_static_string: '/'
+		- restler_static_string: 'email'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "email":'
+		+ restler_fuzzable_string: ["mail3@mail.com", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.367: Sending: 'PUT /users/v1/name1/email HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 33\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 96080f27-b4e7-4c97-bf78-9cb79f4dfd3a\r\n\r\n{\n    "email":"mail3@mail.com"}\r\n'
+
+2026-11-23 19:50:48.400: Received: 'HTTP/1.1 204 NO CONTENT\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nConnection: close\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-4
+
+	Request: 1 (Remaining candidate combinations: 6)
+	Request hash: 9671ff560f1e36cdf5a8ce157ec779e2c0f8a491
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [name1, fuzzstring, ...]
+		- restler_static_string: '/'
+		- restler_static_string: 'password'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "password":'
+		+ restler_fuzzable_string: ["pass4", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.414: Sending: 'PUT /users/v1/name1/password HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 27\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 4b21b452-4317-4617-82c4-92371a2b0f0c\r\n\r\n{\n    "password":"pass4"}\r\n'
+
+2026-11-23 19:50:48.431: Received: 'HTTP/1.1 204 NO CONTENT\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nConnection: close\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-5
+
+	Request: 1 (Remaining candidate combinations: 5)
+	Request hash: 9b234efa34108cb881e82f3d75c80a47b715983c
+
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'login'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "username":'
+		+ restler_fuzzable_string: ["name1", "fuzzstring", ...]
+		- restler_static_string: ',\n    "password":'
+		+ restler_fuzzable_string: ["pass1", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.441: Sending: 'POST /users/v1/login HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 51\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 69591a6a-41f5-4541-ab6d-b8f4d24a9eaa\r\n\r\n{\n    "username":"name1",\n    "password":"pass1"}\r\n'
+
+2026-11-23 19:50:48.450: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 81\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "Password is not correct for the given username."}'
+
+
+Generation-1: Rendering Sequence-6
+
+	Request: 1 (Remaining candidate combinations: 9)
+	Request hash: ad774fff1145088ee418e32166064fcccc6d4127
+
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'register'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "username":'
+		+ restler_fuzzable_string: ["name1", "fuzzstring", ...]
+		- restler_static_string: ',\n    "password":'
+		+ restler_fuzzable_string: ["pass1", "fuzzstring", ...]
+		- restler_static_string: ',\n    "email":'
+		+ restler_fuzzable_string: ["user@tempmail.com", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.461: Sending: 'POST /users/v1/register HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 84\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: cb39a422-a002-4993-a9c6-794f0c589008\r\n\r\n{\n    "username":"name1",\n    "password":"pass1",\n    "email":"user@tempmail.com"}\r\n'
+
+2026-11-23 19:50:48.468: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 69\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "User already exists. Please Log in."}'
+
+
+Generation-1: Rendering Sequence-7
+
+	Request: 1 (Remaining candidate combinations: 5)
+	Request hash: ae3854c85225b0b51949816e092da4a3eb4da8b1
+
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'books'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "book_title":'
+		+ restler_fuzzable_string: ["book99", "fuzzstring", ...]
+		- restler_static_string: ',\n    "secret":'
+		+ restler_fuzzable_string: ["pass1secret", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.479: Sending: 'POST /books/v1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 58\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 9cb299f8-16ed-4712-8dcc-60652a985855\r\n\r\n{\n    "book_title":"book99",\n    "secret":"pass1secret"}\r\n'
+
+2026-11-23 19:50:48.494: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 56\r\nConnection: close\r\n\r\n{"message": "Book has been added.", "status": "success"}'
+
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: ae44d6ba2a1e0478a794c87961c46c75fa01910f
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'createdb'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.505: Sending: 'GET /createdb HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 57fd7631-5aa1-4f66-a68d-5e45fb3968a7\r\n\r\n'
+
+2026-11-23 19:50:48.585: Received: 'HTTP/1.1 500 INTERNAL SERVER ERROR\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 63111\r\nConnection: close\r\n\r\n<!doctype html>\n<html lang=en>\n  <head>\n    <title>sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: books.book_title\n[SQL: INSERT INTO books (book_title, secret_content, user_id) VALUES (?, ?, ?)]\n[parameters: (\'bookTitle45\', \'secret for bookTitle45\', 3)]\n(Background on this error at: https://sqlalche.me/e/20/gkpj)\n // Werkzeug Debugger</title>\n    <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">\n    <link rel="shortcut icon"\n        href="?__debugger__=yes&amp;cmd=resource&amp;f=console.png">\n    <script src="?__debugger__=yes&amp;cmd=resource&amp;f=debugger.js"></script>\n    <script>\n      var CONSOLE_MODE = false,\n          EVALEX = true,\n          EVALEX_TRUSTED = false,\n          SECRET = "vOcZUWdmqASuv27fWN9d";\n    </script>\n  </head>\n  <body style="background-color: #fff">\n    <div class="debugger">\n<h1>IntegrityError</h1>\n<div class="detail">\n  <p class="errormsg">sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: books.book_title\n[SQL: INSERT INTO books (book_title, secret_content, user_id) VALUES (?, ?, ?)]\n[parameters: (&#39;bookTitle45&#39;, &#39;secret for bookTitle45&#39;, 3)]\n(Background on this error at: https://sqlalche.me/e/20/gkpj)\n</p>\n</div>\n<h2 class="traceback">Traceback <em>(most recent call last)</em></h2>\n<div class="traceback">\n  <h3></h3>\n  <ul><li><div class="frame" id="frame-133979573687136">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py"</cite>,\n      line <em class="line">1964</em>,\n      in <code class="function">_exec_single_context</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">                            </span>context,</pre>\n<pre class="line before"><span class="ws">                        </span>):</pre>\n<pre class="line before"><span class="ws">                            </span>evt_handled = True</pre>\n<pre class="line before"><span class="ws">                            </span>break</pre>\n<pre class="line before"><span class="ws">                </span>if not evt_handled:</pre>\n<pre class="line current"><span class="ws">                    </span>self.dialect.do_execute(\n<span class="ws">                    </span>^</pre>\n<pre class="line after"><span class="ws">                        </span>cursor, str_statement, effective_parameters, context</pre>\n<pre class="line after"><span class="ws">                    </span>)</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">            </span>if self._has_events or self.engine._has_events:</pre>\n<pre class="line after"><span class="ws">                </span>self.dispatch.after_cursor_execute(</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979573687280">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py"</cite>,\n      line <em class="line">747</em>,\n      in <code class="function">do_execute</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">    </span>def do_executemany(self, cursor, statement, parameters, context=None):</pre>\n<pre class="line before"><span class="ws">        </span>cursor.executemany(statement, parameters)</pre>\n<pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">    </span>def do_execute(self, cursor, statement, parameters, context=None):</pre>\n<pre class="line current"><span class="ws">        </span>cursor.execute(statement, parameters)\n<span class="ws">        </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">    </span>def do_execute_no_params(self, cursor, statement, context=None):</pre>\n<pre class="line after"><span class="ws">        </span>cursor.execute(statement)</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">    </span>def is_disconnect(self, e, connection, cursor):</pre></div>\n</div>\n\n<li><div class="exc-divider">The above exception was the direct cause of the following exception:</div>\n<li><div class="frame" id="frame-133979578644176">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/flask/app.py"</cite>,\n      line <em class="line">2548</em>,\n      in <code class="function">__call__</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">    </span>def __call__(self, environ: dict, start_response: t.Callable) -&gt; t.Any:</pre>\n<pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;The WSGI server calls the Flask application object as the</pre>\n<pre class="line before"><span class="ws">        </span>WSGI application. This calls :meth:`wsgi_app`, which can be</pre>\n<pre class="line before"><span class="ws">        </span>wrapped to apply middleware.</pre>\n<pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;</pre>\n<pre class="line current"><span class="ws">        </span>return self.wsgi_app(environ, start_response)\n<span class="ws">        </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574410336">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/flask/app.py"</cite>,\n      line <em class="line">2528</em>,\n      in <code class="function">wsgi_app</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">            </span>try:</pre>\n<pre class="line before"><span class="ws">                </span>ctx.push()</pre>\n<pre class="line before"><span class="ws">                </span>response = self.full_dispatch_request()</pre>\n<pre class="line before"><span class="ws">            </span>except Exception as e:</pre>\n<pre class="line before"><span class="ws">                </span>error = e</pre>\n<pre class="line current"><span class="ws">                </span>response = self.handle_exception(e)\n<span class="ws">                </span>           ^^^^^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws">            </span>except:  # noqa: B001</pre>\n<pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre>\n<pre class="line after"><span class="ws">                </span>raise</pre>\n<pre class="line after"><span class="ws">            </span>return response(environ, start_response)</pre>\n<pre class="line after"><span class="ws">        </span>finally:</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574410480">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/flask/app.py"</cite>,\n      line <em class="line">2525</em>,\n      in <code class="function">wsgi_app</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">        </span>ctx = self.request_context(environ)</pre>\n<pre class="line before"><span class="ws">        </span>error: t.Optional[BaseException] = None</pre>\n<pre class="line before"><span class="ws">        </span>try:</pre>\n<pre class="line before"><span class="ws">            </span>try:</pre>\n<pre class="line before"><span class="ws">                </span>ctx.push()</pre>\n<pre class="line current"><span class="ws">                </span>response = self.full_dispatch_request()\n<span class="ws">                </span>           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws">            </span>except Exception as e:</pre>\n<pre class="line after"><span class="ws">                </span>error = e</pre>\n<pre class="line after"><span class="ws">                </span>response = self.handle_exception(e)</pre>\n<pre class="line after"><span class="ws">            </span>except:  # noqa: B001</pre>\n<pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574410624">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/flask/app.py"</cite>,\n      line <em class="line">1822</em>,\n      in <code class="function">full_dispatch_request</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">            </span>request_started.send(self)</pre>\n<pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>\n<pre class="line before"><span class="ws">            </span>if rv is None:</pre>\n<pre class="line before"><span class="ws">                </span>rv = self.dispatch_request()</pre>\n<pre class="line before"><span class="ws">        </span>except Exception as e:</pre>\n<pre class="line current"><span class="ws">            </span>rv = self.handle_user_exception(e)\n<span class="ws">            </span>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">    </span>def finalize_request(</pre>\n<pre class="line after"><span class="ws">        </span>self,</pre>\n<pre class="line after"><span class="ws">        </span>rv: t.Union[ft.ResponseReturnValue, HTTPException],</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574410768">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/flask/app.py"</cite>,\n      line <em class="line">1820</em>,\n      in <code class="function">full_dispatch_request</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">        </span>try:</pre>\n<pre class="line before"><span class="ws">            </span>request_started.send(self)</pre>\n<pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>\n<pre class="line before"><span class="ws">            </span>if rv is None:</pre>\n<pre class="line current"><span class="ws">                </span>rv = self.dispatch_request()\n<span class="ws">                </span>     ^^^^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws">        </span>except Exception as e:</pre>\n<pre class="line after"><span class="ws">            </span>rv = self.handle_user_exception(e)</pre>\n<pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">    </span>def finalize_request(</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574410912">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/flask/app.py"</cite>,\n      line <em class="line">1796</em>,\n      in <code class="function">dispatch_request</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">            </span>and req.method == &#34;OPTIONS&#34;</pre>\n<pre class="line before"><span class="ws">        </span>):</pre>\n<pre class="line before"><span class="ws">            </span>return self.make_default_options_response()</pre>\n<pre class="line before"><span class="ws">        </span># otherwise dispatch to the handler for that endpoint</pre>\n<pre class="line before"><span class="ws">        </span>view_args: t.Dict[str, t.Any] = req.view_args  # type: ignore[assignment]</pre>\n<pre class="line current"><span class="ws">        </span>return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)\n<span class="ws">        </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">    </span>def full_dispatch_request(self) -&gt; Response:</pre>\n<pre class="line after"><span class="ws">        </span>&#34;&#34;&#34;Dispatches the request and on top of that performs request</pre>\n<pre class="line after"><span class="ws">        </span>pre and postprocessing as well as HTTP exception catching and</pre>\n<pre class="line after"><span class="ws">        </span>error handling.</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574411056">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/connexion/decorators/decorator.py"</cite>,\n      line <em class="line">68</em>,\n      in <code class="function">wrapper</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">        </span>else:  # pragma: no cover</pre>\n<pre class="line before"><span class="ws">            </span>@functools.wraps(function)</pre>\n<pre class="line before"><span class="ws">            </span>def wrapper(*args, **kwargs):</pre>\n<pre class="line before"><span class="ws">                </span>request = self.api.get_request(*args, **kwargs)</pre>\n<pre class="line current"><span class="ws">                </span>response = function(request)\n<span class="ws">                </span>           ^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws">                </span>return self.api.get_response(response, self.mimetype, request)</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">        </span>return wrapper</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574411344">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/connexion/decorators/uri_parsing.py"</cite>,\n      line <em class="line">149</em>,\n      in <code class="function">wrapper</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">            </span>form = coerce_dict(request.form)</pre>\n<pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">            </span>request.query = self.resolve_query(query)</pre>\n<pre class="line before"><span class="ws">            </span>request.path_params = self.resolve_path(path_params)</pre>\n<pre class="line before"><span class="ws">            </span>request.form = self.resolve_form(form)</pre>\n<pre class="line current"><span class="ws">            </span>response = function(request)\n<span class="ws">            </span>           ^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws">            </span>return response</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">        </span>return wrapper</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws"></span> </pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574413360">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/connexion/decorators/parameter.py"</cite>,\n      line <em class="line">120</em>,\n      in <code class="function">wrapper</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">        </span># attempt to provide the request context to the function</pre>\n<pre class="line before"><span class="ws">        </span>if pass_context_arg_name and (has_kwargs or pass_context_arg_name in arguments):</pre>\n<pre class="line before"><span class="ws">            </span>kwargs[pass_context_arg_name] = request.context</pre>\n<pre class="line before"><span class="ws"></span> </pre>\n<pre class="line current"><span class="ws">        </span>return function(**kwargs)\n<span class="ws">        </span>       ^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">    </span>return wrapper</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574414080">\n  <h4>File <cite class="filename">"/vampi/api_views/main.py"</cite>,\n      line <em class="line">9</em>,\n      in <code class="function">populate_db</code></h4>\n  <div class="source "><pre class="line before"><span class="ws"></span>from app import vuln</pre>\n<pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws"></span>def populate_db():</pre>\n<pre class="line before"><span class="ws">    </span>db.drop_all()</pre>\n<pre class="line before"><span class="ws">    </span>db.create_all()</pre>\n<pre class="line current"><span class="ws">    </span>User.init_db_users()\n<span class="ws">    </span>^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws">    </span>response_text = &#39;{ &#34;message&#34;: &#34;Database populated.&#34; }&#39;</pre>\n<pre class="line after"><span class="ws">    </span>response = Response(response_text, 200, mimetype=&#39;application/json&#39;)</pre>\n<pre class="line after"><span class="ws">    </span>return response</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws"></span>def basic():</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574414224">\n  <h4>File <cite class="filename">"/vampi/models/user_model.py"</cite>,\n      line <em class="line">101</em>,\n      in <code class="function">init_db_users</code></h4>\n  <div class="source "><pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">    </span>@staticmethod</pre>\n<pre class="line before"><span class="ws">    </span>def init_db_users():</pre>\n<pre class="line before"><span class="ws">        </span>User.register_user(&#34;name1&#34;, &#34;pass1&#34;, &#34;mail1@mail.com&#34;, False)</pre>\n<pre class="line before"><span class="ws">        </span>User.register_user(&#34;name2&#34;, &#34;pass2&#34;, &#34;mail2@mail.com&#34;, False)</pre>\n<pre class="line current"><span class="ws">        </span>User.register_user(&#34;admin&#34;, &#34;pass1&#34;, &#34;admin@mail.com&#34;, True)\n<span class="ws">        </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574414944">\n  <h4>File <cite class="filename">"/vampi/models/user_model.py"</cite>,\n      line <em class="line">89</em>,\n      in <code class="function">register_user</code></h4>\n  <div class="source "><pre class="line before"><span class="ws">    </span>def register_user(username, password, email, admin=False):</pre>\n<pre class="line before"><span class="ws">        </span>new_user = User(username=username, password=password, email=email, admin=admin)</pre>\n<pre class="line before"><span class="ws">        </span>randomint = str(randrange(100))</pre>\n<pre class="line before"><span class="ws">        </span>new_user.books = [Book(book_title=&#34;bookTitle&#34; + randomint, secret_content=&#34;secret for bookTitle&#34; + randomint)]</pre>\n<pre class="line before"><span class="ws">        </span>db.session.add(new_user)</pre>\n<pre class="line current"><span class="ws">        </span>db.session.commit()\n<span class="ws">        </span>^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">    </span>@staticmethod</pre>\n<pre class="line after"><span class="ws">    </span>def delete_user(username):</pre>\n<pre class="line after"><span class="ws">        </span>done = User.query.filter_by(username=username).delete()</pre>\n<pre class="line after"><span class="ws">        </span>db.session.commit()</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574415088">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py"</cite>,\n      line <em class="line">538</em>,\n      in <code class="function">commit</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">            </span>:ref:`asyncio_orm_avoid_lazyloads`</pre>\n<pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;  # noqa: E501</pre>\n<pre class="line before"><span class="ws"></span> </pre>\n<pre class="line current"><span class="ws">        </span>return self._proxied.commit()\n<span class="ws">        </span>       ^^^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">    </span>def connection(</pre>\n<pre class="line after"><span class="ws">        </span>self,</pre>\n<pre class="line after"><span class="ws">        </span>bind_arguments: Optional[_BindArguments] = None,</pre>\n<pre class="line after"><span class="ws">        </span>execution_options: Optional[_ExecuteOptions] = None,</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574417392">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py"</cite>,\n      line <em class="line">1903</em>,\n      in <code class="function">commit</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;</pre>\n<pre class="line before"><span class="ws">        </span>trans = self._transaction</pre>\n<pre class="line before"><span class="ws">        </span>if trans is None:</pre>\n<pre class="line before"><span class="ws">            </span>trans = self._autobegin_t()</pre>\n<pre class="line before"><span class="ws"></span> </pre>\n<pre class="line current"><span class="ws">        </span>trans.commit(_to_root=True)\n<span class="ws">        </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">    </span>def prepare(self) -&gt; None:</pre>\n<pre class="line after"><span class="ws">        </span>&#34;&#34;&#34;Prepare the current transaction in progress for two phase commit.</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">        </span>If no transaction is in progress, this method raises an</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574915072">\n  <h4>File <cite class="filename">"&lt;string&gt;"</cite>,\n      line <em class="line">2</em>,\n      in <code class="function">commit</code></h4>\n  <div class="source "></div>\n</div>\n\n<li><div class="frame" id="frame-133979574915216">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py"</cite>,\n      line <em class="line">137</em>,\n      in <code class="function">_go</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">                    </span>)</pre>\n<pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">            </span>self._current_fn = fn</pre>\n<pre class="line before"><span class="ws">            </span>self._next_state = _StateChangeStates.CHANGE_IN_PROGRESS</pre>\n<pre class="line before"><span class="ws">            </span>try:</pre>\n<pre class="line current"><span class="ws">                </span>ret_value = fn(self, *arg, **kw)\n<span class="ws">                </span>            ^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws">            </span>except:</pre>\n<pre class="line after"><span class="ws">                </span>raise</pre>\n<pre class="line after"><span class="ws">            </span>else:</pre>\n<pre class="line after"><span class="ws">                </span>if self._state is expect_state:</pre>\n<pre class="line after"><span class="ws">                    </span>return ret_value</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574915504">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py"</cite>,\n      line <em class="line">1218</em>,\n      in <code class="function">commit</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">        </span>SessionTransactionState.CLOSED,</pre>\n<pre class="line before"><span class="ws">    </span>)</pre>\n<pre class="line before"><span class="ws">    </span>def commit(self, _to_root: bool = False) -&gt; None:</pre>\n<pre class="line before"><span class="ws">        </span>if self._state is not SessionTransactionState.PREPARED:</pre>\n<pre class="line before"><span class="ws">            </span>with self._expect_state(SessionTransactionState.PREPARED):</pre>\n<pre class="line current"><span class="ws">                </span>self._prepare_impl()\n<span class="ws">                </span>^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">        </span>if self._parent is None or self.nested:</pre>\n<pre class="line after"><span class="ws">            </span>for conn, trans, should_commit, autoclose in set(</pre>\n<pre class="line after"><span class="ws">                </span>self._connections.values()</pre>\n<pre class="line after"><span class="ws">            </span>):</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574915648">\n  <h4>File <cite class="filename">"&lt;string&gt;"</cite>,\n      line <em class="line">2</em>,\n      in <code class="function">_prepare_impl</code></h4>\n  <div class="source "></div>\n</div>\n\n<li><div class="frame" id="frame-133979574915792">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py"</cite>,\n      line <em class="line">137</em>,\n      in <code class="function">_go</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">                    </span>)</pre>\n<pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">            </span>self._current_fn = fn</pre>\n<pre class="line before"><span class="ws">            </span>self._next_state = _StateChangeStates.CHANGE_IN_PROGRESS</pre>\n<pre class="line before"><span class="ws">            </span>try:</pre>\n<pre class="line current"><span class="ws">                </span>ret_value = fn(self, *arg, **kw)\n<span class="ws">                </span>            ^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws">            </span>except:</pre>\n<pre class="line after"><span class="ws">                </span>raise</pre>\n<pre class="line after"><span class="ws">            </span>else:</pre>\n<pre class="line after"><span class="ws">                </span>if self._state is expect_state:</pre>\n<pre class="line after"><span class="ws">                    </span>return ret_value</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574915936">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py"</cite>,\n      line <em class="line">1193</em>,\n      in <code class="function">_prepare_impl</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">        </span>if not self.session._flushing:</pre>\n<pre class="line before"><span class="ws">            </span>for _flush_guard in range(100):</pre>\n<pre class="line before"><span class="ws">                </span>if self.session._is_clean():</pre>\n<pre class="line before"><span class="ws">                    </span>break</pre>\n<pre class="line current"><span class="ws">                </span>self.session.flush()\n<span class="ws">                </span>^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws">            </span>else:</pre>\n<pre class="line after"><span class="ws">                </span>raise exc.FlushError(</pre>\n<pre class="line after"><span class="ws">                    </span>&#34;Over 100 subsequent flushes have occurred within &#34;</pre>\n<pre class="line after"><span class="ws">                    </span>&#34;session.commit() - is an after_flush() hook &#34;</pre>\n<pre class="line after"><span class="ws">                    </span>&#34;creating new objects?&#34;</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574916080">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py"</cite>,\n      line <em class="line">4140</em>,\n      in <code class="function">flush</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">        </span>if self._is_clean():</pre>\n<pre class="line before"><span class="ws">            </span>return</pre>\n<pre class="line before"><span class="ws">        </span>try:</pre>\n<pre class="line before"><span class="ws">            </span>self._flushing = True</pre>\n<pre class="line current"><span class="ws">            </span>self._flush(objects)\n<span class="ws">            </span>^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws">        </span>finally:</pre>\n<pre class="line after"><span class="ws">            </span>self._flushing = False</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">    </span>def _flush_warning(self, method: Any) -&gt; None:</pre>\n<pre class="line after"><span class="ws">        </span>util.warn(</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574916224">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py"</cite>,\n      line <em class="line">4276</em>,\n      in <code class="function">_flush</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">            </span>self.dispatch.after_flush_postexec(self, flush_context)</pre>\n<pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">            </span>transaction.commit()</pre>\n<pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">        </span>except:</pre>\n<pre class="line current"><span class="ws">            </span>with util.safe_reraise():\n<span class="ws">            </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws">                </span>transaction.rollback(_capture_exception=True)</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">    </span>def bulk_save_objects(</pre>\n<pre class="line after"><span class="ws">        </span>self,</pre>\n<pre class="line after"><span class="ws">        </span>objects: Iterable[object],</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574916368">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py"</cite>,\n      line <em class="line">147</em>,\n      in <code class="function">__exit__</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">        </span># see #2703 for notes</pre>\n<pre class="line before"><span class="ws">        </span>if type_ is None:</pre>\n<pre class="line before"><span class="ws">            </span>exc_type, exc_value, exc_tb = self._exc_info</pre>\n<pre class="line before"><span class="ws">            </span>assert exc_value is not None</pre>\n<pre class="line before"><span class="ws">            </span>self._exc_info = None  # remove potential circular references</pre>\n<pre class="line current"><span class="ws">            </span>raise exc_value.with_traceback(exc_tb)\n<span class="ws">            </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws">        </span>else:</pre>\n<pre class="line after"><span class="ws">            </span>self._exc_info = None  # remove potential circular references</pre>\n<pre class="line after"><span class="ws">            </span>assert value is not None</pre>\n<pre class="line after"><span class="ws">            </span>raise value.with_traceback(traceback)</pre>\n<pre class="line after"><span class="ws"></span> </pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574917664">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py"</cite>,\n      line <em class="line">4237</em>,\n      in <code class="function">_flush</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">        </span>flush_context.transaction = transaction = self._autobegin_t()._begin()</pre>\n<pre class="line before"><span class="ws">        </span>try:</pre>\n<pre class="line before"><span class="ws">            </span>self._warn_on_events = True</pre>\n<pre class="line before"><span class="ws">            </span>try:</pre>\n<pre class="line current"><span class="ws">                </span>flush_context.execute()\n<span class="ws">                </span>^^^^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws">            </span>finally:</pre>\n<pre class="line after"><span class="ws">                </span>self._warn_on_events = False</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">            </span>self.dispatch.after_flush(self, flush_context)</pre>\n<pre class="line after"><span class="ws"></span> </pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574917808">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py"</cite>,\n      line <em class="line">467</em>,\n      in <code class="function">execute</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">                </span>while set_:</pre>\n<pre class="line before"><span class="ws">                    </span>n = set_.pop()</pre>\n<pre class="line before"><span class="ws">                    </span>n.execute_aggregate(self, set_)</pre>\n<pre class="line before"><span class="ws">        </span>else:</pre>\n<pre class="line before"><span class="ws">            </span>for rec in topological.sort(self.dependencies, postsort_actions):</pre>\n<pre class="line current"><span class="ws">                </span>rec.execute(self)\n<span class="ws">                </span>^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">    </span>def finalize_flush_changes(self) -&gt; None:</pre>\n<pre class="line after"><span class="ws">        </span>&#34;&#34;&#34;Mark processed objects as clean / deleted after a successful</pre>\n<pre class="line after"><span class="ws">        </span>flush().</pre>\n<pre class="line after"><span class="ws"></span> </pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574917952">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py"</cite>,\n      line <em class="line">644</em>,\n      in <code class="function">execute</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">        </span>self.sort_key = (&#34;SaveUpdateAll&#34;, mapper._sort_key)</pre>\n<pre class="line before"><span class="ws">        </span>assert mapper is mapper.base_mapper</pre>\n<pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">    </span>@util.preload_module(&#34;sqlalchemy.orm.persistence&#34;)</pre>\n<pre class="line before"><span class="ws">    </span>def execute(self, uow):</pre>\n<pre class="line current"><span class="ws">        </span>util.preloaded.orm_persistence.save_obj(\n<span class="ws">        </span>^</pre>\n<pre class="line after"><span class="ws">            </span>self.mapper,</pre>\n<pre class="line after"><span class="ws">            </span>uow.states_for_mapper_hierarchy(self.mapper, False, False),</pre>\n<pre class="line after"><span class="ws">            </span>uow,</pre>\n<pre class="line after"><span class="ws">        </span>)</pre>\n<pre class="line after"><span class="ws"></span> </pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574918096">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py"</cite>,\n      line <em class="line">93</em>,\n      in <code class="function">save_obj</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">            </span>mapper,</pre>\n<pre class="line before"><span class="ws">            </span>table,</pre>\n<pre class="line before"><span class="ws">            </span>update,</pre>\n<pre class="line before"><span class="ws">        </span>)</pre>\n<pre class="line before"><span class="ws"></span> </pre>\n<pre class="line current"><span class="ws">        </span>_emit_insert_statements(\n<span class="ws">        </span>^</pre>\n<pre class="line after"><span class="ws">            </span>base_mapper,</pre>\n<pre class="line after"><span class="ws">            </span>uowtransaction,</pre>\n<pre class="line after"><span class="ws">            </span>mapper,</pre>\n<pre class="line after"><span class="ws">            </span>table,</pre>\n<pre class="line after"><span class="ws">            </span>insert,</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574919968">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py"</cite>,\n      line <em class="line">1188</em>,\n      in <code class="function">_emit_insert_statements</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">                            </span>statement.values(value_params),</pre>\n<pre class="line before"><span class="ws">                            </span>params,</pre>\n<pre class="line before"><span class="ws">                            </span>execution_options=execution_options,</pre>\n<pre class="line before"><span class="ws">                        </span>)</pre>\n<pre class="line before"><span class="ws">                    </span>else:</pre>\n<pre class="line current"><span class="ws">                        </span>result = connection.execute(\n<span class="ws">                        </span>         </pre>\n<pre class="line after"><span class="ws">                            </span>statement,</pre>\n<pre class="line after"><span class="ws">                            </span>params,</pre>\n<pre class="line after"><span class="ws">                            </span>execution_options=execution_options,</pre>\n<pre class="line after"><span class="ws">                        </span>)</pre>\n<pre class="line after"><span class="ws"></span> </pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574920112">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py"</cite>,\n      line <em class="line">1414</em>,\n      in <code class="function">execute</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">        </span>try:</pre>\n<pre class="line before"><span class="ws">            </span>meth = statement._execute_on_connection</pre>\n<pre class="line before"><span class="ws">        </span>except AttributeError as err:</pre>\n<pre class="line before"><span class="ws">            </span>raise exc.ObjectNotExecutableError(statement) from err</pre>\n<pre class="line before"><span class="ws">        </span>else:</pre>\n<pre class="line current"><span class="ws">            </span>return meth(\n<span class="ws">            </span>       </pre>\n<pre class="line after"><span class="ws">                </span>self,</pre>\n<pre class="line after"><span class="ws">                </span>distilled_parameters,</pre>\n<pre class="line after"><span class="ws">                </span>execution_options or NO_OPTIONS,</pre>\n<pre class="line after"><span class="ws">            </span>)</pre>\n<pre class="line after"><span class="ws"></span> </pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979574926448">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py"</cite>,\n      line <em class="line">489</em>,\n      in <code class="function">_execute_on_connection</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">        </span>execution_options: CoreExecuteOptionsParameter,</pre>\n<pre class="line before"><span class="ws">    </span>) -&gt; Result[Any]:</pre>\n<pre class="line before"><span class="ws">        </span>if self.supports_execution:</pre>\n<pre class="line before"><span class="ws">            </span>if TYPE_CHECKING:</pre>\n<pre class="line before"><span class="ws">                </span>assert isinstance(self, Executable)</pre>\n<pre class="line current"><span class="ws">            </span>return connection._execute_clauseelement(\n<span class="ws">            </span>       </pre>\n<pre class="line after"><span class="ws">                </span>self, distilled_params, execution_options</pre>\n<pre class="line after"><span class="ws">            </span>)</pre>\n<pre class="line after"><span class="ws">        </span>else:</pre>\n<pre class="line after"><span class="ws">            </span>raise exc.ObjectNotExecutableError(self)</pre>\n<pre class="line after"><span class="ws"></span> </pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979573684544">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py"</cite>,\n      line <em class="line">1638</em>,\n      in <code class="function">_execute_clauseelement</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">            </span>column_keys=keys,</pre>\n<pre class="line before"><span class="ws">            </span>for_executemany=for_executemany,</pre>\n<pre class="line before"><span class="ws">            </span>schema_translate_map=schema_translate_map,</pre>\n<pre class="line before"><span class="ws">            </span>linting=self.dialect.compiler_linting | compiler.WARN_LINTING,</pre>\n<pre class="line before"><span class="ws">        </span>)</pre>\n<pre class="line current"><span class="ws">        </span>ret = self._execute_context(\n<span class="ws">        </span>      </pre>\n<pre class="line after"><span class="ws">            </span>dialect,</pre>\n<pre class="line after"><span class="ws">            </span>dialect.execution_ctx_cls._init_compiled,</pre>\n<pre class="line after"><span class="ws">            </span>compiled_sql,</pre>\n<pre class="line after"><span class="ws">            </span>distilled_parameters,</pre>\n<pre class="line after"><span class="ws">            </span>execution_options,</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979573684688">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py"</cite>,\n      line <em class="line">1842</em>,\n      in <code class="function">_execute_context</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">            </span>return self._exec_insertmany_context(</pre>\n<pre class="line before"><span class="ws">                </span>dialect,</pre>\n<pre class="line before"><span class="ws">                </span>context,</pre>\n<pre class="line before"><span class="ws">            </span>)</pre>\n<pre class="line before"><span class="ws">        </span>else:</pre>\n<pre class="line current"><span class="ws">            </span>return self._exec_single_context(\n<span class="ws">            </span>       </pre>\n<pre class="line after"><span class="ws">                </span>dialect, context, statement, parameters</pre>\n<pre class="line after"><span class="ws">            </span>)</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">    </span>def _exec_single_context(</pre>\n<pre class="line after"><span class="ws">        </span>self,</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979573684832">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py"</cite>,\n      line <em class="line">1983</em>,\n      in <code class="function">_exec_single_context</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">            </span>context.post_exec()</pre>\n<pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">            </span>result = context._setup_result_proxy()</pre>\n<pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">        </span>except BaseException as e:</pre>\n<pre class="line current"><span class="ws">            </span>self._handle_dbapi_exception(\n<span class="ws">            </span>^</pre>\n<pre class="line after"><span class="ws">                </span>e, str_statement, effective_parameters, cursor, context</pre>\n<pre class="line after"><span class="ws">            </span>)</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">        </span>return result</pre>\n<pre class="line after"><span class="ws"></span> </pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979573684976">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py"</cite>,\n      line <em class="line">2325</em>,\n      in <code class="function">_handle_dbapi_exception</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">            </span>if newraise:</pre>\n<pre class="line before"><span class="ws">                </span>raise newraise.with_traceback(exc_info[2]) from e</pre>\n<pre class="line before"><span class="ws">            </span>elif should_wrap:</pre>\n<pre class="line before"><span class="ws">                </span>assert sqlalchemy_exception is not None</pre>\n<pre class="line current"><span class="ws">                </span>raise sqlalchemy_exception.with_traceback(exc_info[2]) from e\n<span class="ws">                </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws">            </span>else:</pre>\n<pre class="line after"><span class="ws">                </span>assert exc_info[1] is not None</pre>\n<pre class="line after"><span class="ws">                </span>raise exc_info[1].with_traceback(exc_info[2])</pre>\n<pre class="line after"><span class="ws">        </span>finally:</pre>\n<pre class="line after"><span class="ws">            </span>del self._reentrant_error</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979573685120">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py"</cite>,\n      line <em class="line">1964</em>,\n      in <code class="function">_exec_single_context</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws">                            </span>context,</pre>\n<pre class="line before"><span class="ws">                        </span>):</pre>\n<pre class="line before"><span class="ws">                            </span>evt_handled = True</pre>\n<pre class="line before"><span class="ws">                            </span>break</pre>\n<pre class="line before"><span class="ws">                </span>if not evt_handled:</pre>\n<pre class="line current"><span class="ws">                    </span>self.dialect.do_execute(\n<span class="ws">                    </span>^</pre>\n<pre class="line after"><span class="ws">                        </span>cursor, str_statement, effective_parameters, context</pre>\n<pre class="line after"><span class="ws">                    </span>)</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">            </span>if self._has_events or self.engine._has_events:</pre>\n<pre class="line after"><span class="ws">                </span>self.dispatch.after_cursor_execute(</pre></div>\n</div>\n\n<li><div class="frame" id="frame-133979573685264">\n  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py"</cite>,\n      line <em class="line">747</em>,\n      in <code class="function">do_execute</code></h4>\n  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">    </span>def do_executemany(self, cursor, statement, parameters, context=None):</pre>\n<pre class="line before"><span class="ws">        </span>cursor.executemany(statement, parameters)</pre>\n<pre class="line before"><span class="ws"></span> </pre>\n<pre class="line before"><span class="ws">    </span>def do_execute(self, cursor, statement, parameters, context=None):</pre>\n<pre class="line current"><span class="ws">        </span>cursor.execute(statement, parameters)\n<span class="ws">        </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">    </span>def do_execute_no_params(self, cursor, statement, context=None):</pre>\n<pre class="line after"><span class="ws">        </span>cursor.execute(statement)</pre>\n<pre class="line after"><span class="ws"></span> </pre>\n<pre class="line after"><span class="ws">    </span>def is_disconnect(self, e, connection, cursor):</pre></div>\n</div>\n</ul>\n  <blockquote>sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: books.book_title\n[SQL: INSERT INTO books (book_title, secret_content, user_id) VALUES (?, ?, ?)]\n[parameters: (&#39;bookTitle45&#39;, &#39;secret for bookTitle45&#39;, 3)]\n(Background on this error at: https://sqlalche.me/e/20/gkpj)\n</blockquote>\n</div>\n\n<div class="plain">\n    <p>\n      This is the Copy/Paste friendly version of the traceback.\n    </p>\n    <textarea cols="50" rows="10" name="code" readonly>Traceback (most recent call last):\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py&#34;, line 1964, in _exec_single_context\n    self.dialect.do_execute(\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py&#34;, line 747, in do_execute\n    cursor.execute(statement, parameters)\nsqlite3.IntegrityError: UNIQUE constraint failed: books.book_title\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File &#34;/usr/local/lib/python3.11/site-packages/flask/app.py&#34;, line 2548, in __call__\n    return self.wsgi_app(environ, start_response)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File &#34;/usr/local/lib/python3.11/site-packages/flask/app.py&#34;, line 2528, in wsgi_app\n    response = self.handle_exception(e)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n  File &#34;/usr/local/lib/python3.11/site-packages/flask/app.py&#34;, line 2525, in wsgi_app\n    response = self.full_dispatch_request()\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File &#34;/usr/local/lib/python3.11/site-packages/flask/app.py&#34;, line 1822, in full_dispatch_request\n    rv = self.handle_user_exception(e)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File &#34;/usr/local/lib/python3.11/site-packages/flask/app.py&#34;, line 1820, in full_dispatch_request\n    rv = self.dispatch_request()\n         ^^^^^^^^^^^^^^^^^^^^^^^\n  File &#34;/usr/local/lib/python3.11/site-packages/flask/app.py&#34;, line 1796, in dispatch_request\n    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File &#34;/usr/local/lib/python3.11/site-packages/connexion/decorators/decorator.py&#34;, line 68, in wrapper\n    response = function(request)\n               ^^^^^^^^^^^^^^^^^\n  File &#34;/usr/local/lib/python3.11/site-packages/connexion/decorators/uri_parsing.py&#34;, line 149, in wrapper\n    response = function(request)\n               ^^^^^^^^^^^^^^^^^\n  File &#34;/usr/local/lib/python3.11/site-packages/connexion/decorators/parameter.py&#34;, line 120, in wrapper\n    return function(**kwargs)\n           ^^^^^^^^^^^^^^^^^^\n  File &#34;/vampi/api_views/main.py&#34;, line 9, in populate_db\n    User.init_db_users()\n  File &#34;/vampi/models/user_model.py&#34;, line 101, in init_db_users\n    User.register_user(&#34;admin&#34;, &#34;pass1&#34;, &#34;admin@mail.com&#34;, True)\n  File &#34;/vampi/models/user_model.py&#34;, line 89, in register_user\n    db.session.commit()\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py&#34;, line 538, in commit\n    return self._proxied.commit()\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py&#34;, line 1903, in commit\n    trans.commit(_to_root=True)\n  File &#34;&lt;string&gt;&#34;, line 2, in commit\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py&#34;, line 137, in _go\n    ret_value = fn(self, *arg, **kw)\n                ^^^^^^^^^^^^^^^^^^^^\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py&#34;, line 1218, in commit\n    self._prepare_impl()\n  File &#34;&lt;string&gt;&#34;, line 2, in _prepare_impl\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py&#34;, line 137, in _go\n    ret_value = fn(self, *arg, **kw)\n                ^^^^^^^^^^^^^^^^^^^^\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py&#34;, line 1193, in _prepare_impl\n    self.session.flush()\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py&#34;, line 4140, in flush\n    self._flush(objects)\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py&#34;, line 4276, in _flush\n    with util.safe_reraise():\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py&#34;, line 147, in __exit__\n    raise exc_value.with_traceback(exc_tb)\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py&#34;, line 4237, in _flush\n    flush_context.execute()\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py&#34;, line 467, in execute\n    rec.execute(self)\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py&#34;, line 644, in execute\n    util.preloaded.orm_persistence.save_obj(\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py&#34;, line 93, in save_obj\n    _emit_insert_statements(\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py&#34;, line 1188, in _emit_insert_statements\n    result = connection.execute(\n             ^^^^^^^^^^^^^^^^^^^\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py&#34;, line 1414, in execute\n    return meth(\n           ^^^^^\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py&#34;, line 489, in _execute_on_connection\n    return connection._execute_clauseelement(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py&#34;, line 1638, in _execute_clauseelement\n    ret = self._execute_context(\n          ^^^^^^^^^^^^^^^^^^^^^^\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py&#34;, line 1842, in _execute_context\n    return self._exec_single_context(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py&#34;, line 1983, in _exec_single_context\n    self._handle_dbapi_exception(\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py&#34;, line 2325, in _handle_dbapi_exception\n    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py&#34;, line 1964, in _exec_single_context\n    self.dialect.do_execute(\n  File &#34;/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py&#34;, line 747, in do_execute\n    cursor.execute(statement, parameters)\nsqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: books.book_title\n[SQL: INSERT INTO books (book_title, secret_content, user_id) VALUES (?, ?, ?)]\n[parameters: (&#39;bookTitle45&#39;, &#39;secret for bookTitle45&#39;, 3)]\n(Background on this error at: https://sqlalche.me/e/20/gkpj)\n</textarea>\n</div>\n<div class="explanation">\n  The debugger caught an exception in your WSGI application.  You can now\n  look at the traceback which led to the error.  <span class="nojavascript">\n  If you enable JavaScript you can also use additional features such as code\n  execution (if the evalex feature is enabled), automatic pasting of the\n  exceptions and much more.</span>\n</div>\n      <div class="footer">\n        Brought to you by <strong class="arthur">DON\'T PANIC</strong>, your\n        friendly Werkzeug powered traceback interpreter.\n      </div>\n    </div>\n\n    <div class="pin-prompt">\n      <div class="inner">\n        <h3>Console Locked</h3>\n        <p>\n          The console is locked and needs to be unlocked by entering the PIN.\n          You can find the PIN printed out on the standard output of your\n          shell that runs the server.\n        <form>\n          <p>PIN:\n            <input type=text name=pin size=14>\n            <input type=submit name=btn value="Confirm Pin">\n        </form>\n      </div>\n    </div>\n  </body>\n</html>\n\n<!--\n\nTraceback (most recent call last):\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context\n    self.dialect.do_execute(\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute\n    cursor.execute(statement, parameters)\nsqlite3.IntegrityError: UNIQUE constraint failed: books.book_title\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__\n    return self.wsgi_app(environ, start_response)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app\n    response = self.handle_exception(e)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app\n    response = self.full_dispatch_request()\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request\n    rv = self.handle_user_exception(e)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request\n    rv = self.dispatch_request()\n         ^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request\n    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/local/lib/python3.11/site-packages/connexion/decorators/decorator.py", line 68, in wrapper\n    response = function(request)\n               ^^^^^^^^^^^^^^^^^\n  File "/usr/local/lib/python3.11/site-packages/connexion/decorators/uri_parsing.py", line 149, in wrapper\n    response = function(request)\n               ^^^^^^^^^^^^^^^^^\n  File "/usr/local/lib/python3.11/site-packages/connexion/decorators/parameter.py", line 120, in wrapper\n    return function(**kwargs)\n           ^^^^^^^^^^^^^^^^^^\n  File "/vampi/api_views/main.py", line 9, in populate_db\n    User.init_db_users()\n  File "/vampi/models/user_model.py", line 101, in init_db_users\n    User.register_user("admin", "pass1", "admin@mail.com", True)\n  File "/vampi/models/user_model.py", line 89, in register_user\n    db.session.commit()\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 538, in commit\n    return self._proxied.commit()\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1903, in commit\n    trans.commit(_to_root=True)\n  File "<string>", line 2, in commit\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go\n    ret_value = fn(self, *arg, **kw)\n                ^^^^^^^^^^^^^^^^^^^^\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1218, in commit\n    self._prepare_impl()\n  File "<string>", line 2, in _prepare_impl\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go\n    ret_value = fn(self, *arg, **kw)\n                ^^^^^^^^^^^^^^^^^^^^\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1193, in _prepare_impl\n    self.session.flush()\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4140, in flush\n    self._flush(objects)\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4276, in _flush\n    with util.safe_reraise():\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__\n    raise exc_value.with_traceback(exc_tb)\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4237, in _flush\n    flush_context.execute()\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 467, in execute\n    rec.execute(self)\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 644, in execute\n    util.preloaded.orm_persistence.save_obj(\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj\n    _emit_insert_statements(\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 1188, in _emit_insert_statements\n    result = connection.execute(\n             ^^^^^^^^^^^^^^^^^^^\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1414, in execute\n    return meth(\n           ^^^^^\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 489, in _execute_on_connection\n    return connection._execute_clauseelement(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement\n    ret = self._execute_context(\n          ^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context\n    return self._exec_single_context(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context\n    self._handle_dbapi_exception(\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2325, in _handle_dbapi_exception\n    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context\n    self.dialect.do_execute(\n  File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute\n    cursor.execute(statement, parameters)\nsqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: books.book_title\n[SQL: INSERT INTO books (book_title, secret_content, user_id) VALUES (?, ?, ?)]\n[parameters: (\'bookTitle45\', \'secret for bookTitle45\', 3)]\n(Background on this error at: https://sqlalche.me/e/20/gkpj)\n\n\n-->\n'
+
+2026-11-23 19:50:48.589: Attempting to reproduce bug...
+2026-11-23 19:50:48.591: Sending: 'GET /createdb HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 0c314f3b-9595-492f-80b5-45eaf3ad7a65\r\n\r\n'
+
+2026-11-23 19:50:48.657: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 36\r\nConnection: close\r\n\r\n{ "message": "Database populated." }'
+
+2026-11-23 19:50:48.661: Done replaying sequence.
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: ae44d6ba2a1e0478a794c87961c46c75fa01910f
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'createdb'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.681: Sending: 'GET /createdb HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 46548a75-65b0-45cc-8b01-23d9431afee1\r\n\r\n'
+
+2026-11-23 19:50:48.729: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 36\r\nConnection: close\r\n\r\n{ "message": "Database populated." }'
+
+
+Generation-1: Rendering Sequence-9
+
+	Request: 1 (Remaining candidate combinations: 4)
+	Request hash: af1cad1f1eb2bf503dc605137043029f04849e33
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [name1, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.739: Sending: 'DELETE /users/v1/name1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 183bae67-14c1-4bd1-8ac6-efd41a686ba4\r\n\r\n'
+
+2026-11-23 19:50:48.747: Received: 'HTTP/1.1 401 UNAUTHORIZED\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 63\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "Only Admins may delete users!"}'
+
+
+Generation-1: Rendering Sequence-9
+
+	Request: 1 (Remaining candidate combinations: 3)
+	Request hash: af1cad1f1eb2bf503dc605137043029f04849e33
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [name1, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.755: Sending: 'DELETE /users/v1/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 76402ab7-e5a1-4322-a621-b1ab54375b04\r\n\r\n'
+
+2026-11-23 19:50:48.762: Received: 'HTTP/1.1 401 UNAUTHORIZED\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 63\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "Only Admins may delete users!"}'
+
+
+Generation-1: Rendering Sequence-9
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: af1cad1f1eb2bf503dc605137043029f04849e33
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [name1, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.771: Sending: 'DELETE /users/v1/name1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 36d72b89-abce-4b4e-9d45-ff4cc4991a62\r\n\r\n'
+
+2026-11-23 19:50:48.779: Received: 'HTTP/1.1 401 UNAUTHORIZED\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 63\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "Only Admins may delete users!"}'
+
+
+Generation-1: Rendering Sequence-9
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: af1cad1f1eb2bf503dc605137043029f04849e33
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [name1, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.791: Sending: 'DELETE /users/v1/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 9026ed02-56a2-41c6-9ff6-d9ef8672b3b7\r\n\r\n'
+
+2026-11-23 19:50:48.799: Received: 'HTTP/1.1 401 UNAUTHORIZED\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 63\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "Only Admins may delete users!"}'
+
+
+Generation-1: Rendering Sequence-10
+
+	Request: 1 (Remaining candidate combinations: 4)
+	Request hash: ba67ec4635f39a8a824bc25ef29276f3d76533fe
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [name1, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.810: Sending: 'GET /users/v1/name1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 3f70e5e8-545a-484d-bda0-1ea83a679968\r\n\r\n'
+
+2026-11-23 19:50:48.818: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 48\r\nConnection: close\r\n\r\n{"username": "name1", "email": "mail1@mail.com"}'
+
+
+Generation-1: Rendering Sequence-11
+
+	Request: 1 (Remaining candidate combinations: 4)
+	Request hash: c70e5420fe48130089c4d6574393f24536aeadf8
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'books'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [bookTitle77, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.827: Sending: 'GET /books/v1/bookTitle77 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 351bd434-b96b-43b2-ac74-6ba85228607f\r\n\r\n'
+
+2026-11-23 19:50:48.840: Received: 'HTTP/1.1 404 NOT FOUND\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 49\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "Book not found!"}'
+
+
+Generation-1: Rendering Sequence-11
+
+	Request: 1 (Remaining candidate combinations: 3)
+	Request hash: c70e5420fe48130089c4d6574393f24536aeadf8
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'books'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [bookTitle77, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.851: Sending: 'GET /books/v1/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 33eeda7a-189e-4191-ab39-9901232248ff\r\n\r\n'
+
+2026-11-23 19:50:48.870: Received: 'HTTP/1.1 404 NOT FOUND\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 49\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "Book not found!"}'
+
+
+Generation-1: Rendering Sequence-11
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: c70e5420fe48130089c4d6574393f24536aeadf8
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'books'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [bookTitle77, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.887: Sending: 'GET /books/v1/bookTitle77 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 2dcecb97-1b14-47cb-92bf-91c0e0c28bcb\r\n\r\n'
+
+2026-11-23 19:50:48.897: Received: 'HTTP/1.1 404 NOT FOUND\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 49\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "Book not found!"}'
+
+
+Generation-1: Rendering Sequence-11
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: c70e5420fe48130089c4d6574393f24536aeadf8
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'books'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [bookTitle77, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.906: Sending: 'GET /books/v1/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 95b26bfd-1a70-4877-a5b9-ddb8c368b938\r\n\r\n'
+
+2026-11-23 19:50:48.914: Received: 'HTTP/1.1 404 NOT FOUND\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 49\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "Book not found!"}'
+
+
+Generation-1: Rendering Sequence-12
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: de858f1b3fbbea3360cd73d4d5d82c3dd09b0d61
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'books'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.925: Sending: 'GET /books/v1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: c0ae54f9-4a57-466d-a2b0-8aead5e6fb97\r\n\r\n'
+
+2026-11-23 19:50:48.934: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 230\r\nConnection: close\r\n\r\n{\n  "Books": [\n    {\n      "book_title": "bookTitle97",\n      "user": "name1"\n    },\n    {\n      "book_title": "bookTitle94",\n      "user": "name2"\n    },\n    {\n      "book_title": "bookTitle11",\n      "user": "admin"\n    }\n  ]\n}\n'
+
+
+Generation-1: Rendering Sequence-13
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: f030bbbd32966cde41037b98a8849c46b76e4bc1
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.943: Sending: 'GET / HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: bd1bdf35-76de-4623-89a1-29e20ee07cb3\r\n\r\n'
+
+2026-11-23 19:50:48.951: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 271\r\nConnection: close\r\n\r\n{ "message": "VAmPI the Vulnerable API", "help": "VAmPI is a vulnerable on purpose API. It was created in order to evaluate the efficiency of third party tools in identifying vulnerabilities in APIs but it can also be used in learning/teaching purposes.", "vulnerable":1}'
+
+
+Generation-1: Rendering Sequence-14
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: fc93a5f92d40789557b4fcc7c41e5ffecf7690f8
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-23 19:50:48.961: Sending: 'GET /users/v1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: f14d8182-aa92-41de-afab-5a0e18445bdc\r\n\r\n'
+
+2026-11-23 19:50:48.968: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Mon, 23 Nov 2026 19:50:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 236\r\nConnection: close\r\n\r\n{\n  "users": [\n    {\n      "email": "mail1@mail.com",\n      "username": "name1"\n    },\n    {\n      "email": "mail2@mail.com",\n      "username": "name2"\n    },\n    {\n      "email": "admin@mail.com",\n      "username": "admin"\n    }\n  ]\n}\n'
+

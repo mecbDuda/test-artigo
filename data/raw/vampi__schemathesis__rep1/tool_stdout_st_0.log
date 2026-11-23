@@ -1,0 +1,509 @@
+Schemathesis v4.34.0
+━━━━━━━━━━━━━━━━━━━━
+
+ ✅  Loaded specification from http://localhost:8099/openapi3.yml (in 2.08s)
+
+     Base URL:         http://localhost:8080
+     Specification:    Open API 3.0.1
+     Operations:       14 selected / 14 total
+
+ ✅  API capabilities:
+
+     Supports NULL byte in headers:                            ✓
+     Accepts backslash and control characters in URL paths:    ✓
+
+ ❌  Examples (in 0.60s)
+
+     ✅  7 passed  ❌  1 failed  ⏭   6 skipped
+
+ ❌  Coverage (in 3.87s)
+
+     ✅  6 passed  ❌  8 failed
+
+ 🚫  Fuzzing (in 927.67s)
+
+     ✅  6 passed  ❌  7 failed  🚫  1 error
+
+ ❌  Stateful (in 867.38s)
+
+     Scenarios:    9788
+     API Links:    9 covered / 9 selected / 9 total
+
+     ✅ 9116 passed  ❌ 672 failed
+
+==================================== ERRORS ====================================
+________________________________ POST /books/v1 ________________________________
+Network Error
+
+Read timed out after 10 seconds
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{}' http://localhost:8080/books/v1
+________________________________ GET /books/v1 _________________________________
+Network Error
+
+Read timed out after 10 seconds
+
+Reproduce with:
+
+    curl -X GET -H 'Authorization: [Filtered]' http://localhost:8080/books/v1
+________________________ PUT /users/v1/{username}/email ________________________
+Network Error
+
+Read timed out after 10 seconds
+
+Reproduce with:
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"email": "999999999999999999999999999999"}' http://localhost:8080/users/v1/admin/email
+
+Need more help?
+    Join our Discord server: https://discord.gg/R9ASRAmHnA
+
+=================================== FAILURES ===================================
+_________________________ DELETE /users/v1/{username} __________________________
+1. Test Case ID: MQUx9g
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[401] Unauthorized:
+
+    `{
+      "detail": "No authorization token provided",
+      "status": 401,
+      "title": "Unauthorized",
+      "type": "about:blank"
+    }`
+
+Reproduce with:
+
+    curl -X DELETE http://localhost:8080/users/v1/admin
+
+    st replay MQUx9g
+
+__________________________ GET /books/v1/{book_title} __________________________
+1. Test Case ID: R9TmC9
+
+- ST108 Response violates schema
+
+    {"book_title":"book99","owner":"name1","secret":"pass1secret"} is not of type "array"
+
+    Validated against the response schema for status code 200.
+
+    Schema:
+
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "book_title": {
+                        "type": "string",
+                        "example": "bookTitle77"
+                    },
+                    "owner": {
+                        "type": "string",
+                        "example": "name1"
+                    },
+                    "secret": {
+                        "type": "string",
+                        "example": "secret for bookTitle77"
+                    }
+                }
+            }
+        }
+
+    Value:
+
+        {
+            "book_title": "book99",
+            "owner": "name1",
+            "secret": "pass1secret"
+        }
+
+[200] OK:
+
+    `{"book_title": "book99", "owner": "name1", "secret": "pass1secret"}`
+
+Reproduce with:
+
+    curl -X GET -H 'Authorization: [Filtered]' http://localhost:8080/books/v1/book99
+
+    st replay R9TmC9
+
+2. Test Case ID: XjWcFw
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[401] Unauthorized:
+
+    `{
+      "detail": "No authorization token provided",
+      "status": 401,
+      "title": "Unauthorized",
+      "type": "about:blank"
+    }`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8080/books/v1/book99
+
+    st replay XjWcFw
+
+________________________________ GET /createdb _________________________________
+1. Test Case ID: ZTBg7R
+
+- ST101 Server error
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200
+
+[500] Internal Server Error:
+
+    `<!doctype html>
+    <html lang=en>
+      <head>
+        <title>sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: books.book_title
+    [SQL: INSERT INTO books (book_title, secret_content, user_id) VALUES (?, ?, ?)]
+    [parameters: ('bookTitle41', 'secret for bookTitle41', 3)]
+    (Background on this error at: https://sqlalche.me/e/20/gkpj)
+     // Werkzeug Debugger</title>
+        <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">
+        <link rel="shortcut icon"
+            href="?_ // Output truncated...`
+
+Reproduce with:
+
+    curl -X GET -H 'Authorization: [Filtered]' http://localhost:8080/createdb
+
+    st replay ZTBg7R
+
+___________________________________ GET /me ____________________________________
+1. Test Case ID: p3yBwq
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[401] Unauthorized:
+
+    `{
+      "detail": "No authorization token provided",
+      "status": 401,
+      "title": "Unauthorized",
+      "type": "about:blank"
+    }`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8080/me
+
+    st replay p3yBwq
+
+___________________________ GET /users/v1/{username} ___________________________
+1. Test Case ID: YSlCbS
+
+- ST101 Server error
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 404
+
+[500] Internal Server Error:
+
+    `<!doctype html>
+    <html lang=en>
+      <head>
+        <title>sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unrecognized token: "'''"
+    [SQL: SELECT * FROM users WHERE username = ''']
+    (Background on this error at: https://sqlalche.me/e/20/e3q8)
+     // Werkzeug Debugger</title>
+        <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">
+        <link rel="shortcut icon"
+            href="?__debugger__=yes&amp;cmd=resource&amp;f=console.png">
+        <script src="?__debugger__=yes&amp;cmd=resource // Output truncated...`
+
+Reproduce with:
+
+    curl -X GET -H 'Authorization: [Filtered]' http://localhost:8080/users/v1/%27
+
+    st replay YSlCbS
+
+________________________________ POST /books/v1 ________________________________
+1. Test Case ID: xRJvTC
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[400] Bad Request:
+
+    `{ "status": "fail", "message": "Book Already exists!"}`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"book_title": "book99", "secret": "[Filtered]"}' http://localhost:8080/books/v1
+
+    st replay xRJvTC
+
+_____________________________ POST /users/v1/login _____________________________
+1. Test Case ID: 8kiK8p
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[400] Bad Request:
+
+    `{ "status": "fail", "message": "'username' is a required property"}`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{}' http://localhost:8080/users/v1/login
+
+    st replay 8kiK8p
+
+___________________________ POST /users/v1/register ____________________________
+1. Test Case ID: yJtOnE
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[400] Bad Request:
+
+    `{ "status": "fail", "message": "'username' is a required property"}`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{}' http://localhost:8080/users/v1/register
+
+    st replay yJtOnE
+
+________________________ PUT /users/v1/{username}/email ________________________
+1. Test Case ID: eUYZtO
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[401] Unauthorized:
+
+    `{
+      "detail": "No authorization token provided",
+      "status": 401,
+      "title": "Unauthorized",
+      "type": "about:blank"
+    }`
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"email": "mail3@mail.com"}' http://localhost:8080/users/v1/name1/email
+
+    st replay eUYZtO
+
+2. Test Case ID: SmalcQ
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[400] Bad Request:
+
+    `{ "status": "fail", "message": "Please provide a proper JSON body."}`
+
+Reproduce with:
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{}' http://localhost:8080/users/v1/name1/email
+
+    st replay SmalcQ
+
+______________________ PUT /users/v1/{username}/password _______________________
+1. Test Case ID: ZSBAGx
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[401] Unauthorized:
+
+    `{
+      "detail": "No authorization token provided",
+      "status": 401,
+      "title": "Unauthorized",
+      "type": "about:blank"
+    }`
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"password": "[Filtered]"}' http://localhost:8080/users/v1/name1/password
+
+    st replay ZSBAGx
+
+2. Test Case ID: KDwXd6
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[400] Bad Request:
+
+    `{ "status": "fail", "message": "Malformed Data"}`
+
+Reproduce with:
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{}' http://localhost:8080/users/v1/name1/password
+
+    st replay KDwXd6
+
+________________________________ Stateful tests ________________________________
+1. Test Case ID: yPEaYl
+
+- ST101 Server error
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 400, 401
+
+[500] Internal Server Error:
+
+    `<!doctype html>
+    <html lang=en>
+      <head>
+        <title>sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: books.book_title
+    [SQL: INSERT INTO books (book_title, secret_content, user_id) VALUES (?, ?, ?)]
+    [parameters: ('bookTitle14', '', 1)]
+    (Background on this error at: https://sqlalche.me/e/20/gkpj)
+     // Werkzeug Debugger</title>
+        <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">
+        <link rel="shortcut icon"
+            href="?__debugger__=yes&amp;cm // Output truncated...`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"": -4.945044658344474e+16, "\u0004\u0089\u00a8\u00a8\uda0b\udfd4|\udaa4\udf89": [], "Infinity": [{"\u0099\ud9e8\udf6f=\u00cb\udba3\udd9a": 27413}], "secret": "[Filtered]", "book_title": "bookTitle14"}' http://localhost:8080/books/v1
+
+    st replay yPEaYl
+
+2. Test Case ID: v0kmJQ
+
+- ST302 Created resource not found
+
+    The API returned `404 Not Found` for a resource that was just created.
+
+    Created with      : `POST /books/v1`
+    Not available with: `GET /books/v1/{book_title}`
+
+[404] Not Found:
+
+    `{
+      "detail": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.",
+      "status": 404,
+      "title": "Not Found",
+      "type": "about:blank"
+    }`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"book_title": "", "secret": "[Filtered]"}' http://localhost:8080/books/v1
+    curl -X GET -H 'Authorization: [Filtered]' http://localhost:8080/books/v1/
+
+    st replay v0kmJQ
+
+3. Test Case ID: IBB4ER
+
+- ST103 Undocumented status code
+
+    Received: 308
+    Documented: 200, 401, 404
+
+[308] Permanent Redirect:
+
+    `<!doctype html>
+    <html lang=en>
+    <title>Redirecting...</title>
+    <h1>Redirecting...</h1>
+    <p>You should be redirected automatically to the target URL: <a href="http://api:5000/books/v1/%C3%8F">http://api:5000/books/v1/%C3%8F</a>. If not, click the link.`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"\u00b4\u00eeI": [[null]], "": [], "\u00ad\u00db\u00a4\b\u00a3": [" \u00d7\u00c8"], "none": null, "secret": "[Filtered]", "book_title": "/\u00cf"}' http://localhost:8080/books/v1
+    curl -X GET -H 'Authorization: [Filtered]' http://localhost:8080/books/v1/%2F%C3%8F
+
+    st replay IBB4ER
+
+=================================== WARNINGS ===================================
+
+Authentication failed: 1 operation returned only 401/403 responses
+
+401 Unauthorized (1 operation):
+  - DELETE /users/v1/{username}
+
+💡 Ensure valid authentication credentials are set via `--auth` or `-H`
+
+=================================== SUMMARY ====================================
+
+API Operations:
+  Selected: 14/14
+  Tested: 14
+
+Test Phases:
+  ❌ Examples
+  ❌ Coverage
+  🚫 Fuzzing
+  ❌ Stateful
+
+Failures:
+  ❌ ST101 Server error: 3
+  ❌ ST108 Response violates schema: 1
+  ❌ ST302 Created resource not found: 1
+  ❌ ST202 Schema-valid request rejected: 5
+  ❌ ST105 Undocumented Content-Type: 5
+  ❌ ST103 Undocumented status code: 4
+
+For more information, run `st explain <code>` for ST101, ST103, ST105, ST108, ST202, ST302.
+
+Errors:
+  🚫 Network Error: 3
+
+Warnings:
+  ⚠️ Authentication failed: 1 operation returned only 401/403 responses
+
+_______________________________ Schema Coverage ________________________________
+
+Operations           14/14   100.0%
+Parameters           10/10   100.0%
+Keywords             24/24   100.0%
+Examples             14/14   100.0%
+Responses            26/28    92.8%
+Response Keywords   120/135   88.8%
+
+HTML report         ./schema-coverage.html
+
+Test cases:
+  84224 generated, 16 found 19 unique failures, 4 errored
+
+Reports:
+  - JUnit: /out/junit-20261123T205140Z.xml
+
+Seed: 1001
+
+================= 19 failures, 3 errors, 1 warning in 1800.07s =================

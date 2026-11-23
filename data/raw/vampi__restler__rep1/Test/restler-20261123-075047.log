@@ -1,0 +1,43 @@
+Restler Information: 0 : Starting task Test...
+    DateTime=2026-11-23T19:50:47.1241799Z
+Restler Information: 0 : Launching 'python --version'
+    DateTime=2026-11-23T19:50:47.8065976Z
+Restler Information: 0 : Launching 'python3 --version'
+    DateTime=2026-11-23T19:50:47.8066666Z
+Restler Information: 0 : Process execution terminated in 00:00:00.0286413 with exit code 0x0: 'python3 --version'
+    DateTime=2026-11-23T19:50:47.8376951Z
+Restler Information: 0 : Process execution terminated in 00:00:00.0202626 with exit code 0x0: 'python --version'
+    DateTime=2026-11-23T19:50:47.8377771Z
+Restler Information: 0 : (21) python3 --version exited with code: 0
+    DateTime=2026-11-23T19:50:47.8447615Z
+Restler Information: 0 : (22) python --version exited with code: 0
+    DateTime=2026-11-23T19:50:47.8448119Z
+Restler Information: 0 : Launching 'python3 -B "/RESTler/restler/../engine/restler.py" --restler_grammar "/work/Compile/grammar.py" --custom_mutations "/work/Compile/dict.json" --set_version 9.2.4  --token_refresh_interval 3600 --token_refresh_cmd "cat /work/token.txt"  --no_ssl   --settings "/work/Compile/engine_settings.json"   --target_ip 127.0.0.1 --target_port 8080 --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode directed-smoke-test'
+    DateTime=2026-11-23T19:50:47.8674211Z
+Restler Information: 0 : Process execution terminated in 00:00:01.1283246 with exit code 0x0: 'python3 -B "/RESTler/restler/../engine/restler.py" --restler_grammar "/work/Compile/grammar.py" --custom_mutations "/work/Compile/dict.json" --set_version 9.2.4  --token_refresh_interval 3600 --token_refresh_cmd "cat /work/token.txt"  --no_ssl   --settings "/work/Compile/engine_settings.json"   --target_ip 127.0.0.1 --target_port 8080 --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode directed-smoke-test'
+    DateTime=2026-11-23T19:50:48.9958552Z
+Restler Information: 0 : (24) python3 -B "/RESTler/restler/../engine/restler.py" --restler_grammar "/work/Compile/grammar.py" --custom_mutations "/work/Compile/dict.json" --set_version 9.2.4  --token_refresh_interval 3600 --token_refresh_cmd "cat /work/token.txt"  --no_ssl   --settings "/work/Compile/engine_settings.json"   --target_ip 127.0.0.1 --target_port 8080 --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode directed-smoke-test exited with code: 0
+    DateTime=2026-11-23T19:50:48.9959525Z
+Restler Information: 0 : Launching 'dotnet "/RESTler/restler/../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "/work/Test" --output_dir "/work/Test/ResponseBuckets" --dictionary_file "/work/Compile/dict.json" --max_instances_per_bucket 10'
+    DateTime=2026-11-23T19:50:49.0061499Z
+Restler Information: 0 : Process execution terminated in 00:00:00.5713488 with exit code 0x0: 'dotnet "/RESTler/restler/../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "/work/Test" --output_dir "/work/Test/ResponseBuckets" --dictionary_file "/work/Compile/dict.json" --max_instances_per_bucket 10'
+    DateTime=2026-11-23T19:50:49.5775829Z
+Restler Information: 0 : (28) dotnet "/RESTler/restler/../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "/work/Test" --output_dir "/work/Test/ResponseBuckets" --dictionary_file "/work/Compile/dict.json" --max_instances_per_bucket 10 exited with code: 0
+    DateTime=2026-11-23T19:50:49.5777446Z
+Restler Information: 0 : Request coverage (successful / total): 12 / 14
+    DateTime=2026-11-23T19:50:49.7394348Z
+Restler Information: 0 : Attempted requests: 14 / 14
+    DateTime=2026-11-23T19:50:49.7394958Z
+Restler Information: 0 : Bugs were found!
+    DateTime=2026-11-23T19:50:49.7452256Z
+Restler Information: 0 : Bug buckets:
+    DateTime=2026-11-23T19:50:49.7452666Z
+Restler Information: 0 : 
+main_driver_500: 1
+    DateTime=2026-11-23T19:50:49.7460886Z
+Restler Information: 0 : See 'coverage_failures_to_investigate.txt' to investigate API coverage.
+    DateTime=2026-11-23T19:50:49.8366529Z
+Restler Information: 0 : Task Test succeeded.
+    DateTime=2026-11-23T19:50:49.8395948Z
+Restler Information: 0 : Collecting logs...
+    DateTime=2026-11-23T19:50:50.2269663Z
