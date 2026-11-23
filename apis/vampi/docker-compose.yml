@@ -1,9 +1,12 @@
 # VAmPI (https://github.com/erev0s/VAmPI) atrás de um proxy reverso de captura.
-# As ferramentas SEMPRE acessam a API pelo proxy (porta 8080), nunca direto.
+# As ferramentas SEMPRE acessam a API pelo proxy (porta 8080+k do slot k), nunca direto.
 services:
   api:
     # "latest" de 2026-04-07, fixada por digest (ver docs/versoes.md)
     image: erev0s/vampi:latest@sha256:0a5a224b6e14ae7da6a6ea265178ff71286ff903aec74adee98f660bb0e4ca12
+    # limites iguais para todas as ferramentas, definidos por slot (scripts/limites.sh)
+    cpus: ${API_CPUS:-0}
+    mem_limit: ${API_MEM:-0}
     environment:
       - vulnerable=1                    # modo vulnerável: as vulnerabilidades documentadas ficam ativas
       - tokentimetolive=7200            # token dura mais que a campanha
@@ -12,11 +15,13 @@ services:
 
   proxy:
     image: mitmproxy/mitmproxy:10.3.0@sha256:a22a4f2178ac5876598402c7060868ec96e90710b31e768ed25a57f501d9f48d
+    cpus: ${PROXY_CPUS:-0}
+    mem_limit: ${PROXY_MEM:-0}
     command: >
       mitmdump --mode reverse:http://api:5000 --listen-port 8080
       -s /addon/log_flows.py --set flow_detail=0
     ports:
-      - "8080:8080"
+      - "${PROXY_PORT:-8080}:8080"   # porta do slot (8080+k)
     volumes:
       - ../../proxy:/addon:ro
       - ${LOG_DIR:?defina LOG_DIR}:/logs

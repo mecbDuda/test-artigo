@@ -38,10 +38,37 @@ Autenticação: VAmPI usa JWT Bearer (login de `name1`); petclinic-rest e catwat
 
 ## Máquina
 
-Máquina da **campanha completa** (a partir de 2026-11-23): GitHub Codespace. A
-máquina da preparação era outra (Intel Core i5-13400F, Windows 11 com WSL2/Ubuntu
-24.04, 12 GB alocados ao WSL, Docker 29.1.3, Compose 2.40.3, Python 3.12.3). O
-estudo piloto (branch `piloto`, pasta `piloto/`) rodou neste mesmo Codespace.
+### Campanha completa
+
+A campanha completa (27 execuções, a partir de 2026-11-23 à noite) rodou nesta
+máquina, a mesma da preparação, com **2 slots paralelos** (`docs/desvios.md`, D21 a D26).
+
+| Item | Valor |
+|---|---|
+| Ambiente | PC desktop com Windows 11 Pro (10.0.26300) e WSL 2.4.13 (Ubuntu 24.04.5 LTS, kernel 5.15.167.4-microsoft-standard-WSL2); Docker Engine nativo no WSL, não o Docker Desktop |
+| CPU | Intel Core i5-13400F, 10 núcleos (6P + 4E), 16 threads (`nproc` = 16) |
+| RAM | 16 GB físicos (15,8 GiB visíveis no Windows); 12 GB alocados ao WSL (`.wslconfig`), 11.964 MiB visíveis no Linux; swap de 3 GiB |
+| Disco | disco virtual ext4 do WSL (1.007 GB, 950 GB livres) |
+| Docker | Docker Engine 29.1.3, storage overlayfs, cgroup v1 (cgroupfs) |
+| Docker Compose | 2.40.3 |
+| Python | 3.12.3 (pyyaml 6.0.1, scipy 1.11.4) |
+| curl / tmux / git | 8.5.0 / 3.4 / 2.43.0 |
+| Rede | `--network host` testado e funcionando (`docker run --rm --network host alpine wget …`) |
+
+Limites por contêiner em cada slot (`scripts/limites.sh 2`; iguais para as três ferramentas):
+
+| Contêiner | CPUs | Memória |
+|---|---|---|
+| Ferramenta (Schemathesis, RESTler ou EvoMaster) | 4,00 | 3.038 MiB |
+| API alvo | 2,00 | 1.536 MiB (APIs Java com `-Xmx1152m`) |
+| Proxy (mitmproxy) | 1,00 | 384 MiB |
+| Reserva para o sistema | 2 CPUs | 2.048 MiB |
+
+### Codespace (estudo piloto e campanha interrompida)
+
+O estudo piloto (branch `piloto`, pasta `piloto/`) e uma primeira tentativa de
+campanha, sequencial e interrompida após 6 execuções (D21; dados em
+`campanha_codespace/`), rodaram num GitHub Codespace:
 
 | Item | Valor |
 |---|---|

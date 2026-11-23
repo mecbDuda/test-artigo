@@ -24,8 +24,13 @@ fi
 
 start=$SECONDS
 # 1) compile
-docker run --rm --network host -v "$OUT_DIR:/work" -w /work --entrypoint sh "$RESTLER_IMAGE" \
-  -c "$RESTLER_BIN compile --api_spec $spec_in" > "$OUT_DIR/restler_compile.log" 2>&1
+# compile e test usam run_limited só para ter o nome com sufixo do slot, os mesmos
+# limites de CPU/memória da ferramenta e o registro do contêiner; o prazo dado é o
+# orçamento inteiro, que eles nunca atingem
+LOG_NAME=restler_compile.log run_limited "restler_compile" "$BUDGET_SEC" \
+  -v "$OUT_DIR:/work" -w /work --entrypoint sh "$RESTLER_IMAGE" \
+  -c "$RESTLER_BIN compile --api_spec $spec_in"
+[ -f "$OUT_DIR/Compile/grammar.py" ] || { echo "!! RESTler compile não gerou a gramática"; exit 1; }
 
 # fixa a semente aleatória nas configurações do motor.
 # Se o caminho base compilado for "/" (ex.: Swagger 2.0 com basePath "/"), o RESTler
@@ -48,8 +53,9 @@ common="--grammar_file /work/Compile/grammar.py --dictionary_file /work/Compile/
  --settings /work/Compile/engine_settings.json --no_ssl --target_ip $host --target_port $port $auth_args"
 
 # 2) test (smoke): mede cobertura inicial de requisições
-docker run --rm --network host -v "$OUT_DIR:/work" -w /work --entrypoint sh "$RESTLER_IMAGE" \
-  -c "$RESTLER_BIN test $common" > "$OUT_DIR/restler_test.log" 2>&1 || true
+LOG_NAME=restler_test.log run_limited "restler_test" "$BUDGET_SEC" \
+  -v "$OUT_DIR:/work" -w /work --entrypoint sh "$RESTLER_IMAGE" \
+  -c "$RESTLER_BIN test $common" || true
 
 # 3) fuzz com o tempo restante (o RESTler recebe o orçamento em horas)
 remaining=$((BUDGET_SEC - (SECONDS - start)))

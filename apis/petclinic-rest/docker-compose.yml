@@ -6,16 +6,24 @@ services:
   api:
     # imagem pré-construída do WFD, tag FINAL de 2026-11-13, fixada por digest
     image: webfuzzing/wfd-petclinic-rest:FINAL@sha256:ea7d5dcc6d0144479c8636ab0b0cc1125f29e30b5e9f0c08e64e6e820ed1a70f
+    # limites iguais para todas as ferramentas, definidos por slot (scripts/limites.sh)
+    cpus: ${API_CPUS:-0}
+    mem_limit: ${API_MEM:-0}
+    environment:
+      # heap = 75% do limite do contêiner (o padrão da JVM, 25%, daria só 376 MiB; docs/desvios.md)
+      - JAVA_TOOL_OPTIONS=${API_JAVA_OPTS:-}
     networks: [sut]
     # sem "ports": a API só é acessível através do proxy
 
   proxy:
     image: mitmproxy/mitmproxy:10.3.0@sha256:a22a4f2178ac5876598402c7060868ec96e90710b31e768ed25a57f501d9f48d
+    cpus: ${PROXY_CPUS:-0}
+    mem_limit: ${PROXY_MEM:-0}
     command: >
       mitmdump --mode reverse:http://api:8080 --listen-port 8080
       -s /addon/log_flows.py --set flow_detail=0
     ports:
-      - "8080:8080"
+      - "${PROXY_PORT:-8080}:8080"   # porta do slot (8080+k)
     volumes:
       - ../../proxy:/addon:ro
       - ${LOG_DIR:?defina LOG_DIR}:/logs
