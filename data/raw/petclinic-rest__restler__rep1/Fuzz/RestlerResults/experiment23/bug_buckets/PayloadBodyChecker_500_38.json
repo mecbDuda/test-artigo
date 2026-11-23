@@ -1,0 +1,16 @@
+{
+    "status_code": "500",
+    "checker_name": "PayloadBodyChecker",
+    "reproducible": true,
+    "verb": "PUT",
+    "endpoint": null,
+    "status_text": "",
+    "request_sequence": [
+        {
+            "producer_timing_delay": 0,
+            "max_async_wait_time": 0,
+            "replay_request": "PUT /petclinic/api/pets/petida4e49d0de0 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{\"name\":\"fuzzstring\",\"birthDate\":\"fuzzstring\",\"type\":{\"name\":\"fuzzstring\",\"id\":0},\"id\":0,\"ownerId\":0,\"visits\":[{ \"fuzz\" : false }]}",
+            "response": "HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Mon, 23 Nov 2026 21:22:45 GMT\r\nConnection: close\r\n\r\n"
+        }
+    ]
+}

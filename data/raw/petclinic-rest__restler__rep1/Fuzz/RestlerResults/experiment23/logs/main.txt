@@ -1,0 +1,2635 @@
+Random seed: 1001
+Setting fuzzing schemes: bfs-fast
+2026-11-23 21:22:34.762: Going to fuzz a set with 43 requests
+2026-11-23 21:22:34.762: Request-0: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-1: Value Combinations: 6
+2026-11-23 21:22:34.762: Request-2: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-3: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-4: Value Combinations: 16
+2026-11-23 21:22:34.762: Request-5: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-6: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-7: Value Combinations: 4
+2026-11-23 21:22:34.762: Request-8: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-9: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-10: Value Combinations: 4
+2026-11-23 21:22:34.762: Request-11: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-12: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-13: Value Combinations: 16
+2026-11-23 21:22:34.762: Request-14: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-15: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-16: Value Combinations: 20
+2026-11-23 21:22:34.762: Request-17: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-18: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-19: Value Combinations: 16
+2026-11-23 21:22:34.762: Request-20: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-21: Value Combinations: 6
+2026-11-23 21:22:34.762: Request-22: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-23: Value Combinations: 16
+2026-11-23 21:22:34.762: Request-24: Value Combinations: 10
+2026-11-23 21:22:34.762: Request-25: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-26: Value Combinations: 4
+2026-11-23 21:22:34.762: Request-27: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-28: Value Combinations: 4
+2026-11-23 21:22:34.762: Request-29: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-30: Value Combinations: 20
+2026-11-23 21:22:34.762: Request-31: Value Combinations: 16
+2026-11-23 21:22:34.762: Request-32: Value Combinations: 6
+2026-11-23 21:22:34.762: Request-33: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-34: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-35: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-36: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-37: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-38: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-39: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-40: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-41: Value Combinations: 2
+2026-11-23 21:22:34.762: Request-42: Value Combinations: 2
+2026-11-23 21:22:34.762: Avg. Value Combinations per Request: 5.116279069767442
+2026-11-23 21:22:34.762: Median Value Combinations per Request: 2
+2026-11-23 21:22:34.762: Min Value Combinations per Request: 2
+2026-11-23 21:22:34.762: Max Value Combinations per Request: 20
+2026-11-23 21:22:34.762: Total dependencies: 31
+
+2026-11-23 21:22:34.773: Generation: 1 / Sequences Collection Size: 22 
+(After bfs-fast Extend)
+
+2026-11-23 21:24:29.546: Generation: 1 / Sequences Collection Size: 31 
+(After bfs-fast Render)
+
+2026-11-23 21:24:29.549: Final Swagger spec coverage: 13 / 43
+2026-11-23 21:24:29.549: Rendered requests: 22 / 43
+2026-11-23 21:24:29.549: Rendered requests with "valid" status codes: 13 / 22
+2026-11-23 21:24:29.549: Num fully valid requests (no resource creation failures): 13
+2026-11-23 21:24:29.549: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-23 21:24:29.549: Num invalid requests caused by failed resource creations: 0
+2026-11-23 21:24:29.549: Total Creations of Dyn Objects: 487
+2026-11-23 21:24:29.549: Total Requests Sent: {'gc': 349, 'main_driver': 106, 'LeakageRuleChecker': 16, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 0, 'InvalidDynamicObjectChecker': 0, 'PayloadBodyChecker': 1614, 'ExamplesChecker': 0, 'InvalidValueChecker': 0}
+2026-11-23 21:24:29.549: Bug Buckets: {'InvalidValueChecker_500': 9, 'LeakageRuleChecker_500': 1, 'PayloadBodyChecker_500': 82, 'main_driver_500': 2}
+2026-11-23 21:24:29.556: Generation: 2 / Sequences Collection Size: 35 
+(After bfs-fast Extend)
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+2026-11-23 21:26:39.343: Generation: 2 / Sequences Collection Size: 52 
+(After bfs-fast Render)
+
+2026-11-23 21:26:39.343: Final Swagger spec coverage: 26 / 43
+2026-11-23 21:26:39.343: Rendered requests: 33 / 43
+2026-11-23 21:26:39.343: Rendered requests with "valid" status codes: 26 / 33
+2026-11-23 21:26:39.343: Num fully valid requests (no resource creation failures): 26
+2026-11-23 21:26:39.343: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-23 21:26:39.343: Num invalid requests caused by failed resource creations: 0
+2026-11-23 21:26:39.343: Total Creations of Dyn Objects: 1089
+2026-11-23 21:26:39.343: Total Requests Sent: {'gc': 1024, 'main_driver': 262, 'LeakageRuleChecker': 16, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 4, 'InvalidDynamicObjectChecker': 54, 'PayloadBodyChecker': 2740, 'ExamplesChecker': 0, 'InvalidValueChecker': 19}
+2026-11-23 21:26:39.343: Bug Buckets: {'InvalidDynamicObjectChecker_20x': 6, 'InvalidDynamicObjectChecker_500': 9, 'InvalidValueChecker_500': 14, 'LeakageRuleChecker_500': 1, 'PayloadBodyChecker_500': 123, 'main_driver_500': 2}
+2026-11-23 21:26:39.358: Generation: 3 / Sequences Collection Size: 35 
+(After bfs-fast Extend)
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+2026-11-23 21:28:26.746: Generation: 3 / Sequences Collection Size: 31 
+(After bfs-fast Render)
+
+2026-11-23 21:28:26.746: Final Swagger spec coverage: 35 / 43
+2026-11-23 21:28:26.746: Rendered requests: 33 / 43
+2026-11-23 21:28:26.746: Rendered requests with "valid" status codes: 35 / 33
+2026-11-23 21:28:26.746: Num fully valid requests (no resource creation failures): 35
+2026-11-23 21:28:26.746: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-23 21:28:26.746: Num invalid requests caused by failed resource creations: 0
+2026-11-23 21:28:26.746: Total Creations of Dyn Objects: 1357
+2026-11-23 21:28:26.746: Total Requests Sent: {'gc': 1242, 'main_driver': 410, 'LeakageRuleChecker': 23, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 10, 'InvalidDynamicObjectChecker': 117, 'PayloadBodyChecker': 2740, 'ExamplesChecker': 0, 'InvalidValueChecker': 51}
+2026-11-23 21:28:26.746: Bug Buckets: {'InvalidDynamicObjectChecker_20x': 6, 'InvalidDynamicObjectChecker_500': 9, 'InvalidValueChecker_500': 14, 'LeakageRuleChecker_500': 1, 'PayloadBodyChecker_500': 123, 'main_driver_500': 2}
+2026-11-23 21:28:26.755: Generation: 4 / Sequences Collection Size: 35 
+(After bfs-fast Extend)
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+2026-11-23 21:29:43.799: Generation: 4 / Sequences Collection Size: 26 
+(After bfs-fast Render)
+
+2026-11-23 21:29:43.799: Final Swagger spec coverage: 35 / 43
+2026-11-23 21:29:43.799: Rendered requests: 35 / 43
+2026-11-23 21:29:43.799: Rendered requests with "valid" status codes: 35 / 35
+2026-11-23 21:29:43.799: Num fully valid requests (no resource creation failures): 35
+2026-11-23 21:29:43.799: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-23 21:29:43.799: Num invalid requests caused by failed resource creations: 0
+2026-11-23 21:29:43.799: Total Creations of Dyn Objects: 1623
+2026-11-23 21:29:43.799: Total Requests Sent: {'gc': 1511, 'main_driver': 574, 'LeakageRuleChecker': 23, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 18, 'InvalidDynamicObjectChecker': 189, 'PayloadBodyChecker': 2740, 'ExamplesChecker': 0, 'InvalidValueChecker': 84}
+2026-11-23 21:29:43.799: Bug Buckets: {'InvalidDynamicObjectChecker_20x': 7, 'InvalidDynamicObjectChecker_500': 11, 'InvalidValueChecker_500': 14, 'LeakageRuleChecker_500': 1, 'PayloadBodyChecker_500': 123, 'main_driver_500': 2}
+2026-11-23 21:29:43.812: Generation: 5 / Sequences Collection Size: 35 
+(After bfs-fast Extend)
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+2026-11-23 21:31:56.058: Generation: 5 / Sequences Collection Size: 50 
+(After bfs-fast Render)
+
+2026-11-23 21:31:56.059: Final Swagger spec coverage: 35 / 43
+2026-11-23 21:31:56.059: Rendered requests: 35 / 43
+2026-11-23 21:31:56.059: Rendered requests with "valid" status codes: 35 / 35
+2026-11-23 21:31:56.059: Num fully valid requests (no resource creation failures): 35
+2026-11-23 21:31:56.059: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-23 21:31:56.059: Num invalid requests caused by failed resource creations: 0
+2026-11-23 21:31:56.059: Total Creations of Dyn Objects: 2058
+2026-11-23 21:31:56.059: Total Requests Sent: {'gc': 1926, 'main_driver': 1030, 'LeakageRuleChecker': 38, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 30, 'InvalidDynamicObjectChecker': 261, 'PayloadBodyChecker': 2740, 'ExamplesChecker': 0, 'InvalidValueChecker': 164}
+2026-11-23 21:31:56.059: Bug Buckets: {'InvalidDynamicObjectChecker_20x': 7, 'InvalidDynamicObjectChecker_500': 11, 'InvalidValueChecker_500': 14, 'LeakageRuleChecker_500': 1, 'PayloadBodyChecker_500': 123, 'main_driver_500': 2}
+2026-11-23 21:31:56.073: Generation: 6 / Sequences Collection Size: 35 
+(After bfs-fast Extend)
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+2026-11-23 21:34:09.927: Generation: 6 / Sequences Collection Size: 48 
+(After bfs-fast Render)
+
+2026-11-23 21:34:09.927: Final Swagger spec coverage: 35 / 43
+2026-11-23 21:34:09.927: Rendered requests: 35 / 43
+2026-11-23 21:34:09.927: Rendered requests with "valid" status codes: 35 / 35
+2026-11-23 21:34:09.927: Num fully valid requests (no resource creation failures): 35
+2026-11-23 21:34:09.927: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-23 21:34:09.927: Num invalid requests caused by failed resource creations: 0
+2026-11-23 21:34:09.927: Total Creations of Dyn Objects: 2544
+2026-11-23 21:34:09.927: Total Requests Sent: {'gc': 2395, 'main_driver': 1469, 'LeakageRuleChecker': 39, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 42, 'InvalidDynamicObjectChecker': 371, 'PayloadBodyChecker': 2740, 'ExamplesChecker': 0, 'InvalidValueChecker': 269}
+2026-11-23 21:34:09.927: Bug Buckets: {'InvalidDynamicObjectChecker_20x': 8, 'InvalidDynamicObjectChecker_500': 12, 'InvalidValueChecker_500': 14, 'LeakageRuleChecker_500': 1, 'PayloadBodyChecker_500': 123, 'main_driver_500': 2}
+2026-11-23 21:34:09.942: Generation: 7 / Sequences Collection Size: 35 
+(After bfs-fast Extend)
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+2026-11-23 21:36:19.627: Generation: 7 / Sequences Collection Size: 26 
+(After bfs-fast Render)
+
+2026-11-23 21:36:19.627: Final Swagger spec coverage: 35 / 43
+2026-11-23 21:36:19.627: Rendered requests: 35 / 43
+2026-11-23 21:36:19.627: Rendered requests with "valid" status codes: 35 / 35
+2026-11-23 21:36:19.627: Num fully valid requests (no resource creation failures): 35
+2026-11-23 21:36:19.627: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-23 21:36:19.627: Num invalid requests caused by failed resource creations: 0
+2026-11-23 21:36:19.627: Total Creations of Dyn Objects: 2879
+2026-11-23 21:36:19.627: Total Requests Sent: {'gc': 2677, 'main_driver': 1800, 'LeakageRuleChecker': 43, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 46, 'InvalidDynamicObjectChecker': 470, 'PayloadBodyChecker': 2740, 'ExamplesChecker': 0, 'InvalidValueChecker': 359}
+2026-11-23 21:36:19.627: Bug Buckets: {'InvalidDynamicObjectChecker_20x': 8, 'InvalidDynamicObjectChecker_500': 12, 'InvalidValueChecker_500': 14, 'InvalidValueChecker_502': 1, 'LeakageRuleChecker_500': 1, 'PayloadBodyChecker_500': 123, 'main_driver_500': 2}
+2026-11-23 21:36:19.643: Generation: 8 / Sequences Collection Size: 35 
+(After bfs-fast Extend)
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+2026-11-23 21:38:39.163: Generation: 8 / Sequences Collection Size: 29 
+(After bfs-fast Render)
+
+2026-11-23 21:38:39.163: Final Swagger spec coverage: 35 / 43
+2026-11-23 21:38:39.163: Rendered requests: 35 / 43
+2026-11-23 21:38:39.163: Rendered requests with "valid" status codes: 35 / 35
+2026-11-23 21:38:39.163: Num fully valid requests (no resource creation failures): 35
+2026-11-23 21:38:39.163: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-23 21:38:39.163: Num invalid requests caused by failed resource creations: 0
+2026-11-23 21:38:39.163: Total Creations of Dyn Objects: 3185
+2026-11-23 21:38:39.163: Total Requests Sent: {'gc': 2982, 'main_driver': 2234, 'LeakageRuleChecker': 45, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 52, 'InvalidDynamicObjectChecker': 602, 'PayloadBodyChecker': 2740, 'ExamplesChecker': 0, 'InvalidValueChecker': 478}
+2026-11-23 21:38:39.163: Bug Buckets: {'InvalidDynamicObjectChecker_20x': 8, 'InvalidDynamicObjectChecker_500': 12, 'InvalidValueChecker_500': 14, 'InvalidValueChecker_502': 1, 'LeakageRuleChecker_500': 1, 'PayloadBodyChecker_500': 123, 'main_driver_500': 2}
+2026-11-23 21:38:39.181: Generation: 9 / Sequences Collection Size: 35 
+(After bfs-fast Extend)
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+2026-11-23 21:41:02.835: Generation: 9 / Sequences Collection Size: 27 
+(After bfs-fast Render)
+
+2026-11-23 21:41:02.835: Final Swagger spec coverage: 35 / 43
+2026-11-23 21:41:02.835: Rendered requests: 35 / 43
+2026-11-23 21:41:02.835: Rendered requests with "valid" status codes: 35 / 35
+2026-11-23 21:41:02.835: Num fully valid requests (no resource creation failures): 35
+2026-11-23 21:41:02.835: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-23 21:41:02.835: Num invalid requests caused by failed resource creations: 0
+2026-11-23 21:41:02.835: Total Creations of Dyn Objects: 3510
+2026-11-23 21:41:02.835: Total Requests Sent: {'gc': 3265, 'main_driver': 2668, 'LeakageRuleChecker': 50, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 60, 'InvalidDynamicObjectChecker': 693, 'PayloadBodyChecker': 2740, 'ExamplesChecker': 0, 'InvalidValueChecker': 614}
+2026-11-23 21:41:02.835: Bug Buckets: {'InvalidDynamicObjectChecker_20x': 8, 'InvalidDynamicObjectChecker_500': 12, 'InvalidValueChecker_500': 14, 'InvalidValueChecker_502': 1, 'LeakageRuleChecker_500': 1, 'PayloadBodyChecker_500': 123, 'main_driver_500': 2}
+2026-11-23 21:41:02.856: Generation: 10 / Sequences Collection Size: 35 
+(After bfs-fast Extend)
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+2026-11-23 21:43:19.635: Generation: 10 / Sequences Collection Size: 20 
+(After bfs-fast Render)
+
+2026-11-23 21:43:19.635: Final Swagger spec coverage: 35 / 43
+2026-11-23 21:43:19.635: Rendered requests: 35 / 43
+2026-11-23 21:43:19.635: Rendered requests with "valid" status codes: 35 / 35
+2026-11-23 21:43:19.635: Num fully valid requests (no resource creation failures): 35
+2026-11-23 21:43:19.635: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-23 21:43:19.635: Num invalid requests caused by failed resource creations: 0
+2026-11-23 21:43:19.635: Total Creations of Dyn Objects: 3914
+2026-11-23 21:43:19.635: Total Requests Sent: {'gc': 3680, 'main_driver': 3049, 'LeakageRuleChecker': 53, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 68, 'InvalidDynamicObjectChecker': 805, 'PayloadBodyChecker': 2740, 'ExamplesChecker': 0, 'InvalidValueChecker': 740}
+2026-11-23 21:43:19.635: Bug Buckets: {'InvalidDynamicObjectChecker_20x': 8, 'InvalidDynamicObjectChecker_500': 12, 'InvalidValueChecker_500': 14, 'InvalidValueChecker_502': 1, 'LeakageRuleChecker_500': 1, 'PayloadBodyChecker_500': 123, 'main_driver_500': 2}
+2026-11-23 21:43:19.658: Generation: 11 / Sequences Collection Size: 35 
+(After bfs-fast Extend)
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+2026-11-23 21:45:33.521: Generation: 11 / Sequences Collection Size: 32 
+(After bfs-fast Render)
+
+2026-11-23 21:45:33.521: Final Swagger spec coverage: 35 / 43
+2026-11-23 21:45:33.521: Rendered requests: 35 / 43
+2026-11-23 21:45:33.521: Rendered requests with "valid" status codes: 35 / 35
+2026-11-23 21:45:33.521: Num fully valid requests (no resource creation failures): 35
+2026-11-23 21:45:33.521: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-23 21:45:33.521: Num invalid requests caused by failed resource creations: 0
+2026-11-23 21:45:33.521: Total Creations of Dyn Objects: 4205
+2026-11-23 21:45:33.521: Total Requests Sent: {'gc': 3951, 'main_driver': 3605, 'LeakageRuleChecker': 56, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 74, 'InvalidDynamicObjectChecker': 940, 'PayloadBodyChecker': 2740, 'ExamplesChecker': 0, 'InvalidValueChecker': 890}
+2026-11-23 21:45:33.521: Bug Buckets: {'InvalidDynamicObjectChecker_20x': 8, 'InvalidDynamicObjectChecker_500': 12, 'InvalidValueChecker_500': 14, 'InvalidValueChecker_502': 1, 'LeakageRuleChecker_500': 1, 'PayloadBodyChecker_500': 123, 'main_driver_500': 2}
+2026-11-23 21:45:33.551: Generation: 12 / Sequences Collection Size: 35 
+(After bfs-fast Extend)
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+2026-11-23 21:47:45.344: Generation: 12 / Sequences Collection Size: 33 
+(After bfs-fast Render)
+
+2026-11-23 21:47:45.345: Final Swagger spec coverage: 35 / 43
+2026-11-23 21:47:45.345: Rendered requests: 35 / 43
+2026-11-23 21:47:45.345: Rendered requests with "valid" status codes: 35 / 35
+2026-11-23 21:47:45.345: Num fully valid requests (no resource creation failures): 35
+2026-11-23 21:47:45.345: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-23 21:47:45.345: Num invalid requests caused by failed resource creations: 0
+2026-11-23 21:47:45.345: Total Creations of Dyn Objects: 4519
+2026-11-23 21:47:45.345: Total Requests Sent: {'gc': 4252, 'main_driver': 4149, 'LeakageRuleChecker': 58, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 82, 'InvalidDynamicObjectChecker': 1068, 'PayloadBodyChecker': 2740, 'ExamplesChecker': 0, 'InvalidValueChecker': 1044}
+2026-11-23 21:47:45.345: Bug Buckets: {'InvalidDynamicObjectChecker_20x': 8, 'InvalidDynamicObjectChecker_500': 12, 'InvalidValueChecker_500': 14, 'InvalidValueChecker_502': 1, 'LeakageRuleChecker_500': 1, 'PayloadBodyChecker_500': 123, 'main_driver_500': 2}
+2026-11-23 21:47:45.406: Generation: 13 / Sequences Collection Size: 35 
+(After bfs-fast Extend)
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+2026-11-23 21:50:38.078: Generation: 13 / Sequences Collection Size: 29 
+(After bfs-fast Render)
+
+2026-11-23 21:50:38.078: Final Swagger spec coverage: 35 / 43
+2026-11-23 21:50:38.078: Rendered requests: 35 / 43
+2026-11-23 21:50:38.078: Rendered requests with "valid" status codes: 35 / 35
+2026-11-23 21:50:38.078: Num fully valid requests (no resource creation failures): 35
+2026-11-23 21:50:38.078: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-23 21:50:38.078: Num invalid requests caused by failed resource creations: 0
+2026-11-23 21:50:38.078: Total Creations of Dyn Objects: 5009
+2026-11-23 21:50:38.078: Total Requests Sent: {'gc': 4719, 'main_driver': 4931, 'LeakageRuleChecker': 62, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 88, 'InvalidDynamicObjectChecker': 1221, 'PayloadBodyChecker': 2740, 'ExamplesChecker': 0, 'InvalidValueChecker': 1260}
+2026-11-23 21:50:38.078: Bug Buckets: {'InvalidDynamicObjectChecker_20x': 8, 'InvalidDynamicObjectChecker_500': 12, 'InvalidValueChecker_500': 14, 'InvalidValueChecker_502': 1, 'LeakageRuleChecker_500': 1, 'PayloadBodyChecker_500': 123, 'main_driver_500': 2}
+2026-11-23 21:50:38.113: Generation: 14 / Sequences Collection Size: 35 
+(After bfs-fast Extend)
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Invalid rendering occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Error: Parser exception occurred during valid sequence re-rendering.
+
+Timed out...
+2026-11-23 21:52:20.751: Generation: 14 / Sequences Collection Size: 57 
+(After bfs-fast Render)
+
+2026-11-23 21:52:20.751: Final Swagger spec coverage: 35 / 43
+2026-11-23 21:52:20.751: Rendered requests: 35 / 43
+2026-11-23 21:52:20.751: Rendered requests with "valid" status codes: 35 / 35
+2026-11-23 21:52:20.751: Num fully valid requests (no resource creation failures): 35
+2026-11-23 21:52:20.751: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-23 21:52:20.751: Num invalid requests caused by failed resource creations: 0
+2026-11-23 21:52:20.751: Total Creations of Dyn Objects: 5183
+2026-11-23 21:52:20.751: Total Requests Sent: {'gc': 4899, 'main_driver': 5354, 'LeakageRuleChecker': 66, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 96, 'InvalidDynamicObjectChecker': 1383, 'PayloadBodyChecker': 2740, 'ExamplesChecker': 0, 'InvalidValueChecker': 1390}
+2026-11-23 21:52:20.751: Bug Buckets: {'InvalidDynamicObjectChecker_20x': 8, 'InvalidDynamicObjectChecker_500': 12, 'InvalidValueChecker_500': 14, 'InvalidValueChecker_502': 1, 'LeakageRuleChecker_500': 1, 'PayloadBodyChecker_500': 123, 'main_driver_500': 2}
+
+Testing completed -- below are the final stats:
+
+2026-11-23 21:52:21.704: Final Swagger spec coverage: 35 / 43
+2026-11-23 21:52:21.704: Rendered requests: 35 / 43
+2026-11-23 21:52:21.704: Rendered requests with "valid" status codes: 35 / 35
+2026-11-23 21:52:21.704: Num fully valid requests (no resource creation failures): 35
+2026-11-23 21:52:21.704: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-23 21:52:21.704: Num invalid requests caused by failed resource creations: 0
+2026-11-23 21:52:21.704: Total Creations of Dyn Objects: 5183
+2026-11-23 21:52:21.704: Total Requests Sent: {'gc': 4965, 'main_driver': 5354, 'LeakageRuleChecker': 66, 'ResourceHierarchyChecker': 0, 'UseAfterFreeChecker': 96, 'InvalidDynamicObjectChecker': 1383, 'PayloadBodyChecker': 2740, 'ExamplesChecker': 0, 'InvalidValueChecker': 1390}
+2026-11-23 21:52:21.704: Bug Buckets: {'InvalidDynamicObjectChecker_20x': 8, 'InvalidDynamicObjectChecker_500': 12, 'InvalidValueChecker_500': 14, 'InvalidValueChecker_502': 1, 'LeakageRuleChecker_500': 1, 'PayloadBodyChecker_500': 123, 'main_driver_500': 2}

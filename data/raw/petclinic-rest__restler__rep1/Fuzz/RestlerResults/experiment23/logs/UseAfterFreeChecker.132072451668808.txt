@@ -1,0 +1,192 @@
+
+Target types: {'_api_specialties_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': '229', '_api_pettypes_post_id': None, '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_owners_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': None, '_api_owners_post_id': '325', '_api_owners__ownerId__pets_post_type_id': None}
+Found * 3 * consumers.
+
+Target types: {'_api_specialties_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': '368', '_api_pettypes_post_id': None, '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_specialties_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': '370', '_api_pettypes_post_id': None, '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_owners_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': None, '_api_owners_post_id': '610', '_api_owners__ownerId__pets_post_type_id': None}
+Found * 3 * consumers.
+
+Target types: {'_api_specialties_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': '443', '_api_pettypes_post_id': None, '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '360', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '363', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_owners_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': None, '_api_owners_post_id': '646', '_api_owners__ownerId__pets_post_type_id': None}
+Found * 3 * consumers.
+
+Target types: {'_api_specialties_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': '455', '_api_pettypes_post_id': None, '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_specialties_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': '457', '_api_pettypes_post_id': None, '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '370', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '372', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_owners_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': None, '_api_owners_post_id': '810', '_api_owners__ownerId__pets_post_type_id': None}
+Found * 3 * consumers.
+
+Target types: {'_api_owners_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': None, '_api_owners_post_id': '812', '_api_owners__ownerId__pets_post_type_id': None}
+Found * 3 * consumers.
+
+Target types: {'_api_vets_post_specialties_0_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': '703', '_api_specialties_post_id': '720', '_api_pettypes_post_id': None, '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_specialties_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': '732', '_api_pettypes_post_id': None, '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_specialties_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': '734', '_api_pettypes_post_id': None, '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '444', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '446', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_owners_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': None, '_api_owners_post_id': '983', '_api_owners__ownerId__pets_post_type_id': None}
+Found * 3 * consumers.
+
+Target types: {'_api_vets_post_specialties_0_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': '911', '_api_specialties_post_id': '950', '_api_pettypes_post_id': None, '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '581', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_vets_post_specialties_0_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': '511', '_api_specialties_post_id': '1145', '_api_pettypes_post_id': None, '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '593', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_owners_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': None, '_api_owners_post_id': '1191', '_api_owners__ownerId__pets_post_type_id': None}
+Found * 3 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '606', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '608', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_owners_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': None, '_api_owners_post_id': '1228', '_api_owners__ownerId__pets_post_type_id': None}
+Found * 3 * consumers.
+
+Target types: {'_api_owners_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': None, '_api_owners_post_id': '1230', '_api_owners__ownerId__pets_post_type_id': None}
+Found * 3 * consumers.
+
+Target types: {'_api_specialties_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': '1457', '_api_specialties_post_id': '1482', '_api_pettypes_post_id': None, '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '618', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '620', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_owners_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': None, '_api_owners_post_id': '1265', '_api_owners__ownerId__pets_post_type_id': None}
+Found * 3 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '692', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '694', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_owners_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': None, '_api_owners_post_id': '1431', '_api_owners__ownerId__pets_post_type_id': None}
+Found * 3 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '705', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '707', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_owners_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': None, '_api_owners_post_id': '1463', '_api_owners__ownerId__pets_post_type_id': None}
+Found * 3 * consumers.
+
+Target types: {'_api_owners_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': None, '_api_owners_post_id': '1465', '_api_owners__ownerId__pets_post_type_id': None}
+Found * 3 * consumers.
+
+Target types: {'_api_specialties_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': '947', '_api_specialties_post_id': '2004', '_api_pettypes_post_id': None, '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '718', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_owners_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': None, '_api_owners_post_id': '1503', '_api_owners__ownerId__pets_post_type_id': None}
+Found * 3 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '729', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_pettypes_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': '731', '_api_owners_post_id': None, '_api_owners__ownerId__pets_post_type_id': None}
+Found * 2 * consumers.
+
+Target types: {'_api_owners_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': None, '_api_owners_post_id': '1668', '_api_owners__ownerId__pets_post_type_id': None}
+Found * 3 * consumers.
+
+Target types: {'_api_owners_post_id'}
+Clean dependencies: {'_api_pets__petId__put_id': None, '_api_visits_post_id': None, '_api_vets_post_specialties_0_id': None, '_api_specialties_post_id': None, '_api_pettypes_post_id': None, '_api_owners_post_id': '1670', '_api_owners__ownerId__pets_post_type_id': None}
+Found * 3 * consumers.

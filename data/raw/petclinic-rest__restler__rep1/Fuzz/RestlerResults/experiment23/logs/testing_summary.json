@@ -1,0 +1,41 @@
+{
+    "final_spec_coverage": "35 / 43",
+    "rendered_requests": "35 / 43",
+    "rendered_requests_valid_status": "35 / 35",
+    "num_fully_valid": 35,
+    "num_sequence_failures": 0,
+    "num_invalid_by_failed_resource_creations": 0,
+    "total_object_creations": 5183,
+    "total_requests_sent": {
+        "gc": 4965,
+        "main_driver": 5354,
+        "LeakageRuleChecker": 66,
+        "ResourceHierarchyChecker": 0,
+        "UseAfterFreeChecker": 96,
+        "InvalidDynamicObjectChecker": 1383,
+        "PayloadBodyChecker": 2740,
+        "ExamplesChecker": 0,
+        "InvalidValueChecker": 1390
+    },
+    "bug_buckets": {
+        "InvalidDynamicObjectChecker_20x": 8,
+        "InvalidDynamicObjectChecker_500": 12,
+        "InvalidValueChecker_500": 14,
+        "InvalidValueChecker_502": 1,
+        "LeakageRuleChecker_500": 1,
+        "PayloadBodyChecker_500": 123,
+        "main_driver_500": 2
+    },
+    "reproducible_bug_buckets": {
+        "InvalidDynamicObjectChecker_20x": 8,
+        "InvalidDynamicObjectChecker_500": 12,
+        "InvalidValueChecker_500": 14,
+        "InvalidValueChecker_502": 0,
+        "LeakageRuleChecker_500": 1,
+        "PayloadBodyChecker_500": 123,
+        "main_driver_500": 2
+    },
+    "settings": {
+        "random_seed": 1001
+    }
+}

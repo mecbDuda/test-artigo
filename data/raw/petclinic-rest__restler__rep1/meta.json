@@ -1,0 +1,11 @@
+{
+  "run_id": "petclinic-rest__restler__rep1",
+  "api": "petclinic-rest",
+  "tool": "restler",
+  "rep": 1,
+  "seed": 1001,
+  "budget_sec": 1800,
+  "start_ts": 1795468939.0404184,
+  "end_ts": 1795470747.6405613,
+  "schema_file": "apis/petclinic-rest/openapi.json"
+}

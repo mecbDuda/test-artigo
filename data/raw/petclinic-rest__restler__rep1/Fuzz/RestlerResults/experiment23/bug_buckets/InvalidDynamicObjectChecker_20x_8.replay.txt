@@ -1,0 +1,46 @@
+################################################################################
+ InvalidDynamicObjectChecker_20x
+
+ Hash: InvalidDynamicObjectChecker_20x_1497c2b9e3ae6282e348783590d6a533a6670850
+
+ To attempt to reproduce this bug using restler, run restler with the command
+ line option of --replay_log <path_to_this_log>.
+ If an authentication token is required, you must also specify the token_refresh_cmd.
+
+ This log may contain specific values for IDs or names that were generated
+ during fuzzing, using the fuzzing dictionary. Such names will be re-played
+ without modification. You must update the replay log manually with any changes
+ required to execute the requests in your environment (for example, replacing
+ pre-created account, subscription, or other resource IDs, as needed).
+################################################################################
+
+-> POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{\n    "name":"radiology"}\r\n
+! producer_timing_delay 0
+! max_async_wait_time 20
+PREVIOUS RESPONSE: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/specialties/699\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Mon, 23 Nov 2026 21:31:56 GMT\r\n\r\n1d\r\n{"id":699,"name":"radiology"}\r\n0\r\n\r\n'
+
+-> GET /petclinic/api/specialties/699 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+! producer_timing_delay 0
+! max_async_wait_time 20
+PREVIOUS RESPONSE: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Mon, 23 Nov 2026 21:31:56 GMT\r\n\r\n1d\r\n{"id":699,"name":"radiology"}\r\n0\r\n\r\n'
+
+-> GET /petclinic/api/specialties/699 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+! producer_timing_delay 0
+! max_async_wait_time 20
+PREVIOUS RESPONSE: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Mon, 23 Nov 2026 21:31:56 GMT\r\n\r\n1d\r\n{"id":699,"name":"radiology"}\r\n0\r\n\r\n'
+
+-> GET /petclinic/api/specialties/699 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+! producer_timing_delay 0
+! max_async_wait_time 20
+PREVIOUS RESPONSE: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Mon, 23 Nov 2026 21:31:56 GMT\r\n\r\n1d\r\n{"id":699,"name":"radiology"}\r\n0\r\n\r\n'
+
+-> POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{\n    "firstName":"James",\n    "lastName":"fuzzstring",\n    "specialties":\n    [\n        {\n            "name":"radiology"\n        }\n    ]}\r\n
+! producer_timing_delay 0
+! max_async_wait_time 20
+PREVIOUS RESPONSE: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/vets/1212\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Mon, 23 Nov 2026 21:31:56 GMT\r\n\r\nc84\r\n{"firstName":"James","lastName":"fuzzstring","specialties":[{"id":451,"name":"radiology"},{"id":660,"name":"radiology"},{"id":11,"name":"radiology"},{"id":33,"name":"radiology"},{"id":510,"name":"radiology"},{"id":1,"name":"radiology"},{"id":26,"name":"radiology"},{"id":437,"name":"radiology"},{"id":194,"name":"radiology"},{"id":683,"name":"radiology"},{"id":191,"name":"radiology"},{"id":688,"name":"radiology"},{"id":187,"name":"radiology"},{"id":676,"name":"radiology"},{"id":198,"name":"radiology"},{"id":666,"name":"radiology"},{"id":511,"name":"radiology"},{"id":19,"name":"radiology"},{"id":186,"name":"radiology"},{"id":479,"name":"radiology"},{"id":445,"name":"radiology"},{"id":15,"name":"radiology"},{"id":8,"name":"radiology"},{"id":664,"name":"radiology"},{"id":202,"name":"radiology"},{"id":684,"name":"radiology"},{"id":679,"name":"radiology"},{"id":185,"name":"radiology"},{"id":5,"name":"radiology"},{"id":689,"name":"radiology"},{"id":694,"name":"radiology"},{"id":691,"name":"radiology"},{"id":181,"name":"radiology"},{"id":675,"name":"radiology"},{"id":690,"name":"radiology"},{"id":228,"name":"radiology"},{"id":476,"name":"radiology"},{"id":686,"name":"radiology"},{"id":697,"name":"radiology"},{"id":197,"name":"radiology"},{"id":680,"name":"radiology"},{"id":447,"name":"radiology"},{"id":438,"name":"radiology"},{"id":673,"name":"radiology"},{"id":662,"name":"radiology"},{"id":698,"name":"radiology"},{"id":219,"name":"radiology"},{"id":488,"name":"radiology"},{"id":670,"name":"radiology"},{"id":12,"name":"radiology"},{"id":663,"name":"radiology"},{"id":685,"name":"radiology"},{"id":678,"name":"radiology"},{"id":29,"name":"radiology"},{"id":661,"name":"radiology"},{"id":655,"name":"radiology"},{"id":699,"name":"radiology"},{"id":478,"name":"radiology"},{"id":40,"name":"radiology"},{"id":513,"name":"radiology"},{"id":671,"name":"radiology"},{"id":687,"name":"radiology"},{"id":32,"name":"radiology"},{"id":495,"name":"radiology"},{"id":692,"name":"radiology"},{"id":207,"name":"radiology"},{"id":361,"name":"radiology"},{"id":199,"name":"radiology"},{"id":439,"name":"radiology"},{"id":206,"name":"radiology"},{"id":48,"name":"radiology"},{"id":442,"name":"radiology"},{"id":218,"name":"radiology"},{"id":515,"name":"radiology"},{"id":652,"name":"radiology"},{"id":468,"name":"radiology"},{"id":232,"name":"radiology"},{"id":677,"name":"radiology"},{"id":669,"name":"radiology"},{"id":220,"name":"radiology"},{"id":651,"name":"radiology"},{"id":696,"name":"radiology"},{"id":693,"name":"radiology"},{"id":674,"name":"radiology"},{"id":682,"name":"radiology"},{"id":667,"name":"radiology"},{"id":201,"name":"radiology"},{"id":672,"name":"radiology"},{"id":681,"name":"radiology"},{"id":649,"name":"radiology"},{"id":695,"name":"radiology"},{"id":231,"name":"radiology"},{"id":203,"name":"radiology"},{"id":508,"name":"radiology"},{"id":233,"name":"radiology"},{"id":193,"name":"radiology"},{"id":668,"name":"radiology"},{"id":487,"name":"radiology"},{"id":369,"name":"radiology"},{"id":216,"name":"radiology"},{"id":453,"name":"radiology"},{"id":42,"name":"radiology"},{"id":474,"name":"radiology"},{"id":585,"name":"radiology"},{"id":665,"name":"radiology"}],"id":1212}\r\n0\r\n\r\n'
+
+-> GET /petclinic/api/vets/451?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+! producer_timing_delay 0
+! max_async_wait_time 0
+PREVIOUS RESPONSE: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Mon, 23 Nov 2026 21:31:56 GMT\r\n\r\n'
+

@@ -1,0 +1,11 @@
+{
+  "run_id": "petclinic-rest__evomaster__rep1",
+  "api": "petclinic-rest",
+  "tool": "evomaster",
+  "rep": 1,
+  "seed": 1001,
+  "budget_sec": 1800,
+  "start_ts": 1795470969.4241638,
+  "end_ts": 1795472781.373477,
+  "schema_file": "apis/petclinic-rest/openapi.json"
+}

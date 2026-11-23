@@ -1,0 +1,24 @@
+################################################################################
+ PayloadBodyChecker_500
+
+ StructMissing_/password/enabled/roles[...]
+{'username': 'fuzzstring'}
+
+ Hash: PayloadBodyChecker_500_579e56cb069a123d7c56fb226ee12602f32b05eb
+
+ To attempt to reproduce this bug using restler, run restler with the command
+ line option of --replay_log <path_to_this_log>.
+ If an authentication token is required, you must also specify the token_refresh_cmd.
+
+ This log may contain specific values for IDs or names that were generated
+ during fuzzing, using the fuzzing dictionary. Such names will be re-played
+ without modification. You must update the replay log manually with any changes
+ required to execute the requests in your environment (for example, replacing
+ pre-created account, subscription, or other resource IDs, as needed).
+################################################################################
+
+-> POST /petclinic/api/users HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{"username":"fuzzstring"}
+! producer_timing_delay 0
+! max_async_wait_time 0
+PREVIOUS RESPONSE: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Mon, 23 Nov 2026 21:23:43 GMT\r\nConnection: close\r\n\r\n10f\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/users","status":500,"title":"IllegalArgumentException","type":"http://api:8080/petclinic/api/users","timestamp":"2026-11-23T21:23:43.150186218Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+

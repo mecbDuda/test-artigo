@@ -1,0 +1,26 @@
+################################################################################
+ InvalidValueChecker_500
+
+ Hash: InvalidValueChecker_500_830521fe80e89c1404e4a5bcbab8232ae6f4ce9d
+
+ To attempt to reproduce this bug using restler, run restler with the command
+ line option of --replay_log <path_to_this_log>.
+ If an authentication token is required, you must also specify the token_refresh_cmd.
+
+ This log may contain specific values for IDs or names that were generated
+ during fuzzing, using the fuzzing dictionary. Such names will be re-played
+ without modification. You must update the replay log manually with any changes
+ required to execute the requests in your environment (for example, replacing
+ pre-created account, subscription, or other resource IDs, as needed).
+################################################################################
+
+-> POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{\n    "firstName":"George",\n    "lastName":"fuzzstring",\n    "address":"110 W. Liberty St.",\n    "city":"Madison",\n    "telephone":"6085551023"}\r\n
+! producer_timing_delay 0
+! max_async_wait_time 20
+PREVIOUS RESPONSE: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/owners/303\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Mon, 23 Nov 2026 21:25:08 GMT\r\n\r\n'
+
+-> PUT /petclinic/api/owners/302 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{\n    "firstName":"zDA4oZ\r "utU",\n    "lastName":"Franklin",\n    "address":"110 W. Liberty St.",\n    "city":"Madison",\n    "telephone":"6085551023"}\r\n
+! producer_timing_delay 0
+! max_async_wait_time 20
+PREVIOUS RESPONSE: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Mon, 23 Nov 2026 21:25:08 GMT\r\nConnection: close\r\n\r\n120\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/owners/302","status":500,"title":"HttpMessageNotReadableException","type":"http://api:8080/petclinic/api/owners/302","timestamp":"2026-11-23T21:25:08.302660998Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+

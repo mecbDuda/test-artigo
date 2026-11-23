@@ -1,0 +1,92 @@
+2026-11-23 21:22:31.274: Sending: 'DELETE /petclinic/api/specialties/9 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.292: Received: 'HTTP/1.1 404 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Length: 0\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.293: Sending: 'DELETE /petclinic/api/specialties/7 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.310: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.313: Sending: 'DELETE /petclinic/api/specialties/6 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.347: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.351: Sending: 'DELETE /petclinic/api/specialties/4 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.376: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.379: Sending: 'DELETE /petclinic/api/pettypes/14 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.411: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.413: Sending: 'DELETE /petclinic/api/pettypes/13 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.438: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.440: Sending: 'DELETE /petclinic/api/pettypes/10 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.459: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.462: Sending: 'DELETE /petclinic/api/visits/8 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.485: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.488: Sending: 'DELETE /petclinic/api/visits/6 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.508: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.510: Sending: 'DELETE /petclinic/api/visits/5 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.541: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.545: Sending: 'DELETE /petclinic/api/vets/4 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.575: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.580: Sending: 'DELETE /petclinic/api/vets/1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.595: Received: 'HTTP/1.1 404 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Length: 0\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.598: Sending: 'DELETE /petclinic/api/vets/1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.611: Received: 'HTTP/1.1 404 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Length: 0\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.614: Sending: 'DELETE /petclinic/api/vets/1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.628: Received: 'HTTP/1.1 404 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Length: 0\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.630: Sending: 'DELETE /petclinic/api/owners/26 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.662: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.667: Sending: 'DELETE /petclinic/api/owners/25 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.687: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.689: Sending: 'DELETE /petclinic/api/owners/23 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.714: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.717: Sending: 'DELETE /petclinic/api/owners/21 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.737: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.739: Sending: 'DELETE /petclinic/api/owners/20 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.753: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.756: Sending: 'DELETE /petclinic/api/owners/19 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.770: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.772: Sending: 'DELETE /petclinic/api/owners/17 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.786: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.788: Sending: 'DELETE /petclinic/api/owners/13 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.800: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
+2026-11-23 21:22:31.802: Sending: 'DELETE /petclinic/api/owners/12 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n'
+
+2026-11-23 21:22:31.814: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Mon, 23 Nov 2026 21:22:31 GMT\r\n\r\n'
+
