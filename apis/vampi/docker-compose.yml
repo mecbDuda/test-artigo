@@ -2,14 +2,16 @@
 # As ferramentas SEMPRE acessam a API pelo proxy (porta 8080), nunca direto.
 services:
   api:
-    image: erev0s/vampi:latest          # fixe a tag/digest usada no experimento e registre no artigo
+    # "latest" de 2026-04-07, fixada por digest (ver docs/versoes.md)
+    image: erev0s/vampi:latest@sha256:0a5a224b6e14ae7da6a6ea265178ff71286ff903aec74adee98f660bb0e4ca12
     environment:
       - vulnerable=1                    # modo vulnerável: as vulnerabilidades documentadas ficam ativas
       - tokentimetolive=7200            # token dura mais que a campanha
+    networks: [sut]                     # rede interna, sem internet (docs/desvios.md, D08)
     # sem "ports": a API só é acessível através do proxy
 
   proxy:
-    image: mitmproxy/mitmproxy:10.3.0
+    image: mitmproxy/mitmproxy:10.3.0@sha256:a22a4f2178ac5876598402c7060868ec96e90710b31e768ed25a57f501d9f48d
     command: >
       mitmdump --mode reverse:http://api:5000 --listen-port 8080
       -s /addon/log_flows.py --set flow_detail=0
@@ -20,5 +22,10 @@ services:
       - ${LOG_DIR:?defina LOG_DIR}:/logs
     environment:
       - FLOW_LOG=/logs/flows.jsonl
+    networks: [sut, default]
     depends_on:
       - api
+
+networks:
+  sut:
+    internal: true
