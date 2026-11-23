@@ -1,0 +1,4 @@
+Ferramenta,VP,FP,Precisão,Inconclusivos,Principal causa de FP
+Schemathesis,8,11,42.1%,1,[PRELIMINAR-IA] Especificação não documenta o Content-Type das respostas 401 (padrão do framework)
+RESTler,4,0,100.0%,0,—
+EvoMaster (caixa-preta),1,7,12.5%,1,[PRELIMINAR-IA] Especificação não documenta o Content-Type das respostas 401 (padrão do framework)

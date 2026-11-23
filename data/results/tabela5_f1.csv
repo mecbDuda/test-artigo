@@ -1,0 +1,4 @@
+Ferramenta,Precisão (média),Recall (média),F1 (média),F1 (mín–máx)
+Schemathesis,42.1%,20.0%,0.27,0.27–0.27
+RESTler,100.0%,20.0%,0.33,0.33–0.33
+EvoMaster (caixa-preta),12.5%,10.0%,0.11,0.11–0.11

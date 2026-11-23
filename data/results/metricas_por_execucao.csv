@@ -1,0 +1,4 @@
+run_id,api,tool,rep,relatos_brutos,relatos_unicos,vp_relatos,fp_relatos,inc_relatos,defeitos_detectados,defeitos_ids,defeitos_oraculo,fn,precisao,recall,f1,cobertura_operacoes_pct,requisicoes,ttff_min,dph
+vampi__evomaster__rep1,vampi,evomaster,1,124,9,1,7,1,1,VAMPI-10,10,9,0.125,0.1,0.11111111111111112,92.9,46546,0.15333333333333332,6.0
+vampi__restler__rep1,vampi,restler,1,5,4,4,0,0,2,VAMPI-01;VAMPI-07,10,8,1.0,0.2,0.33333333333333337,85.7,918,0.09166666666666666,12.0
+vampi__schemathesis__rep1,vampi,schemathesis,1,126,20,8,11,1,2,VAMPI-01;VAMPI-10,10,8,0.42105263157894735,0.2,0.2711864406779661,92.9,30379,0.11333333333333333,12.0

@@ -1,0 +1,4 @@
+Ferramenta,Cobertura de operações (%),Nº de requisições,TTFF (min),DPH
+Schemathesis,92.9,30379,0.1,12.00
+RESTler,85.7,918,0.1,12.00
+EvoMaster (caixa-preta),92.9,46546,0.2,6.00
