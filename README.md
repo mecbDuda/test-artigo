@@ -45,24 +45,25 @@ do mesmo jeito para todas, independentemente do formato de relatório de cada um
 ## Passo a passo
 
 ### 1. Preparar
+As especificações já estão no repositório (`apis/*/openapi*`). As imagens são
+fixadas por digest em `config/experiment.env` e `apis/*/docker-compose.yml`
+(versões e máquina em `docs/versoes.md`; mudanças de método em `docs/desvios.md`).
 ```bash
-# especificação do VAmPI
-curl -L -o apis/vampi/openapi3.yml \
-  https://raw.githubusercontent.com/erev0s/VAmPI/master/openapi_specs/openapi3.yml
-
-# baixar as imagens
-docker pull erev0s/vampi:latest
-docker pull mitmproxy/mitmproxy:10.3.0
-docker pull schemathesis/schemathesis:stable
-docker pull mcr.microsoft.com/restlerfuzzer/restler:v8.5.0
-docker pull webfuzzing/evomaster:v5.1.0
+# baixar as imagens (mesmas referências fixadas nos arquivos de configuração)
+docker pull erev0s/vampi:latest@sha256:0a5a224b6e14ae7da6a6ea265178ff71286ff903aec74adee98f660bb0e4ca12
+docker pull mitmproxy/mitmproxy:10.3.0@sha256:a22a4f2178ac5876598402c7060868ec96e90710b31e768ed25a57f501d9f48d
+docker pull schemathesis/schemathesis:4.34.0@sha256:7aa27b2085e944c81f5225c52c29bf072778bb5d59e6b27e1876b4757e266a14
+docker pull mcr.microsoft.com/restlerfuzzer/restler:v9.2.4@sha256:f37705fc4a11071f1de67ac4708fd97c71c1b4e5a0bc0f9c16c21028c0c41cbb
+docker pull webfuzzing/evomaster:v5.1.0@sha256:cf02675504a0b51c268c9320e7d6f7fce92e038c62d5a0bdb25e175ea86c0c89
+docker pull webfuzzing/wfd-petclinic-rest:FINAL@sha256:ea7d5dcc6d0144479c8636ab0b0cc1125f29e30b5e9f0c08e64e6e820ed1a70f
+docker pull webfuzzing/wfd-catwatch:FINAL@sha256:814cfa76226f4e0f2adb01aa4eba95bc296971a25ac20a33be597b1fd1d68ef2
 ```
-Fixe as versões em `config/experiment.env` e registre-as no artigo (Quadro 3).
+APIs: `vampi`, `petclinic-rest` e `catwatch` (as duas últimas do Web Fuzzing Dataset).
 Para adicionar outras APIs, siga `apis/_template/README.md`.
 
 ### 2. Teste rápido (obrigatório antes das campanhas reais)
 ```bash
-BUDGET_MIN=2 REPS=1 ./scripts/run_campaigns.sh
+BUDGET_MIN=2 REPS=1 APIS="vampi petclinic-rest catwatch" ./scripts/run_campaigns.sh
 python3 analysis/extract_findings.py
 ```
 Confira, para **cada ferramenta**, se:
@@ -74,9 +75,12 @@ Depois apague o teste: `rm -rf data/raw/* data/processed data/validated/relatos.
 
 ### 3. Campanhas reais
 ```bash
-./scripts/run_campaigns.sh      # ex.: 3 ferramentas × 3 APIs × 3 repetições × 30 min ≈ 13,5 h
+./scripts/start_background.sh   # 3 ferramentas × 3 APIs × 3 repetições × 30 min ≈ 14,5 h com preparação
+./scripts/progress.sh           # progresso; ao vivo: tmux attach -t campanhas  ou  tail -f campaigns.log
 ```
-Execuções já concluídas são puladas; dá para interromper e continuar depois.
+Execuções já concluídas (com `meta.json`) são puladas. Execuções interrompidas
+são movidas para `data/raw/_incompletas/` e refeitas. Para retomar, rode
+`./scripts/start_background.sh` de novo.
 
 ### 4. Extração e validação manual
 ```bash
