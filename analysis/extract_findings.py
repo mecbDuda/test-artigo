@@ -78,11 +78,37 @@ class OpMatcher:
 
 # ---------------------------------------------------------------- utilitários
 def norm_sig(text, limit=120):
+    # páginas de erro HTML (ex.: depurador do Werkzeug no VAmPI) começam todas com
+    # "<!doctype html>"; a exceção real está no <title>
+    m = re.search(r"<title>(.*?)</title>", text or "", re.I | re.S)
+    if m:
+        text = m.group(1)
     text = (text or "").strip().splitlines()[0] if (text or "").strip() else ""
     text = re.sub(r"[0-9a-fA-F]{8}-[0-9a-fA-F-]{27,}", "<uuid>", text)
     text = re.sub(r"\d+", "<n>", text)
     text = re.sub(r"\s+", " ", text).lower()
     return text[:limit]
+
+
+VOLATILE_KEYS = {"timestamp", "instance", "path", "type", "traceid", "trace_id", "requestid", "request_id", "schemavalidationerrors"}
+
+
+def body_sig(body):
+    """Texto estável que representa o corpo de uma resposta de erro.
+    Corpos JSON (Spring: timestamp/status/error/message/path; problem+json:
+    title/detail/instance) trazem campos que mudam a cada requisição, como o
+    caminho concreto e o horário. Eles são descartados para que erros iguais em
+    IDs diferentes virem um só relato. O que sobra (ex.: title = classe da
+    exceção) define a assinatura."""
+    try:
+        obj = json.loads(body or "")
+    except (ValueError, TypeError):
+        return body or ""
+    if not isinstance(obj, dict):
+        return body or ""
+    parts = [f"{k}={obj[k]}" for k in sorted(obj) if k.lower() not in VOLATILE_KEYS and k.lower() != "status"
+             and not isinstance(obj[k], (dict, list))]
+    return " | ".join(parts)
 
 
 def key_of(api, op, kind, sig):
@@ -120,24 +146,18 @@ def findings_schemathesis(run_dir, matcher):
             for child in list(tc):
                 if child.tag not in ("failure", "error"):
                     continue
-                msg = (child.get("message") or child.text or "").strip()
-                for block in re.split(r"\n\s*\n", msg) or [msg]:
-                    low = block.lower()
-                    if "server error" in low or re.search(r"\b5\d\d\b", low) and "status" not in low:
-                        kind = "http_5xx"          # já coberto pelo proxy; mantido para conferência
-                    elif "schema" in low:
-                        kind = "schema_violation"
-                    elif "status code" in low or "undocumented" in low:
-                        kind = "undocumented_status"
-                    elif "content-type" in low or "content type" in low:
-                        kind = "content_type"
-                    elif "header" in low:
-                        kind = "missing_header"
-                    elif not block.strip():
-                        continue
-                    else:
-                        kind = "other"
-                    res.append({"op": op, "kind": f"schemathesis:{kind}", "sig": norm_sig(block), "example": block[:300]})
+                # Formato da 4.x: message="ST101, ST103"; o texto traz, para cada
+                # caso, linhas "- ST202 Schema-valid request rejected" e um "curl" de
+                # reprodução. ST101 = erro de servidor (5xx), já medido pelo proxy.
+                text = child.text or ""
+                checks = re.findall(r"^\s*-\s+(ST\d+)\s+(.+?)\s*$", text, re.M)
+                if not checks:
+                    checks = [(c, "") for c in re.findall(r"ST\d+", child.get("message") or "")]
+                curl = re.search(r"^\s*(curl .+)$", text, re.M)
+                example = curl.group(1)[:300] if curl else text.strip()[:300]
+                for code, title in dict.fromkeys(checks):
+                    kind = "http_5xx" if code == "ST101" else f"schemathesis:{code}"
+                    res.append({"op": op, "kind": kind, "sig": norm_sig(f"{code} {title}"), "example": example})
     return res
 
 
@@ -164,6 +184,30 @@ def findings_restler(run_dir, matcher):
 
 
 def findings_evomaster(run_dir, matcher):
+    """Lê o relatório WFC (generated_tests/report.json) que o EvoMaster 5.x grava:
+    faults.foundFaults[] = {operationId: "GET:/me", testCaseId, faultCategories: [{code, context}]}.
+    Código 100 = resposta HTTP 500 (já medida pelo proxy). Se o relatório não existir,
+    usa a heurística antiga sobre os testes gerados."""
+    rep = os.path.join(run_dir, "generated_tests", "report.json")
+    if os.path.exists(rep):
+        res = []
+        with open(rep, encoding="utf-8") as f:
+            data = json.load(f)
+        for fault in (data.get("faults") or {}).get("foundFaults") or []:
+            m = re.match(r"([A-Za-z]+):(.*)", fault.get("operationId", ""))
+            op = f"{m.group(1).upper()} {m.group(2)}" if m else fault.get("operationId", "desconhecida")
+            if m and op not in matcher.ops:
+                op = matcher.match(m.group(1), m.group(2))
+            for cat in fault.get("faultCategories") or []:
+                code = cat.get("code")
+                kind = "http_5xx" if code == 100 else f"evomaster:{code}"
+                res.append({"op": op, "kind": kind, "sig": norm_sig(cat.get("context", "")),
+                            "example": f"{fault.get('testCaseId', '')} | {cat.get('context', '')}"[:300]})
+        return res
+    return findings_evomaster_heuristic(run_dir, matcher)
+
+
+def findings_evomaster_heuristic(run_dir, matcher):
     res = []
     pat = re.compile(r"(?i)(fault|falha)[^\n]*?\b(GET|POST|PUT|PATCH|DELETE)[:\s]+(/\S*)")
     for p in glob.glob(os.path.join(run_dir, "generated_tests", "**", "*.*"), recursive=True):
@@ -211,7 +255,7 @@ def main():
             if 200 <= r["status"] < 300:
                 covered.add(op)
             if r["status"] >= 500:
-                sig = f"{r['status']} " + norm_sig(r.get("resp_body"))
+                sig = f"{r['status']} " + norm_sig(body_sig(r.get("resp_body")))
                 k = key_of(meta["api"], op, "http_5xx", sig)
                 f = run_found.setdefault(k, {"op": op, "kind": "http_5xx", "sig": sig, "first_s": r["ts"] - t0, "count": 0,
                                              "example": f"{r['method']} {r['path']}?{r.get('query','')} body={r.get('req_body','')[:200]}"})
