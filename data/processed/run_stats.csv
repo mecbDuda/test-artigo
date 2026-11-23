@@ -1,0 +1,4 @@
+run_id,api,tool,rep,budget_sec,duracao_real_s,requisicoes,operacoes_total,operacoes_cobertas_2xx,cobertura_operacoes_pct,respostas_5xx
+vampi__evomaster__rep1,vampi,evomaster,1,600,609.7,46546,14,13,92.9,117
+vampi__restler__rep1,vampi,restler,1,600,629.8,918,14,12,85.7,3
+vampi__schemathesis__rep1,vampi,schemathesis,1,600,608.5,30379,14,13,92.9,112

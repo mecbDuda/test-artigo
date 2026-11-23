@@ -1,0 +1,34 @@
+run_id,api,tool,rep,chave,operacao,tipo,assinatura,primeira_ocorrencia_s,ocorrencias
+vampi__evomaster__rep1,vampi,evomaster,1,3bb5b01b73e9,POST /books/v1,http_5xx,500 sqlalchemy.exc.integrityerror: (sqlite<n>.integrityerror) unique constraint failed: books.book_title,9.2,37
+vampi__evomaster__rep1,vampi,evomaster,1,c4ff37a6cddc,GET /createdb,http_5xx,500 sqlalchemy.exc.integrityerror: (sqlite<n>.integrityerror) unique constraint failed: books.book_title,14.8,80
+vampi__evomaster__rep1,vampi,evomaster,1,ecff568650e1,GET /me,evomaster:101,type: validation.response.contenttype.notallowed,6.7,1
+vampi__evomaster__rep1,vampi,evomaster,1,766bb9b8d25b,POST /books/v1,evomaster:101,type: validation.response.contenttype.notallowed,6.5,1
+vampi__evomaster__rep1,vampi,evomaster,1,b565d906d1d4,POST /users/v1/register,evomaster:101,type: validation.response.body.unexpected,6.7,1
+vampi__evomaster__rep1,vampi,evomaster,1,8806276ccfa5,GET /books/v1/{book_title},evomaster:101,type: validation.response.contenttype.notallowed,6.3,1
+vampi__evomaster__rep1,vampi,evomaster,1,748c1261bd53,DELETE /users/v1/{username},evomaster:101,type: validation.response.contenttype.notallowed,6.6,1
+vampi__evomaster__rep1,vampi,evomaster,1,862b84be1601,PUT /users/v1/{username}/password,evomaster:101,type: validation.response.contenttype.notallowed,6.6,1
+vampi__evomaster__rep1,vampi,evomaster,1,6060e0c71cbd,PUT /users/v1/{username}/email,evomaster:101,type: validation.response.contenttype.notallowed,6.6,1
+vampi__restler__rep1,vampi,restler,1,3fdc99bcfb2f,GET /users/v1/{username},http_5xx,500 sqlalchemy.exc.statementerror: (sqlalchemy.exc.invalidrequesterror) a value is required for bind parameter 'x<n>bcb',20.5,2
+vampi__restler__rep1,vampi,restler,1,eb50f42a0469,GET /users/v1/{username},http_5xx,"500 sqlalchemy.exc.operationalerror: (sqlite<n>.operationalerror) near ""l$m"": syntax error",20.9,1
+vampi__restler__rep1,vampi,restler,1,e7f456148913,PUT /users/v1/{username}/email,restler:InvalidValueChecker,InvalidValueChecker,5.5,1
+vampi__restler__rep1,vampi,restler,1,7202155be343,GET /users/v1/{username},restler:InvalidValueChecker,InvalidValueChecker 500,5.8,1
+vampi__schemathesis__rep1,vampi,schemathesis,1,3bb5b01b73e9,POST /books/v1,http_5xx,500 sqlalchemy.exc.integrityerror: (sqlite<n>.integrityerror) unique constraint failed: books.book_title,31.0,14
+vampi__schemathesis__rep1,vampi,schemathesis,1,adefc91931d0,GET /users/v1/{username},http_5xx,"500 sqlalchemy.exc.operationalerror: (sqlite<n>.operationalerror) near ""񪪑"": syntax error",102.5,6
+vampi__schemathesis__rep1,vampi,schemathesis,1,c51f9d1f6889,GET /users/v1/{username},http_5xx,"500 sqlalchemy.exc.operationalerror: (sqlite<n>.operationalerror) unrecognized token: ""'񟹡򌤧",102.9,1
+vampi__schemathesis__rep1,vampi,schemathesis,1,2089893ccaa5,GET /users/v1/{username},http_5xx,"500 sqlalchemy.exc.operationalerror: (sqlite<n>.operationalerror) unrecognized token: ""'񟹡򌤧''""",103.0,1
+vampi__schemathesis__rep1,vampi,schemathesis,1,43434c45ca1a,GET /users/v1/{username},http_5xx,"500 sqlalchemy.exc.operationalerror: (sqlite<n>.operationalerror) unrecognized token: ""'񟹡''""",103.0,1
+vampi__schemathesis__rep1,vampi,schemathesis,1,54d6b5d97be4,GET /users/v1/{username},http_5xx,"500 sqlalchemy.exc.operationalerror: (sqlite<n>.operationalerror) unrecognized token: ""'''""",103.0,89
+vampi__schemathesis__rep1,vampi,schemathesis,1,2ae9805c77ca,POST /books/v1,schemathesis:ST202,st<n> schema-valid request rejected,6.4,1
+vampi__schemathesis__rep1,vampi,schemathesis,1,cfb9ad4f6da3,POST /users/v1/login,schemathesis:ST202,st<n> schema-valid request rejected,6.5,1
+vampi__schemathesis__rep1,vampi,schemathesis,1,4267255482ca,POST /users/v1/register,schemathesis:ST202,st<n> schema-valid request rejected,6.5,1
+vampi__schemathesis__rep1,vampi,schemathesis,1,ab80c5353f05,GET /me,schemathesis:ST105,st<n> undocumented content-type,10.4,1
+vampi__schemathesis__rep1,vampi,schemathesis,1,e2ef582a61ec,GET /books/v1/{book_title},schemathesis:ST108,st<n> response violates schema,6.6,1
+vampi__schemathesis__rep1,vampi,schemathesis,1,fd6017d0fef3,GET /books/v1/{book_title},schemathesis:ST105,st<n> undocumented content-type,6.6,1
+vampi__schemathesis__rep1,vampi,schemathesis,1,df7e62f18aab,PUT /users/v1/{username}/email,schemathesis:ST105,st<n> undocumented content-type,6.7,1
+vampi__schemathesis__rep1,vampi,schemathesis,1,45bf0905db24,PUT /users/v1/{username}/email,schemathesis:ST202,st<n> schema-valid request rejected,6.7,1
+vampi__schemathesis__rep1,vampi,schemathesis,1,9a9f8f8fef96,PUT /users/v1/{username}/password,schemathesis:ST105,st<n> undocumented content-type,6.7,1
+vampi__schemathesis__rep1,vampi,schemathesis,1,d1a7fc15e629,PUT /users/v1/{username}/password,schemathesis:ST202,st<n> schema-valid request rejected,6.7,1
+vampi__schemathesis__rep1,vampi,schemathesis,1,c78369941b69,GET /users/v1/{username},schemathesis:ST103,st<n> undocumented status code,6.8,1
+vampi__schemathesis__rep1,vampi,schemathesis,1,32650435bf7d,DELETE /users/v1/{username},schemathesis:ST105,st<n> undocumented content-type,6.8,1
+vampi__schemathesis__rep1,vampi,schemathesis,1,5180ebae611a,Stateful tests,schemathesis:ST103,st<n> undocumented status code,,1
+vampi__schemathesis__rep1,vampi,schemathesis,1,cd3f9722b4a9,Stateful tests,schemathesis:ST302,st<n> created resource not found,,1

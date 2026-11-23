@@ -1,0 +1,11 @@
+{
+  "run_id": "vampi__schemathesis__rep1",
+  "api": "vampi",
+  "tool": "schemathesis",
+  "rep": 1,
+  "seed": 1001,
+  "budget_sec": 600,
+  "start_ts": 1795436471.0867825,
+  "end_ts": 1795437079.562728,
+  "schema_file": "apis/vampi/openapi3.yml"
+}

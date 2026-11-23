@@ -1,0 +1,11 @@
+{
+  "run_id": "vampi__evomaster__rep1",
+  "api": "vampi",
+  "tool": "evomaster",
+  "rep": 1,
+  "seed": 1001,
+  "budget_sec": 600,
+  "start_ts": 1795435853.487587,
+  "end_ts": 1795436463.1718178,
+  "schema_file": "apis/vampi/openapi3.yml"
+}

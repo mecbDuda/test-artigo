@@ -1,0 +1,163 @@
+{
+  "0": {},
+  "401": {
+    "6b22c8c2-7773-42c9-a6da-eb3739eb9aed": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "DELETE",
+            "path": "/users/v1/fuzzstring",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 401,
+            "codeDescription": "UNAUTHORIZED",
+            "content": "{ \"status\": \"fail\", \"message\": \"Only Admins may delete users!\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "DELETE",
+            "path": "/users/v1/name1",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 401,
+            "codeDescription": "UNAUTHORIZED",
+            "content": "{ \"status\": \"fail\", \"message\": \"Only Admins may delete users!\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "DELETE",
+            "path": "/users/v1/fuzzstring",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 401,
+            "codeDescription": "UNAUTHORIZED",
+            "content": "{ \"status\": \"fail\", \"message\": \"Only Admins may delete users!\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "DELETE",
+            "path": "/users/v1/name1",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 401,
+            "codeDescription": "UNAUTHORIZED",
+            "content": "{ \"status\": \"fail\", \"message\": \"Only Admins may delete users!\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ]
+  },
+  "404": {
+    "98bc3e97-d032-4365-a726-b11bdba4da63": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/books/v1/fuzzstring",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "NOT FOUND",
+            "content": "{ \"status\": \"fail\", \"message\": \"Book not found!\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/books/v1/bookTitle77",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "NOT FOUND",
+            "content": "{ \"status\": \"fail\", \"message\": \"Book not found!\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/books/v1/fuzzstring",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "NOT FOUND",
+            "content": "{ \"status\": \"fail\", \"message\": \"Book not found!\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/books/v1/bookTitle77",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "NOT FOUND",
+            "content": "{ \"status\": \"fail\", \"message\": \"Book not found!\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ]
+  }
+}

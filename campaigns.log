@@ -1,0 +1,60 @@
+>> TOOLS=[schemathesis restler evomaster] APIS=[vampi] REPS=1 BUDGET_MIN=10 BASE_SEED=1000
+=== vampi__restler__rep1 (2026-11-23T12:00:14+00:00) ===
+ Network fuzzexp_sut Creating 
+ Network fuzzexp_sut Creating 
+ Network fuzzexp_default Creating 
+ Network fuzzexp_default Creating 
+ Network fuzzexp_default Created 
+ Network fuzzexp_default Created 
+ Network fuzzexp_sut Created 
+ Network fuzzexp_sut Created 
+ Container fuzzexp-api-1 Creating 
+ Container fuzzexp-api-1 Created 
+ Container fuzzexp-proxy-1 Creating 
+ Container fuzzexp-proxy-1 Created 
+ Container fuzzexp-api-1 Starting 
+ Container fuzzexp-api-1 Started 
+ Container fuzzexp-proxy-1 Starting 
+ Container fuzzexp-proxy-1 Started 
+curl: (52) Empty reply from server
+curl: (7) Failed to connect to localhost port 8099 after 0 ms: Couldn't connect to server
+=== vampi__evomaster__rep1 (2026-11-23T12:10:49+00:00) ===
+ Network fuzzexp_default Creating 
+ Network fuzzexp_default Creating 
+ Network fuzzexp_sut Creating 
+ Network fuzzexp_sut Creating 
+ Network fuzzexp_default Created 
+ Network fuzzexp_default Created 
+ Network fuzzexp_sut Created 
+ Network fuzzexp_sut Created 
+ Container fuzzexp-api-1 Creating 
+ Container fuzzexp-api-1 Created 
+ Container fuzzexp-proxy-1 Creating 
+ Container fuzzexp-proxy-1 Created 
+ Container fuzzexp-api-1 Starting 
+ Container fuzzexp-api-1 Started 
+ Container fuzzexp-proxy-1 Starting 
+ Container fuzzexp-proxy-1 Started 
+curl: (56) Recv failure: Connection reset by peer
+curl: (7) Failed to connect to localhost port 8099 after 0 ms: Couldn't connect to server
+=== vampi__schemathesis__rep1 (2026-11-23T12:21:06+00:00) ===
+ Network fuzzexp_default Creating 
+ Network fuzzexp_default Creating 
+ Network fuzzexp_sut Creating 
+ Network fuzzexp_sut Creating 
+ Network fuzzexp_default Created 
+ Network fuzzexp_default Created 
+ Network fuzzexp_sut Created 
+ Network fuzzexp_sut Created 
+ Container fuzzexp-api-1 Creating 
+ Container fuzzexp-api-1 Created 
+ Container fuzzexp-proxy-1 Creating 
+ Container fuzzexp-proxy-1 Created 
+ Container fuzzexp-api-1 Starting 
+ Container fuzzexp-api-1 Started 
+ Container fuzzexp-proxy-1 Starting 
+ Container fuzzexp-proxy-1 Started 
+curl: (56) Recv failure: Connection reset by peer
+curl: (7) Failed to connect to localhost port 8099 after 0 ms: Couldn't connect to server
+Concluído. Próximo passo: python3 analysis/extract_findings.py
+FIM_PILOTO

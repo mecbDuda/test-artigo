@@ -1,0 +1,12 @@
+Restler Information: 0 : Starting task Compile...
+    DateTime=2026-11-23T12:00:18.9442468Z
+Restler Information: 0 : Launching 'dotnet "/RESTler/restler/../compiler/Restler.CompilerExe.dll" "/work/Compile/config.json"'
+    DateTime=2026-11-23T12:00:20.0733348Z
+Restler Information: 0 : Process execution terminated in 00:00:01.6185957 with exit code 0x0: 'dotnet "/RESTler/restler/../compiler/Restler.CompilerExe.dll" "/work/Compile/config.json"'
+    DateTime=2026-11-23T12:00:21.6975229Z
+Restler Information: 0 : (20) dotnet "/RESTler/restler/../compiler/Restler.CompilerExe.dll" "/work/Compile/config.json" exited with code: 0
+    DateTime=2026-11-23T12:00:21.7032705Z
+Restler Information: 0 : Task Compile succeeded.
+    DateTime=2026-11-23T12:00:21.7213037Z
+Restler Information: 0 : Collecting logs...
+    DateTime=2026-11-23T12:00:21.8707115Z
