@@ -38,13 +38,20 @@ Autenticação: VAmPI usa JWT Bearer (login de `name1`); petclinic-rest e catwat
 
 ## Máquina
 
+Máquina da **campanha completa** (a partir de 2026-11-23): GitHub Codespace. A
+máquina da preparação era outra (Intel Core i5-13400F, Windows 11 com WSL2/Ubuntu
+24.04, 12 GB alocados ao WSL, Docker 29.1.3, Compose 2.40.3, Python 3.12.3). O
+estudo piloto (branch `piloto`, pasta `piloto/`) rodou neste mesmo Codespace.
+
 | Item | Valor |
 |---|---|
-| CPU | Intel Core i5-13400F (10 núcleos / 16 threads) |
-| RAM | 15,8 GB no host; 12 GB alocados ao WSL2 (`.wslconfig`) |
-| SO do host | Windows 11 Pro, build 10.0.26300 |
-| Ambiente Linux | WSL2, Ubuntu 24.04.5 LTS, kernel 5.15.167.4-microsoft-standard-WSL2 |
-| Docker | Docker Engine 29.1.3 nativo no WSL2 (pacote `docker.io` do Ubuntu), storage overlayfs |
-| Docker Compose | 2.40.3 |
-| Python | 3.12.3 (pyyaml 6.0.1, scipy 1.11.4) |
+| Ambiente | GitHub Codespace, tipo "2 cores, 8 GB RAM, 32 GB storage" (VM Azure), tempo de ociosidade de 240 min |
+| CPU | AMD EPYC 7763, 2 vCPUs (`nproc` = 2) |
+| RAM | 7,8 GiB (`free -h`), sem swap |
+| Disco | 32 GB (overlay); `/tmp` em disco separado de 44 GB |
+| SO | Ubuntu 24.04.5 LTS, kernel 6.8.0-1070-azure |
+| Docker | Docker Engine 29.9.2, storage overlayfs |
+| Docker Compose | v5.6.1 |
+| Python | 3.14.2 (pyyaml 6.0.3, scipy 1.18.1) |
 | curl | 8.5.0 |
+| tmux | 3.4 |

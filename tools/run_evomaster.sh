@@ -18,7 +18,11 @@ auth_args=()
 target_origin="$(printf '%s' "$BASE_URL" | sed -E 's#^(https?://[^/]+).*#\1#')"
 
 mkdir -p "$OUT_DIR/generated_tests"
-run_limited "evomaster" "$((BUDGET_SEC + 120))" \
+# Folga de 600 s depois do orçamento de busca (--maxTime): a minimização tem limite
+# padrão de 5 min (--minimizeTimeout, v5.1.0) e o relatório WFC só é gravado depois
+# dela. Com 120 s de folga, na catwatch o contêiner era morto durante a minimização
+# e o report.json se perdia (docs/desvios.md, D18).
+run_limited "evomaster" "$((BUDGET_SEC + 600))" \
   -v "$OUT_DIR/generated_tests:/generated_tests" \
   "webfuzzing/evomaster:$EM_VERSION" \
     --blackBox true \

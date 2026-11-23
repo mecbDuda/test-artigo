@@ -35,6 +35,10 @@ python3 - "$OUT_DIR/Compile/engine_settings.json" "$SEED" "$OUT_DIR/Compile/gram
 import json, sys
 p, seed, grammar = sys.argv[1], int(sys.argv[2]), sys.argv[3]
 s = json.load(open(p)); s["random_seed"] = seed
+# Nova conexão a cada requisição: depois de respostas com "Connection: close" (o Tomcat
+# do petclinic-rest e da catwatch fecha a conexão após erros), o RESTler reaproveitava o
+# socket fechado e esperava 120 s por requisição (docs/desvios.md, D17).
+s["reconnect_on_every_request"] = True
 if 'restler_basepath("/")' in open(grammar, encoding="utf-8").read():
     s["basepath"] = ""
 json.dump(s, open(p, "w"), indent=2)
