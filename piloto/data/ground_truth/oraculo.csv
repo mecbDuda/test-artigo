@@ -1,0 +1,11 @@
+defeito_id,api,operacao,tipo,origem,descricao,como_reproduzir,verificado
+VAMPI-01,vampi,GET /users/v1/{username},injecao_sql,documentado,SQL injection no parâmetro username,"[preencher após reproduzir, ex.: GET /users/v1/name1' ...]",nao
+VAMPI-02,vampi,PUT /users/v1/{username}/password,autorizacao,documentado,Troca de senha de outro usuário sem autorização,[preencher],nao
+VAMPI-03,vampi,GET /books/v1/{book_title},autorizacao_bola,documentado,Broken object-level authorization: acesso ao segredo de livro de outro usuário,[preencher],nao
+VAMPI-04,vampi,POST /users/v1/register,mass_assignment,documentado,Mass assignment: registro aceita atributo de administrador,[preencher],nao
+VAMPI-05,vampi,GET /users/v1/_debug,exposicao_dados,documentado,Exposição excessiva de dados no endpoint de debug,[preencher],nao
+VAMPI-06,vampi,POST /users/v1/login,enumeracao,documentado,Enumeração de usuários e senhas pelas mensagens de erro do login,[preencher],nao
+VAMPI-07,vampi,PUT /users/v1/{username}/email,redos,documentado,ReDoS: expressão regular de validação de e-mail vulnerável,[preencher],nao
+VAMPI-08,vampi,(global),limite_recursos,documentado,Ausência de limite de recursos e de rate limiting,[preencher],nao
+VAMPI-09,vampi,(autenticação JWT),autenticacao,documentado,Bypass de autenticação JWT por chave de assinatura fraca,[preencher],nao
+VAMPI-10,vampi,POST /books/v1,excecao_nao_tratada,pooling,"POST /books/v1 com título já existente gera 500 (IntegrityError não tratada, books.py:37) em vez de 4xx","ver relatos 3bb5b01b73e9 e 5180ebae611a",nao

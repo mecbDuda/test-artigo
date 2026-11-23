@@ -8,4 +8,3 @@ VAMPI-06,vampi,POST /users/v1/login,enumeracao,documentado,Enumeração de usuá
 VAMPI-07,vampi,PUT /users/v1/{username}/email,redos,documentado,ReDoS: expressão regular de validação de e-mail vulnerável,[preencher],nao
 VAMPI-08,vampi,(global),limite_recursos,documentado,Ausência de limite de recursos e de rate limiting,[preencher],nao
 VAMPI-09,vampi,(autenticação JWT),autenticacao,documentado,Bypass de autenticação JWT por chave de assinatura fraca,[preencher],nao
-VAMPI-10,vampi,POST /books/v1,excecao_nao_tratada,pooling,"POST /books/v1 com título já existente gera 500 (IntegrityError não tratada, books.py:37) em vez de 4xx","ver relatos 3bb5b01b73e9 e 5180ebae611a",nao
