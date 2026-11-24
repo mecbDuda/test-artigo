@@ -1,0 +1,16 @@
+Métrica,Comparação,n,Â12,p (Mann-Whitney)
+recall,Schemathesis vs RESTler,9/9,0.65,0.304
+recall,Schemathesis vs EvoMaster (caixa-preta),9/9,0.65,0.304
+recall,RESTler vs EvoMaster (caixa-preta),9/9,0.50,1.000
+precisao,Schemathesis vs RESTler,9/9,0.00,0.000
+precisao,Schemathesis vs EvoMaster (caixa-preta),9/9,0.53,0.859
+precisao,RESTler vs EvoMaster (caixa-preta),9/9,0.72,0.114
+f1,Schemathesis vs RESTler,9/9,0.33,0.249
+f1,Schemathesis vs EvoMaster (caixa-preta),9/9,0.43,0.658
+f1,RESTler vs EvoMaster (caixa-preta),9/9,0.67,0.248
+cobertura_operacoes_pct,Schemathesis vs RESTler,9/9,0.72,0.112
+cobertura_operacoes_pct,Schemathesis vs EvoMaster (caixa-preta),9/9,0.56,0.713
+cobertura_operacoes_pct,RESTler vs EvoMaster (caixa-preta),9/9,0.41,0.525
+dph,Schemathesis vs RESTler,9/9,0.74,0.082
+dph,Schemathesis vs EvoMaster (caixa-preta),9/9,0.74,0.082
+dph,RESTler vs EvoMaster (caixa-preta),9/9,0.50,1.000

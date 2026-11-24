@@ -1,0 +1,55 @@
+API,Métrica,Comparação,n,Â12,p (Mann-Whitney)
+catwatch,recall,Schemathesis vs RESTler,3/3,0.83,0.188
+catwatch,recall,Schemathesis vs EvoMaster (caixa-preta),3/3,0.83,0.188
+catwatch,recall,RESTler vs EvoMaster (caixa-preta),3/3,0.50,—
+catwatch,precisao,Schemathesis vs RESTler,3/3,0.00,0.064
+catwatch,precisao,Schemathesis vs EvoMaster (caixa-preta),3/3,0.00,0.100
+catwatch,precisao,RESTler vs EvoMaster (caixa-preta),3/3,1.00,0.064
+catwatch,f1,Schemathesis vs RESTler,3/3,0.00,0.064
+catwatch,f1,Schemathesis vs EvoMaster (caixa-preta),3/3,0.00,0.100
+catwatch,f1,RESTler vs EvoMaster (caixa-preta),3/3,1.00,0.064
+catwatch,cobertura_operacoes_pct,Schemathesis vs RESTler,3/3,0.50,—
+catwatch,cobertura_operacoes_pct,Schemathesis vs EvoMaster (caixa-preta),3/3,0.50,—
+catwatch,cobertura_operacoes_pct,RESTler vs EvoMaster (caixa-preta),3/3,0.50,—
+catwatch,requisicoes,Schemathesis vs RESTler,3/3,0.00,0.100
+catwatch,requisicoes,Schemathesis vs EvoMaster (caixa-preta),3/3,1.00,0.100
+catwatch,requisicoes,RESTler vs EvoMaster (caixa-preta),3/3,1.00,0.100
+catwatch,dph,Schemathesis vs RESTler,3/3,0.83,0.188
+catwatch,dph,Schemathesis vs EvoMaster (caixa-preta),3/3,0.83,0.188
+catwatch,dph,RESTler vs EvoMaster (caixa-preta),3/3,0.50,—
+petclinic-rest,recall,Schemathesis vs RESTler,3/3,1.00,0.064
+petclinic-rest,recall,Schemathesis vs EvoMaster (caixa-preta),3/3,1.00,0.064
+petclinic-rest,recall,RESTler vs EvoMaster (caixa-preta),3/3,0.50,—
+petclinic-rest,precisao,Schemathesis vs RESTler,3/3,0.00,0.077
+petclinic-rest,precisao,Schemathesis vs EvoMaster (caixa-preta),3/3,0.00,0.064
+petclinic-rest,precisao,RESTler vs EvoMaster (caixa-preta),3/3,0.00,0.059
+petclinic-rest,f1,Schemathesis vs RESTler,3/3,0.00,0.077
+petclinic-rest,f1,Schemathesis vs EvoMaster (caixa-preta),3/3,0.00,0.064
+petclinic-rest,f1,RESTler vs EvoMaster (caixa-preta),3/3,0.00,0.059
+petclinic-rest,cobertura_operacoes_pct,Schemathesis vs RESTler,3/3,1.00,0.047
+petclinic-rest,cobertura_operacoes_pct,Schemathesis vs EvoMaster (caixa-preta),3/3,1.00,0.064
+petclinic-rest,cobertura_operacoes_pct,RESTler vs EvoMaster (caixa-preta),3/3,0.17,0.197
+petclinic-rest,requisicoes,Schemathesis vs RESTler,3/3,0.00,0.100
+petclinic-rest,requisicoes,Schemathesis vs EvoMaster (caixa-preta),3/3,0.00,0.100
+petclinic-rest,requisicoes,RESTler vs EvoMaster (caixa-preta),3/3,0.00,0.100
+petclinic-rest,dph,Schemathesis vs RESTler,3/3,1.00,0.064
+petclinic-rest,dph,Schemathesis vs EvoMaster (caixa-preta),3/3,1.00,0.064
+petclinic-rest,dph,RESTler vs EvoMaster (caixa-preta),3/3,0.50,—
+vampi,recall,Schemathesis vs RESTler,3/3,1.00,0.047
+vampi,recall,Schemathesis vs EvoMaster (caixa-preta),3/3,1.00,0.047
+vampi,recall,RESTler vs EvoMaster (caixa-preta),3/3,0.50,—
+vampi,precisao,Schemathesis vs RESTler,3/3,0.00,0.059
+vampi,precisao,Schemathesis vs EvoMaster (caixa-preta),3/3,1.00,0.072
+vampi,precisao,RESTler vs EvoMaster (caixa-preta),3/3,1.00,0.059
+vampi,f1,Schemathesis vs RESTler,3/3,1.00,0.059
+vampi,f1,Schemathesis vs EvoMaster (caixa-preta),3/3,1.00,0.072
+vampi,f1,RESTler vs EvoMaster (caixa-preta),3/3,1.00,0.059
+vampi,cobertura_operacoes_pct,Schemathesis vs RESTler,3/3,1.00,0.047
+vampi,cobertura_operacoes_pct,Schemathesis vs EvoMaster (caixa-preta),3/3,0.50,—
+vampi,cobertura_operacoes_pct,RESTler vs EvoMaster (caixa-preta),3/3,0.00,0.047
+vampi,requisicoes,Schemathesis vs RESTler,3/3,1.00,0.100
+vampi,requisicoes,Schemathesis vs EvoMaster (caixa-preta),3/3,0.00,0.100
+vampi,requisicoes,RESTler vs EvoMaster (caixa-preta),3/3,0.00,0.100
+vampi,dph,Schemathesis vs RESTler,3/3,1.00,0.047
+vampi,dph,Schemathesis vs EvoMaster (caixa-preta),3/3,1.00,0.047
+vampi,dph,RESTler vs EvoMaster (caixa-preta),3/3,0.50,—

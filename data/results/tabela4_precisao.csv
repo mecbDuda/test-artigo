@@ -1,0 +1,4 @@
+Ferramenta,VP,FP,Precisão,Inconclusivos,Principal causa de FP
+Schemathesis,121,148,45.0%,0,Revisão: os dois avaliadores concordaram com todas as sugestões (declarado pela equipe em 2026-11-24; D31)
+RESTler,109,14,88.6%,1,Revisão: os dois avaliadores concordaram com todas as sugestões (declarado pela equipe em 2026-11-24; D31)
+EvoMaster (caixa-preta),33,27,55.0%,2,Revisão: os dois avaliadores concordaram com todas as sugestões (declarado pela equipe em 2026-11-24; D31)

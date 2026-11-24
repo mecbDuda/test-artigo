@@ -1,0 +1,5 @@
+API,Defeitos no oráculo,Schemathesis VP (união),Schemathesis Recall (união),Schemathesis Recall (média),RESTler VP (união),RESTler Recall (união),RESTler Recall (média),EvoMaster (caixa-preta) VP (união),EvoMaster (caixa-preta) Recall (união),EvoMaster (caixa-preta) Recall (média)
+catwatch,8,8,100.0%,95.8%,7,87.5%,87.5%,7,87.5%,87.5%
+petclinic-rest,13,11,84.6%,76.9%,7,53.8%,53.8%,7,53.8%,53.8%
+vampi,12,4,33.3%,33.3%,2,16.7%,16.7%,2,16.7%,16.7%
+Total,33,23,69.7%,68.7%,16,48.5%,52.7%,16,48.5%,52.7%
