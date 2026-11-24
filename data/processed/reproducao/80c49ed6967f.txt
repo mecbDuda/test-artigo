@@ -1,0 +1,43 @@
+relato 80c49ed6967f | vampi | GET /createdb | evomaster:101
+assinatura: type: validation.response.status.unknown
+ferramentas: evomaster
+evidência: vampi__evomaster__rep1/generated_tests/EvoMaster_faults_Test.java#test_0_getOnCreatedbShowsFaults_100_101
+
+
+=== trecho do relatório da ferramenta ===
+
+        
+        // Fault100. HTTP Status 500.
+        // Fault101. Received A Response From API With A Structure/Data That Is Not Matching Its Schema. Type: validation.response.status.unknown Response status 500 not defined for path '/createdb'.
+        given().accept("*/*")
+                .header("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU0ODg5OTQsImlhdCI6MTc5NTQ4MTc5NCwic3ViIjoibmFtZTEifQ.pWoPdBFaMzNilWqOFdsEXCl5UqMaRm4SHQv0EsC0Zww") // Fixed Headers
+                .get(baseUrlOfSut + "/createdb")
+                .then()
+                .statusCode(500)
+                .assertThat()
+                .contentType("text/html");
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] GET /createdb
+  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MDUsImlhdCI6MTc5NTU1NzcwNSwic3ViIjoibmFtZTEifQ.GpabA1Ra6JfAsWUmTUIzba4VWLxDsy5oTLn48zv5fQU", "Accept": "*/*"}
+  corpo: 
+  -> 200 (60 ms) content-type=application/json
+  resposta: { "message": "Database populated." }
+
+[tentativa 2, passo 1] GET /createdb
+  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MDUsImlhdCI6MTc5NTU1NzcwNSwic3ViIjoibmFtZTEifQ.GpabA1Ra6JfAsWUmTUIzba4VWLxDsy5oTLn48zv5fQU", "Accept": "*/*"}
+  corpo: 
+  -> 200 (60 ms) content-type=application/json
+  resposta: { "message": "Database populated." }
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:44] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:44] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:44] "[33mGET /books/v1/book99 HTTP/1.1[0m" 404 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:44] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:44] "[33mGET /books/v1/book99 HTTP/1.1[0m" 404 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "GET /createdb HTTP/1.1" 200 -

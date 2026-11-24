@@ -1,0 +1,170 @@
+relato 3bb5b01b73e9 | vampi | POST /books/v1 | http_5xx
+assinatura: 500 sqlalchemy.exc.integrityerror: (sqlite<n>.integrityerror) unique constraint failed: books.book_title
+ferramentas: evomaster;schemathesis
+evidência: vampi__evomaster__rep1/flows.jsonl (ts 1795481802)
+
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] POST /books/v1
+  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MjEsImlhdCI6MTc5NTU1NzcyMSwic3ViIjoibmFtZTEifQ.V0HXwukhjyE6CKX1OmpIR_CjelRkVOLesbI7-JrSCt4", "Content-Type": "application/json"}
+  corpo: {"book_title":"bookTitle32", "secret":"pass1secret"}
+  -> 200 (15 ms) content-type=application/json
+  resposta: {"message": "Book has been added.", "status": "success"}
+
+[tentativa 2, passo 1] POST /books/v1
+  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MjEsImlhdCI6MTc5NTU1NzcyMSwic3ViIjoibmFtZTEifQ.V0HXwukhjyE6CKX1OmpIR_CjelRkVOLesbI7-JrSCt4", "Content-Type": "application/json"}
+  corpo: {"book_title":"bookTitle32", "secret":"pass1secret"}
+  -> 400 (9 ms) content-type=application/json
+  resposta: { "status": "fail", "message": "Book Already exists!"}
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  |   File "/vampi/models/user_model.py", line 101, in init_db_users
+api-1  |     User.register_user("admin", "pass1", "admin@mail.com", True)
+api-1  |   File "/vampi/models/user_model.py", line 89, in register_user
+api-1  |     db.session.commit()
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 538, in commit
+api-1  |     return self._proxied.commit()
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1903, in commit
+api-1  |     trans.commit(_to_root=True)
+api-1  |   File "<string>", line 2, in commit
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+api-1  |     ret_value = fn(self, *arg, **kw)
+api-1  |                 ^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1218, in commit
+api-1  |     self._prepare_impl()
+api-1  |   File "<string>", line 2, in _prepare_impl
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+api-1  |     ret_value = fn(self, *arg, **kw)
+api-1  |                 ^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1193, in _prepare_impl
+api-1  |     self.session.flush()
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4140, in flush
+api-1  |     self._flush(objects)
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4276, in _flush
+api-1  |     with util.safe_reraise():
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+api-1  |     raise exc_value.with_traceback(exc_tb)
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4237, in _flush
+api-1  |     flush_context.execute()
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 467, in execute
+api-1  |     rec.execute(self)
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 644, in execute
+api-1  |     util.preloaded.orm_persistence.save_obj(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+api-1  |     _emit_insert_statements(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 1188, in _emit_insert_statements
+api-1  |     result = connection.execute(
+api-1  |              ^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1414, in execute
+api-1  |     return meth(
+api-1  |            ^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 489, in _execute_on_connection
+api-1  |     return connection._execute_clauseelement(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+api-1  |     ret = self._execute_context(
+api-1  |           ^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+api-1  |     return self._exec_single_context(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+api-1  |     self._handle_dbapi_exception(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2325, in _handle_dbapi_exception
+api-1  |     raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+api-1  |     self.dialect.do_execute(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+api-1  |     cursor.execute(statement, parameters)
+api-1  | sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: books.book_title
+api-1  | [SQL: INSERT INTO books (book_title, secret_content, user_id) VALUES (?, ?, ?)]
+api-1  | [parameters: ('bookTitle73', 'secret for bookTitle73', 3)]
+api-1  | (Background on this error at: https://sqlalche.me/e/20/gkpj)
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:00] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:00] "[35m[1mGET /users/v1/' HTTP/1.1[0m" 500 -
+api-1  | Traceback (most recent call last):
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+api-1  |     self.dialect.do_execute(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+api-1  |     cursor.execute(statement, parameters)
+api-1  | sqlite3.OperationalError: unrecognized token: "'''"
+api-1  | 
+api-1  | The above exception was the direct cause of the following exception:
+api-1  | 
+api-1  | Traceback (most recent call last):
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
+api-1  |     return self.wsgi_app(environ, start_response)
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+api-1  |     response = self.handle_exception(e)
+api-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
+api-1  |     response = self.full_dispatch_request()
+api-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
+api-1  |     rv = self.handle_user_exception(e)
+api-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
+api-1  |     rv = self.dispatch_request()
+api-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
+api-1  |     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/decorator.py", line 68, in wrapper
+api-1  |     response = function(request)
+api-1  |                ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/uri_parsing.py", line 149, in wrapper
+api-1  |     response = function(request)
+api-1  |                ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/validation.py", line 399, in wrapper
+api-1  |     return function(request)
+api-1  |            ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/parameter.py", line 120, in wrapper
+api-1  |     return function(**kwargs)
+api-1  |            ^^^^^^^^^^^^^^^^^^
+api-1  |   File "/vampi/api_views/users.py", line 46, in get_by_username
+api-1  |     if User.get_user(username):
+api-1  |        ^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/vampi/models/user_model.py", line 73, in get_user
+api-1  |     query = db.session.execute(text(user_query))
+api-1  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 709, in execute
+api-1  |     return self._proxied.execute(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2229, in execute
+api-1  |     return self._execute_internal(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2133, in _execute_internal
+api-1  |     result = conn.execute(
+api-1  |              ^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1414, in execute
+api-1  |     return meth(
+api-1  |            ^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 489, in _execute_on_connection
+api-1  |     return connection._execute_clauseelement(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+api-1  |     ret = self._execute_context(
+api-1  |           ^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+api-1  |     return self._exec_single_context(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+api-1  |     self._handle_dbapi_exception(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2325, in _handle_dbapi_exception
+api-1  |     raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+api-1  |     self.dialect.do_execute(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+api-1  |     cursor.execute(statement, parameters)
+api-1  | sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unrecognized token: "'''"
+api-1  | [SQL: SELECT * FROM users WHERE username = ''']
+api-1  | (Background on this error at: https://sqlalche.me/e/20/e3q8)
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:01] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:01] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:01] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:01] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:01] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:01] "POST /books/v1 HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:01] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:01] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 400 -

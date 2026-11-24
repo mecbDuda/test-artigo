@@ -236,6 +236,55 @@ def main():
             comp.append(row)
     add_table(md, out_dir, "comparacao_estatistica", "Comparação par a par (Â12 > 0,5 favorece a primeira ferramenta)", comp)
 
+    # ---------- Tabela 7: por ferramenta e API, média (mín–máx) entre repetições ----------
+    def mm(vals, nd=2, pct=False):
+        m, _, lo, hi = agg(vals)
+        if m is None:
+            return "—"
+        return f"{fmt(m, nd, pct)} ({fmt(lo, nd, pct)}–{fmt(hi, nd, pct)})"
+
+    t7 = []
+    for api in apis:
+        for t in tools:
+            runs = [r for r in per_run if r["tool"] == t and r["api"] == api]
+            if not runs:
+                continue
+            t7.append({"API": api, "Ferramenta": TOOL_LABEL.get(t, t), "Repetições": len(runs),
+                       "Relatos brutos": mm([r["relatos_brutos"] for r in runs], 1),
+                       "Relatos únicos": mm([r["relatos_unicos"] for r in runs], 1),
+                       "VP": mm([r["vp_relatos"] for r in runs], 1), "FP": mm([r["fp_relatos"] for r in runs], 1),
+                       "INC": mm([r["inc_relatos"] for r in runs], 1),
+                       "Defeitos detectados": mm([r["defeitos_detectados"] for r in runs], 1),
+                       "Recall": mm([r["recall"] for r in runs], pct=True),
+                       "Precisão": mm([r["precisao"] for r in runs], pct=True),
+                       "F1": mm([r["f1"] for r in runs]),
+                       "Cobertura de operações (%)": mm([r["cobertura_operacoes_pct"] for r in runs], 1),
+                       "Requisições": mm([r["requisicoes"] for r in runs], 0),
+                       "TTFF (min)": mm([r["ttff_min"] for r in runs], 1),
+                       "DPH": mm([r["dph"] for r in runs])})
+    add_table(md, out_dir, "tabela7_por_ferramenta_api",
+              "Tabela 7 – Métricas por ferramenta e API: média (mínimo–máximo) entre as repetições", t7)
+
+    # ---------- Comparação estatística por API (n = repetições por ferramenta) ----------
+    comp_api = []
+    for api in apis:
+        for m in ("recall", "precisao", "f1", "cobertura_operacoes_pct", "requisicoes", "dph"):
+            for a, b in combinations(tools, 2):
+                xa = [r[m] for r in per_run if r["tool"] == a and r["api"] == api and r[m] is not None]
+                xb = [r[m] for r in per_run if r["tool"] == b and r["api"] == api and r[m] is not None]
+                row = {"API": api, "Métrica": m, "Comparação": f"{TOOL_LABEL.get(a, a)} vs {TOOL_LABEL.get(b, b)}",
+                       "n": f"{len(xa)}/{len(xb)}", "Â12": fmt(a12(xa, xb)), "p (Mann-Whitney)": "—"}
+                try:
+                    from scipy.stats import mannwhitneyu
+                    if len(xa) >= 3 and len(xb) >= 3 and len(set(xa + xb)) > 1:
+                        row["p (Mann-Whitney)"] = fmt(mannwhitneyu(xa, xb, alternative="two-sided").pvalue, 3)
+                except ImportError:
+                    pass
+                comp_api.append(row)
+    add_table(md, out_dir, "comparacao_estatistica_por_api",
+              "Comparação par a par por API (com n = 3 por grupo, o menor p bilateral possível do Mann-Whitney é 0,10)",
+              comp_api)
+
     with open(os.path.join(out_dir, "tabelas.md"), "w", encoding="utf-8") as f:
         f.write("\n".join(md))
     print(f"Resultados em {out_dir}/ (veja tabelas.md)")

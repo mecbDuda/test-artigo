@@ -1,0 +1,186 @@
+relato 5143b272cea0 | petclinic-rest | POST /api/visits | schemathesis:ST103
+assinatura: st<n> undocumented status code
+ferramentas: schemathesis
+evidência: petclinic-rest__schemathesis__rep1/iter_0/junit-20261124T015900Z.xml
+
+
+=== trecho do relatório da ferramenta ===
+1. Test Case ID: Fd3nDV
+
+- ST103 Undocumented status code
+
+    Received: 201
+    Documented: 200, 304, 400, 404, 500
+
+[201] Created:
+
+    `{"description":"rabies shot","id":8,"petId":15,"date":"2013-01-01"}`
+
+Reproduce with:
+
+    curl -X POST -H 'Content-Type: application/json' -d '{"date": "2013-01-01", "description": "rabies shot", "petId": 15}' http://localhost:8081/petclinic/api/visits
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] POST /petclinic/api/visits
+  cabeçalhos: {"Content-Type": "application/json"}
+  corpo: {"date": "2013-01-01", "description": "rabies shot", "petId": 15}
+  -> 404 (214 ms) content-type=application/problem+json
+  resposta: {"detail":"The requested resource could not be processed due to a data constraint violation","instance":"/petclinic/api/visits","status":404,"title":"DataIntegrityViolationException","type":"http://api:8080/petclinic/api/visits","timestamp":"2026-11-24T22:28:36.323784048Z","schemaValidationErrors":[]}
+
+[tentativa 2, passo 1] POST /petclinic/api/visits
+  cabeçalhos: {"Content-Type": "application/json"}
+  corpo: {"date": "2013-01-01", "description": "rabies shot", "petId": 15}
+  -> 404 (15 ms) content-type=application/problem+json
+  resposta: {"detail":"The requested resource could not be processed due to a data constraint violation","instance":"/petclinic/api/visits","status":404,"title":"DataIntegrityViolationException","type":"http://api:8080/petclinic/api/visits","timestamp":"2026-11-24T22:28:36.386859280Z","schemaValidationErrors":[]}
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140)
+api-1  | 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140)
+api-1  | 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+api-1  | 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140)
+api-1  | 	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+api-1  | 	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+api-1  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140)
+api-1  | 	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+api-1  | 	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140)
+api-1  | 	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+api-1  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140)
+api-1  | 	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+api-1  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:336)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140)
+api-1  | 	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+api-1  | 	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+api-1  | 	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+api-1  | 	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+api-1  | 	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+api-1  | 	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+api-1  | 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+api-1  | 	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+api-1  | 	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+api-1  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+api-1  | 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+api-1  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+api-1  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+api-1  | 	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+api-1  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+api-1  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+api-1  | 	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+api-1  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+api-1  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+api-1  | 	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+api-1  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+api-1  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+api-1  | 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+api-1  | 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+api-1  | 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535)
+api-1  | 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+api-1  | 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+api-1  | 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+api-1  | 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+api-1  | 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406)
+api-1  | 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+api-1  | 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307)
+api-1  | 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036)
+api-1  | 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+api-1  | 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949)
+api-1  | 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483)
+api-1  | 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+api-1  | 	at java.base/java.lang.Thread.run(Thread.java:840)
+api-1  | Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [Referential integrity constraint violation: "CONSTRAINT_96: PUBLIC.VISITS FOREIGN KEY(PET_ID) REFERENCES PUBLIC.PETS(ID) (15)"; SQL statement:
+api-1  | insert into visits (visit_date,description,pet_id,id) values (?,?,?,default) [23506-240]] [insert into visits (visit_date,description,pet_id,id) values (?,?,?,default)]
+api-1  | 	at org.hibernate.dialect.H2Dialect.lambda$buildSQLExceptionConversionDelegate$0(H2Dialect.java:862)
+api-1  | 	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+api-1  | 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+api-1  | 	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:189)
+api-1  | 	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performMutation(GetGeneratedKeysDelegate.java:96)
+api-1  | 	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:45)
+api-1  | 	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:65)
+api-1  | 	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:54)
+api-1  | 	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:183)
+api-1  | 	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:123)
+api-1  | 	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:87)
+api-1  | 	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:87)
+api-1  | 	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:667)
+api-1  | 	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291)
+api-1  | 	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:270)
+api-1  | 	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322)
+api-1  | 	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:384)
+api-1  | 	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:298)
+api-1  | 	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:228)
+api-1  | 	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:144)
+api-1  | 	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:144)
+api-1  | 	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:91)
+api-1  | 	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:75)
+api-1  | 	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:51)
+api-1  | 	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+api-1  | 	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:709)
+api-1  | 	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:692)
+api-1  | 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+api-1  | 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+api-1  | 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+api-1  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+api-1  | 	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityHandlerInvocationHandler.invokeMethod(SharedEntityManagerCreator.java:239)
+api-1  | 	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:392)
+api-1  | 	at jdk.proxy2/jdk.proxy2.$Proxy164.persist(Unknown Source)
+api-1  | 	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:664)
+api-1  | 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+api-1  | 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+api-1  | 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+api-1  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+api-1  | 	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+api-1  | 	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:278)
+api-1  | 	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169)
+api-1  | 	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+api-1  | 	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545)
+api-1  | 	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290)
+api-1  | 	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690)
+api-1  | 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+api-1  | 	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171)
+api-1  | 	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146)
+api-1  | 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+api-1  | 	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+api-1  | 	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+api-1  | 	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+api-1  | 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+api-1  | 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135)
+api-1  | 	... 143 common frames omitted
+api-1  | Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "CONSTRAINT_96: PUBLIC.VISITS FOREIGN KEY(PET_ID) REFERENCES PUBLIC.PETS(ID) (15)"; SQL statement:
+api-1  | insert into visits (visit_date,description,pet_id,id) values (?,?,?,default) [23506-240]
+api-1  | 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+api-1  | 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+api-1  | 	at org.h2.message.DbException.get(DbException.java:223)
+api-1  | 	at org.h2.message.DbException.get(DbException.java:199)
+api-1  | 	at org.h2.constraint.ConstraintReferential.checkRowOwnTable(ConstraintReferential.java:309)
+api-1  | 	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:250)
+api-1  | 	at org.h2.table.Table.fireConstraints(Table.java:1208)
+api-1  | 	at org.h2.table.Table.fireAfterRow(Table.java:1226)
+api-1  | 	at org.h2.command.dml.Insert.insertRows(Insert.java:188)
+api-1  | 	at org.h2.command.dml.Insert.update(Insert.java:135)
+api-1  | 	at org.h2.command.CommandContainer.executeUpdateWithGeneratedKeys(CommandContainer.java:212)
+api-1  | 	at org.h2.command.CommandContainer.update(CommandContainer.java:133)
+api-1  | 	at org.h2.command.Command.executeUpdate(Command.java:306)
+api-1  | 	at org.h2.command.Command.executeUpdate(Command.java:250)
+api-1  | 	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+api-1  | 	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+api-1  | 	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+api-1  | 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+api-1  | 	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:185)
+api-1  | 	... 194 common frames omitted

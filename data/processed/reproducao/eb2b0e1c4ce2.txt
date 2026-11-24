@@ -1,0 +1,63 @@
+relato eb2b0e1c4ce2 | vampi | GET /createdb | schemathesis:ST103
+assinatura: st<n> undocumented status code
+ferramentas: schemathesis
+evidência: vampi__schemathesis__rep1/iter_0/junit-20261124T002423Z.xml
+
+
+=== trecho do relatório da ferramenta ===
+1. Test Case ID: mEXdxD
+
+- ST101 Server error
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200
+
+[500] Internal Server Error:
+
+    `<!doctype html>
+    <html lang=en>
+      <head>
+        <title>sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: books.book_title
+    [SQL: INSERT INTO books (book_title, secret_content, user_id) VALUES (?, ?, ?)]
+    [parameters: ('bookTitle42', 'secret for bookTitle42', 3)]
+    (Background on this error at: https://sqlalche.me/e/20/gkpj)
+     // Werkzeug Debugger</title>
+        <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">
+        <link rel="shortcut icon"
+            href="?_ // Output truncated...`
+
+Reproduce with:
+
+    curl -X GET -H 'Authorization: [Filtered]' http://localhost:8080/createdb
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] GET /createdb
+  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MDYsImlhdCI6MTc5NTU1NzcwNiwic3ViIjoibmFtZTEifQ.81Bg60WUtgOnkah1ETIuxgNusqMxR5dUjaqsUGIMhCk"}
+  corpo: 
+  -> 200 (59 ms) content-type=application/json
+  resposta: { "message": "Database populated." }
+
+[tentativa 2, passo 1] GET /createdb
+  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MDYsImlhdCI6MTc5NTU1NzcwNiwic3ViIjoibmFtZTEifQ.81Bg60WUtgOnkah1ETIuxgNusqMxR5dUjaqsUGIMhCk"}
+  corpo: 
+  -> 200 (56 ms) content-type=application/json
+  resposta: { "message": "Database populated." }
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "GET /createdb HTTP/1.1" 200 -

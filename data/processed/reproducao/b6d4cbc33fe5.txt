@@ -1,0 +1,27 @@
+relato b6d4cbc33fe5 | catwatch | HEAD /error | evomaster:101
+assinatura: type: validation.response.status.unknown
+ferramentas: evomaster
+evidência: catwatch__evomaster__rep1/generated_tests/EvoMaster_faults_Test.java#test_14_headOnErrorShowsFaults_100_101
+
+
+=== trecho do relatório da ferramenta ===
+
+        
+        // Fault100. HTTP Status 500.
+        // Fault101. Received A Response From API With A Structure/Data That Is Not Matching Its Schema. Type: validation.response.status.unknown Response status 500 not defined for path '/error'.
+        given().accept("*/*")
+                .head(baseUrlOfSut + "/error")
+                .then()
+                .statusCode(500)
+                .assertThat()
+                .body(isEmptyOrNullString());
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] HEAD /error
+  cabeçalhos: {"Accept": "*/*"}
+  corpo: 
+  -> 500 (8 ms) content-type=application/json;charset=UTF-8
+  resposta: 
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+

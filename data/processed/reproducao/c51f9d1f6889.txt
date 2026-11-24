@@ -1,0 +1,202 @@
+relato c51f9d1f6889 | vampi | GET /users/v1/{username} | http_5xx
+assinatura: 500 sqlalchemy.exc.operationalerror: (sqlite<n>.operationalerror) unrecognized token: "'񟹡򌤧
+ferramentas: schemathesis
+evidência: vampi__schemathesis__rep1/flows.jsonl (ts 1795479930)
+
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] GET /users/v1/%F1%9F%B9%A1%F2%8C%A4%A7%0A%27
+  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MTIsImlhdCI6MTc5NTU1NzcxMiwic3ViIjoibmFtZTEifQ.2Od_cH9hgfk1117HU_Rvgrsxb8GMDEG0paDB-QwFPXQ"}
+  corpo: 
+  -> 500 (10 ms) content-type=text/html; charset=utf-8
+  resposta: <!doctype html>
+<html lang=en>
+  <head>
+    <title>sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unrecognized token: "'񟹡򌤧
+''"
+[SQL: SELECT * FROM users WHERE username = '񟹡򌤧
+'']
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+ // Werkzeug Debugger</title>
+    <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">
+    <link rel="shortcut icon"
+        href="?__debugger__=yes&amp;cmd=resource&amp;f=console.png">
+    <script src="?__debugger__=yes&amp;cmd=resource&amp;f=debugger.js"></script>
+    <script>
+      var CONSOLE_MODE = false,
+          EVALEX = true,
+          EVALEX_TRUSTED = false,
+          SECRET = "88Dxej3Vvv6nWuRU6aa8";
+    </script>
+  </head>
+  <body style="background-color: #fff">
+    <div class="debugger">
+<h1>OperationalError</h1>
+<div class="detail">
+  <p class="errormsg">sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unrecognized token: &#34;&#39;񟹡򌤧
+&#39;&#39;&#34;
+[SQL: SELECT * FROM users WHERE username = &#39;񟹡򌤧
+&#39;&#39;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+</p>
+</div>
+<h2 class="traceback">Traceback <em>(most recent call last)</em></h2>
+<div class="traceback">
+  <h3></h3>
+  <ul><li><div class="frame" id="frame-140015521348288">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py"</cite>,
+      line <em class="line">1964</em>,
+      in <code class="function">_exec_single_context</code></h4>
+  <div class="source li
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+api-1  |     response = self.handle_exception(e)
+api-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
+api-1  |     response = self.full_dispatch_request()
+api-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
+api-1  |     rv = self.handle_user_exception(e)
+api-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
+api-1  |     rv = self.dispatch_request()
+api-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
+api-1  |     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/decorator.py", line 68, in wrapper
+api-1  |     response = function(request)
+api-1  |                ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/uri_parsing.py", line 149, in wrapper
+api-1  |     response = function(request)
+api-1  |                ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/validation.py", line 399, in wrapper
+api-1  |     return function(request)
+api-1  |            ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/parameter.py", line 120, in wrapper
+api-1  |     return function(**kwargs)
+api-1  |            ^^^^^^^^^^^^^^^^^^
+api-1  |   File "/vampi/api_views/users.py", line 46, in get_by_username
+api-1  |     if User.get_user(username):
+api-1  |        ^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/vampi/models/user_model.py", line 73, in get_user
+api-1  |     query = db.session.execute(text(user_query))
+api-1  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 709, in execute
+api-1  |     return self._proxied.execute(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2229, in execute
+api-1  |     return self._execute_internal(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2133, in _execute_internal
+api-1  |     result = conn.execute(
+api-1  |              ^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1414, in execute
+api-1  |     return meth(
+api-1  |            ^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 489, in _execute_on_connection
+api-1  |     return connection._execute_clauseelement(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+api-1  |     ret = self._execute_context(
+api-1  |           ^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+api-1  |     return self._exec_single_context(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+api-1  |     self._handle_dbapi_exception(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2325, in _handle_dbapi_exception
+api-1  |     raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+api-1  |     self.dialect.do_execute(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+api-1  |     cursor.execute(statement, parameters)
+api-1  | sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) near "񪪑": syntax error
+api-1  | [SQL: SELECT * FROM users WHERE username = '񟹡򌤧
+api-1  | '񪪑']
+api-1  | (Background on this error at: https://sqlalche.me/e/20/e3q8)
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:52] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:52] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:52] "[35m[1mGET /users/v1/񟹡򌤧%0A' HTTP/1.1[0m" 500 -
+api-1  | Traceback (most recent call last):
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+api-1  |     self.dialect.do_execute(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+api-1  |     cursor.execute(statement, parameters)
+api-1  | sqlite3.OperationalError: unrecognized token: "'񟹡򌤧
+api-1  | ''"
+api-1  | 
+api-1  | The above exception was the direct cause of the following exception:
+api-1  | 
+api-1  | Traceback (most recent call last):
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
+api-1  |     return self.wsgi_app(environ, start_response)
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+api-1  |     response = self.handle_exception(e)
+api-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
+api-1  |     response = self.full_dispatch_request()
+api-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
+api-1  |     rv = self.handle_user_exception(e)
+api-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
+api-1  |     rv = self.dispatch_request()
+api-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
+api-1  |     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/decorator.py", line 68, in wrapper
+api-1  |     response = function(request)
+api-1  |                ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/uri_parsing.py", line 149, in wrapper
+api-1  |     response = function(request)
+api-1  |                ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/validation.py", line 399, in wrapper
+api-1  |     return function(request)
+api-1  |            ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/parameter.py", line 120, in wrapper
+api-1  |     return function(**kwargs)
+api-1  |            ^^^^^^^^^^^^^^^^^^
+api-1  |   File "/vampi/api_views/users.py", line 46, in get_by_username
+api-1  |     if User.get_user(username):
+api-1  |        ^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/vampi/models/user_model.py", line 73, in get_user
+api-1  |     query = db.session.execute(text(user_query))
+api-1  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 709, in execute
+api-1  |     return self._proxied.execute(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2229, in execute
+api-1  |     return self._execute_internal(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2133, in _execute_internal
+api-1  |     result = conn.execute(
+api-1  |              ^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1414, in execute
+api-1  |     return meth(
+api-1  |            ^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 489, in _execute_on_connection
+api-1  |     return connection._execute_clauseelement(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+api-1  |     ret = self._execute_context(
+api-1  |           ^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+api-1  |     return self._exec_single_context(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+api-1  |     self._handle_dbapi_exception(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2325, in _handle_dbapi_exception
+api-1  |     raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+api-1  |     self.dialect.do_execute(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+api-1  |     cursor.execute(statement, parameters)
+api-1  | sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unrecognized token: "'񟹡򌤧
+api-1  | ''"
+api-1  | [SQL: SELECT * FROM users WHERE username = '񟹡򌤧
+api-1  | '']
+api-1  | (Background on this error at: https://sqlalche.me/e/20/e3q8)

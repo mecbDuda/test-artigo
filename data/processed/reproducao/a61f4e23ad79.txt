@@ -1,0 +1,36 @@
+relato a61f4e23ad79 | catwatch | GET /statistics/languages | schemathesis:ST103
+assinatura: st<n> undocumented status code
+ferramentas: schemathesis
+evidência: catwatch__schemathesis__rep1/iter_0/junit-20261124T005700Z.xml
+
+
+=== trecho do relatório da ferramenta ===
+1. Test Case ID: iqBXGA
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+- ST103 Undocumented status code
+
+    Received: 400
+    Documented: 200, 401, 403, 404
+
+[400] Bad Request:
+
+    `Couldn't parse date string .`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8080/statistics/languages?organizations=&start_date=&end_date='
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] GET /statistics/languages?organizations=&start_date=&end_date=
+  cabeçalhos: {}
+  corpo: 
+  -> 400 (6 ms) content-type=application/json;charset=UTF-8
+  resposta: Couldn't parse date string .
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+

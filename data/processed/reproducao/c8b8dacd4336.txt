@@ -1,0 +1,52 @@
+relato c8b8dacd4336 | catwatch | GET /config | schemathesis:ST108
+assinatura: st<n> response violates schema
+ferramentas: schemathesis
+evidência: catwatch__schemathesis__rep1/iter_0/junit-20261124T005700Z.xml
+
+
+=== trecho do relatório da ferramenta ===
+1. Test Case ID: hspSwB
+
+- ST108 Response violates schema
+
+    null is not of type "string"
+
+    Validated against the response schema for status code 200.
+
+    Schema at /additionalProperties:
+
+        {
+            "type": "string"
+        }
+
+    Value:
+
+        null
+
+[200] OK:
+
+    `{"cache.path":"target/cache","cache.size":"50","endpoints.enabled":"false","endpoints.health.enabled":"true","github.login":null,"organization.list":"zalando,zalando-stups,zalando-incubator","schedule":"0 1 8 * * *","scoring.project":"function(project) {var daysSinceLastPush = 0;if (project.lastPushed) {var tokens = project.lastPushed.split(\" \");var day = tokens[2];var month = tokens[1];var year = tokens[5];var lastPushedDate = new Date(day + ' ' + month + ' ' + year);var millisInDay = 86400000;daysSinceL // Output truncated...`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8080/config
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] GET /config
+  cabeçalhos: {}
+  corpo: 
+  -> 200 (7 ms) content-type=application/json;charset=UTF-8
+  resposta: {"cache.path":"target/cache","cache.size":"50","endpoints.enabled":"false","endpoints.health.enabled":"true","github.login":null,"organization.list":"zalando,zalando-stups,zalando-incubator","schedule":"0 1 8 * * *","scoring.project":"function(project) {var daysSinceLastPush = 0;if (project.lastPushed) {var tokens = project.lastPushed.split(\" \");var day = tokens[2];var month = tokens[1];var year = tokens[5];var lastPushedDate = new Date(day + ' ' + month + ' ' + year);var millisInDay = 86400000;daysSinceLastPush = Math.floor((new Date() - lastPushedDate) / millisInDay);}var maintainersPenalty = 0;if (project.maintainers.length < 2) {maintainersPenalty = 100;}return project.starsCount * 3 + project.forksCount * 2 + project.contributorsCount * 5 - daysSinceLastPush - maintainersPenalty}","spring.database.driverClassName":null,"spring.datasource.platform":null,"spring.datasource.url":"jdbc:h2:mem:testdb","spring.datasource.username":"sa","spring.jpa.database":null,"spring.jpa.hibernate.ddl-auto":"update"}
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  | 22:02:56.011 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+api-1  | 22:02:56.267 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: invokeUsingGET_1
+api-1  | 22:02:56.348 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+api-1  | 22:02:56.361 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+api-1  | 22:02:56.370 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+api-1  | 22:02:56.374 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+api-1  | 22:02:56.420 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+api-1  | 22:02:56.425 [main] INFO  o.z.c.b.CatWatchBackendApplication - Started CatWatchBackendApplication in 12.258 seconds (JVM running for 9.866)
+api-1  | 22:02:56.649 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+api-1  | 22:02:56.650 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+api-1  | 22:02:56.663 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms

@@ -1,0 +1,51 @@
+relato e2452b86fc41 | petclinic-rest | Stateful tests | schemathesis:ST104
+assinatura: st<n> missing content-type header
+ferramentas: schemathesis
+evidência: petclinic-rest__schemathesis__rep1/iter_0/junit-20261124T015900Z.xml
+
+
+=== trecho do relatório da ferramenta ===
+1. Test Case ID: FIRZgv
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    <EMPTY>
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/petclinic/api/owners?lastName=Estaban'
+    curl -X DELETE http://localhost:8081/petclinic/api/owners/10
+    curl -X DELETE http://localhost:8081/petclinic/api/owners/10
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] GET /petclinic/api/owners?lastName=Estaban
+  cabeçalhos: {}
+  corpo: 
+  -> 200 (84 ms) content-type=application/json
+  resposta: [{"firstName":"Carlos","lastName":"Estaban","address":"2335 Independence La.","city":"Waunakee","telephone":"6085555487","pets":[{"name":"Lucky","birthDate":"2010-06-24","type":{"name":"dog","id":2},"id":12,"visits":[],"ownerId":10},{"name":"Sly","birthDate":"2012-06-08","type":{"name":"cat","id":1},"id":13,"visits":[],"ownerId":10}],"id":10}]
+
+[tentativa 1, passo 2] DELETE /petclinic/api/owners/10
+  cabeçalhos: {}
+  corpo: 
+  -> 204 (58 ms) content-type=
+  resposta: 
+
+[tentativa 1, passo 3] DELETE /petclinic/api/owners/10
+  cabeçalhos: {}
+  corpo: 
+  -> 404 (10 ms) content-type=
+  resposta: 
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+

@@ -1,0 +1,15 @@
+relato d35398c0612b | catwatch | HEAD /error | http_5xx
+assinatura: 500 
+ferramentas: evomaster;restler;schemathesis
+evidência: catwatch__evomaster__rep1/flows.jsonl (ts 1795483855)
+
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] HEAD /error
+  cabeçalhos: {}
+  corpo: 
+  -> 500 (6 ms) content-type=application/json;charset=UTF-8
+  resposta: 
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+

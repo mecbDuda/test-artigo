@@ -1,0 +1,21 @@
+relato d270be035ef1 | vampi | desconhecida | restler:InvalidValueChecker
+assinatura: InvalidValueChecker 500
+ferramentas: restler
+evidência: vampi__restler__rep2/Fuzz/RestlerResults/experiment26/bug_buckets/InvalidValueChecker_500_1.replay.txt
+
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] GET /users/v1/Su'SPdJNGZ+5FSs7kGq$
+  cabeçalhos: {"Accept": "application/json", "Host": "localhost:5000"}
+  corpo: 
+  -> None (32951 ms) content-type=
+  resposta: TIMEOUT (30 s)
+
+[tentativa 2, passo 1] GET /users/v1/Su'SPdJNGZ+5FSs7kGq$
+  cabeçalhos: {"Accept": "application/json", "Host": "localhost:5000"}
+  corpo: 
+  -> None (32970 ms) content-type=
+  resposta: TIMEOUT (30 s)
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+

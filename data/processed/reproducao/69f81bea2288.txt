@@ -1,0 +1,37 @@
+relato 69f81bea2288 | catwatch | OPTIONS /error | schemathesis:ST109
+assinatura: st<n> json deserialization error
+ferramentas: schemathesis
+evidência: catwatch__schemathesis__rep1/iter_0/junit-20261124T005700Z.xml
+
+
+=== trecho do relatório da ferramenta ===
+1. Test Case ID: NUguBz
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `text/html`
+
+[200] OK:
+
+    <EMPTY>
+
+Reproduce with:
+
+    curl -X OPTIONS http://localhost:8080/error
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] OPTIONS /error
+  cabeçalhos: {}
+  corpo: 
+  -> 200 (6 ms) content-type=
+  resposta: 
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+

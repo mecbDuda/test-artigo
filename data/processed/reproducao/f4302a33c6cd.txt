@@ -1,0 +1,47 @@
+relato f4302a33c6cd | petclinic-rest | DELETE / | schemathesis:ST103
+assinatura: st<n> undocumented status code
+ferramentas: schemathesis
+evidência: petclinic-rest__schemathesis__rep1/iter_0/junit-20261124T015900Z.xml
+
+
+=== trecho do relatório da ferramenta ===
+1. Test Case ID: MlpXqO
+
+- ST103 Undocumented status code
+
+    Received: 302
+    Documented: 200
+
+[302] Found:
+
+    <EMPTY>
+
+Reproduce with:
+
+    curl -X DELETE http://localhost:8081/petclinic/
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] DELETE /petclinic/
+  cabeçalhos: {}
+  corpo: 
+  -> 302 (11 ms) content-type=
+  resposta: 
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  | WARN  UserDetailsServiceAutoConfiguration - 
+api-1  | 
+api-1  | Using generated security password: 673e1710-7b02-4d7d-a3f2-468251f286bd
+api-1  | 
+api-1  | This generated password is for development use only. Your security configuration must be updated before running your application in production.
+api-1  | 
+api-1  | INFO  InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+api-1  | INFO  H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:petclinic'
+api-1  | INFO  EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+api-1  | INFO  Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+api-1  | INFO  TomcatWebServer - Tomcat started on port 8080 (http) with context path '/petclinic'
+api-1  | INFO  PetClinicApplication - Started PetClinicApplication in 11.12 seconds (process running for 12.319)
+api-1  | WARN  SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+api-1  | WARN  SpringDocAppInitializer - SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+api-1  | INFO  [/petclinic] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+api-1  | INFO  DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+api-1  | INFO  DispatcherServlet - Completed initialization in 1 ms

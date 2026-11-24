@@ -1,0 +1,50 @@
+relato df7e62f18aab | vampi | PUT /users/v1/{username}/email | schemathesis:ST105
+assinatura: st<n> undocumented content-type
+ferramentas: schemathesis
+evidência: vampi__schemathesis__rep1/iter_0/junit-20261124T002423Z.xml
+
+
+=== trecho do relatório da ferramenta ===
+1. Test Case ID: rEHxZq
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[401] Unauthorized:
+
+    `{
+      "detail": "No authorization token provided",
+      "status": 401,
+      "title": "Unauthorized",
+      "type": "about:blank"
+    }`
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"email": "mail3@mail.com"}' http://localhost:8080/users/v1/name1/email
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] PUT /users/v1/name1/email
+  cabeçalhos: {"Content-Type": "application/json"}
+  corpo: {"email": "mail3@mail.com"}
+  -> 401 (6 ms) content-type=application/problem+json
+  resposta: {
+  "detail": "No authorization token provided",
+  "status": 401,
+  "title": "Unauthorized",
+  "type": "about:blank"
+}
+
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:05] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:05] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:05] "[31m[1mPUT /users/v1/_VzuiA08/email HTTP/1.1[0m" 401 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:06] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:06] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:06] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:06] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:06] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:06] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -

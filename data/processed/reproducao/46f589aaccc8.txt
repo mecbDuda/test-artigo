@@ -1,0 +1,38 @@
+relato 46f589aaccc8 | catwatch | HEAD /error | schemathesis:ST105
+assinatura: st<n> undocumented content-type
+ferramentas: schemathesis
+evidência: catwatch__schemathesis__rep1/iter_0/junit-20261124T005700Z.xml
+
+
+=== trecho do relatório da ferramenta ===
+1. Test Case ID: h21KH6
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/json;charset=UTF-8
+    Documented: text/html
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 204, 401, 403
+
+[500] Internal Server Error:
+
+    <EMPTY>
+
+Reproduce with:
+
+    curl -X HEAD http://localhost:8080/error
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] HEAD /error
+  cabeçalhos: {}
+  corpo: 
+  -> 500 (6 ms) content-type=application/json;charset=UTF-8
+  resposta: 
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+

@@ -1,0 +1,41 @@
+relato 8806276ccfa5 | vampi | GET /books/v1/{book_title} | evomaster:101
+assinatura: type: validation.response.contenttype.notallowed
+ferramentas: evomaster
+evidência: vampi__evomaster__rep1/generated_tests/EvoMaster_faults_Test.java#test_4_getOnV1ReturnsMismatchResponseWithSchema
+
+
+=== trecho do relatório da ferramenta ===
+
+        
+        // Fault101. Received A Response From API With A Structure/Data That Is Not Matching Its Schema. Type: validation.response.contentType.notAllowed Response Content-Type header 'application/problem+json' does not match any allowed types. Must be one of: [application/json].
+        given().accept("*/*")
+                .get(baseUrlOfSut + "/books/v1/bSbQl2")
+                .then()
+                .statusCode(401)
+                .assertThat()
+                .contentType("application/problem+json")
+                .body("'detail'", containsString("No authorization token provided"))
+                .body("'status'", numberMatches(401))
+                .body("'title'", containsString("Unauthorized"))
+                .body("'type'", containsString("about:blank"));
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] GET /books/v1/bSbQl2
+  cabeçalhos: {"Accept": "*/*"}
+  corpo: 
+  -> 401 (7 ms) content-type=application/problem+json
+  resposta: {
+  "detail": "No authorization token provided",
+  "status": 401,
+  "title": "Unauthorized",
+  "type": "about:blank"
+}
+
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:42] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:42] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:42] "[31m[1mDELETE /users/v1/admin HTTP/1.1[0m" 401 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:43] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:43] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:43] "[31m[1mGET /books/v1/bSbQl2 HTTP/1.1[0m" 401 -

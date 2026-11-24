@@ -1,0 +1,40 @@
+relato bec072cea103 | catwatch | DELETE /error | evomaster:101
+assinatura: type: validation.response.status.unknown
+ferramentas: evomaster
+evidência: catwatch__evomaster__rep1/generated_tests/EvoMaster_faults_Test.java#test_12_deleteOnErrorShowsFaults_100_101
+
+
+=== trecho do relatório da ferramenta ===
+
+        
+        // Fault100. HTTP Status 500.
+        // Fault101. Received A Response From API With A Structure/Data That Is Not Matching Its Schema. Type: validation.response.status.unknown Response status 500 not defined for path '/error'.
+        given().accept("text/html")
+                .delete(baseUrlOfSut + "/error")
+                .then()
+                .statusCode(500)
+                .assertThat()
+                .contentType("text/html");
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] DELETE /error
+  cabeçalhos: {"Accept": "text/html"}
+  corpo: 
+  -> 500 (28 ms) content-type=text/html;charset=UTF-8
+  resposta: <html><body><h1>Whitelabel Error Page</h1><p>This application has no explicit mapping for /error, so you are seeing this as a fallback.</p><div id='created'>Tue Nov 24 22:01:52 GMT 2026</div><div>There was an unexpected error (type=None, status=999).</div><div>No message available</div></body></html>
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  | 22:01:50.999 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+api-1  | 22:01:51.000 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+api-1  | 22:01:51.022 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+api-1  | 22:01:51.066 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+api-1  | 22:01:51.365 [main] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: invokeUsingGET_1
+api-1  | 22:01:51.438 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+api-1  | 22:01:51.452 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+api-1  | 22:01:51.468 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+api-1  | 22:01:51.470 [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+api-1  | 22:01:51.490 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+api-1  | 22:01:51.495 [main] INFO  o.z.c.b.CatWatchBackendApplication - Started CatWatchBackendApplication in 9.291 seconds (JVM running for 9.927)
+api-1  | 22:01:51.953 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+api-1  | 22:01:51.954 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+api-1  | 22:01:51.967 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms

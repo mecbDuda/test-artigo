@@ -1,0 +1,180 @@
+relato 5d0ad452e3ef | petclinic-rest | GET / | schemathesis:ST103
+assinatura: st<n> undocumented status code
+ferramentas: schemathesis
+evidência: petclinic-rest__schemathesis__rep1/iter_0/junit-20261124T015900Z.xml
+
+
+=== trecho do relatório da ferramenta ===
+1. Test Case ID: tsJ1G3
+
+- ST103 Undocumented status code
+
+    Received: 302
+    Documented: 200
+
+[302] Found:
+
+    <EMPTY>
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] GET /petclinic/
+  cabeçalhos: {}
+  corpo: 
+  -> 302 (10 ms) content-type=
+  resposta: 
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:230)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140)
+api-1  | 	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+api-1  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:243)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:336)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+api-1  | 	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:140)
+api-1  | 	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+api-1  | 	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+api-1  | 	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+api-1  | 	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+api-1  | 	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+api-1  | 	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+api-1  | 	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+api-1  | 	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+api-1  | 	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+api-1  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+api-1  | 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+api-1  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+api-1  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+api-1  | 	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+api-1  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+api-1  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+api-1  | 	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+api-1  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+api-1  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+api-1  | 	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+api-1  | 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+api-1  | 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+api-1  | 	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+api-1  | 	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+api-1  | 	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535)
+api-1  | 	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+api-1  | 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+api-1  | 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+api-1  | 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+api-1  | 	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406)
+api-1  | 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+api-1  | 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307)
+api-1  | 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036)
+api-1  | 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+api-1  | 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949)
+api-1  | 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483)
+api-1  | 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+api-1  | 	at java.base/java.lang.Thread.run(Thread.java:840)
+api-1  | INFO  GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+api-1  | INFO  GracefulShutdown - Graceful shutdown complete
+api-1  | INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+api-1  | INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+api-1  | INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+api-1  | Picked up JAVA_TOOL_OPTIONS: -Xmx1152m
+api-1  | 22:12:42,256 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found logback-core version 1.5.38
+api-1  | 22:12:42,260 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7249dadf - Here is a list of configurators discovered as a service, by rank: 
+api-1  | 22:12:42,260 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7249dadf -   org.springframework.boot.logging.logback.RootLogLevelConfigurator
+api-1  | 22:12:42,260 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7249dadf - They will be invoked in order until ExecutionStatus.DO_NOT_INVOKE_NEXT_IF_ANY is returned.
+api-1  | 22:12:42,261 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7249dadf - Constructed configurator of type class org.springframework.boot.logging.logback.RootLogLevelConfigurator
+api-1  | 22:12:42,264 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7249dadf - org.springframework.boot.logging.logback.RootLogLevelConfigurator.configure() call lasted 1 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+api-1  | 22:12:42,264 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7249dadf - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+api-1  | 22:12:42,266 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7249dadf - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+api-1  | 22:12:42,267 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+api-1  | 22:12:42,267 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:nested:/petclinic-rest-sut.jar/!BOOT-INF/classes/!/logback.xml]
+api-1  | 22:12:42,376 |-INFO in ch.qos.logback.classic.model.processor.ConfigurationModelHandlerFull - Scan attribute set to true. Will scan for configuration file changes.
+api-1  | 22:12:42,378 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@4362d7df - URL [jar:nested:/petclinic-rest-sut.jar/!BOOT-INF/classes/!/logback.xml] is not of type file
+api-1  | 22:12:42,379 |-INFO in ch.qos.logback.classic.model.processor.LoggerContextListenerModelHandler - Adding LoggerContextListener of type [ch.qos.logback.classic.jul.LevelChangePropagator] to the object stack
+api-1  | 22:12:42,393 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@66238be2 - Propagating INFO level on Logger[ROOT] onto the JUL framework
+api-1  | 22:12:42,393 |-INFO in ch.qos.logback.classic.model.processor.LoggerContextListenerModelHandler - Starting LoggerContextListener
+api-1  | 22:12:42,394 |-WARN in ch.qos.logback.classic.model.processor.ConfigurationModelHandlerFull - Missing watchable .xml or .properties files.
+api-1  | 22:12:42,394 |-WARN in ch.qos.logback.classic.model.processor.ConfigurationModelHandlerFull - Watching .xml files requires that the main configuration file is reachable as a URL
+api-1  | 22:12:42,394 |-INFO in ch.qos.logback.classic.model.processor.ConfigurationModelHandlerFull - Main configuration file URL: jar:nested:/petclinic-rest-sut.jar/!BOOT-INF/classes/!/logback.xml
+api-1  | 22:12:42,394 |-INFO in ch.qos.logback.classic.model.processor.ConfigurationModelHandlerFull - FileWatchList= {}
+api-1  | 22:12:42,395 |-INFO in ch.qos.logback.classic.model.processor.ConfigurationModelHandlerFull - URLWatchList= {}
+api-1  | 22:12:42,398 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [console]
+api-1  | 22:12:42,398 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+api-1  | 22:12:42,403 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+api-1  | 22:12:42,447 |-INFO in ch.qos.logback.core.ConsoleAppender[console] - NOTE: Writing to the console can be slow. Try to avoid logging to the 
+api-1  | 22:12:42,447 |-INFO in ch.qos.logback.core.ConsoleAppender[console] - console in production environments, especially in high volume systems.
+api-1  | 22:12:42,447 |-INFO in ch.qos.logback.core.ConsoleAppender[console] - See also https://logback.qos.ch/codes.html#slowConsole
+api-1  | 22:12:42,448 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.springframework.samples.petclinic] to DEBUG
+api-1  | 22:12:42,448 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@66238be2 - Propagating DEBUG level on Logger[org.springframework.samples.petclinic] onto the JUL framework
+api-1  | 22:12:42,449 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+api-1  | 22:12:42,449 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [console] to Logger[ROOT]
+api-1  | 22:12:42,449 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@1c25b8a7 - End of configuration.
+api-1  | 22:12:42,450 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@200606de - Registering current configuration as safe fallback point
+api-1  | 22:12:42,450 |-INFO in ch.qos.logback.classic.util.ContextInitializer@7249dadf - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 184 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+api-1  | 
+api-1  | 22:12:43,022 |-WARN in ch.qos.logback.classic.model.processor.ConfigurationModelHandlerFull - Missing watchable .xml or .properties files.
+api-1  | 22:12:43,022 |-WARN in ch.qos.logback.classic.model.processor.ConfigurationModelHandlerFull - Watching .xml files requires that the main configuration file is reachable as a URL
+api-1  | 
+api-1  |   .   ____          _            __ _ _
+api-1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+api-1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+api-1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+api-1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+api-1  |  =========|_|==============|___/=/_/_/_/
+api-1  | 
+api-1  |  :: Spring Boot ::                (v4.1.1)
+api-1  | 
+api-1  | INFO  PetClinicApplication - Starting PetClinicApplication v4.0.2 using Java 17.0.21 with PID 1 (/petclinic-rest-sut.jar started by root in /)
+api-1  | DEBUG PetClinicApplication - Running with Spring Boot v4.1.1, Spring v7.0.9
+api-1  | INFO  PetClinicApplication - The following 2 profiles are active: "h2", "spring-data-jpa"
+api-1  | INFO  Version - HV000001: Hibernate Validator 9.1.3.Final
+api-1  | INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+api-1  | INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 7 JPA repository interfaces.
+api-1  | INFO  TomcatWebServer - Tomcat initialized with port 8080 (http)
+api-1  | INFO  Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+api-1  | INFO  StandardService - Starting service [Tomcat]
+api-1  | INFO  StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+api-1  | INFO  WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 5761 ms
+api-1  | INFO  HikariDataSource - HikariPool-1 - Starting...
+api-1  | INFO  HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:petclinic user=SA
+api-1  | INFO  HikariDataSource - HikariPool-1 - Start completed.
+api-1  | INFO  jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+api-1  | INFO  core - HHH000001: Hibernate ORM core version 7.4.5.Final
+api-1  | INFO  SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+api-1  | WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+api-1  | INFO  pooling - HHH10001005: Database info:
+api-1  | 	Database JDBC URL [jdbc:h2:mem:petclinic]
+api-1  | 	Database driver: H2 JDBC Driver
+api-1  | 	Database dialect: H2Dialect
+api-1  | 	Database version: 2.4.240
+api-1  | 	Default catalog/schema: PETCLINIC/PUBLIC
+api-1  | 	Autocommit mode: undefined/unknown
+api-1  | 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+api-1  | 	JDBC fetch size: 100
+api-1  | 	Pool: DataSourceConnectionProvider
+api-1  | 	Minimum pool size: undefined/unknown
+api-1  | 	Maximum pool size: undefined/unknown
+api-1  | INFO  core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+api-1  | INFO  LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+api-1  | INFO  QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+api-1  | WARN  UserDetailsServiceAutoConfiguration - 
+api-1  | 
+api-1  | Using generated security password: 047709f6-5c5b-4206-8f22-3fba76a845f5
+api-1  | 
+api-1  | This generated password is for development use only. Your security configuration must be updated before running your application in production.
+api-1  | 
+api-1  | INFO  InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+api-1  | INFO  H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:petclinic'
+api-1  | INFO  EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+api-1  | INFO  Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+api-1  | INFO  TomcatWebServer - Tomcat started on port 8080 (http) with context path '/petclinic'
+api-1  | INFO  PetClinicApplication - Started PetClinicApplication in 12.157 seconds (process running for 10.137)
+api-1  | WARN  SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+api-1  | WARN  SpringDocAppInitializer - SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+api-1  | INFO  [/petclinic] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+api-1  | INFO  DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+api-1  | INFO  DispatcherServlet - Completed initialization in 1 ms

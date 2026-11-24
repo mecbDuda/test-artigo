@@ -1,0 +1,39 @@
+relato b565d906d1d4 | vampi | POST /users/v1/register | evomaster:101
+assinatura: type: validation.response.body.unexpected
+ferramentas: evomaster
+evidência: vampi__evomaster__rep1/generated_tests/EvoMaster_faults_Test.java#test_3_postOnRegisterReturnsMismatchResponseWithSchema
+
+
+=== trecho do relatório da ferramenta ===
+
+        
+        // Fault101. Received A Response From API With A Structure/Data That Is Not Matching Its Schema. Type: validation.response.body.unexpected No response body is expected but one was found.
+        given().accept("application/json")
+                .header("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU0ODg5OTQsImlhdCI6MTc5NTQ4MTc5NCwic3ViIjoibmFtZTEifQ.pWoPdBFaMzNilWqOFdsEXCl5UqMaRm4SHQv0EsC0Zww") // Fixed Headers
+                .contentType("application/json")
+                .body(" { " + 
+                    " \"password\" : \"pass1\", " + 
+                    " \"email\" : \"user@tempmail.com\" " + 
+                    " } ")
+                .post(baseUrlOfSut + "/users/v1/register")
+                .then()
+                .statusCode(400)
+                .assertThat()
+                .contentType("application/json")
+                .body("'status'", containsString("fail"))
+                .body("'message'", containsString("'username' is a required property"));
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] POST /users/v1/register
+  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MjQsImlhdCI6MTc5NTU1NzcyNCwic3ViIjoibmFtZTEifQ.vd5UnSbBClo8UdE8SdDHnmBilEbtcCYqFcCz7Eh0s6U", "Content-Type": "application/json", "Accept": "application/json"}
+  corpo:  {  "password" : "pass1",  "email" : "user@tempmail.com"  } 
+  -> 400 (9 ms) content-type=application/json
+  resposta: { "status": "fail", "message": "'username' is a required property"}
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:03] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:03] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:03] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:04] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:04] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:04] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -

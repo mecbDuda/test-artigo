@@ -1,0 +1,146 @@
+relato 3fdc99bcfb2f | vampi | GET /users/v1/{username} | http_5xx
+assinatura: 500 sqlalchemy.exc.statementerror: (sqlalchemy.exc.invalidrequesterror) a value is required for bind parameter 'x<n>bcb'
+ferramentas: restler
+evidência: vampi__restler__rep1/flows.jsonl (ts 1795483647)
+
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] GET /users/v1/]:X2BCb
+  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MDgsImlhdCI6MTc5NTU1NzcwOCwic3ViIjoibmFtZTEifQ.gJs_as4ZPt1Tvcj0eA6-De6bmwEUAQIGaOBjwAv53vY"}
+  corpo: 
+  -> 500 (13 ms) content-type=text/html; charset=utf-8
+  resposta: <!doctype html>
+<html lang=en>
+  <head>
+    <title>sqlalchemy.exc.StatementError: (sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter 'X2BCb'
+[SQL: SELECT * FROM users WHERE username = ']?']
+[parameters: [{}]]
+(Background on this error at: https://sqlalche.me/e/20/cd3x)
+ // Werkzeug Debugger</title>
+    <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">
+    <link rel="shortcut icon"
+        href="?__debugger__=yes&amp;cmd=resource&amp;f=console.png">
+    <script src="?__debugger__=yes&amp;cmd=resource&amp;f=debugger.js"></script>
+    <script>
+      var CONSOLE_MODE = false,
+          EVALEX = true,
+          EVALEX_TRUSTED = false,
+          SECRET = "88Dxej3Vvv6nWuRU6aa8";
+    </script>
+  </head>
+  <body style="background-color: #fff">
+    <div class="debugger">
+<h1>StatementError</h1>
+<div class="detail">
+  <p class="errormsg">sqlalchemy.exc.StatementError: (sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter &#39;X2BCb&#39;
+[SQL: SELECT * FROM users WHERE username = &#39;]?&#39;]
+[parameters: [{}]]
+(Background on this error at: https://sqlalche.me/e/20/cd3x)
+</p>
+</div>
+<h2 class="traceback">Traceback <em>(most recent call last)</em></h2>
+<div class="traceback">
+  <h3></h3>
+  <ul><li><div class="frame" id="frame-140015523304720">
+  <h4>File <cite class="filename">"/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py"</cite>,
+      line <em class="line">1808</em>,
+      in <code class
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:47] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:47] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:47] "[31m[1mGET /me HTTP/1.1[0m" 401 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:47] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:47] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:47] "[31m[1mGET /me HTTP/1.1[0m" 401 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:48] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:48] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:48] "[35m[1mGET /users/v1/]:X2BCb HTTP/1.1[0m" 500 -
+api-1  | Traceback (most recent call last):
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1808, in _execute_context
+api-1  |     context = constructor(
+api-1  |               ^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1184, in _init_compiled
+api-1  |     self.compiled_parameters = [
+api-1  |                                ^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1185, in <listcomp>
+api-1  |     compiled.construct_params(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/compiler.py", line 1758, in construct_params
+api-1  |     raise exc.InvalidRequestError(
+api-1  | sqlalchemy.exc.InvalidRequestError: A value is required for bind parameter 'X2BCb' (Background on this error at: https://sqlalche.me/e/20/cd3x)
+api-1  | 
+api-1  | The above exception was the direct cause of the following exception:
+api-1  | 
+api-1  | Traceback (most recent call last):
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
+api-1  |     return self.wsgi_app(environ, start_response)
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+api-1  |     response = self.handle_exception(e)
+api-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
+api-1  |     response = self.full_dispatch_request()
+api-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
+api-1  |     rv = self.handle_user_exception(e)
+api-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
+api-1  |     rv = self.dispatch_request()
+api-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
+api-1  |     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/decorator.py", line 68, in wrapper
+api-1  |     response = function(request)
+api-1  |                ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/uri_parsing.py", line 149, in wrapper
+api-1  |     response = function(request)
+api-1  |                ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/validation.py", line 399, in wrapper
+api-1  |     return function(request)
+api-1  |            ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/parameter.py", line 120, in wrapper
+api-1  |     return function(**kwargs)
+api-1  |            ^^^^^^^^^^^^^^^^^^
+api-1  |   File "/vampi/api_views/users.py", line 46, in get_by_username
+api-1  |     if User.get_user(username):
+api-1  |        ^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/vampi/models/user_model.py", line 73, in get_user
+api-1  |     query = db.session.execute(text(user_query))
+api-1  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 709, in execute
+api-1  |     return self._proxied.execute(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2229, in execute
+api-1  |     return self._execute_internal(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2133, in _execute_internal
+api-1  |     result = conn.execute(
+api-1  |              ^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1414, in execute
+api-1  |     return meth(
+api-1  |            ^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 489, in _execute_on_connection
+api-1  |     return connection._execute_clauseelement(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+api-1  |     ret = self._execute_context(
+api-1  |           ^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1814, in _execute_context
+api-1  |     self._handle_dbapi_exception(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2325, in _handle_dbapi_exception
+api-1  |     raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1808, in _execute_context
+api-1  |     context = constructor(
+api-1  |               ^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1184, in _init_compiled
+api-1  |     self.compiled_parameters = [
+api-1  |                                ^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1185, in <listcomp>
+api-1  |     compiled.construct_params(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/compiler.py", line 1758, in construct_params
+api-1  |     raise exc.InvalidRequestError(
+api-1  | sqlalchemy.exc.StatementError: (sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter 'X2BCb'
+api-1  | [SQL: SELECT * FROM users WHERE username = ']?']
+api-1  | [parameters: [{}]]
+api-1  | (Background on this error at: https://sqlalche.me/e/20/cd3x)

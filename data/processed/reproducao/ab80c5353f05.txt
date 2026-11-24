@@ -1,0 +1,55 @@
+relato ab80c5353f05 | vampi | GET /me | schemathesis:ST105
+assinatura: st<n> undocumented content-type
+ferramentas: schemathesis
+evidência: vampi__schemathesis__rep1/iter_0/junit-20261124T002423Z.xml
+
+
+=== trecho do relatório da ferramenta ===
+1. Test Case ID: SkSgX4
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[401] Unauthorized:
+
+    `{
+      "detail": "No authorization token provided",
+      "status": 401,
+      "title": "Unauthorized",
+      "type": "about:blank"
+    }`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8080/me
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] GET /me
+  cabeçalhos: {}
+  corpo: 
+  -> 401 (5 ms) content-type=application/problem+json
+  resposta: {
+  "detail": "No authorization token provided",
+  "status": 401,
+  "title": "Unauthorized",
+  "type": "about:blank"
+}
+
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:47] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:47] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:47] "[31m[1mGET /me HTTP/1.1[0m" 401 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:47] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:47] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:47] "[31m[1mGET /me HTTP/1.1[0m" 401 -

@@ -5,7 +5,7 @@ Lê data/raw/<execução>/ e produz:
   data/processed/run_stats.csv            métricas de exploração por execução
   data/processed/achados_por_execucao.csv achados deduplicados dentro de cada execução
   data/validated/relatos.csv              lista ÚNICA de relatos a validar manualmente
-                                          (preserva classificações já preenchidas)
+                                          (preserva classificações e sugestões já preenchidas)
 
 Fontes de achados:
   * proxy (todas as ferramentas): respostas HTTP 5xx  -> tipo "http_5xx"
@@ -36,6 +36,8 @@ except ImportError:  # especificações em JSON continuam funcionando
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 METHODS = ("get", "post", "put", "patch", "delete", "head", "options")
 CLASS_COLS = ["classificacao", "defeito_id", "avaliador_1", "avaliador_2", "observacoes"]
+# sugestões preparadas para a revisão da equipe (evidência + reprodução); também preservadas
+SUGESTAO_COLS = ["sugestao", "defeito_sugerido", "justificativa", "reproduzido"]
 
 
 # ---------------------------------------------------------------- especificação
@@ -73,6 +75,11 @@ class OpMatcher:
         for _, rx, tpl in self.rules:
             if rx.match(path):
                 return f"{method.upper()} {tpl}"
+        # fora da especificação, IDs concretos viram marcadores; sem isso cada ID gerado
+        # pela ferramenta (ex.: /owners/1014/1014, /owners/1053/1053) vira um relato
+        # diferente do mesmo comportamento (docs/desvios.md, D28)
+        path = re.sub(r"/[0-9a-fA-F]{8}-[0-9a-fA-F-]{27,}(?=/|$)", "/{uuid}", path)
+        path = re.sub(r"/\d+(?=/|$)", "/{n}", path)
         return f"{method.upper()} {path} (fora da especificação)"
 
 
@@ -302,10 +309,10 @@ def main():
     rows = []
     for k, r in sorted(relatos.items(), key=lambda kv: (kv[1]["api"], kv[1]["operacao"], kv[1]["tipo"])):
         row = dict(r, ferramentas=";".join(sorted(r["ferramentas"])))
-        for c in CLASS_COLS:
+        for c in SUGESTAO_COLS + CLASS_COLS:
             row[c] = old.get(k, {}).get(c, "")
         rows.append(row)
-    write_csv(rel_path, rows, fields=["chave", "api", "operacao", "tipo", "assinatura", "ferramentas", "exemplo"] + CLASS_COLS)
+    write_csv(rel_path, rows, fields=["chave", "api", "operacao", "tipo", "assinatura", "ferramentas", "exemplo"] + SUGESTAO_COLS + CLASS_COLS)
 
     pend = sum(1 for r in rows if not r["classificacao"])
     print(f"{len(stats_rows)} execuções | {len(achados_rows)} achados por execução | {len(rows)} relatos únicos ({pend} sem classificação)")

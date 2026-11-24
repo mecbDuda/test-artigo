@@ -1,0 +1,38 @@
+relato e72b557f7845 | catwatch | GET /error | schemathesis:ST105
+assinatura: st<n> undocumented content-type
+ferramentas: schemathesis
+evidência: catwatch__schemathesis__rep1/iter_0/junit-20261124T005700Z.xml
+
+
+=== trecho do relatório da ferramenta ===
+1. Test Case ID: UlC8zQ
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/json;charset=UTF-8
+    Documented: text/html
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 401, 403, 404
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795481824914,"status":999,"error":"None","message":"No message available"}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8080/error
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] GET /error
+  cabeçalhos: {}
+  corpo: 
+  -> 500 (6 ms) content-type=application/json;charset=UTF-8
+  resposta: {"timestamp":1795557784068,"status":999,"error":"None","message":"No message available"}
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+

@@ -1,0 +1,59 @@
+relato 5180ebae611a | vampi | Stateful tests | schemathesis:ST103
+assinatura: st<n> undocumented status code
+ferramentas: schemathesis
+evidência: vampi__schemathesis__rep1/iter_0/junit-20261124T002423Z.xml
+
+
+=== trecho do relatório da ferramenta ===
+1. Test Case ID: vKPzbS
+
+- ST101 Server error
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 400, 401
+
+[500] Internal Server Error:
+
+    `<!doctype html>
+    <html lang=en>
+      <head>
+        <title>sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: books.book_title
+    [SQL: INSERT INTO books (book_title, secret_content, user_id) VALUES (?, ?, ?)]
+    [parameters: ('bookTitle91', 'e', 1)]
+    (Background on this error at: https://sqlalche.me/e/20/gkpj)
+     // Werkzeug Debugger</title>
+        <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">
+        <link rel="shortcut icon"
+            href="?__debugger__=yes&amp;c // Output truncated...`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"secret": "[Filtered]", "book_title": "bookTitle91"}' http://localhost:8080/books/v1
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] POST /books/v1
+  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MzAsImlhdCI6MTc5NTU1NzczMCwic3ViIjoibmFtZTEifQ.dr8ye1K8TxMsEImbIZpcf9PfB3kaeR1D3tCkpIa0oCs", "Content-Type": "application/json"}
+  corpo: {"secret": "valorFiltrado1", "book_title": "bookTitle91"}
+  -> 200 (40 ms) content-type=application/json
+  resposta: {"message": "Book has been added.", "status": "success"}
+
+[tentativa 2, passo 1] POST /books/v1
+  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MzAsImlhdCI6MTc5NTU1NzczMCwic3ViIjoibmFtZTEifQ.dr8ye1K8TxMsEImbIZpcf9PfB3kaeR1D3tCkpIa0oCs", "Content-Type": "application/json"}
+  corpo: {"secret": "valorFiltrado1", "book_title": "bookTitle91"}
+  -> 400 (7 ms) content-type=application/json
+  resposta: { "status": "fail", "message": "Book Already exists!"}
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:09] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:09] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:09] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 401 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:09] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:09] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:09] "[31m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 400 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:10] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:10] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:10] "POST /books/v1 HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:10] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:10] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 400 -

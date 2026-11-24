@@ -1,0 +1,49 @@
+relato 2ae9805c77ca | vampi | POST /books/v1 | schemathesis:ST202
+assinatura: st<n> schema-valid request rejected
+ferramentas: schemathesis
+evidência: vampi__schemathesis__rep1/iter_0/junit-20261124T002423Z.xml
+
+
+=== trecho do relatório da ferramenta ===
+1. Test Case ID: Asmjh5
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[400] Bad Request:
+
+    `{ "status": "fail", "message": "Book Already exists!"}`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"book_title": "book99", "secret": "[Filtered]"}' http://localhost:8080/books/v1
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] POST /books/v1
+  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MjIsImlhdCI6MTc5NTU1NzcyMiwic3ViIjoibmFtZTEifQ.OwN8yTLS9oxtC8EuOjj9ak31TQa69CRXJz_wnHj-ut4", "Content-Type": "application/json"}
+  corpo: {"book_title": "book99", "secret": "valorFiltrado1"}
+  -> 200 (15 ms) content-type=application/json
+  resposta: {"message": "Book has been added.", "status": "success"}
+
+[tentativa 2, passo 1] POST /books/v1
+  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MjIsImlhdCI6MTc5NTU1NzcyMiwic3ViIjoibmFtZTEifQ.OwN8yTLS9oxtC8EuOjj9ak31TQa69CRXJz_wnHj-ut4", "Content-Type": "application/json"}
+  corpo: {"book_title": "book99", "secret": "valorFiltrado1"}
+  -> 400 (10 ms) content-type=application/json
+  resposta: { "status": "fail", "message": "Book Already exists!"}
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:01] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:01] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:01] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 401 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:01] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:01] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:01] "POST /books/v1 HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:01] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:01] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 400 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:02] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:02] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:02] "POST /books/v1 HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:02] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:02] "[31m[1mPOST /books/v1 HTTP/1.1[0m" 400 -

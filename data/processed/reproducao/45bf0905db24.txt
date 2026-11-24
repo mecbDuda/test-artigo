@@ -1,0 +1,39 @@
+relato 45bf0905db24 | vampi | PUT /users/v1/{username}/email | schemathesis:ST202
+assinatura: st<n> schema-valid request rejected
+ferramentas: schemathesis
+evidência: vampi__schemathesis__rep1/iter_0/junit-20261124T002423Z.xml
+
+
+=== trecho do relatório da ferramenta ===
+1. Test Case ID: ZXIJy5
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[400] Bad Request:
+
+    `{ "status": "fail", "message": "Please provide a proper JSON body."}`
+
+Reproduce with:
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{}' http://localhost:8080/users/v1/name1/email
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] PUT /users/v1/name1/email
+  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MjcsImlhdCI6MTc5NTU1NzcyNywic3ViIjoibmFtZTEifQ.9t0eiF4WAeEHudyXgEIiMSdap_b9LPCFY4G710IFDtE", "Content-Type": "application/json"}
+  corpo: {}
+  -> 400 (7 ms) content-type=application/json
+  resposta: { "status": "fail", "message": "Please provide a proper JSON body."}
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:06] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:06] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:06] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:06] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:06] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:06] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 401 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:07] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:07] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:07] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -

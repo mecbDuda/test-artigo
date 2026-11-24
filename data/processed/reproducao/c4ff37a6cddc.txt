@@ -1,0 +1,35 @@
+relato c4ff37a6cddc | vampi | GET /createdb | http_5xx
+assinatura: 500 sqlalchemy.exc.integrityerror: (sqlite<n>.integrityerror) unique constraint failed: books.book_title
+ferramentas: evomaster;schemathesis
+evidência: vampi__evomaster__rep1/flows.jsonl (ts 1795481800)
+
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] GET /createdb
+  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MDUsImlhdCI6MTc5NTU1NzcwNSwic3ViIjoibmFtZTEifQ.GpabA1Ra6JfAsWUmTUIzba4VWLxDsy5oTLn48zv5fQU"}
+  corpo: 
+  -> 200 (46 ms) content-type=application/json
+  resposta: { "message": "Database populated." }
+
+[tentativa 2, passo 1] GET /createdb
+  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MDYsImlhdCI6MTc5NTU1NzcwNiwic3ViIjoibmFtZTEifQ.81Bg60WUtgOnkah1ETIuxgNusqMxR5dUjaqsUGIMhCk"}
+  corpo: 
+  -> 200 (50 ms) content-type=application/json
+  resposta: { "message": "Database populated." }
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:44] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:44] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:44] "[33mGET /books/v1/book99 HTTP/1.1[0m" 404 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:44] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:44] "[33mGET /books/v1/book99 HTTP/1.1[0m" 404 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:45] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:01:46] "GET /createdb HTTP/1.1" 200 -

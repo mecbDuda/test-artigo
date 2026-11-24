@@ -1,0 +1,39 @@
+relato 4267255482ca | vampi | POST /users/v1/register | schemathesis:ST202
+assinatura: st<n> schema-valid request rejected
+ferramentas: schemathesis
+evidência: vampi__schemathesis__rep1/iter_0/junit-20261124T002423Z.xml
+
+
+=== trecho do relatório da ferramenta ===
+1. Test Case ID: WcUCFB
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[400] Bad Request:
+
+    `{ "status": "fail", "message": "'username' is a required property"}`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{}' http://localhost:8080/users/v1/register
+
+=== reprodução em estado limpo ===
+[tentativa 1, passo 1] POST /users/v1/register
+  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MjQsImlhdCI6MTc5NTU1NzcyNCwic3ViIjoibmFtZTEifQ.vd5UnSbBClo8UdE8SdDHnmBilEbtcCYqFcCz7Eh0s6U", "Content-Type": "application/json"}
+  corpo: {}
+  -> 400 (8 ms) content-type=application/json
+  resposta: { "status": "fail", "message": "'username' is a required property"}
+
+=== log da API durante a reprodução (últimas 150 linhas) ===
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:03] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:03] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:03] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:04] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:04] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:04] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:04] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:04] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.18.0.3 - - [24/Nov/2026 22:02:04] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
