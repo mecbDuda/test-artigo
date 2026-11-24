@@ -1,0 +1,7 @@
+defeito_id,requisicao,schemathesis,restler,evomaster
+VAMPI-02,PUT /users/v1/{outro usuário}/password -> 204,3340,0,540
+VAMPI-03,GET /books/v1/{book_title} -> 200,47197,0,365
+VAMPI-04,POST /users/v1/register com campo admin no corpo -> 200,0,0,355
+VAMPI-05,GET /users/v1/_debug -> 200,735,9,27451
+VAMPI-06,POST /users/v1/login -> 400,1530,381,20688
+(todas),total de requisições nas 3 repetições,454138,2730,548111

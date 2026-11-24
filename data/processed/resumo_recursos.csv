@@ -1,0 +1,7 @@
+papel,amostras,cpu_media_pct,cpu_pico_pct,mem_media_mib,mem_pico_mib,mem_pico_pct_do_limite,limite_mem_mib,conteineres_tsv,pico_cgroup_mib,vezes_no_limite,oom_killed
+api,759,25.3,199.8,275.2,509.4,33.2,1536.0,27,582.0,0,0
+ferramenta: evomaster,247,10.6,203.1,230.4,343.7,11.3,3038.2,9,577.9,0,0
+ferramenta: restler,242,5.9,18.8,55.3,79.2,2.6,3038.2,27,371.6,0,0
+ferramenta: schemathesis,261,65.4,110.0,383.4,513.2,16.9,3038.2,9,594.2,0,0
+maquina (host WSL),393,10.6,21.3,2149.1,2847.6,23.8,11964.3,0,,,
+proxy,759,21.7,76.4,63.5,88.2,23.0,384.0,27,357.9,0,0

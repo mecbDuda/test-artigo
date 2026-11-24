@@ -44,9 +44,9 @@ Execuções consideradas: 27. Valores de média = média entre repetições.
 
 | Ferramenta | VP | FP | Precisão | Inconclusivos | Principal causa de FP |
 |---|---|---|---|---|---|
-| Schemathesis | 121 | 148 | 45.0% | 0 | Revisão: os dois avaliadores concordaram com todas as sugestões (declarado pela equipe em 2026-11-24; D31) |
-| RESTler | 109 | 14 | 88.6% | 1 | Revisão: os dois avaliadores concordaram com todas as sugestões (declarado pela equipe em 2026-11-24; D31) |
-| EvoMaster (caixa-preta) | 33 | 27 | 55.0% | 2 | Revisão: os dois avaliadores concordaram com todas as sugestões (declarado pela equipe em 2026-11-24; D31) |
+| Schemathesis | 121 | 148 | 45.0% | 0 | resposta sem corpo/sem Content-Type onde a especificação declara um tipo; sem falha da API (40 de 148) |
+| RESTler | 109 | 14 | 88.6% | 1 | RESTler (InvalidDynamicObjectChecker, bucket 20x) anexou ?injected_query_string=123 ao caminho de um objeto válido e esperava erro; a API ignora o parâmetro desconhecido e devolve o objeto (20x), comportamento aceitável (8 de 14) |
+| EvoMaster (caixa-preta) | 33 | 27 | 55.0% | 2 | endpoint interno /error do Spring Boot exposto pela especificação gerada automaticamente; chamado diretamente, sem erro anterior, responde 500 (status 999) por desenho do framework (13 de 27) |
 
 ## Tabela 5 – Precisão, recall e F1-score (média das repetições)
 

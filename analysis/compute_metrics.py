@@ -19,6 +19,7 @@ Definições:
 """
 import csv
 import os
+import re
 import statistics as st
 import sys
 from collections import Counter, defaultdict
@@ -38,6 +39,14 @@ def read(path):
 
 def ids(cell):
     return {x.strip() for x in (cell or "").replace(",", ";").split(";") if x.strip()}
+
+
+def causa_fp(r):
+    """Causa de um FP: a justificativa da sugestão (sem detalhes do caso) se a classificação
+    final é a sugerida; senão, nada (o tipo do relato é usado no lugar)."""
+    if r.get("sugestao", "").strip().upper() != r.get("classificacao", "").strip().upper():
+        return ""
+    return re.split(r" \(recebido|; reprodução sem Accept", r.get("justificativa", ""))[0].strip()
 
 
 def safe_div(a, b):
@@ -192,9 +201,12 @@ def main():
         keys = {a["chave"] for r in per_run if r["tool"] == t for a in ach_by_run[r["run_id"]]}
         c = Counter(cls.get(k, {}).get("classificacao", "").strip().upper() or "INC" for k in keys)
         fp_types = Counter(cls[k]["tipo"] for k in keys if cls.get(k, {}).get("classificacao", "").strip().upper() == "FP")
-        fp_obs = Counter(cls[k]["observacoes"].strip() for k in keys
-                         if cls.get(k, {}).get("classificacao", "").strip().upper() == "FP" and cls[k]["observacoes"].strip())
-        cause = (fp_obs.most_common(1) or fp_types.most_common(1) or [("—", 0)])[0][0]
+        # causa do FP: a justificativa da sugestão quando a equipe a aceitou (classificacao = sugestao);
+        # sem ela, o tipo do relato
+        fp_obs = Counter(causa_fp(cls[k]) for k in keys
+                         if cls.get(k, {}).get("classificacao", "").strip().upper() == "FP" and causa_fp(cls[k]))
+        cause, n_cause = (fp_obs.most_common(1) or fp_types.most_common(1) or [("—", 0)])[0]
+        cause = f"{cause} ({n_cause} de {c['FP']})" if c["FP"] else cause
         t4.append({"Ferramenta": TOOL_LABEL.get(t, t), "VP": c["VP"], "FP": c["FP"],
                    "Precisão": fmt(safe_div(c["VP"], c["VP"] + c["FP"]), pct=True),
                    "Inconclusivos": len(keys) - c["VP"] - c["FP"], "Principal causa de FP": cause})

@@ -1,0 +1,20 @@
+item,valor
+execucoes_concluidas,27
+execucoes_incompletas_refeitas,0
+inicio_primeira_execucao,2026-11-23 20:53:52
+fim_ultima_execucao,2026-11-24 18:50:02
+horas_de_relogio,21.94
+horas_com_execucao_ativa,7.38
+duracao_execucao_media_s,1880.1
+duracao_execucao_min_s,1805.7
+duracao_execucao_max_s,2004.1
+orcamento_s,1800
+slots_paralelos,2
+sementes_por_repeticao,rep1=1001 rep2=1002 rep3=1003
+limite_tool_cpus,4.00
+limite_tool_mem,3038m
+limite_api_cpus,2.00
+limite_api_mem,1536m
+limite_proxy_cpus,1.00
+limite_proxy_mem,384m
+limite_api_java_opts,-Xmx1152m
