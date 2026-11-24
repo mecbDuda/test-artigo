@@ -51,7 +51,7 @@ em `piloto/` (e na branch `piloto`).
 | `analysis/sugerir.py` | sugere VP/FP/INC e defeito para cada relato e gera `docs/guia_revisao.md` |
 | `analysis/compute_metrics.py` | calcula as métricas e as tabelas em `data/results/` |
 | `data/ground_truth/oraculo.csv` | oráculo de defeitos |
-| `docs/desvios.md` | toda mudança em relação ao planejado (D01–D30) e ameaças à validade (A1–A6) |
+| `docs/desvios.md` | toda mudança em relação ao planejado (D01–D31) e ameaças à validade (A1–A6) |
 | `docs/versoes.md` | versões das ferramentas, APIs e máquina usada |
 | `docs/protocolo_validacao.md` | protocolo de classificação dos relatos |
 | `docs/guia_revisao.md` | guia de revisão dos relatos para os avaliadores |
@@ -64,17 +64,20 @@ em `piloto/` (e na branch `piloto`).
   threads, 16 GB de RAM) com **2 slots paralelos**: de 2026-11-23 20:53 a 2026-11-24 18:50,
   com uma pausa segura (00:05 a 14:37). Foram 27/27 execuções concluídas, sem falhas, sem
   execuções refeitas e sem contêiner atingindo o limite de memória.
-- **Fase 3 concluída.** A extração deu 1.265 relatos brutos e 390 únicos (vampi 47, catwatch 75,
+- **Fase 3 concluída.** A extração deu 1.265 achados por execução (deduplicados dentro de cada
+  execução) e 390 relatos únicos (vampi 47, catwatch 75,
   petclinic-rest 268). Cada relato foi reproduzido numa API limpa (359 reproduziram) e recebeu
   uma sugestão: 206 VP, 182 FP e 2 INC, com 3 defeitos novos no VAmPI, 8 na catwatch e 13 no
   petclinic-rest.
-- **Em andamento: revisão pela equipe.** Os dois avaliadores marcam "ok" ou a classificação
-  correta, por uma página de revisão compartilhada (as marcações são depois copiadas para as
-  colunas `avaliador_1` e `avaliador_2` de `data/validated/relatos.csv`) ou diretamente no CSV.
-  As colunas `classificacao` e `defeito_id` só são preenchidas na Fase 4.
-- **Próximos passos:** Fase 4 (consolidar a revisão, decidir divergências, atualizar o
-  oráculo, calcular as métricas), Fase 5 (`RESULTADOS_PARA_ARTIGO.md`) e Fase 6 (organizar o
-  repositório e reescrever o README para a professora).
+- **Fase 4 concluída.** A equipe declarou que os dois avaliadores concordam com todas as
+  sugestões (registro em bloco, D31): 0 divergências; classificação final 206 VP, 182 FP e
+  2 INC; 24 defeitos novos no oráculo com `origem=pooling` (total 33); métricas em
+  `data/results/` (`analysis/consolidar_revisao.py`, `analysis/compute_metrics.py`).
+- **Fase 5 concluída:** `RESULTADOS_PARA_ARTIGO.md`, na raiz (resumos de apoio gerados por
+  `analysis/resumir_execucao.py`).
+- **Fase 6 concluída:** repositório organizado e README reescrito para a professora.
+- **Pendente com a equipe:** colunas `como_reproduzir` e `verificado` dos defeitos do
+  `oraculo.csv` (marcadas `[preencher]`/`nao`) e a redação do artigo.
 
 ## Ferramentas de apoio
 

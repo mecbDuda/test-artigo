@@ -6,7 +6,7 @@ evidência: vampi__schemathesis__rep3/flows.jsonl (ts 1795553381)
 
 === reprodução em estado limpo ===
 [tentativa 1, passo 1] GET /users/v1/%F0%B2%BA%B7%27
-  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MTksImlhdCI6MTc5NTU1NzcxOSwic3ViIjoibmFtZTEifQ.Pq57TERC97WZqfTyRtM50dVVzfR09HzqQ2vYZOTJbaA"}
+  cabeçalhos: {"Authorization": "Bearer <JWT removido>"}
   corpo: 
   -> 500 (11 ms) content-type=text/html; charset=utf-8
   resposta: <!doctype html>

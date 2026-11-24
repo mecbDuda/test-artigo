@@ -34,13 +34,13 @@ Reproduce with:
 
 === reprodução em estado limpo ===
 [tentativa 1, passo 1] GET /createdb
-  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MDYsImlhdCI6MTc5NTU1NzcwNiwic3ViIjoibmFtZTEifQ.81Bg60WUtgOnkah1ETIuxgNusqMxR5dUjaqsUGIMhCk"}
+  cabeçalhos: {"Authorization": "Bearer <JWT removido>"}
   corpo: 
   -> 200 (59 ms) content-type=application/json
   resposta: { "message": "Database populated." }
 
 [tentativa 2, passo 1] GET /createdb
-  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MDYsImlhdCI6MTc5NTU1NzcwNiwic3ViIjoibmFtZTEifQ.81Bg60WUtgOnkah1ETIuxgNusqMxR5dUjaqsUGIMhCk"}
+  cabeçalhos: {"Authorization": "Bearer <JWT removido>"}
   corpo: 
   -> 200 (56 ms) content-type=application/json
   resposta: { "message": "Database populated." }

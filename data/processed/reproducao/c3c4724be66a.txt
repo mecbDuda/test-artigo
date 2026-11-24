@@ -6,7 +6,7 @@ evidência: vampi__restler__rep3/flows.jsonl (ts 1795549517)
 
 === reprodução em estado limpo ===
 [tentativa 1, passo 1] GET /users/v1/hHsS^${PR'YGHA%M3B<u4S:%GJ#W=&hO[J($YHS9^*J=Snk8
-  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MTEsImlhdCI6MTc5NTU1NzcxMSwic3ViIjoibmFtZTEifQ.yJypmnMQe4oM7iVs6tidpMcCFEHekXoSwG8rJ2hNAow"}
+  cabeçalhos: {"Authorization": "Bearer <JWT removido>"}
   corpo: 
   -> 500 (10 ms) content-type=text/html; charset=utf-8
   resposta: <!doctype html>

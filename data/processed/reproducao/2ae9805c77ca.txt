@@ -22,13 +22,13 @@ Reproduce with:
 
 === reprodução em estado limpo ===
 [tentativa 1, passo 1] POST /books/v1
-  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MjIsImlhdCI6MTc5NTU1NzcyMiwic3ViIjoibmFtZTEifQ.OwN8yTLS9oxtC8EuOjj9ak31TQa69CRXJz_wnHj-ut4", "Content-Type": "application/json"}
+  cabeçalhos: {"Authorization": "Bearer <JWT removido>", "Content-Type": "application/json"}
   corpo: {"book_title": "book99", "secret": "valorFiltrado1"}
   -> 200 (15 ms) content-type=application/json
   resposta: {"message": "Book has been added.", "status": "success"}
 
 [tentativa 2, passo 1] POST /books/v1
-  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MjIsImlhdCI6MTc5NTU1NzcyMiwic3ViIjoibmFtZTEifQ.OwN8yTLS9oxtC8EuOjj9ak31TQa69CRXJz_wnHj-ut4", "Content-Type": "application/json"}
+  cabeçalhos: {"Authorization": "Bearer <JWT removido>", "Content-Type": "application/json"}
   corpo: {"book_title": "book99", "secret": "valorFiltrado1"}
   -> 400 (10 ms) content-type=application/json
   resposta: { "status": "fail", "message": "Book Already exists!"}

@@ -6,7 +6,7 @@ evidência: vampi__restler__rep1/Fuzz/RestlerResults/experiment25/bug_buckets/In
 
 === reprodução em estado limpo ===
 [tentativa 1, passo 1] GET /users/v1/]:X2BCb
-  cabeçalhos: {"Accept": "application/json", "Host": "localhost:5000", "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1Njc4NTksImlhdCI6MTc5NTU2MDY1OSwic3ViIjoibmFtZTEifQ.3Qk8EAoXuLyzKpeWP5mcctqZuWWKO3cvkKU27ZKLk1Q"}
+  cabeçalhos: {"Accept": "application/json", "Host": "localhost:5000", "Authorization": "Bearer <JWT removido>"}
   corpo: 
   -> 500 (23 ms) content-type=text/html; charset=utf-8
   resposta: <!doctype html>

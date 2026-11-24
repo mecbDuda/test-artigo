@@ -22,7 +22,7 @@ Reproduce with:
 
 === reprodução em estado limpo ===
 [tentativa 1, passo 1] PUT /users/v1/name1/password
-  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MjksImlhdCI6MTc5NTU1NzcyOSwic3ViIjoibmFtZTEifQ.O1wDBC_uOhblVejwug6Tr8PWwmhOqUM8phA2pKScTfk", "Content-Type": "application/json"}
+  cabeçalhos: {"Authorization": "Bearer <JWT removido>", "Content-Type": "application/json"}
   corpo: {}
   -> 400 (4 ms) content-type=application/json
   resposta: { "status": "fail", "message": "Malformed Data"}

@@ -452,15 +452,24 @@ def linha(rel, ev, final, tent, rep, nota):
             "tentativas": tent, "reproduzido": rep, "nota": nota}
 
 
+# tokens JWT (do VAmPI local, descartável) não são gravados nas evidências
+JWT_RE = re.compile(r"eyJ[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}")
+
+
+def sem_token(texto):
+    return JWT_RE.sub("<JWT removido>", texto)
+
+
 def escrever_txt(rel, ev, troca, log):
+    partes = [f"relato {rel['chave']} | {rel['api']} | {rel['operacao']} | {rel['tipo']}\n",
+              f"assinatura: {rel['assinatura']}\nferramentas: {rel['ferramentas']}\n",
+              f"evidência: {(ev or {}).get('fonte', '(não encontrada)')}\n{(ev or {}).get('nota', '')}\n\n"]
+    if ev and ev.get("trecho"):
+        partes.append("=== trecho do relatório da ferramenta ===\n" + ev["trecho"] + "\n\n")
+    partes.append("=== reprodução em estado limpo ===\n" + (troca or "(não executada)\n"))
+    partes.append("\n=== log da API durante a reprodução (últimas 150 linhas) ===\n" + (log or "") + "\n")
     with open(os.path.join(OUT_DIR, rel["chave"] + ".txt"), "w", encoding="utf-8") as f:
-        f.write(f"relato {rel['chave']} | {rel['api']} | {rel['operacao']} | {rel['tipo']}\n")
-        f.write(f"assinatura: {rel['assinatura']}\nferramentas: {rel['ferramentas']}\n")
-        f.write(f"evidência: {(ev or {}).get('fonte', '(não encontrada)')}\n{(ev or {}).get('nota', '')}\n\n")
-        if ev and ev.get("trecho"):
-            f.write("=== trecho do relatório da ferramenta ===\n" + ev["trecho"] + "\n\n")
-        f.write("=== reprodução em estado limpo ===\n" + (troca or "(não executada)\n"))
-        f.write("\n=== log da API durante a reprodução (últimas 150 linhas) ===\n" + (log or "") + "\n")
+        f.write(sem_token("".join(partes)))
 
 
 def main():

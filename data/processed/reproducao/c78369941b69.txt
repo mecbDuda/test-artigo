@@ -34,7 +34,7 @@ Reproduce with:
 
 === reprodução em estado limpo ===
 [tentativa 1, passo 1] GET /users/v1/%27
-  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MjAsImlhdCI6MTc5NTU1NzcyMCwic3ViIjoibmFtZTEifQ.O2ipT0Hw5SYjn8WtM1IYhzM64Yk0-4uBIV2sGCcH56M"}
+  cabeçalhos: {"Authorization": "Bearer <JWT removido>"}
   corpo: 
   -> 500 (11 ms) content-type=text/html; charset=utf-8
   resposta: <!doctype html>

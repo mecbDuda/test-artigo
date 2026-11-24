@@ -9,7 +9,7 @@ evidência: vampi__evomaster__rep1/generated_tests/EvoMaster_faults_Test.java#te
         
         // Fault101. Received A Response From API With A Structure/Data That Is Not Matching Its Schema. Type: validation.response.body.unexpected No response body is expected but one was found.
         given().accept("application/json")
-                .header("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU0ODg5OTQsImlhdCI6MTc5NTQ4MTc5NCwic3ViIjoibmFtZTEifQ.pWoPdBFaMzNilWqOFdsEXCl5UqMaRm4SHQv0EsC0Zww") // Fixed Headers
+                .header("Authorization", "Bearer <JWT removido>") // Fixed Headers
                 .contentType("application/json")
                 .body(" { " + 
                     " \"password\" : \"pass1\", " + 
@@ -25,7 +25,7 @@ evidência: vampi__evomaster__rep1/generated_tests/EvoMaster_faults_Test.java#te
 
 === reprodução em estado limpo ===
 [tentativa 1, passo 1] POST /users/v1/register
-  cabeçalhos: {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTU1NjQ5MjQsImlhdCI6MTc5NTU1NzcyNCwic3ViIjoibmFtZTEifQ.vd5UnSbBClo8UdE8SdDHnmBilEbtcCYqFcCz7Eh0s6U", "Content-Type": "application/json", "Accept": "application/json"}
+  cabeçalhos: {"Authorization": "Bearer <JWT removido>", "Content-Type": "application/json", "Accept": "application/json"}
   corpo:  {  "password" : "pass1",  "email" : "user@tempmail.com"  } 
   -> 400 (9 ms) content-type=application/json
   resposta: { "status": "fail", "message": "'username' is a required property"}
