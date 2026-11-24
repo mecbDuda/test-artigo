@@ -1,0 +1,12 @@
+{
+  "failedRequestsCount": 8,
+  "bugCount": 0,
+  "codeCounts": {
+    "401": 4,
+    "404": 4
+  },
+  "errorBuckets": {
+    "(401, a234a4b0-ceb7-4816-9680-b64502cf52ca)": 4,
+    "(404, bada5a81-3416-4238-aaa7-d1c433d36899)": 4
+  }
+}

@@ -1,0 +1,14 @@
+Starting task Fuzz...
+Using python: 'python3' (Python 3.11.8)
+
+ERROR: Results analyzer for logs in /work/Fuzz failed.
+
+Request coverage (successful / total): 9 / 14
+Attempted requests: 10 / 14
+Bugs were found!
+Bug buckets:
+
+InvalidValueChecker_500: 1
+InvalidValueChecker_timeout: 1
+Task Fuzz succeeded.
+Collecting logs...

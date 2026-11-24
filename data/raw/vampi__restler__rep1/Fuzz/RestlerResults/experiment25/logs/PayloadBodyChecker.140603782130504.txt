@@ -1,0 +1,98 @@
+fuzzing valid True
+fuzzing invalid True
+start with examples True
+size dep budget True
+use feedback True
+skip_uuid_substitution False
+recipe None
+Start fuzzing request: POST /users/v1/register
+#node: 4
+Fuzz using dynamic feedback
+#N: 4, #max: 200, #width: 20
+Task begin Invalid-JSON
+Tracker begin (Invalid-JSON):
+    Valid: 8
+    Invalid: 0
+Tracker end
+Task end Invalid-JSON
+
+Task begin Structure
+Tracker begin (Structure):
+    Valid: 4
+    Invalid: 4
+    misc: 1 (4: 4)
+Tracker end
+Task end Structure
+
+Task begin Type
+Tracker begin (Type):
+    Valid: 0
+    Invalid: 50
+    misc: 17 (50: 2 4 4 2 2 4 2 4 4 2 2 2 4 4 2 4 2)
+Tracker end
+Task end Type
+Skip visited request /users/v1/register
+Skip visited request /users/v1/register
+Skip visited request /users/v1/register
+Skip visited request /users/v1/register
+Skip visited request /users/v1/register
+Skip visited request /users/v1/register
+Skip visited request /users/v1/register
+Skip visited request /users/v1/register
+Start fuzzing request: POST /users/v1/login
+#node: 3
+Fuzz using dynamic feedback
+#N: 3, #max: 200, #width: 20
+Task begin Invalid-JSON
+Tracker begin (Invalid-JSON):
+    Valid: 6
+    Invalid: 0
+Tracker end
+Task end Invalid-JSON
+
+Task begin Structure
+Tracker begin (Structure):
+    Valid: 2
+    Invalid: 4
+    misc: 2 (4: 2 2)
+Tracker end
+Task end Structure
+
+Task begin Type
+Tracker begin (Type):
+    Valid: 0
+    Invalid: 42
+    misc: 13 (42: 4 2 4 2 2 4 2 4 4 4 4 2 4)
+Tracker end
+Task end Type
+Skip visited request /users/v1/login
+Skip visited request /users/v1/login
+Skip visited request /users/v1/login
+Skip visited request /users/v1/login
+Start fuzzing request: PUT /users/v1/{username}/email
+#node: 2
+Fuzz using dynamic feedback
+#N: 2, #max: 200, #width: 20
+Task begin Invalid-JSON
+Tracker begin (Invalid-JSON):
+    Valid: 0
+    Invalid: 8
+    misc: 1 (8: 8)
+Tracker end
+Task end Invalid-JSON
+
+Task begin Structure
+Tracker begin (Structure):
+    Valid: 0
+    Invalid: 4
+    misc: 1 (4: 4)
+Tracker end
+Task end Structure
+
+Task begin Type
+Tracker begin (Type):
+    Valid: 0
+    Invalid: 36
+    misc: 9 (36: 4 4 4 4 4 4 4 4 4)
+Tracker end
+Task end Type

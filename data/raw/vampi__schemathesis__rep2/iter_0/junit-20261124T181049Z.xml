@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites errors="0" failures="11" skipped="0" tests="15" time="1749.401151">
+  <testsuite name="schemathesis" hostname="DESKTOP-U498DNI" errors="0" failures="11" skipped="0" tests="15" time="1749.401151">
+    <testcase name="POST /books/v1" time="7.947763">
+      <failure type="failure" message="ST202">1. Test Case ID: YVH4XV
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[400] Bad Request:
+
+    `{ "status": "fail", "message": "Book Already exists!"}`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"book_title": "book99", "secret": "[Filtered]"}' http://localhost:8080/books/v1</failure>
+    </testcase>
+    <testcase name="POST /users/v1/login" time="6.351334">
+      <failure type="failure" message="ST202">1. Test Case ID: cF4dLQ
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[400] Bad Request:
+
+    `{ "status": "fail", "message": "'username' is a required property"}`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{}' http://localhost:8080/users/v1/login</failure>
+    </testcase>
+    <testcase name="POST /users/v1/register" time="7.085636">
+      <failure type="failure" message="ST202">1. Test Case ID: 4OG2RG
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[400] Bad Request:
+
+    `{ "status": "fail", "message": "'username' is a required property"}`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{}' http://localhost:8080/users/v1/register</failure>
+    </testcase>
+    <testcase name="GET /" time="2.660997" />
+    <testcase name="GET /books/v1" time="2.978290" />
+    <testcase name="GET /createdb" time="30.290562">
+      <failure type="failure" message="ST101, ST103">1. Test Case ID: s1M11C
+
+- ST101 Server error
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200
+
+[500] Internal Server Error:
+
+    `&lt;!doctype html&gt;
+    &lt;html lang=en&gt;
+      &lt;head&gt;
+        &lt;title&gt;sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: books.book_title
+    [SQL: INSERT INTO books (book_title, secret_content, user_id) VALUES (?, ?, ?)]
+    [parameters: ('bookTitle62', 'secret for bookTitle62', 3)]
+    (Background on this error at: https://sqlalche.me/e/20/gkpj)
+     // Werkzeug Debugger&lt;/title&gt;
+        &lt;link rel="stylesheet" href="?__debugger__=yes&amp;amp;cmd=resource&amp;amp;f=style.css"&gt;
+        &lt;link rel="shortcut icon"
+            href="?_ // Output truncated...`
+
+Reproduce with:
+
+    curl -X GET -H 'Authorization: [Filtered]' http://localhost:8080/createdb</failure>
+    </testcase>
+    <testcase name="GET /me" time="2.945208">
+      <failure type="failure" message="ST105">1. Test Case ID: aiG7WK
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[401] Unauthorized:
+
+    `{
+      "detail": "No authorization token provided",
+      "status": 401,
+      "title": "Unauthorized",
+      "type": "about:blank"
+    }`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8080/me</failure>
+    </testcase>
+    <testcase name="GET /users/v1" time="2.765481" />
+    <testcase name="GET /users/v1/_debug" time="2.750497" />
+    <testcase name="GET /books/v1/{book_title}" time="386.834268">
+      <failure type="failure" message="ST108">1. Test Case ID: Fmgh1k
+
+- ST108 Response violates schema
+
+    {"book_title":"book99","owner":"name1","secret":"pass1secret"} is not of type "array"
+
+    Validated against the response schema for status code 200.
+
+    Schema:
+
+        {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "book_title": {
+                        "type": "string",
+                        "example": "bookTitle77"
+                    },
+                    "owner": {
+                        "type": "string",
+                        "example": "name1"
+                    },
+                    "secret": {
+                        "type": "string",
+                        "example": "secret for bookTitle77"
+                    }
+                }
+            }
+        }
+
+    Value:
+
+        {
+            "book_title": "book99",
+            "owner": "name1",
+            "secret": "pass1secret"
+        }
+
+[200] OK:
+
+    `{"book_title": "book99", "owner": "name1", "secret": "pass1secret"}`
+
+Reproduce with:
+
+    curl -X GET -H 'Authorization: [Filtered]' http://localhost:8080/books/v1/book99</failure>
+      <failure type="failure" message="ST105">1. Test Case ID: qZIsmP
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[401] Unauthorized:
+
+    `{
+      "detail": "No authorization token provided",
+      "status": 401,
+      "title": "Unauthorized",
+      "type": "about:blank"
+    }`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8080/books/v1/book99</failure>
+    </testcase>
+    <testcase name="PUT /users/v1/{username}/email" time="8.429975">
+      <failure type="failure" message="ST105">1. Test Case ID: hQvvRU
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[401] Unauthorized:
+
+    `{
+      "detail": "No authorization token provided",
+      "status": 401,
+      "title": "Unauthorized",
+      "type": "about:blank"
+    }`
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"email": "mail3@mail.com"}' http://localhost:8080/users/v1/name1/email</failure>
+      <failure type="failure" message="ST202">1. Test Case ID: Fto2h6
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[400] Bad Request:
+
+    `{ "status": "fail", "message": "Please provide a proper JSON body."}`
+
+Reproduce with:
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{}' http://localhost:8080/users/v1/name1/email</failure>
+    </testcase>
+    <testcase name="PUT /users/v1/{username}/password" time="7.872053">
+      <failure type="failure" message="ST105">1. Test Case ID: 8jaSKV
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[401] Unauthorized:
+
+    `{
+      "detail": "No authorization token provided",
+      "status": 401,
+      "title": "Unauthorized",
+      "type": "about:blank"
+    }`
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"password": "[Filtered]"}' http://localhost:8080/users/v1/name1/password</failure>
+      <failure type="failure" message="ST202">1. Test Case ID: EBKUyf
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[400] Bad Request:
+
+    `{ "status": "fail", "message": "Malformed Data"}`
+
+Reproduce with:
+
+    curl -X PUT -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{}' http://localhost:8080/users/v1/name1/password</failure>
+    </testcase>
+    <testcase name="GET /users/v1/{username}" time="17.890942">
+      <failure type="failure" message="ST101, ST103">1. Test Case ID: 7UmWwF
+
+- ST101 Server error
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 404
+
+[500] Internal Server Error:
+
+    `&lt;!doctype html&gt;
+    &lt;html lang=en&gt;
+      &lt;head&gt;
+        &lt;title&gt;sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unrecognized token: "'''"
+    [SQL: SELECT * FROM users WHERE username = ''']
+    (Background on this error at: https://sqlalche.me/e/20/e3q8)
+     // Werkzeug Debugger&lt;/title&gt;
+        &lt;link rel="stylesheet" href="?__debugger__=yes&amp;amp;cmd=resource&amp;amp;f=style.css"&gt;
+        &lt;link rel="shortcut icon"
+            href="?__debugger__=yes&amp;amp;cmd=resource&amp;amp;f=console.png"&gt;
+        &lt;script src="?__debugger__=yes&amp;amp;cmd=resource // Output truncated...`
+
+Reproduce with:
+
+    curl -X GET -H 'Authorization: [Filtered]' http://localhost:8080/users/v1/%27</failure>
+    </testcase>
+    <testcase name="DELETE /users/v1/{username}" time="366.086827">
+      <failure type="failure" message="ST105">1. Test Case ID: TmOqIz
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[401] Unauthorized:
+
+    `{
+      "detail": "No authorization token provided",
+      "status": 401,
+      "title": "Unauthorized",
+      "type": "about:blank"
+    }`
+
+Reproduce with:
+
+    curl -X DELETE http://localhost:8080/users/v1/admin</failure>
+    </testcase>
+    <testcase name="Stateful tests" time="896.511319">
+      <failure type="failure" message="ST101, ST103">1. Test Case ID: HcYALS
+
+- ST101 Server error
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 400, 401
+
+[500] Internal Server Error:
+
+    `&lt;!doctype html&gt;
+    &lt;html lang=en&gt;
+      &lt;head&gt;
+        &lt;title&gt;sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: books.book_title
+    [SQL: INSERT INTO books (book_title, secret_content, user_id) VALUES (?, ?, ?)]
+    [parameters: ('bookTitle92', 'Õ\U000973e7æ¡', 1)]
+    (Background on this error at: https://sqlalche.me/e/20/gkpj)
+     // Werkzeug Debugger&lt;/title&gt;
+        &lt;link rel="stylesheet" href="?__debugger__=yes&amp;amp;cmd=resource&amp;amp;f=style.css"&gt;
+        &lt;link rel="shortcut icon"
+            href="?__debugger // Output truncated...`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"\u0018\u00a7r\u009c\u00fd}\u00cd\ud963\udcda\u00d2\u0098": [5932, []], "p": -9029, "\u1e70\u033a\u033a\u0315o\u035e \u0337i\u0332\u032c\u0347\u032a\u0359n\u031d\u0317\u0355v\u031f\u031c\u0318\u0326\u035fo\u0336\u0319\u0330\u0320k\u00e8\u035a\u032e\u033a\u032a\u0339\u0331\u0324 \u0316t\u031d\u0355\u0333\u0323\u033b\u032a\u035eh\u033c\u0353\u0332\u0326\u0333\u0318\u0332e\u0347\u0323\u0330\u0326\u032c\u034e \u0322\u033c\u033b\u0331\u0318h\u035a\u034e\u0359\u031c\u0323\u0332\u0345i\u0326\u0332\u0323\u0330\u0324v\u033b\u034de\u033a\u032d\u0333\u032a\u0330-m\u0322i\u0345n\u0316\u033a\u031e\u0332\u032f\u0330d\u0335\u033c\u031f\u0359\u0329\u033c\u0318\u0333 \u031e\u0325\u0331\u0333\u032dr\u031b\u0317\u0318e\u0359p\u0360r\u033c\u031e\u033b\u032d\u0317e\u033a\u0320\u0323\u035fs\u0318\u0347\u0333\u034d\u031d\u0349e\u0349\u0325\u032f\u031e\u0332\u035a\u032c\u035c\u01f9\u032c\u034e\u034e\u031f\u0316\u0347\u0324t\u034d\u032c\u0324\u0353\u033c\u032d\u0358\u0345i\u032a\u0331n\u0360g\u0334\u0349 \u034f\u0349\u0345c\u032c\u031fh\u0361a\u032b\u033b\u032f\u0358o\u032b\u031f\u0316\u034d\u0319\u031d\u0349s\u0317\u0326\u0332.\u0328\u0339\u0348\u0323": [[], {"\udaac\udf2e\u00fa": "\u0004^\uda40\ude92\u00fe\u001b\u0099\uee56\u00a5\u0015\u0017", "\u00d3\u008b": 993, "\u00b8\u00d5\ns": null}, 3.435621017466163e+16], "\u00d7\u00a1\uda6c\uddde\u00b9\ua531": null, "secret": "[Filtered]", "book_title": "bookTitle92"}' http://localhost:8080/books/v1</failure>
+      <failure type="failure" message="ST302">1. Test Case ID: IF3UnD
+
+- ST302 Created resource not found
+
+    The API returned `404 Not Found` for a resource that was just created.
+
+    Created with      : `POST /books/v1`
+    Not available with: `GET /books/v1/{book_title}`
+
+[404] Not Found:
+
+    `{
+      "detail": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.",
+      "status": 404,
+      "title": "Not Found",
+      "type": "about:blank"
+    }`
+
+Reproduce with:
+
+    curl -X POST -H 'Authorization: [Filtered]' -H 'Content-Type: application/json' -d '{"\\\udb9f\uded7\u00c6\u0004": {}, "book_title": "", "secret": "[Filtered]"}' http://localhost:8080/books/v1
+    curl -X GET -H 'Authorization: [Filtered]' http://localhost:8080/books/v1/</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

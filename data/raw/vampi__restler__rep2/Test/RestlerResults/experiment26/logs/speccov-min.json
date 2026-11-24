@@ -1,0 +1,161 @@
+{
+    "678e4a9c5d7505fed4c8ac4e1066dca6dd141189_1": {
+        "verb": "GET",
+        "endpoint": "/users/v1/_debug",
+        "valid": 1,
+        "matching_prefix": [],
+        "request": "GET /users/v1/_debug HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nAUTHORIZATION TOKEN\r\n\r\n",
+        "response": "HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:47 GMT\r\nContent-Type: application/json\r\nContent-Length: 382\r\nConnection: close\r\n\r\n{\n  \"users\": [\n    {\n      \"admin\": false,\n      \"email\": \"mail1@mail.com\",\n      \"password\": \"pass1\",\n      \"username\": \"name1\"\n    },\n    {\n      \"admin\": false,\n      \"email\": \"mail2@mail.com\",\n      \"password\": \"pass2\",\n      \"username\": \"name2\"\n    },\n    {\n      \"admin\": true,\n      \"email\": \"admin@mail.com\",\n      \"password\": \"pass1\",\n      \"username\": \"admin\"\n    }\n  ]\n}\n"
+    },
+    "6bccc70cd68ca2aafa19dd26840560ab747d9ebb_1": {
+        "verb": "GET",
+        "endpoint": "/me",
+        "valid": 1,
+        "matching_prefix": [],
+        "request": "GET /me HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nAUTHORIZATION TOKEN\r\n\r\n",
+        "response": "HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:47 GMT\r\nContent-Type: application/json\r\nContent-Length: 95\r\nConnection: close\r\n\r\n{\"data\": {\"admin\": false, \"email\": \"mail1@mail.com\", \"username\": \"name1\"}, \"status\": \"success\"}"
+    },
+    "79a2e16b2e4496f6746eb1f80defe4fddd9d0893_1": {
+        "verb": "PUT",
+        "endpoint": "/users/v1/{username}/email",
+        "valid": 1,
+        "matching_prefix": [],
+        "request": "PUT /users/v1/name1/email HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\nAUTHORIZATION TOKEN\r\n\r\n{\n    \"email\":\"mail3@mail.com\"}\r\n",
+        "response": "HTTP/1.1 204 NO CONTENT\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:47 GMT\r\nContent-Type: application/json\r\nConnection: close\r\n\r\n"
+    },
+    "9671ff560f1e36cdf5a8ce157ec779e2c0f8a491_1": {
+        "verb": "PUT",
+        "endpoint": "/users/v1/{username}/password",
+        "valid": 1,
+        "matching_prefix": [],
+        "request": "PUT /users/v1/name1/password HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\nAUTHORIZATION TOKEN\r\n\r\n{\n    \"password\":\"pass4\"}\r\n",
+        "response": "HTTP/1.1 204 NO CONTENT\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:48 GMT\r\nContent-Type: application/json\r\nConnection: close\r\n\r\n"
+    },
+    "9b234efa34108cb881e82f3d75c80a47b715983c_1": {
+        "verb": "POST",
+        "endpoint": "/users/v1/login",
+        "valid": 1,
+        "matching_prefix": [],
+        "request": "POST /users/v1/login HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\nAUTHORIZATION TOKEN\r\n\r\n{\n    \"username\":\"name1\",\n    \"password\":\"pass1\"}\r\n",
+        "response": "HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 81\r\nConnection: close\r\n\r\n{ \"status\": \"fail\", \"message\": \"Password is not correct for the given username.\"}"
+    },
+    "ad774fff1145088ee418e32166064fcccc6d4127_1": {
+        "verb": "POST",
+        "endpoint": "/users/v1/register",
+        "valid": 1,
+        "matching_prefix": [],
+        "request": "POST /users/v1/register HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\nAUTHORIZATION TOKEN\r\n\r\n{\n    \"username\":\"name1\",\n    \"password\":\"pass1\",\n    \"email\":\"user@tempmail.com\"}\r\n",
+        "response": "HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 69\r\nConnection: close\r\n\r\n{ \"status\": \"fail\", \"message\": \"User already exists. Please Log in.\"}"
+    },
+    "ae3854c85225b0b51949816e092da4a3eb4da8b1_1": {
+        "verb": "POST",
+        "endpoint": "/books/v1",
+        "valid": 1,
+        "matching_prefix": [],
+        "request": "POST /books/v1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\nAUTHORIZATION TOKEN\r\n\r\n{\n    \"book_title\":\"book99\",\n    \"secret\":\"pass1secret\"}\r\n",
+        "response": "HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 56\r\nConnection: close\r\n\r\n{\"message\": \"Book has been added.\", \"status\": \"success\"}"
+    },
+    "ae44d6ba2a1e0478a794c87961c46c75fa01910f_1": {
+        "verb": "GET",
+        "endpoint": "/createdb",
+        "valid": 1,
+        "matching_prefix": [],
+        "request": "GET /createdb HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nAUTHORIZATION TOKEN\r\n\r\n",
+        "response": "HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 36\r\nConnection: close\r\n\r\n{ \"message\": \"Database populated.\" }"
+    },
+    "af1cad1f1eb2bf503dc605137043029f04849e33_1": {
+        "verb": "DELETE",
+        "endpoint": "/users/v1/{username}",
+        "valid": 0,
+        "matching_prefix": [],
+        "request": "DELETE /users/v1/name1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nAUTHORIZATION TOKEN\r\n\r\n",
+        "response": "HTTP/1.1 401 UNAUTHORIZED\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 63\r\nConnection: close\r\n\r\n{ \"status\": \"fail\", \"message\": \"Only Admins may delete users!\"}"
+    },
+    "af1cad1f1eb2bf503dc605137043029f04849e33_2": {
+        "verb": "DELETE",
+        "endpoint": "/users/v1/{username}",
+        "valid": 0,
+        "matching_prefix": [],
+        "request": "DELETE /users/v1/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nAUTHORIZATION TOKEN\r\n\r\n",
+        "response": "HTTP/1.1 401 UNAUTHORIZED\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 63\r\nConnection: close\r\n\r\n{ \"status\": \"fail\", \"message\": \"Only Admins may delete users!\"}"
+    },
+    "af1cad1f1eb2bf503dc605137043029f04849e33_3": {
+        "verb": "DELETE",
+        "endpoint": "/users/v1/{username}",
+        "valid": 0,
+        "matching_prefix": [],
+        "request": "DELETE /users/v1/name1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nAUTHORIZATION TOKEN\r\n\r\n",
+        "response": "HTTP/1.1 401 UNAUTHORIZED\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 63\r\nConnection: close\r\n\r\n{ \"status\": \"fail\", \"message\": \"Only Admins may delete users!\"}"
+    },
+    "af1cad1f1eb2bf503dc605137043029f04849e33_4": {
+        "verb": "DELETE",
+        "endpoint": "/users/v1/{username}",
+        "valid": 0,
+        "matching_prefix": [],
+        "request": "DELETE /users/v1/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nAUTHORIZATION TOKEN\r\n\r\n",
+        "response": "HTTP/1.1 401 UNAUTHORIZED\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 63\r\nConnection: close\r\n\r\n{ \"status\": \"fail\", \"message\": \"Only Admins may delete users!\"}"
+    },
+    "ba67ec4635f39a8a824bc25ef29276f3d76533fe_1": {
+        "verb": "GET",
+        "endpoint": "/users/v1/{username}",
+        "valid": 1,
+        "matching_prefix": [],
+        "request": "GET /users/v1/name1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nAUTHORIZATION TOKEN\r\n\r\n",
+        "response": "HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 48\r\nConnection: close\r\n\r\n{\"username\": \"name1\", \"email\": \"mail1@mail.com\"}"
+    },
+    "c70e5420fe48130089c4d6574393f24536aeadf8_1": {
+        "verb": "GET",
+        "endpoint": "/books/v1/{book_title}",
+        "valid": 0,
+        "matching_prefix": [],
+        "request": "GET /books/v1/bookTitle77 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nAUTHORIZATION TOKEN\r\n\r\n",
+        "response": "HTTP/1.1 404 NOT FOUND\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 49\r\nConnection: close\r\n\r\n{ \"status\": \"fail\", \"message\": \"Book not found!\"}"
+    },
+    "c70e5420fe48130089c4d6574393f24536aeadf8_2": {
+        "verb": "GET",
+        "endpoint": "/books/v1/{book_title}",
+        "valid": 0,
+        "matching_prefix": [],
+        "request": "GET /books/v1/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nAUTHORIZATION TOKEN\r\n\r\n",
+        "response": "HTTP/1.1 404 NOT FOUND\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 49\r\nConnection: close\r\n\r\n{ \"status\": \"fail\", \"message\": \"Book not found!\"}"
+    },
+    "c70e5420fe48130089c4d6574393f24536aeadf8_3": {
+        "verb": "GET",
+        "endpoint": "/books/v1/{book_title}",
+        "valid": 0,
+        "matching_prefix": [],
+        "request": "GET /books/v1/bookTitle77 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nAUTHORIZATION TOKEN\r\n\r\n",
+        "response": "HTTP/1.1 404 NOT FOUND\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 49\r\nConnection: close\r\n\r\n{ \"status\": \"fail\", \"message\": \"Book not found!\"}"
+    },
+    "c70e5420fe48130089c4d6574393f24536aeadf8_4": {
+        "verb": "GET",
+        "endpoint": "/books/v1/{book_title}",
+        "valid": 0,
+        "matching_prefix": [],
+        "request": "GET /books/v1/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nAUTHORIZATION TOKEN\r\n\r\n",
+        "response": "HTTP/1.1 404 NOT FOUND\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 49\r\nConnection: close\r\n\r\n{ \"status\": \"fail\", \"message\": \"Book not found!\"}"
+    },
+    "de858f1b3fbbea3360cd73d4d5d82c3dd09b0d61_1": {
+        "verb": "GET",
+        "endpoint": "/books/v1",
+        "valid": 1,
+        "matching_prefix": [],
+        "request": "GET /books/v1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nAUTHORIZATION TOKEN\r\n\r\n",
+        "response": "HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 230\r\nConnection: close\r\n\r\n{\n  \"Books\": [\n    {\n      \"book_title\": \"bookTitle95\",\n      \"user\": \"name1\"\n    },\n    {\n      \"book_title\": \"bookTitle80\",\n      \"user\": \"name2\"\n    },\n    {\n      \"book_title\": \"bookTitle50\",\n      \"user\": \"admin\"\n    }\n  ]\n}\n"
+    },
+    "f030bbbd32966cde41037b98a8849c46b76e4bc1_1": {
+        "verb": "GET",
+        "endpoint": "",
+        "valid": 1,
+        "matching_prefix": [],
+        "request": "GET / HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nAUTHORIZATION TOKEN\r\n\r\n",
+        "response": "HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 271\r\nConnection: close\r\n\r\n{ \"message\": \"VAmPI the Vulnerable API\", \"help\": \"VAmPI is a vulnerable on purpose API. It was created in order to evaluate the efficiency of third party tools in identifying vulnerabilities in APIs but it can also be used in learning/teaching purposes.\", \"vulnerable\":1}"
+    },
+    "fc93a5f92d40789557b4fcc7c41e5ffecf7690f8_1": {
+        "verb": "GET",
+        "endpoint": "/users/v1",
+        "valid": 1,
+        "matching_prefix": [],
+        "request": "GET /users/v1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nAUTHORIZATION TOKEN\r\n\r\n",
+        "response": "HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 17:37:48 GMT\r\nContent-Type: application/json\r\nContent-Length: 236\r\nConnection: close\r\n\r\n{\n  \"users\": [\n    {\n      \"email\": \"mail1@mail.com\",\n      \"username\": \"name1\"\n    },\n    {\n      \"email\": \"mail2@mail.com\",\n      \"username\": \"name2\"\n    },\n    {\n      \"email\": \"admin@mail.com\",\n      \"username\": \"admin\"\n    }\n  ]\n}\n"
+    }}

@@ -1,0 +1,8 @@
+Starting task Test...
+Using python: 'python3' (Python 3.11.8)
+Request coverage (successful / total): 12 / 14
+Attempted requests: 14 / 14
+No bugs were found.
+See 'coverage_failures_to_investigate.txt' to investigate API coverage.
+Task Test succeeded.
+Collecting logs...

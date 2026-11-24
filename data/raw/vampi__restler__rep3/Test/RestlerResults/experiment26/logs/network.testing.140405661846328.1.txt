@@ -1,0 +1,514 @@
+2026-11-24 19:45:01.433: Will refresh token: cat /work/token.txt
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 678e4a9c5d7505fed4c8ac4e1066dca6dd141189
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: '_debug'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.449: Sending: 'GET /users/v1/_debug HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 0a47f6dc-fddb-4330-9496-930bc03a1e2b\r\n\r\n'
+
+2026-11-24 19:45:01.456: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nContent-Length: 382\r\nConnection: close\r\n\r\n{\n  "users": [\n    {\n      "admin": false,\n      "email": "mail1@mail.com",\n      "password": "pass1",\n      "username": "name1"\n    },\n    {\n      "admin": false,\n      "email": "mail2@mail.com",\n      "password": "pass2",\n      "username": "name2"\n    },\n    {\n      "admin": true,\n      "email": "admin@mail.com",\n      "password": "pass1",\n      "username": "admin"\n    }\n  ]\n}\n'
+
+
+Generation-1: Rendering Sequence-2
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 6bccc70cd68ca2aafa19dd26840560ab747d9ebb
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'me'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.476: Sending: 'GET /me HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: d2986e8f-9b21-49ee-ba17-ca63fe084ac2\r\n\r\n'
+
+2026-11-24 19:45:01.483: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nContent-Length: 95\r\nConnection: close\r\n\r\n{"data": {"admin": false, "email": "mail1@mail.com", "username": "name1"}, "status": "success"}'
+
+
+Generation-1: Rendering Sequence-3
+
+	Request: 1 (Remaining candidate combinations: 6)
+	Request hash: 79a2e16b2e4496f6746eb1f80defe4fddd9d0893
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [name1, fuzzstring, ...]
+		- restler_static_string: '/'
+		- restler_static_string: 'email'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "email":'
+		+ restler_fuzzable_string: ["mail3@mail.com", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.496: Sending: 'PUT /users/v1/name1/email HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 33\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 83aa976d-c971-41c2-834b-43f8fae89909\r\n\r\n{\n    "email":"mail3@mail.com"}\r\n'
+
+2026-11-24 19:45:01.514: Received: 'HTTP/1.1 204 NO CONTENT\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nConnection: close\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-4
+
+	Request: 1 (Remaining candidate combinations: 6)
+	Request hash: 9671ff560f1e36cdf5a8ce157ec779e2c0f8a491
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [name1, fuzzstring, ...]
+		- restler_static_string: '/'
+		- restler_static_string: 'password'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "password":'
+		+ restler_fuzzable_string: ["pass4", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.528: Sending: 'PUT /users/v1/name1/password HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 27\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: a2aaff2d-98cf-4c22-b509-6c0d3baf4364\r\n\r\n{\n    "password":"pass4"}\r\n'
+
+2026-11-24 19:45:01.543: Received: 'HTTP/1.1 204 NO CONTENT\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nConnection: close\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-5
+
+	Request: 1 (Remaining candidate combinations: 5)
+	Request hash: 9b234efa34108cb881e82f3d75c80a47b715983c
+
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'login'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "username":'
+		+ restler_fuzzable_string: ["name1", "fuzzstring", ...]
+		- restler_static_string: ',\n    "password":'
+		+ restler_fuzzable_string: ["pass1", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.557: Sending: 'POST /users/v1/login HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 51\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: b468f6ee-0d42-4802-920c-15dec932a7b2\r\n\r\n{\n    "username":"name1",\n    "password":"pass1"}\r\n'
+
+2026-11-24 19:45:01.563: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nContent-Length: 81\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "Password is not correct for the given username."}'
+
+
+Generation-1: Rendering Sequence-6
+
+	Request: 1 (Remaining candidate combinations: 9)
+	Request hash: ad774fff1145088ee418e32166064fcccc6d4127
+
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		- restler_static_string: 'register'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "username":'
+		+ restler_fuzzable_string: ["name1", "fuzzstring", ...]
+		- restler_static_string: ',\n    "password":'
+		+ restler_fuzzable_string: ["pass1", "fuzzstring", ...]
+		- restler_static_string: ',\n    "email":'
+		+ restler_fuzzable_string: ["user@tempmail.com", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.576: Sending: 'POST /users/v1/register HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 84\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: a2f875f2-77fb-4591-85f4-08c8d319e285\r\n\r\n{\n    "username":"name1",\n    "password":"pass1",\n    "email":"user@tempmail.com"}\r\n'
+
+2026-11-24 19:45:01.582: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nContent-Length: 69\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "User already exists. Please Log in."}'
+
+
+Generation-1: Rendering Sequence-7
+
+	Request: 1 (Remaining candidate combinations: 5)
+	Request hash: ae3854c85225b0b51949816e092da4a3eb4da8b1
+
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'books'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "book_title":'
+		+ restler_fuzzable_string: ["book99", "fuzzstring", ...]
+		- restler_static_string: ',\n    "secret":'
+		+ restler_fuzzable_string: ["pass1secret", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.596: Sending: 'POST /books/v1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\nContent-Type: application/json\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 58\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: df03ee63-94ce-47ab-b1f2-8fbefc867854\r\n\r\n{\n    "book_title":"book99",\n    "secret":"pass1secret"}\r\n'
+
+2026-11-24 19:45:01.612: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nContent-Length: 56\r\nConnection: close\r\n\r\n{"message": "Book has been added.", "status": "success"}'
+
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: ae44d6ba2a1e0478a794c87961c46c75fa01910f
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'createdb'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.625: Sending: 'GET /createdb HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 09fa5b2b-9ad5-4eb1-921f-122e6529408c\r\n\r\n'
+
+2026-11-24 19:45:01.683: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nContent-Length: 36\r\nConnection: close\r\n\r\n{ "message": "Database populated." }'
+
+
+Generation-1: Rendering Sequence-9
+
+	Request: 1 (Remaining candidate combinations: 4)
+	Request hash: af1cad1f1eb2bf503dc605137043029f04849e33
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [name1, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.697: Sending: 'DELETE /users/v1/name1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: d4a7e791-c819-498e-a21a-89442ead6b6b\r\n\r\n'
+
+2026-11-24 19:45:01.704: Received: 'HTTP/1.1 401 UNAUTHORIZED\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nContent-Length: 63\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "Only Admins may delete users!"}'
+
+
+Generation-1: Rendering Sequence-9
+
+	Request: 1 (Remaining candidate combinations: 3)
+	Request hash: af1cad1f1eb2bf503dc605137043029f04849e33
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [name1, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.719: Sending: 'DELETE /users/v1/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 2c9d0402-dd74-4c05-bf6a-b090e9f3d417\r\n\r\n'
+
+2026-11-24 19:45:01.724: Received: 'HTTP/1.1 401 UNAUTHORIZED\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nContent-Length: 63\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "Only Admins may delete users!"}'
+
+
+Generation-1: Rendering Sequence-9
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: af1cad1f1eb2bf503dc605137043029f04849e33
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [name1, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.738: Sending: 'DELETE /users/v1/name1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 0959ed8b-0050-41b0-8988-0e4a886c2a08\r\n\r\n'
+
+2026-11-24 19:45:01.744: Received: 'HTTP/1.1 401 UNAUTHORIZED\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nContent-Length: 63\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "Only Admins may delete users!"}'
+
+
+Generation-1: Rendering Sequence-9
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: af1cad1f1eb2bf503dc605137043029f04849e33
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [name1, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.756: Sending: 'DELETE /users/v1/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 34e0fb28-3b9a-4708-ba30-1ec19fc9769b\r\n\r\n'
+
+2026-11-24 19:45:01.762: Received: 'HTTP/1.1 401 UNAUTHORIZED\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nContent-Length: 63\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "Only Admins may delete users!"}'
+
+
+Generation-1: Rendering Sequence-10
+
+	Request: 1 (Remaining candidate combinations: 4)
+	Request hash: ba67ec4635f39a8a824bc25ef29276f3d76533fe
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [name1, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.776: Sending: 'GET /users/v1/name1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 4aa8c9e3-5697-465c-b1e5-903a7ab7fac9\r\n\r\n'
+
+2026-11-24 19:45:01.783: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nContent-Length: 48\r\nConnection: close\r\n\r\n{"username": "name1", "email": "mail1@mail.com"}'
+
+
+Generation-1: Rendering Sequence-11
+
+	Request: 1 (Remaining candidate combinations: 4)
+	Request hash: c70e5420fe48130089c4d6574393f24536aeadf8
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'books'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [bookTitle77, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.795: Sending: 'GET /books/v1/bookTitle77 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: cff4a904-c846-4f1c-938b-d5221694b264\r\n\r\n'
+
+2026-11-24 19:45:01.801: Received: 'HTTP/1.1 404 NOT FOUND\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nContent-Length: 49\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "Book not found!"}'
+
+
+Generation-1: Rendering Sequence-11
+
+	Request: 1 (Remaining candidate combinations: 3)
+	Request hash: c70e5420fe48130089c4d6574393f24536aeadf8
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'books'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [bookTitle77, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.817: Sending: 'GET /books/v1/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: e0d907bd-24ca-4567-b580-e6f61d3701de\r\n\r\n'
+
+2026-11-24 19:45:01.824: Received: 'HTTP/1.1 404 NOT FOUND\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nContent-Length: 49\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "Book not found!"}'
+
+
+Generation-1: Rendering Sequence-11
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: c70e5420fe48130089c4d6574393f24536aeadf8
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'books'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [bookTitle77, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.843: Sending: 'GET /books/v1/bookTitle77 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: babc9a92-f6d5-4ad4-a355-8046bce2b0cd\r\n\r\n'
+
+2026-11-24 19:45:01.849: Received: 'HTTP/1.1 404 NOT FOUND\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nContent-Length: 49\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "Book not found!"}'
+
+
+Generation-1: Rendering Sequence-11
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: c70e5420fe48130089c4d6574393f24536aeadf8
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'books'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [bookTitle77, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.861: Sending: 'GET /books/v1/fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: f6eb9efc-8dd4-4531-9575-9a0e0e3566be\r\n\r\n'
+
+2026-11-24 19:45:01.868: Received: 'HTTP/1.1 404 NOT FOUND\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nContent-Length: 49\r\nConnection: close\r\n\r\n{ "status": "fail", "message": "Book not found!"}'
+
+
+Generation-1: Rendering Sequence-12
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: de858f1b3fbbea3360cd73d4d5d82c3dd09b0d61
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'books'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.881: Sending: 'GET /books/v1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 5d295207-da50-4046-bce7-f858cc74fc63\r\n\r\n'
+
+2026-11-24 19:45:01.889: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nContent-Length: 230\r\nConnection: close\r\n\r\n{\n  "Books": [\n    {\n      "book_title": "bookTitle89",\n      "user": "name1"\n    },\n    {\n      "book_title": "bookTitle24",\n      "user": "name2"\n    },\n    {\n      "book_title": "bookTitle28",\n      "user": "admin"\n    }\n  ]\n}\n'
+
+
+Generation-1: Rendering Sequence-13
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: f030bbbd32966cde41037b98a8849c46b76e4bc1
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.904: Sending: 'GET / HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 33644a31-2388-434b-a3db-44421c9804d2\r\n\r\n'
+
+2026-11-24 19:45:01.909: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nContent-Length: 271\r\nConnection: close\r\n\r\n{ "message": "VAmPI the Vulnerable API", "help": "VAmPI is a vulnerable on purpose API. It was created in order to evaluate the efficiency of third party tools in identifying vulnerabilities in APIs but it can also be used in learning/teaching purposes.", "vulnerable":1}'
+
+
+Generation-1: Rendering Sequence-14
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: fc93a5f92d40789557b4fcc7c41e5ffecf7690f8
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 19:45:01.924: Sending: 'GET /users/v1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:5000\r\n_OMITTED_AUTH_TOKEN_\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: b4eb3158-ce65-40be-baa0-e38f4647f54e\r\n\r\n'
+
+2026-11-24 19:45:01.930: Received: 'HTTP/1.1 200 OK\r\nServer: Werkzeug/2.2.3 Python/3.11.15\r\nDate: Tue, 24 Nov 2026 19:45:01 GMT\r\nContent-Type: application/json\r\nContent-Length: 236\r\nConnection: close\r\n\r\n{\n  "users": [\n    {\n      "email": "mail1@mail.com",\n      "username": "name1"\n    },\n    {\n      "email": "mail2@mail.com",\n      "username": "name2"\n    },\n    {\n      "email": "admin@mail.com",\n      "username": "admin"\n    }\n  ]\n}\n'
+

@@ -1,0 +1,38 @@
+Restler Information: 0 : Starting task Test...
+    DateTime=2026-11-24T17:37:46.7147114Z
+Restler Information: 0 : Launching 'python3 --version'
+    DateTime=2026-11-24T17:37:47.6517167Z
+Restler Information: 0 : Launching 'python --version'
+    DateTime=2026-11-24T17:37:47.6517801Z
+Restler Information: 0 : Process execution terminated in 00:00:00.0188627 with exit code 0x0: 'python --version'
+    DateTime=2026-11-24T17:37:47.6760141Z
+Restler Information: 0 : Process execution terminated in 00:00:00.0189023 with exit code 0x0: 'python3 --version'
+    DateTime=2026-11-24T17:37:47.6760683Z
+Restler Information: 0 : (23) python --version exited with code: 0
+    DateTime=2026-11-24T17:37:47.6812894Z
+Restler Information: 0 : (22) python3 --version exited with code: 0
+    DateTime=2026-11-24T17:37:47.6813363Z
+Restler Information: 0 : Launching 'python3 -B "/RESTler/restler/../engine/restler.py" --restler_grammar "/work/Compile/grammar.py" --custom_mutations "/work/Compile/dict.json" --set_version 9.2.4  --token_refresh_interval 3600 --token_refresh_cmd "cat /work/token.txt"  --no_ssl   --settings "/work/Compile/engine_settings.json"   --target_ip 127.0.0.1 --target_port 8081 --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode directed-smoke-test'
+    DateTime=2026-11-24T17:37:47.6966478Z
+Restler Information: 0 : Process execution terminated in 00:00:00.7481268 with exit code 0x0: 'python3 -B "/RESTler/restler/../engine/restler.py" --restler_grammar "/work/Compile/grammar.py" --custom_mutations "/work/Compile/dict.json" --set_version 9.2.4  --token_refresh_interval 3600 --token_refresh_cmd "cat /work/token.txt"  --no_ssl   --settings "/work/Compile/engine_settings.json"   --target_ip 127.0.0.1 --target_port 8081 --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode directed-smoke-test'
+    DateTime=2026-11-24T17:37:48.4448542Z
+Restler Information: 0 : (26) python3 -B "/RESTler/restler/../engine/restler.py" --restler_grammar "/work/Compile/grammar.py" --custom_mutations "/work/Compile/dict.json" --set_version 9.2.4  --token_refresh_interval 3600 --token_refresh_cmd "cat /work/token.txt"  --no_ssl   --settings "/work/Compile/engine_settings.json"   --target_ip 127.0.0.1 --target_port 8081 --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode directed-smoke-test exited with code: 0
+    DateTime=2026-11-24T17:37:48.4449574Z
+Restler Information: 0 : Launching 'dotnet "/RESTler/restler/../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "/work/Test" --output_dir "/work/Test/ResponseBuckets" --dictionary_file "/work/Compile/dict.json" --max_instances_per_bucket 10'
+    DateTime=2026-11-24T17:37:48.4513012Z
+Restler Information: 0 : Process execution terminated in 00:00:00.3753875 with exit code 0x0: 'dotnet "/RESTler/restler/../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "/work/Test" --output_dir "/work/Test/ResponseBuckets" --dictionary_file "/work/Compile/dict.json" --max_instances_per_bucket 10'
+    DateTime=2026-11-24T17:37:48.8267488Z
+Restler Information: 0 : (30) dotnet "/RESTler/restler/../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "/work/Test" --output_dir "/work/Test/ResponseBuckets" --dictionary_file "/work/Compile/dict.json" --max_instances_per_bucket 10 exited with code: 0
+    DateTime=2026-11-24T17:37:48.8268105Z
+Restler Information: 0 : Request coverage (successful / total): 12 / 14
+    DateTime=2026-11-24T17:37:48.9372294Z
+Restler Information: 0 : Attempted requests: 14 / 14
+    DateTime=2026-11-24T17:37:48.9372521Z
+Restler Information: 0 : No bugs were found.
+    DateTime=2026-11-24T17:37:48.9389583Z
+Restler Information: 0 : See 'coverage_failures_to_investigate.txt' to investigate API coverage.
+    DateTime=2026-11-24T17:37:48.9966579Z
+Restler Information: 0 : Task Test succeeded.
+    DateTime=2026-11-24T17:37:48.9984766Z
+Restler Information: 0 : Collecting logs...
+    DateTime=2026-11-24T17:37:49.3250816Z

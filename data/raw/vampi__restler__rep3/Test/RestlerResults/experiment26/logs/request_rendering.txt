@@ -1,0 +1,42 @@
+
+2026-11-24 19:45:01.935: Generation-1
+2026-11-24 19:45:01.935: 	Rendered requests: 14 / 14
+2026-11-24 19:45:01.935: 	Rendered requests with "valid" status codes: 12 / 14
+2026-11-24 19:45:01.935: 	Rendered requests determined to be fully valid (no resource creation failures): 12 / 14
+2026-11-24 19:45:01.935: List of failing requests:
+	Request: 8
+		- restler_static_string: 'DELETE '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [name1, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 10
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'books'
+		- restler_static_string: '/'
+		- restler_static_string: 'v1'
+		- restler_static_string: '/'
+		+ restler_fuzzable_string: [bookTitle77, fuzzstring, ...]
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:5000\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+-------------------------
+
+
+2026-11-24 19:45:01.935: 	Never Rendered requests:
+-------------------------
+

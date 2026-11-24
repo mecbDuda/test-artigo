@@ -3,3 +3,9 @@ __pycache__/
 /PAUSAR
 /data/raw/.estado/
 *.tmp
+/data/raw/vampi__evomaster__rep1/flows.jsonl
+/data/raw/vampi__evomaster__rep2/flows.jsonl
+/data/raw/vampi__evomaster__rep3/flows.jsonl
+/data/raw/vampi__schemathesis__rep1/flows.jsonl
+/data/raw/vampi__schemathesis__rep2/flows.jsonl
+/data/raw/vampi__schemathesis__rep3/flows.jsonl

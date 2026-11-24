@@ -1,0 +1,537 @@
+{
+    "678e4a9c5d7505fed4c8ac4e1066dca6dd141189_1": {
+        "verb": "GET",
+        "endpoint": "/users/v1/_debug",
+        "verb_endpoint": "GET /users/v1/_debug",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 0,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 17:37:47",
+            "request_verb": "GET",
+            "request_uri": "/users/v1/_debug",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:5000",
+                "AUTHORIZATION TOKEN"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "OK",
+            "response_headers": [
+                "Server: Werkzeug/2.2.3 Python/3.11.15",
+                "Date: Tue, 24 Nov 2026 17:37:47 GMT",
+                "Content-Type: application/json",
+                "Content-Length: 382",
+                "Connection: close"
+            ],
+            "response_body": "{\n  \"users\": [\n    {\n      \"admin\": false,\n      \"email\": \"mail1@mail.com\",\n      \"password\": \"pass1\",\n      \"username\": \"name1\"\n    },\n    {\n      \"admin\": false,\n      \"email\": \"mail2@mail.com\",\n      \"password\": \"pass2\",\n      \"username\": \"name2\"\n    },\n    {\n      \"admin\": true,\n      \"email\": \"admin@mail.com\",\n      \"password\": \"pass1\",\n      \"username\": \"admin\"\n    }\n  ]\n}\n"
+        },
+        "tracked_parameters": {}
+    },
+    "6bccc70cd68ca2aafa19dd26840560ab747d9ebb_1": {
+        "verb": "GET",
+        "endpoint": "/me",
+        "verb_endpoint": "GET /me",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 1,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 17:37:47",
+            "request_verb": "GET",
+            "request_uri": "/me",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:5000",
+                "AUTHORIZATION TOKEN"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "OK",
+            "response_headers": [
+                "Server: Werkzeug/2.2.3 Python/3.11.15",
+                "Date: Tue, 24 Nov 2026 17:37:47 GMT",
+                "Content-Type: application/json",
+                "Content-Length: 95",
+                "Connection: close"
+            ],
+            "response_body": "{\"data\": {\"admin\": false, \"email\": \"mail1@mail.com\", \"username\": \"name1\"}, \"status\": \"success\"}"
+        },
+        "tracked_parameters": {}
+    },
+    "79a2e16b2e4496f6746eb1f80defe4fddd9d0893_1": {
+        "verb": "PUT",
+        "endpoint": "/users/v1/{username}/email",
+        "verb_endpoint": "PUT /users/v1/{username}/email",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "204",
+        "status_text": "NO CONTENT",
+        "error_message": null,
+        "request_order": 2,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 17:37:47",
+            "request_verb": "PUT",
+            "request_uri": "/users/v1/name1/email",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:5000",
+                "Content-Type: application/json",
+                "AUTHORIZATION TOKEN"
+            ],
+            "request_body": "{\n    \"email\":\"mail3@mail.com\"}\r\n",
+            "response_status_code": "204",
+            "response_status_text": "NO CONTENT",
+            "response_headers": [
+                "Server: Werkzeug/2.2.3 Python/3.11.15",
+                "Date: Tue, 24 Nov 2026 17:37:47 GMT",
+                "Content-Type: application/json",
+                "Connection: close"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "9671ff560f1e36cdf5a8ce157ec779e2c0f8a491_1": {
+        "verb": "PUT",
+        "endpoint": "/users/v1/{username}/password",
+        "verb_endpoint": "PUT /users/v1/{username}/password",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "204",
+        "status_text": "NO CONTENT",
+        "error_message": null,
+        "request_order": 3,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 17:37:48",
+            "request_verb": "PUT",
+            "request_uri": "/users/v1/name1/password",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:5000",
+                "Content-Type: application/json",
+                "AUTHORIZATION TOKEN"
+            ],
+            "request_body": "{\n    \"password\":\"pass4\"}\r\n",
+            "response_status_code": "204",
+            "response_status_text": "NO CONTENT",
+            "response_headers": [
+                "Server: Werkzeug/2.2.3 Python/3.11.15",
+                "Date: Tue, 24 Nov 2026 17:37:48 GMT",
+                "Content-Type: application/json",
+                "Connection: close"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "9b234efa34108cb881e82f3d75c80a47b715983c_1": {
+        "verb": "POST",
+        "endpoint": "/users/v1/login",
+        "verb_endpoint": "POST /users/v1/login",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 4,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 17:37:48",
+            "request_verb": "POST",
+            "request_uri": "/users/v1/login",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:5000",
+                "Content-Type: application/json",
+                "AUTHORIZATION TOKEN"
+            ],
+            "request_body": "{\n    \"username\":\"name1\",\n    \"password\":\"pass1\"}\r\n",
+            "response_status_code": "200",
+            "response_status_text": "OK",
+            "response_headers": [
+                "Server: Werkzeug/2.2.3 Python/3.11.15",
+                "Date: Tue, 24 Nov 2026 17:37:48 GMT",
+                "Content-Type: application/json",
+                "Content-Length: 81",
+                "Connection: close"
+            ],
+            "response_body": "{ \"status\": \"fail\", \"message\": \"Password is not correct for the given username.\"}"
+        },
+        "tracked_parameters": {}
+    },
+    "ad774fff1145088ee418e32166064fcccc6d4127_1": {
+        "verb": "POST",
+        "endpoint": "/users/v1/register",
+        "verb_endpoint": "POST /users/v1/register",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 5,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 17:37:48",
+            "request_verb": "POST",
+            "request_uri": "/users/v1/register",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:5000",
+                "Content-Type: application/json",
+                "AUTHORIZATION TOKEN"
+            ],
+            "request_body": "{\n    \"username\":\"name1\",\n    \"password\":\"pass1\",\n    \"email\":\"user@tempmail.com\"}\r\n",
+            "response_status_code": "200",
+            "response_status_text": "OK",
+            "response_headers": [
+                "Server: Werkzeug/2.2.3 Python/3.11.15",
+                "Date: Tue, 24 Nov 2026 17:37:48 GMT",
+                "Content-Type: application/json",
+                "Content-Length: 69",
+                "Connection: close"
+            ],
+            "response_body": "{ \"status\": \"fail\", \"message\": \"User already exists. Please Log in.\"}"
+        },
+        "tracked_parameters": {}
+    },
+    "ae3854c85225b0b51949816e092da4a3eb4da8b1_1": {
+        "verb": "POST",
+        "endpoint": "/books/v1",
+        "verb_endpoint": "POST /books/v1",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 6,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 17:37:48",
+            "request_verb": "POST",
+            "request_uri": "/books/v1",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:5000",
+                "Content-Type: application/json",
+                "AUTHORIZATION TOKEN"
+            ],
+            "request_body": "{\n    \"book_title\":\"book99\",\n    \"secret\":\"pass1secret\"}\r\n",
+            "response_status_code": "200",
+            "response_status_text": "OK",
+            "response_headers": [
+                "Server: Werkzeug/2.2.3 Python/3.11.15",
+                "Date: Tue, 24 Nov 2026 17:37:48 GMT",
+                "Content-Type: application/json",
+                "Content-Length: 56",
+                "Connection: close"
+            ],
+            "response_body": "{\"message\": \"Book has been added.\", \"status\": \"success\"}"
+        },
+        "tracked_parameters": {}
+    },
+    "ae44d6ba2a1e0478a794c87961c46c75fa01910f_1": {
+        "verb": "GET",
+        "endpoint": "/createdb",
+        "verb_endpoint": "GET /createdb",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 7,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 17:37:48",
+            "request_verb": "GET",
+            "request_uri": "/createdb",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:5000",
+                "AUTHORIZATION TOKEN"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "OK",
+            "response_headers": [
+                "Server: Werkzeug/2.2.3 Python/3.11.15",
+                "Date: Tue, 24 Nov 2026 17:37:48 GMT",
+                "Content-Type: application/json",
+                "Content-Length: 36",
+                "Connection: close"
+            ],
+            "response_body": "{ \"message\": \"Database populated.\" }"
+        },
+        "tracked_parameters": {}
+    },
+    "af1cad1f1eb2bf503dc605137043029f04849e33_1": {
+        "verb": "DELETE",
+        "endpoint": "/users/v1/{username}",
+        "verb_endpoint": "DELETE /users/v1/{username}",
+        "valid": 0,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "401",
+        "status_text": "UNAUTHORIZED",
+        "error_message": "{ \"status\": \"fail\", \"message\": \"Only Admins may delete users!\"}",
+        "request_order": 8,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 17:37:48",
+            "request_verb": "DELETE",
+            "request_uri": "/users/v1/name1",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:5000",
+                "AUTHORIZATION TOKEN"
+            ],
+            "request_body": null,
+            "response_status_code": "401",
+            "response_status_text": "UNAUTHORIZED",
+            "response_headers": [
+                "Server: Werkzeug/2.2.3 Python/3.11.15",
+                "Date: Tue, 24 Nov 2026 17:37:48 GMT",
+                "Content-Type: application/json",
+                "Content-Length: 63",
+                "Connection: close"
+            ],
+            "response_body": "{ \"status\": \"fail\", \"message\": \"Only Admins may delete users!\"}"
+        },
+        "tracked_parameters": {}
+    },
+    "ba67ec4635f39a8a824bc25ef29276f3d76533fe_1": {
+        "verb": "GET",
+        "endpoint": "/users/v1/{username}",
+        "verb_endpoint": "GET /users/v1/{username}",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 9,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 17:37:48",
+            "request_verb": "GET",
+            "request_uri": "/users/v1/name1",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:5000",
+                "AUTHORIZATION TOKEN"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "OK",
+            "response_headers": [
+                "Server: Werkzeug/2.2.3 Python/3.11.15",
+                "Date: Tue, 24 Nov 2026 17:37:48 GMT",
+                "Content-Type: application/json",
+                "Content-Length: 48",
+                "Connection: close"
+            ],
+            "response_body": "{\"username\": \"name1\", \"email\": \"mail1@mail.com\"}"
+        },
+        "tracked_parameters": {}
+    },
+    "c70e5420fe48130089c4d6574393f24536aeadf8_1": {
+        "verb": "GET",
+        "endpoint": "/books/v1/{book_title}",
+        "verb_endpoint": "GET /books/v1/{book_title}",
+        "valid": 0,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "404",
+        "status_text": "NOT FOUND",
+        "error_message": "{ \"status\": \"fail\", \"message\": \"Book not found!\"}",
+        "request_order": 10,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 17:37:48",
+            "request_verb": "GET",
+            "request_uri": "/books/v1/bookTitle77",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:5000",
+                "AUTHORIZATION TOKEN"
+            ],
+            "request_body": null,
+            "response_status_code": "404",
+            "response_status_text": "NOT FOUND",
+            "response_headers": [
+                "Server: Werkzeug/2.2.3 Python/3.11.15",
+                "Date: Tue, 24 Nov 2026 17:37:48 GMT",
+                "Content-Type: application/json",
+                "Content-Length: 49",
+                "Connection: close"
+            ],
+            "response_body": "{ \"status\": \"fail\", \"message\": \"Book not found!\"}"
+        },
+        "tracked_parameters": {}
+    },
+    "de858f1b3fbbea3360cd73d4d5d82c3dd09b0d61_1": {
+        "verb": "GET",
+        "endpoint": "/books/v1",
+        "verb_endpoint": "GET /books/v1",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 11,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 17:37:48",
+            "request_verb": "GET",
+            "request_uri": "/books/v1",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:5000",
+                "AUTHORIZATION TOKEN"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "OK",
+            "response_headers": [
+                "Server: Werkzeug/2.2.3 Python/3.11.15",
+                "Date: Tue, 24 Nov 2026 17:37:48 GMT",
+                "Content-Type: application/json",
+                "Content-Length: 230",
+                "Connection: close"
+            ],
+            "response_body": "{\n  \"Books\": [\n    {\n      \"book_title\": \"bookTitle95\",\n      \"user\": \"name1\"\n    },\n    {\n      \"book_title\": \"bookTitle80\",\n      \"user\": \"name2\"\n    },\n    {\n      \"book_title\": \"bookTitle50\",\n      \"user\": \"admin\"\n    }\n  ]\n}\n"
+        },
+        "tracked_parameters": {}
+    },
+    "f030bbbd32966cde41037b98a8849c46b76e4bc1_1": {
+        "verb": "GET",
+        "endpoint": "",
+        "verb_endpoint": "GET ",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 12,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 17:37:48",
+            "request_verb": "GET",
+            "request_uri": "/",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:5000",
+                "AUTHORIZATION TOKEN"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "OK",
+            "response_headers": [
+                "Server: Werkzeug/2.2.3 Python/3.11.15",
+                "Date: Tue, 24 Nov 2026 17:37:48 GMT",
+                "Content-Type: application/json",
+                "Content-Length: 271",
+                "Connection: close"
+            ],
+            "response_body": "{ \"message\": \"VAmPI the Vulnerable API\", \"help\": \"VAmPI is a vulnerable on purpose API. It was created in order to evaluate the efficiency of third party tools in identifying vulnerabilities in APIs but it can also be used in learning/teaching purposes.\", \"vulnerable\":1}"
+        },
+        "tracked_parameters": {}
+    },
+    "fc93a5f92d40789557b4fcc7c41e5ffecf7690f8_1": {
+        "verb": "GET",
+        "endpoint": "/users/v1",
+        "verb_endpoint": "GET /users/v1",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 13,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 17:37:48",
+            "request_verb": "GET",
+            "request_uri": "/users/v1",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:5000",
+                "AUTHORIZATION TOKEN"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "OK",
+            "response_headers": [
+                "Server: Werkzeug/2.2.3 Python/3.11.15",
+                "Date: Tue, 24 Nov 2026 17:37:48 GMT",
+                "Content-Type: application/json",
+                "Content-Length: 236",
+                "Connection: close"
+            ],
+            "response_body": "{\n  \"users\": [\n    {\n      \"email\": \"mail1@mail.com\",\n      \"username\": \"name1\"\n    },\n    {\n      \"email\": \"mail2@mail.com\",\n      \"username\": \"name2\"\n    },\n    {\n      \"email\": \"admin@mail.com\",\n      \"username\": \"admin\"\n    }\n  ]\n}\n"
+        },
+        "tracked_parameters": {}
+    }
+}

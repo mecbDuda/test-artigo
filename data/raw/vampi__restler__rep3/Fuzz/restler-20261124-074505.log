@@ -1,0 +1,44 @@
+Restler Information: 0 : Starting task Fuzz...
+    DateTime=2026-11-24T19:45:05.0840227Z
+Restler Information: 0 : Launching 'python --version'
+    DateTime=2026-11-24T19:45:06.0492450Z
+Restler Information: 0 : Launching 'python3 --version'
+    DateTime=2026-11-24T19:45:06.0493049Z
+Restler Information: 0 : Process execution terminated in 00:00:00.0116363 with exit code 0x0: 'python --version'
+    DateTime=2026-11-24T19:45:06.0664330Z
+Restler Information: 0 : Process execution terminated in 00:00:00.0116077 with exit code 0x0: 'python3 --version'
+    DateTime=2026-11-24T19:45:06.0664815Z
+Restler Information: 0 : (23) python3 --version exited with code: 0
+    DateTime=2026-11-24T19:45:06.0711005Z
+Restler Information: 0 : (22) python --version exited with code: 0
+    DateTime=2026-11-24T19:45:06.0711672Z
+Restler Information: 0 : Launching 'python3 -B "/RESTler/restler/../engine/restler.py" --restler_grammar "/work/Compile/grammar.py" --custom_mutations "/work/Compile/dict.json" --set_version 9.2.4  --token_refresh_interval 3600 --token_refresh_cmd "cat /work/token.txt"  --no_ssl   --settings "/work/Compile/engine_settings.json" --enable_checkers * --disable_checkers namespacerule --time_budget 0.496700 --target_ip 127.0.0.1 --target_port 8081 --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode bfs-fast'
+    DateTime=2026-11-24T19:45:06.0848489Z
+Restler Information: 0 : Process execution terminated in 00:28:12.3449819 with exit code 0x0: 'python3 -B "/RESTler/restler/../engine/restler.py" --restler_grammar "/work/Compile/grammar.py" --custom_mutations "/work/Compile/dict.json" --set_version 9.2.4  --token_refresh_interval 3600 --token_refresh_cmd "cat /work/token.txt"  --no_ssl   --settings "/work/Compile/engine_settings.json" --enable_checkers * --disable_checkers namespacerule --time_budget 0.496700 --target_ip 127.0.0.1 --target_port 8081 --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode bfs-fast'
+    DateTime=2026-11-24T20:15:53.3490516Z
+Restler Information: 0 : (25) python3 -B "/RESTler/restler/../engine/restler.py" --restler_grammar "/work/Compile/grammar.py" --custom_mutations "/work/Compile/dict.json" --set_version 9.2.4  --token_refresh_interval 3600 --token_refresh_cmd "cat /work/token.txt"  --no_ssl   --settings "/work/Compile/engine_settings.json" --enable_checkers * --disable_checkers namespacerule --time_budget 0.496700 --target_ip 127.0.0.1 --target_port 8081 --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode bfs-fast exited with code: 0
+    DateTime=2026-11-24T20:15:53.3491670Z
+Restler Information: 0 : Launching 'dotnet "/RESTler/restler/../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "/work/Fuzz" --output_dir "/work/Fuzz/ResponseBuckets" --dictionary_file "/work/Compile/dict.json" --max_instances_per_bucket 10'
+    DateTime=2026-11-24T20:15:53.3566217Z
+Restler Information: 0 : Process execution terminated in 00:00:00.9464654 with exit code 0x86: 'dotnet "/RESTler/restler/../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "/work/Fuzz" --output_dir "/work/Fuzz/ResponseBuckets" --dictionary_file "/work/Compile/dict.json" --max_instances_per_bucket 10'
+    DateTime=2026-11-24T20:15:54.3032549Z
+Restler Information: 0 : (47) dotnet "/RESTler/restler/../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "/work/Fuzz" --output_dir "/work/Fuzz/ResponseBuckets" --dictionary_file "/work/Compile/dict.json" --max_instances_per_bucket 10 exited with code: 134
+    DateTime=2026-11-24T20:15:54.3033935Z
+Restler Error: 0 : Results analyzer for logs in /work/Fuzz failed.
+    DateTime=2026-11-24T20:15:54.3049761Z
+Restler Information: 0 : Request coverage (successful / total): 9 / 14
+    DateTime=2026-11-24T20:15:54.4095102Z
+Restler Information: 0 : Attempted requests: 10 / 14
+    DateTime=2026-11-24T20:15:54.4095313Z
+Restler Information: 0 : Bugs were found!
+    DateTime=2026-11-24T20:15:54.4132536Z
+Restler Information: 0 : Bug buckets:
+    DateTime=2026-11-24T20:15:54.4132656Z
+Restler Information: 0 : 
+InvalidValueChecker_500: 1
+InvalidValueChecker_timeout: 1
+    DateTime=2026-11-24T20:15:54.4137212Z
+Restler Information: 0 : Task Fuzz succeeded.
+    DateTime=2026-11-24T20:15:54.4152485Z
+Restler Information: 0 : Collecting logs...
+    DateTime=2026-11-24T20:15:55.1329731Z

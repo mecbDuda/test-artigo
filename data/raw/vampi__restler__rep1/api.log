@@ -1,0 +1,1305 @@
+api-1  |  * Serving Flask app 'config'
+api-1  |  * Debug mode: on
+api-1  | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+api-1  |  * Running on all addresses (0.0.0.0)
+api-1  |  * Running on http://127.0.0.1:5000
+api-1  |  * Running on http://127.0.0.1:5000
+api-1  | [33mPress CTRL+C to quit[0m
+api-1  |  * Restarting with stat
+api-1  |  * Debugger is active!
+api-1  |  * Debugger PIN: 137-940-601
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:26:57] "GET / HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:26:57] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:26:57] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "GET /users/v1/_debug HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "GET /me HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "[35m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "[35m[1mPUT /users/v1/name1/password HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "POST /books/v1 HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "[31m[1mDELETE /users/v1/name1 HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "[31m[1mDELETE /users/v1/fuzzstring HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "[31m[1mDELETE /users/v1/name1 HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "[31m[1mDELETE /users/v1/fuzzstring HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "GET /users/v1/name1 HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "[33mGET /books/v1/bookTitle77 HTTP/1.1[0m" 404 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "[33mGET /books/v1/fuzzstring HTTP/1.1[0m" 404 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "[33mGET /books/v1/bookTitle77 HTTP/1.1[0m" 404 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "[33mGET /books/v1/fuzzstring HTTP/1.1[0m" 404 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "GET /books/v1 HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "GET / HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:08] "GET /users/v1 HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:18] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:18] "GET /createdb HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:18] "GET / HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:18] "GET / HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:18] "GET /users/v1 HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:18] "GET /users/v1 HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:18] "GET /users/v1/_debug HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:18] "GET /users/v1/_debug HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: {'fuzz': False} is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: {'fuzz': False} is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: {'fuzz': False} is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: {'fuzz': False} is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: {'fuzz': False} is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: {'fuzz': False} is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: False is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: False is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: {'fuzz': False} is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: {'fuzz': False} is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: {'fuzz': False} is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: {'fuzz': False} is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: 'fuzzstring' is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: 'fuzzstring' is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: [] is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: [] is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: 0 is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: 0 is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: 0 is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: 0 is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: [] is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: [] is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: 0 is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: 0 is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: [] is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: [] is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: False is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: False is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: False is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: False is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: False is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: False is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: [] is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: [] is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: 0 is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: 0 is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: [] is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: [] is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: 0 is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: 0 is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: False is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: False is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: [] is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: [] is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: 0 is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: 0 is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: False is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/register validation error: False is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:19] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:20] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:21] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:22] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "POST /users/v1/register HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/register HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: {'fuzz': False} is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: {'fuzz': False} is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: False is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: False is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: {'fuzz': False} is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: {'fuzz': False} is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: {'fuzz': False} is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: {'fuzz': False} is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: {'fuzz': False} is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: {'fuzz': False} is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: 'fuzzstring' is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: 'fuzzstring' is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: 0 is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: 0 is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: False is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: False is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: [] is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: [] is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: [] is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: [] is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: [] is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: [] is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: 0 is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: 0 is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: False is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: False is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: 0 is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: 0 is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:23] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: [] is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: [] is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: 0 is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: 0 is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: False is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: False is not of type 'string' - 'password'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: [] is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: [] is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: 0 is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: 0 is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: False is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/login validation error: False is not of type 'string' - 'username'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:24] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:25] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "POST /users/v1/login HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "[31m[1mPOST /users/v1/login HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /me HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /me HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/name1 HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET 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 HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/6392343661799490083676532314634786948062388715695974576165107986262006006597143098181714819369095251223609635342511921230851472307371083204834444084583846965839777589718503242504420290309680707762380777233490430134761509678546105717656174296655519334529392942959549567607888099461548407461939630202342799358137383562702655254018642057180545341062167635194173384144631351339413653024491753449972366352199046335073411317573680619095597577422663483734747463745786590534894753206257373011798282645236887429692839822357611195018741486515792081135862352069299718346167017782761797478379939633613602562381164066122561834168378992812015021846300096304473734098742765097588223421998849072266529331740386662031709162890180101948276751764385937849205023409322816821670038774749832214408317993615073827961984952470506518509066112228459187820768553826397653138200855458781226762971202484059648365477553050993013806134330425731597202904658227453127231572320568523532967194994444497498038140680449659102674501833478408385697108065094869072050848850140665920661579273222519311631832238943221410203812111513080396290476985578011052445834758587475038120183758983446346798675483470614895470993660477660537847079299496483072473042201797517496091712922716822405205146806877429527706223055865773647709271948540814711109989350834221522152235340055544948929541697601521472998358016835481132385242308066100521254686752816542200776093798756028727964208083665032120890381927620242538993576967615650632286033411986122446937447149922835572536548618151192147304703966954875527364539829182174657576260543779958833670189287570939407783422867407457965233577921317979826291000252636453550914261757019658793230503443836677081594149766009097261168783681537671138536914934127037703107440861678473162709826473311236493525315740061241686357567192477113829299527005010393739695071889254409453009156480018972883012236775625560965231699917851145515399545345628581759942409669929230018162384914322770147277238763330837221796780440396186678160227152094618861807139270343067661134798947652720776173864977660502520521000418293625618553286218056447553687893612839760831014851376749485751510141727478640967597680323500321357494382554093733967584263420144050051802019346376587856044517576841548499590124206199224716327313839135155582994742235394639505152272776455782385353469746390128335791832285628110279989183485571758532727166955349854193848989702725074910299010859136706849258086980828798686452437365493498320614832850151327436040061844324432855641282038706124419484158367451839296696912888327170464124474570625919043764331397634982069520687472943713133225348599918418164604013109400838359263457563743577578745541125491361491650363022812310698685410769564228466872772021516366541662522106379792767005564790601678297463466685167209976363158774936429996864723890616688903884887027777379269309652356363785557841557538251542964105016152754879620467562529738707572130217336514736646576703684048222532006655283276603698759184965475035549719775680268255700249342309456907314450360148814304109662177223992569087025192768024318491784319516147232785818730703740033832756778718520130357759654273447507173849911400041491591001257306985497584261736946250296289470346178201107832605743922044477930984810290944289942267876268191982163919291002680032374846825515765421726481003814025476980888628592797824116566927000745499189630390957341458154597661101325392699378082725366114254819731431909788326377112070638102412959001759831750699897407169049161211876414959353134581261048232233216635154686294458834381480877407188199822115178357387040087417382359170598396321813600238635416739700289757127147798698409245292691108125053902904165259145201846446446824549348307263027637956540881216962564144442859864170223398554208109155091032484053163131097182842939013746088560735631560036165053043253574369226515528774593902879875604054947893341975723481732883611668674681758267930203327141642065719833087545016112370069776858553092219764748582237565270915096779864123690350270588083082295108970627234181294788361091483740639076197936242687133061805896662011888978230108248710965250662374132066326565233292947251061258511893055106783146257549831321872883450718552957367974146373573717411831018674525392023532770913939762910163627975364572213103662389715616332687302761726361749729711344150603178033488411807728912088647546082997541004653281282528206588464141810205696786482411802227574519222252300844616612890749254282568579941093686141170288494362717254318547700584592035299211230607550448108261023500161591401682921981450059592235116271387108843241719476815902162935989773347202339575632017942580267499492616506992716480670187032989340478156707625824826773262997723131778746562487670321770187023693047245885559571339013487896667704839636667542794998936623427780313201666714926303565665427171697901206203593985764810868055660790864356043932295284190384031142721359006100531705077487211026952173383246160677971119184470086906180877139361399878642852780570354488670391418382258870056818721794877211386591494829043754008807297014233034380621632526201070393948254849456445215856232640321836836723166204883866370913503490474874647111798450826395044483899666139901549876420045484950378441208667032705041883407323540484610739938978275192705985528275019379800504789935448482522900221529562337832603132067128596047465540479990555029511260426594526719070065645315683236347427340062803791878909425887509850717531928709089734593034261456713452376726173400358948357304551126611620564881634139988107692569133697604169574789998077784823539267069530274452840988836345374816915033707319784445898501622951811475608646251879759681562965318425486357852649588174413970012241871993710143040350347804306353749709598112161912428193245086487329975680070360510948012738352949765336336259085747580140833942524296970260716871683919367691566826992146790581228606889193460297743693137434108784747000010201542686705544661698299205668705291838200177168428501599370802773832041851732299690203912689482901338714922912197600234104343919720500212179387971739567258883517363503565951569138927884409028928956092359946936045903659015939627252969494684872109541156818834123342911899494887921711863934932693184572354667472262328368240664261888339328120693919570755365602038672691250745238226705142502396118791255631182178650818061433531010558005594755387263063152134689129564923238595835233787192351370586291954475285551076548559332427851308019720514969646014102947467736866062817745370894561979537725952350455830779545949339170617930735110717372084671616089192637012486862467645264285581858288723454393993937544488811610821342750604016070115186023638094416146103091574099543471990533466183367571769648433423411227263558269059320390174365637122784427630340530087607382921082780294441362403675844781393470503174229120695321630255767399685258418602305585146793032889607475473664674304971625700990726663539663342947870167812100209513374316937506953926786182700862891340245811955095751009119466687334743963638244039532801103373873114247659084568121742613704561304757008849549523279830580504004030648056070703980223081029757435189331435059951574611312810553159501868130436596497137545031296382329580576292389929771178914506170701293634565935373956409151596005020369410347148386959835873855755799503929455094850802424576956642700160223557895912615372918485592398803825897691778308722916433389911153895039997898118261425530239691760880571378689084317866387285556803732247897079792237911370498968726241231913982383715320623973580944837302919491015102568171604547880072670999941674733626360190235968122211347205582922951973361144497357347860603738671045888728488927758710947874506306166030474792257354710760886579435444551918060425129791576956462647835653882113830209276952414311884989196387432115566829873163930711647815648575351299167820922885961329886065099589711135364942060863157461657299529832837723537136944021412318763726275305245733021909519687746124117891946643415185252332355952683156658701858567696184636464835344981618088457516693816020122408257869333030181327361736110318191356402637371708974240763833381996550367105430122365916957999047001457509742690213692027682026918249094967977695753157018815040975287749135433892788582791855156471930916798594978913454505708192562553657315207165585817646272014065629521471641328218880952174045351485948609876303675661030902235959291970007448376774388216709894057567580624023664898991187155843374206328326691977048020892776497093523493017924110587572912803865306514082258858013597364064357322784492840166958819080188333851358627577115075668989788005354329359730870815731645200343062924838302963313050590123294643876144168348960198235048910676508479843506964879565501315481006802803312491981926996184022704752461222587430941206085867453721696835805519228052885308205093694414755277756625040766784431474254682783138232739182504290090003455690296611817205191863782768103316799801726982303064243251996752951599867917413274890966903466173064153287424412296073530598689400809314224696087286942704926926976039465841992254722887381704515811210780740417033976931337978706225837706324932115636302799890692014295086222567126530495207277719051576125425700325041475013420994027905361021657195834419955524317275611493960970317250596306359244868508404256151347895019926847208756553680095920447937127079233079525005561620682090622098230936013270149134060741238446759052587981616364525892577470452188792070138761941765326242464459832700248650531867036125937803196468027883041179280776136082104305450754741919336214830637560206427737357775388319223986828556298663773704341632275752874191788895496712838152468044534016974892207171718588624085255832628002690765208132926000834427896198974097503799492874445049310283445839850983031871276687247490213263615049654772039243963894038068220516519609268134123411162763290572771204626776736455503965422278156866099506947361998196390187693737581358524265860516955514081550068686127946928346198300683070849979939321028542710891665907275046092865802238 HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "[33mGET /users/v1/ HTTP/1.1[0m" 404 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/{} HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/[] HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/c HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/~ HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/VeT HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/{wE HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/qOM5dOTSyDPM HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/Y9ZGd9Eumt HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "[33mGET /users/v1/ddr(P=[p\8 HTTP/1.1[0m" 404 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/bZm8Kg8S1dvmQ4 HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/RhKt98p HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "[35m[1mGET /users/v1/]:X2BCb HTTP/1.1[0m" 500 -
+api-1  | Traceback (most recent call last):
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1808, in _execute_context
+api-1  |     context = constructor(
+api-1  |               ^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1184, in _init_compiled
+api-1  |     self.compiled_parameters = [
+api-1  |                                ^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1185, in <listcomp>
+api-1  |     compiled.construct_params(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/compiler.py", line 1758, in construct_params
+api-1  |     raise exc.InvalidRequestError(
+api-1  | sqlalchemy.exc.InvalidRequestError: A value is required for bind parameter 'X2BCb' (Background on this error at: https://sqlalche.me/e/20/cd3x)
+api-1  | 
+api-1  | The above exception was the direct cause of the following exception:
+api-1  | 
+api-1  | Traceback (most recent call last):
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
+api-1  |     return self.wsgi_app(environ, start_response)
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+api-1  |     response = self.handle_exception(e)
+api-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
+api-1  |     response = self.full_dispatch_request()
+api-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
+api-1  |     rv = self.handle_user_exception(e)
+api-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
+api-1  |     rv = self.dispatch_request()
+api-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
+api-1  |     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/decorator.py", line 68, in wrapper
+api-1  |     response = function(request)
+api-1  |                ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/uri_parsing.py", line 149, in wrapper
+api-1  |     response = function(request)
+api-1  |                ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/validation.py", line 399, in wrapper
+api-1  |     return function(request)
+api-1  |            ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/parameter.py", line 120, in wrapper
+api-1  |     return function(**kwargs)
+api-1  |            ^^^^^^^^^^^^^^^^^^
+api-1  |   File "/vampi/api_views/users.py", line 46, in get_by_username
+api-1  |     if User.get_user(username):
+api-1  |        ^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/vampi/models/user_model.py", line 73, in get_user
+api-1  |     query = db.session.execute(text(user_query))
+api-1  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 709, in execute
+api-1  |     return self._proxied.execute(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2229, in execute
+api-1  |     return self._execute_internal(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2133, in _execute_internal
+api-1  |     result = conn.execute(
+api-1  |              ^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1414, in execute
+api-1  |     return meth(
+api-1  |            ^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 489, in _execute_on_connection
+api-1  |     return connection._execute_clauseelement(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+api-1  |     ret = self._execute_context(
+api-1  |           ^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1814, in _execute_context
+api-1  |     self._handle_dbapi_exception(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2325, in _handle_dbapi_exception
+api-1  |     raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1808, in _execute_context
+api-1  |     context = constructor(
+api-1  |               ^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1184, in _init_compiled
+api-1  |     self.compiled_parameters = [
+api-1  |                                ^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1185, in <listcomp>
+api-1  |     compiled.construct_params(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/compiler.py", line 1758, in construct_params
+api-1  |     raise exc.InvalidRequestError(
+api-1  | sqlalchemy.exc.StatementError: (sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter 'X2BCb'
+api-1  | [SQL: SELECT * FROM users WHERE username = ']?']
+api-1  | [parameters: [{}]]
+api-1  | (Background on this error at: https://sqlalche.me/e/20/cd3x)
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "[35m[1mGET /users/v1/]:X2BCb HTTP/1.1[0m" 500 -
+api-1  | Traceback (most recent call last):
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1808, in _execute_context
+api-1  |     context = constructor(
+api-1  |               ^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1184, in _init_compiled
+api-1  |     self.compiled_parameters = [
+api-1  |                                ^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1185, in <listcomp>
+api-1  |     compiled.construct_params(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/compiler.py", line 1758, in construct_params
+api-1  |     raise exc.InvalidRequestError(
+api-1  | sqlalchemy.exc.InvalidRequestError: A value is required for bind parameter 'X2BCb' (Background on this error at: https://sqlalche.me/e/20/cd3x)
+api-1  | 
+api-1  | The above exception was the direct cause of the following exception:
+api-1  | 
+api-1  | Traceback (most recent call last):
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
+api-1  |     return self.wsgi_app(environ, start_response)
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+api-1  |     response = self.handle_exception(e)
+api-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
+api-1  |     response = self.full_dispatch_request()
+api-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
+api-1  |     rv = self.handle_user_exception(e)
+api-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
+api-1  |     rv = self.dispatch_request()
+api-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
+api-1  |     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/decorator.py", line 68, in wrapper
+api-1  |     response = function(request)
+api-1  |                ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/uri_parsing.py", line 149, in wrapper
+api-1  |     response = function(request)
+api-1  |                ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/validation.py", line 399, in wrapper
+api-1  |     return function(request)
+api-1  |            ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/parameter.py", line 120, in wrapper
+api-1  |     return function(**kwargs)
+api-1  |            ^^^^^^^^^^^^^^^^^^
+api-1  |   File "/vampi/api_views/users.py", line 46, in get_by_username
+api-1  |     if User.get_user(username):
+api-1  |        ^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/vampi/models/user_model.py", line 73, in get_user
+api-1  |     query = db.session.execute(text(user_query))
+api-1  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 709, in execute
+api-1  |     return self._proxied.execute(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2229, in execute
+api-1  |     return self._execute_internal(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2133, in _execute_internal
+api-1  |     result = conn.execute(
+api-1  |              ^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1414, in execute
+api-1  |     return meth(
+api-1  |            ^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 489, in _execute_on_connection
+api-1  |     return connection._execute_clauseelement(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+api-1  |     ret = self._execute_context(
+api-1  |           ^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1814, in _execute_context
+api-1  |     self._handle_dbapi_exception(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2325, in _handle_dbapi_exception
+api-1  |     raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1808, in _execute_context
+api-1  |     context = constructor(
+api-1  |               ^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1184, in _init_compiled
+api-1  |     self.compiled_parameters = [
+api-1  |                                ^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1185, in <listcomp>
+api-1  |     compiled.construct_params(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/compiler.py", line 1758, in construct_params
+api-1  |     raise exc.InvalidRequestError(
+api-1  | sqlalchemy.exc.StatementError: (sqlalchemy.exc.InvalidRequestError) A value is required for bind parameter 'X2BCb'
+api-1  | [SQL: SELECT * FROM users WHERE username = ']?']
+api-1  | [parameters: [{}]]
+api-1  | (Background on this error at: https://sqlalche.me/e/20/cd3x)
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/2r8733oWn HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/YT>V`qZKA HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/kCfnfiRP8wH HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/s;GNbYB(qlP HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/8g6upwh78 HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "[33mGET /users/v1/UfT#e*o>f HTTP/1.1[0m" 404 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/mQ7yHy992E HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/5QH6RP5{wL HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/ahKWalDkOMYEEC HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "[32mGET /users/v1//YL)R!_)5Qd?Np HTTP/1.1[0m" 308 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/9zlAStCvqQnOa6Wh HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/iUjnER7DJGqJX5XN HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/PzRChTsI5mEVkm60bbZdXyoj HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/9ZcmakjwcpYm818ueLr HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/wVMZyNWxGB6aGuARs9 HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "[35m[1mGET /users/v1/^y'L$M['n%]JXSDEh* HTTP/1.1[0m" 500 -
+api-1  | Traceback (most recent call last):
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+api-1  |     self.dialect.do_execute(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+api-1  |     cursor.execute(statement, parameters)
+api-1  | sqlite3.OperationalError: near "L$M": syntax error
+api-1  | 
+api-1  | The above exception was the direct cause of the following exception:
+api-1  | 
+api-1  | Traceback (most recent call last):
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
+api-1  |     return self.wsgi_app(environ, start_response)
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+api-1  |     response = self.handle_exception(e)
+api-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
+api-1  |     response = self.full_dispatch_request()
+api-1  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
+api-1  |     rv = self.handle_user_exception(e)
+api-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
+api-1  |     rv = self.dispatch_request()
+api-1  |          ^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
+api-1  |     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/decorator.py", line 68, in wrapper
+api-1  |     response = function(request)
+api-1  |                ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/uri_parsing.py", line 149, in wrapper
+api-1  |     response = function(request)
+api-1  |                ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/validation.py", line 399, in wrapper
+api-1  |     return function(request)
+api-1  |            ^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/connexion/decorators/parameter.py", line 120, in wrapper
+api-1  |     return function(**kwargs)
+api-1  |            ^^^^^^^^^^^^^^^^^^
+api-1  |   File "/vampi/api_views/users.py", line 46, in get_by_username
+api-1  |     if User.get_user(username):
+api-1  |        ^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/vampi/models/user_model.py", line 73, in get_user
+api-1  |     query = db.session.execute(text(user_query))
+api-1  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 709, in execute
+api-1  |     return self._proxied.execute(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2229, in execute
+api-1  |     return self._execute_internal(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2133, in _execute_internal
+api-1  |     result = conn.execute(
+api-1  |              ^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1414, in execute
+api-1  |     return meth(
+api-1  |            ^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 489, in _execute_on_connection
+api-1  |     return connection._execute_clauseelement(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+api-1  |     ret = self._execute_context(
+api-1  |           ^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+api-1  |     return self._exec_single_context(
+api-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+api-1  |     self._handle_dbapi_exception(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2325, in _handle_dbapi_exception
+api-1  |     raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+api-1  |     self.dialect.do_execute(
+api-1  |   File "/usr/local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 747, in do_execute
+api-1  |     cursor.execute(statement, parameters)
+api-1  | sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) near "L$M": syntax error
+api-1  | [SQL: SELECT * FROM users WHERE username = '^y'L$M['n%]JXSDEh*']
+api-1  | (Background on this error at: https://sqlalche.me/e/20/e3q8)
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/6XP0pwFBVecgWSWNE1Qhblv3K HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/g68iRCTJBHDMLQuBrJ HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/je4luOHxuNa9w8xo1OdVi HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "[33mGET /users/v1/]xAR^<@9G0Hnq=M"Zs,-) HTTP/1.1[0m" 404 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/WJ5Q9HCQG3pwmi0ZVNywjjqV1M8iSO HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/YmDJvGhNyaFZd1Qf6ZZMkDy9Cv0UcOe HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/vHHbl9HBb4SDottvFoYFOt29T5idj HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/BDLEWyGOsf6NvinEroN6E453fRqITEOUq HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:26] "GET /users/v1/ksKcOIzIQFjLlDXLuOnkIcRPe HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/Dvejr9Sny7PMNm3VH7NUpo6a1FSJTY3 HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/CVayuEWJTdTksX0faBMWpdez9d091 HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/q6iNBH2CANIKuu7DPWPXiWIeNOx5ZID8zm0l2 HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/QjLA9EBV02zkKPfHKNMpOSv2u12YUEn HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/8IL9gRnxLT5U8oPgJBC6oIniDk79KzXiYFx HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/k6vxws2W89NL6tI9rSwe9tXaliFPPjCBey HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/egeH4DbGy7XP1VqzdPerc9pqNdVFYZy HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[33mGET /users/v1/wE*w\R)`]0hIkADMP}!pgvzRhn;(, HTTP/1.1[0m" 404 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/VATt1IVwuEuKHJFvUzuShz0u0vqsucGn HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/dVJPUiJSxbdtOUtEybkZefq1iuEu8o2UrSmS3oXG HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/ve8HWRzUAryNtWMsMV1WhCoESq4I3sDrRB3Oavqom HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[33mGET /users/v1/)\d;1G}cf%mrTYIlIB/-lm"w*YbjB0K\to-~~gY HTTP/1.1[0m" 404 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/jFeJJzPrK2geK8DgP9rInNnMpTPaUEpQq2z3JN4exlS HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/MHClucOfFsNPU0OMXCzYALXflgRXi0Wa1ZUU9V5nX HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/o43Z8U3D5VUHyFTzf8nEHVgY9qvhNUBhJ2UpTN76roLLTBl HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/TuAldklJtD1vkYdnqwA03pqJl4eNSiF8SJ147M HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/JZKCNQdhM3GpfrKCg3jMzSY8WeYi8nr4qQ03UkI HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/jFX7mbXIaFtVFKLLFsdTVJfIWUvnEmV6Gr7UIK0O HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/HwsCX4fExozo3okqbWnOL0hNJzwOk1WaW4fnzfLyPG2cMWdrMy HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/WO4ieBbGxU3uM1XuaengHbWKe7kZSsFdOshV9ERFbXGvFwSjH11 HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/Mr8ompYJNBuqQpzCxiW8TjUGfseWYOZFkMbpKE6RxtD3SSNX HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/1ekfYJ7vlJoJRw8OazM4umH4qtEWTzZYNlgzKPJmtVri2DVAQx1vto HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/mpWd9RKN6g7UuenIEuoNhuEqTMnsVw6lY01RWqOea7mEAYI HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/0urVaX4exkrhFngqBnsVV1asqh4Ps5gluRJoOQeKn1Uk3qWa HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/xqC3ryZiptA9WlNAaPmXNNvXaeqfc4t9sWAK5KPzMRX0OktC HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/iw3ftfFEcHRJXUMlFMsRL4G0IlCIqTjyvOC111qpZ9aSdCwozBXjPP HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/fuzzstring HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/name1 HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "GET /users/v1/fuzzstring HTTP/1.1" 200 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/name1 HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE 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 HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/6392343661799490083676532314634786948062388715695974576165107986262006006597143098181714819369095251223609635342511921230851472307371083204834444084583846965839777589718503242504420290309680707762380777233490430134761509678546105717656174296655519334529392942959549567607888099461548407461939630202342799358137383562702655254018642057180545341062167635194173384144631351339413653024491753449972366352199046335073411317573680619095597577422663483734747463745786590534894753206257373011798282645236887429692839822357611195018741486515792081135862352069299718346167017782761797478379939633613602562381164066122561834168378992812015021846300096304473734098742765097588223421998849072266529331740386662031709162890180101948276751764385937849205023409322816821670038774749832214408317993615073827961984952470506518509066112228459187820768553826397653138200855458781226762971202484059648365477553050993013806134330425731597202904658227453127231572320568523532967194994444497498038140680449659102674501833478408385697108065094869072050848850140665920661579273222519311631832238943221410203812111513080396290476985578011052445834758587475038120183758983446346798675483470614895470993660477660537847079299496483072473042201797517496091712922716822405205146806877429527706223055865773647709271948540814711109989350834221522152235340055544948929541697601521472998358016835481132385242308066100521254686752816542200776093798756028727964208083665032120890381927620242538993576967615650632286033411986122446937447149922835572536548618151192147304703966954875527364539829182174657576260543779958833670189287570939407783422867407457965233577921317979826291000252636453550914261757019658793230503443836677081594149766009097261168783681537671138536914934127037703107440861678473162709826473311236493525315740061241686357567192477113829299527005010393739695071889254409453009156480018972883012236775625560965231699917851145515399545345628581759942409669929230018162384914322770147277238763330837221796780440396186678160227152094618861807139270343067661134798947652720776173864977660502520521000418293625618553286218056447553687893612839760831014851376749485751510141727478640967597680323500321357494382554093733967584263420144050051802019346376587856044517576841548499590124206199224716327313839135155582994742235394639505152272776455782385353469746390128335791832285628110279989183485571758532727166955349854193848989702725074910299010859136706849258086980828798686452437365493498320614832850151327436040061844324432855641282038706124419484158367451839296696912888327170464124474570625919043764331397634982069520687472943713133225348599918418164604013109400838359263457563743577578745541125491361491650363022812310698685410769564228466872772021516366541662522106379792767005564790601678297463466685167209976363158774936429996864723890616688903884887027777379269309652356363785557841557538251542964105016152754879620467562529738707572130217336514736646576703684048222532006655283276603698759184965475035549719775680268255700249342309456907314450360148814304109662177223992569087025192768024318491784319516147232785818730703740033832756778718520130357759654273447507173849911400041491591001257306985497584261736946250296289470346178201107832605743922044477930984810290944289942267876268191982163919291002680032374846825515765421726481003814025476980888628592797824116566927000745499189630390957341458154597661101325392699378082725366114254819731431909788326377112070638102412959001759831750699897407169049161211876414959353134581261048232233216635154686294458834381480877407188199822115178357387040087417382359170598396321813600238635416739700289757127147798698409245292691108125053902904165259145201846446446824549348307263027637956540881216962564144442859864170223398554208109155091032484053163131097182842939013746088560735631560036165053043253574369226515528774593902879875604054947893341975723481732883611668674681758267930203327141642065719833087545016112370069776858553092219764748582237565270915096779864123690350270588083082295108970627234181294788361091483740639076197936242687133061805896662011888978230108248710965250662374132066326565233292947251061258511893055106783146257549831321872883450718552957367974146373573717411831018674525392023532770913939762910163627975364572213103662389715616332687302761726361749729711344150603178033488411807728912088647546082997541004653281282528206588464141810205696786482411802227574519222252300844616612890749254282568579941093686141170288494362717254318547700584592035299211230607550448108261023500161591401682921981450059592235116271387108843241719476815902162935989773347202339575632017942580267499492616506992716480670187032989340478156707625824826773262997723131778746562487670321770187023693047245885559571339013487896667704839636667542794998936623427780313201666714926303565665427171697901206203593985764810868055660790864356043932295284190384031142721359006100531705077487211026952173383246160677971119184470086906180877139361399878642852780570354488670391418382258870056818721794877211386591494829043754008807297014233034380621632526201070393948254849456445215856232640321836836723166204883866370913503490474874647111798450826395044483899666139901549876420045484950378441208667032705041883407323540484610739938978275192705985528275019379800504789935448482522900221529562337832603132067128596047465540479990555029511260426594526719070065645315683236347427340062803791878909425887509850717531928709089734593034261456713452376726173400358948357304551126611620564881634139988107692569133697604169574789998077784823539267069530274452840988836345374816915033707319784445898501622951811475608646251879759681562965318425486357852649588174413970012241871993710143040350347804306353749709598112161912428193245086487329975680070360510948012738352949765336336259085747580140833942524296970260716871683919367691566826992146790581228606889193460297743693137434108784747000010201542686705544661698299205668705291838200177168428501599370802773832041851732299690203912689482901338714922912197600234104343919720500212179387971739567258883517363503565951569138927884409028928956092359946936045903659015939627252969494684872109541156818834123342911899494887921711863934932693184572354667472262328368240664261888339328120693919570755365602038672691250745238226705142502396118791255631182178650818061433531010558005594755387263063152134689129564923238595835233787192351370586291954475285551076548559332427851308019720514969646014102947467736866062817745370894561979537725952350455830779545949339170617930735110717372084671616089192637012486862467645264285581858288723454393993937544488811610821342750604016070115186023638094416146103091574099543471990533466183367571769648433423411227263558269059320390174365637122784427630340530087607382921082780294441362403675844781393470503174229120695321630255767399685258418602305585146793032889607475473664674304971625700990726663539663342947870167812100209513374316937506953926786182700862891340245811955095751009119466687334743963638244039532801103373873114247659084568121742613704561304757008849549523279830580504004030648056070703980223081029757435189331435059951574611312810553159501868130436596497137545031296382329580576292389929771178914506170701293634565935373956409151596005020369410347148386959835873855755799503929455094850802424576956642700160223557895912615372918485592398803825897691778308722916433389911153895039997898118261425530239691760880571378689084317866387285556803732247897079792237911370498968726241231913982383715320623973580944837302919491015102568171604547880072670999941674733626360190235968122211347205582922951973361144497357347860603738671045888728488927758710947874506306166030474792257354710760886579435444551918060425129791576956462647835653882113830209276952414311884989196387432115566829873163930711647815648575351299167820922885961329886065099589711135364942060863157461657299529832837723537136944021412318763726275305245733021909519687746124117891946643415185252332355952683156658701858567696184636464835344981618088457516693816020122408257869333030181327361736110318191356402637371708974240763833381996550367105430122365916957999047001457509742690213692027682026918249094967977695753157018815040975287749135433892788582791855156471930916798594978913454505708192562553657315207165585817646272014065629521471641328218880952174045351485948609876303675661030902235959291970007448376774388216709894057567580624023664898991187155843374206328326691977048020892776497093523493017924110587572912803865306514082258858013597364064357322784492840166958819080188333851358627577115075668989788005354329359730870815731645200343062924838302963313050590123294643876144168348960198235048910676508479843506964879565501315481006802803312491981926996184022704752461222587430941206085867453721696835805519228052885308205093694414755277756625040766784431474254682783138232739182504290090003455690296611817205191863782768103316799801726982303064243251996752951599867917413274890966903466173064153287424412296073530598689400809314224696087286942704926926976039465841992254722887381704515811210780740417033976931337978706225837706324932115636302799890692014295086222567126530495207277719051576125425700325041475013420994027905361021657195834419955524317275611493960970317250596306359244868508404256151347895019926847208756553680095920447937127079233079525005561620682090622098230936013270149134060741238446759052587981616364525892577470452188792070138761941765326242464459832700248650531867036125937803196468027883041179280776136082104305450754741919336214830637560206427737357775388319223986828556298663773704341632275752874191788895496712838152468044534016974892207171718588624085255832628002690765208132926000834427896198974097503799492874445049310283445839850983031871276687247490213263615049654772039243963894038068220516519609268134123411162763290572771204626776736455503965422278156866099506947361998196390187693737581358524265860516955514081550068686127946928346198300683070849979939321028542710891665907275046092865802238 HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[33mDELETE /users/v1/ HTTP/1.1[0m" 404 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/{} HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/[] HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/c HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/~ HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/VeT HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/{wE HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/qOM5dOTSyDPM HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/Y9ZGd9Eumt HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/ddr(P=[p\8 HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/bZm8Kg8S1dvmQ4 HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/RhKt98p HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/]:X2BCb HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/2r8733oWn HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/YT>V`qZKA HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/kCfnfiRP8wH HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/s;GNbYB(qlP HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/8g6upwh78 HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/UfT#e*o>f HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/mQ7yHy992E HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/5QH6RP5{wL HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/ahKWalDkOMYEEC HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[32mDELETE /users/v1//YL)R!_)5Qd?Np HTTP/1.1[0m" 308 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/9zlAStCvqQnOa6Wh HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/iUjnER7DJGqJX5XN HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/PzRChTsI5mEVkm60bbZdXyoj HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/9ZcmakjwcpYm818ueLr HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/wVMZyNWxGB6aGuARs9 HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/^y'L$M['n%]JXSDEh* HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/6XP0pwFBVecgWSWNE1Qhblv3K HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/g68iRCTJBHDMLQuBrJ HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/je4luOHxuNa9w8xo1OdVi HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/]xAR^<@9G0Hnq=M"Zs,-) HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:27] "[31m[1mDELETE /users/v1/WJ5Q9HCQG3pwmi0ZVNywjjqV1M8iSO HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/YmDJvGhNyaFZd1Qf6ZZMkDy9Cv0UcOe HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/vHHbl9HBb4SDottvFoYFOt29T5idj HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/BDLEWyGOsf6NvinEroN6E453fRqITEOUq HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/ksKcOIzIQFjLlDXLuOnkIcRPe HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/Dvejr9Sny7PMNm3VH7NUpo6a1FSJTY3 HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/CVayuEWJTdTksX0faBMWpdez9d091 HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/q6iNBH2CANIKuu7DPWPXiWIeNOx5ZID8zm0l2 HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/QjLA9EBV02zkKPfHKNMpOSv2u12YUEn HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/8IL9gRnxLT5U8oPgJBC6oIniDk79KzXiYFx HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/k6vxws2W89NL6tI9rSwe9tXaliFPPjCBey HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/egeH4DbGy7XP1VqzdPerc9pqNdVFYZy HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/wE*w\R)`]0hIkADMP}!pgvzRhn;(, HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/VATt1IVwuEuKHJFvUzuShz0u0vqsucGn HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/dVJPUiJSxbdtOUtEybkZefq1iuEu8o2UrSmS3oXG HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/ve8HWRzUAryNtWMsMV1WhCoESq4I3sDrRB3Oavqom HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[33mDELETE /users/v1/)\d;1G}cf%mrTYIlIB/-lm"w*YbjB0K\to-~~gY HTTP/1.1[0m" 404 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/jFeJJzPrK2geK8DgP9rInNnMpTPaUEpQq2z3JN4exlS HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/MHClucOfFsNPU0OMXCzYALXflgRXi0Wa1ZUU9V5nX HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/o43Z8U3D5VUHyFTzf8nEHVgY9qvhNUBhJ2UpTN76roLLTBl HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/TuAldklJtD1vkYdnqwA03pqJl4eNSiF8SJ147M HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/JZKCNQdhM3GpfrKCg3jMzSY8WeYi8nr4qQ03UkI HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/jFX7mbXIaFtVFKLLFsdTVJfIWUvnEmV6Gr7UIK0O HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/HwsCX4fExozo3okqbWnOL0hNJzwOk1WaW4fnzfLyPG2cMWdrMy HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/WO4ieBbGxU3uM1XuaengHbWKe7kZSsFdOshV9ERFbXGvFwSjH11 HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/Mr8ompYJNBuqQpzCxiW8TjUGfseWYOZFkMbpKE6RxtD3SSNX HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/1ekfYJ7vlJoJRw8OazM4umH4qtEWTzZYNlgzKPJmtVri2DVAQx1vto HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/mpWd9RKN6g7UuenIEuoNhuEqTMnsVw6lY01RWqOea7mEAYI HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/0urVaX4exkrhFngqBnsVV1asqh4Ps5gluRJoOQeKn1Uk3qWa HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/xqC3ryZiptA9WlNAaPmXNNvXaeqfc4t9sWAK5KPzMRX0OktC HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/iw3ftfFEcHRJXUMlFMsRL4G0IlCIqTjyvOC111qpZ9aSdCwozBXjPP HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/fuzzstring HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/name1 HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mDELETE /users/v1/fuzzstring HTTP/1.1[0m" 401 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[35m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/name1/email validation error: {'fuzz': False} is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/fuzzstring/email validation error: {'fuzz': False} is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/name1/email validation error: {'fuzz': False} is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/fuzzstring/email validation error: {'fuzz': False} is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/name1/email validation error: False is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/fuzzstring/email validation error: False is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/name1/email validation error: False is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/fuzzstring/email validation error: False is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/name1/email validation error: [] is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/fuzzstring/email validation error: [] is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/name1/email validation error: [] is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/fuzzstring/email validation error: [] is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/name1/email validation error: 0 is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/fuzzstring/email validation error: 0 is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/name1/email validation error: 0 is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/fuzzstring/email validation error: 0 is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/name1/email validation error: [] is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/fuzzstring/email validation error: [] is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:28] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/name1/email validation error: [] is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/fuzzstring/email validation error: [] is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/name1/email validation error: 0 is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/fuzzstring/email validation error: 0 is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/name1/email validation error: 0 is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/fuzzstring/email validation error: 0 is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/name1/email validation error: False is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/fuzzstring/email validation error: False is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/name1/email validation error: False is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/fuzzstring/email validation error: False is not of type 'string' - 'email'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/name1/email validation error: 'fuzzstring' is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/fuzzstring/email validation error: 'fuzzstring' is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/name1/email validation error: 'fuzzstring' is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/name1/email HTTP/1.1[0m" 400 -
+api-1  | http://api:5000/users/v1/fuzzstring/email validation error: 'fuzzstring' is not of type 'object'
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/fuzzstring/email HTTP/1.1[0m" 400 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT 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 HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/6392343661799490083676532314634786948062388715695974576165107986262006006597143098181714819369095251223609635342511921230851472307371083204834444084583846965839777589718503242504420290309680707762380777233490430134761509678546105717656174296655519334529392942959549567607888099461548407461939630202342799358137383562702655254018642057180545341062167635194173384144631351339413653024491753449972366352199046335073411317573680619095597577422663483734747463745786590534894753206257373011798282645236887429692839822357611195018741486515792081135862352069299718346167017782761797478379939633613602562381164066122561834168378992812015021846300096304473734098742765097588223421998849072266529331740386662031709162890180101948276751764385937849205023409322816821670038774749832214408317993615073827961984952470506518509066112228459187820768553826397653138200855458781226762971202484059648365477553050993013806134330425731597202904658227453127231572320568523532967194994444497498038140680449659102674501833478408385697108065094869072050848850140665920661579273222519311631832238943221410203812111513080396290476985578011052445834758587475038120183758983446346798675483470614895470993660477660537847079299496483072473042201797517496091712922716822405205146806877429527706223055865773647709271948540814711109989350834221522152235340055544948929541697601521472998358016835481132385242308066100521254686752816542200776093798756028727964208083665032120890381927620242538993576967615650632286033411986122446937447149922835572536548618151192147304703966954875527364539829182174657576260543779958833670189287570939407783422867407457965233577921317979826291000252636453550914261757019658793230503443836677081594149766009097261168783681537671138536914934127037703107440861678473162709826473311236493525315740061241686357567192477113829299527005010393739695071889254409453009156480018972883012236775625560965231699917851145515399545345628581759942409669929230018162384914322770147277238763330837221796780440396186678160227152094618861807139270343067661134798947652720776173864977660502520521000418293625618553286218056447553687893612839760831014851376749485751510141727478640967597680323500321357494382554093733967584263420144050051802019346376587856044517576841548499590124206199224716327313839135155582994742235394639505152272776455782385353469746390128335791832285628110279989183485571758532727166955349854193848989702725074910299010859136706849258086980828798686452437365493498320614832850151327436040061844324432855641282038706124419484158367451839296696912888327170464124474570625919043764331397634982069520687472943713133225348599918418164604013109400838359263457563743577578745541125491361491650363022812310698685410769564228466872772021516366541662522106379792767005564790601678297463466685167209976363158774936429996864723890616688903884887027777379269309652356363785557841557538251542964105016152754879620467562529738707572130217336514736646576703684048222532006655283276603698759184965475035549719775680268255700249342309456907314450360148814304109662177223992569087025192768024318491784319516147232785818730703740033832756778718520130357759654273447507173849911400041491591001257306985497584261736946250296289470346178201107832605743922044477930984810290944289942267876268191982163919291002680032374846825515765421726481003814025476980888628592797824116566927000745499189630390957341458154597661101325392699378082725366114254819731431909788326377112070638102412959001759831750699897407169049161211876414959353134581261048232233216635154686294458834381480877407188199822115178357387040087417382359170598396321813600238635416739700289757127147798698409245292691108125053902904165259145201846446446824549348307263027637956540881216962564144442859864170223398554208109155091032484053163131097182842939013746088560735631560036165053043253574369226515528774593902879875604054947893341975723481732883611668674681758267930203327141642065719833087545016112370069776858553092219764748582237565270915096779864123690350270588083082295108970627234181294788361091483740639076197936242687133061805896662011888978230108248710965250662374132066326565233292947251061258511893055106783146257549831321872883450718552957367974146373573717411831018674525392023532770913939762910163627975364572213103662389715616332687302761726361749729711344150603178033488411807728912088647546082997541004653281282528206588464141810205696786482411802227574519222252300844616612890749254282568579941093686141170288494362717254318547700584592035299211230607550448108261023500161591401682921981450059592235116271387108843241719476815902162935989773347202339575632017942580267499492616506992716480670187032989340478156707625824826773262997723131778746562487670321770187023693047245885559571339013487896667704839636667542794998936623427780313201666714926303565665427171697901206203593985764810868055660790864356043932295284190384031142721359006100531705077487211026952173383246160677971119184470086906180877139361399878642852780570354488670391418382258870056818721794877211386591494829043754008807297014233034380621632526201070393948254849456445215856232640321836836723166204883866370913503490474874647111798450826395044483899666139901549876420045484950378441208667032705041883407323540484610739938978275192705985528275019379800504789935448482522900221529562337832603132067128596047465540479990555029511260426594526719070065645315683236347427340062803791878909425887509850717531928709089734593034261456713452376726173400358948357304551126611620564881634139988107692569133697604169574789998077784823539267069530274452840988836345374816915033707319784445898501622951811475608646251879759681562965318425486357852649588174413970012241871993710143040350347804306353749709598112161912428193245086487329975680070360510948012738352949765336336259085747580140833942524296970260716871683919367691566826992146790581228606889193460297743693137434108784747000010201542686705544661698299205668705291838200177168428501599370802773832041851732299690203912689482901338714922912197600234104343919720500212179387971739567258883517363503565951569138927884409028928956092359946936045903659015939627252969494684872109541156818834123342911899494887921711863934932693184572354667472262328368240664261888339328120693919570755365602038672691250745238226705142502396118791255631182178650818061433531010558005594755387263063152134689129564923238595835233787192351370586291954475285551076548559332427851308019720514969646014102947467736866062817745370894561979537725952350455830779545949339170617930735110717372084671616089192637012486862467645264285581858288723454393993937544488811610821342750604016070115186023638094416146103091574099543471990533466183367571769648433423411227263558269059320390174365637122784427630340530087607382921082780294441362403675844781393470503174229120695321630255767399685258418602305585146793032889607475473664674304971625700990726663539663342947870167812100209513374316937506953926786182700862891340245811955095751009119466687334743963638244039532801103373873114247659084568121742613704561304757008849549523279830580504004030648056070703980223081029757435189331435059951574611312810553159501868130436596497137545031296382329580576292389929771178914506170701293634565935373956409151596005020369410347148386959835873855755799503929455094850802424576956642700160223557895912615372918485592398803825897691778308722916433389911153895039997898118261425530239691760880571378689084317866387285556803732247897079792237911370498968726241231913982383715320623973580944837302919491015102568171604547880072670999941674733626360190235968122211347205582922951973361144497357347860603738671045888728488927758710947874506306166030474792257354710760886579435444551918060425129791576956462647835653882113830209276952414311884989196387432115566829873163930711647815648575351299167820922885961329886065099589711135364942060863157461657299529832837723537136944021412318763726275305245733021909519687746124117891946643415185252332355952683156658701858567696184636464835344981618088457516693816020122408257869333030181327361736110318191356402637371708974240763833381996550367105430122365916957999047001457509742690213692027682026918249094967977695753157018815040975287749135433892788582791855156471930916798594978913454505708192562553657315207165585817646272014065629521471641328218880952174045351485948609876303675661030902235959291970007448376774388216709894057567580624023664898991187155843374206328326691977048020892776497093523493017924110587572912803865306514082258858013597364064357322784492840166958819080188333851358627577115075668989788005354329359730870815731645200343062924838302963313050590123294643876144168348960198235048910676508479843506964879565501315481006802803312491981926996184022704752461222587430941206085867453721696835805519228052885308205093694414755277756625040766784431474254682783138232739182504290090003455690296611817205191863782768103316799801726982303064243251996752951599867917413274890966903466173064153287424412296073530598689400809314224696087286942704926926976039465841992254722887381704515811210780740417033976931337978706225837706324932115636302799890692014295086222567126530495207277719051576125425700325041475013420994027905361021657195834419955524317275611493960970317250596306359244868508404256151347895019926847208756553680095920447937127079233079525005561620682090622098230936013270149134060741238446759052587981616364525892577470452188792070138761941765326242464459832700248650531867036125937803196468027883041179280776136082104305450754741919336214830637560206427737357775388319223986828556298663773704341632275752874191788895496712838152468044534016974892207171718588624085255832628002690765208132926000834427896198974097503799492874445049310283445839850983031871276687247490213263615049654772039243963894038068220516519609268134123411162763290572771204626776736455503965422278156866099506947361998196390187693737581358524265860516955514081550068686127946928346198300683070849979939321028542710891665907275046092865802238/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1//email HTTP/1.1[0m" 405 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/{}/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/[]/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/c/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/~/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/VeT/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/{wE/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/qOM5dOTSyDPM/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/Y9ZGd9Eumt/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/ddr(P=[p\8/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/bZm8Kg8S1dvmQ4/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/RhKt98p/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/]:X2BCb/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/2r8733oWn/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/YT>V`qZKA/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/kCfnfiRP8wH/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/s;GNbYB(qlP/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/8g6upwh78/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1/UfT#e*o>f/email HTTP/1.1[0m" 405 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/mQ7yHy992E/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/5QH6RP5{wL/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/ahKWalDkOMYEEC/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[31m[1mPUT /users/v1//YL)R!_)5Qd?Np/email HTTP/1.1[0m" 405 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/9zlAStCvqQnOa6Wh/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/iUjnER7DJGqJX5XN/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/PzRChTsI5mEVkm60bbZdXyoj/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/9ZcmakjwcpYm818ueLr/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/wVMZyNWxGB6aGuARs9/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/^y'L$M['n%]JXSDEh*/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/6XP0pwFBVecgWSWNE1Qhblv3K/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/g68iRCTJBHDMLQuBrJ/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/je4luOHxuNa9w8xo1OdVi/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/]xAR^<@9G0Hnq=M"Zs,-)/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/WJ5Q9HCQG3pwmi0ZVNywjjqV1M8iSO/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/YmDJvGhNyaFZd1Qf6ZZMkDy9Cv0UcOe/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/vHHbl9HBb4SDottvFoYFOt29T5idj/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/BDLEWyGOsf6NvinEroN6E453fRqITEOUq/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/ksKcOIzIQFjLlDXLuOnkIcRPe/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/Dvejr9Sny7PMNm3VH7NUpo6a1FSJTY3/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/CVayuEWJTdTksX0faBMWpdez9d091/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/q6iNBH2CANIKuu7DPWPXiWIeNOx5ZID8zm0l2/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/QjLA9EBV02zkKPfHKNMpOSv2u12YUEn/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/8IL9gRnxLT5U8oPgJBC6oIniDk79KzXiYFx/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/k6vxws2W89NL6tI9rSwe9tXaliFPPjCBey/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/egeH4DbGy7XP1VqzdPerc9pqNdVFYZy/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/VATt1IVwuEuKHJFvUzuShz0u0vqsucGn/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/dVJPUiJSxbdtOUtEybkZefq1iuEu8o2UrSmS3oXG/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/ve8HWRzUAryNtWMsMV1WhCoESq4I3sDrRB3Oavqom/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/jFeJJzPrK2geK8DgP9rInNnMpTPaUEpQq2z3JN4exlS/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/MHClucOfFsNPU0OMXCzYALXflgRXi0Wa1ZUU9V5nX/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/o43Z8U3D5VUHyFTzf8nEHVgY9qvhNUBhJ2UpTN76roLLTBl/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/TuAldklJtD1vkYdnqwA03pqJl4eNSiF8SJ147M/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/JZKCNQdhM3GpfrKCg3jMzSY8WeYi8nr4qQ03UkI/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/jFX7mbXIaFtVFKLLFsdTVJfIWUvnEmV6Gr7UIK0O/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/HwsCX4fExozo3okqbWnOL0hNJzwOk1WaW4fnzfLyPG2cMWdrMy/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/WO4ieBbGxU3uM1XuaengHbWKe7kZSsFdOshV9ERFbXGvFwSjH11/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:29] "[35m[1mPUT /users/v1/Mr8ompYJNBuqQpzCxiW8TjUGfseWYOZFkMbpKE6RxtD3SSNX/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:30] "[35m[1mPUT /users/v1/1ekfYJ7vlJoJRw8OazM4umH4qtEWTzZYNlgzKPJmtVri2DVAQx1vto/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:30] "[35m[1mPUT /users/v1/mpWd9RKN6g7UuenIEuoNhuEqTMnsVw6lY01RWqOea7mEAYI/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:30] "[35m[1mPUT /users/v1/0urVaX4exkrhFngqBnsVV1asqh4Ps5gluRJoOQeKn1Uk3qWa/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:30] "[35m[1mPUT /users/v1/xqC3ryZiptA9WlNAaPmXNNvXaeqfc4t9sWAK5KPzMRX0OktC/email HTTP/1.1[0m" 204 -
+api-1  | 172.19.0.3 - - [24/Nov/2026 01:27:30] "[35m[1mPUT /users/v1/iw3ftfFEcHRJXUMlFMsRL4G0IlCIqTjyvOC111qpZ9aSdCwozBXjPP/email HTTP/1.1[0m" 204 -

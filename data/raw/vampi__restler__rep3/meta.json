@@ -1,0 +1,28 @@
+{
+  "run_id": "vampi__restler__rep3",
+  "api": "vampi",
+  "tool": "restler",
+  "rep": 3,
+  "seed": 1003,
+  "budget_sec": 1800,
+  "start_ts": 1795549492.0302382,
+  "end_ts": 1795551357.6438546,
+  "schema_file": "apis/vampi/openapi3.yml",
+  "slot": 1,
+  "proxy_port": 8081,
+  "schema_port": 8100,
+  "slots_paralelos": 2,
+  "vizinhos": [
+    "petclinic-rest__evomaster__rep3",
+    "petclinic-rest__schemathesis__rep3"
+  ],
+  "limites": {
+    "tool_cpus": "4.00",
+    "tool_mem": "3038m",
+    "api_cpus": "2.00",
+    "api_mem": "1536m",
+    "proxy_cpus": "1.00",
+    "proxy_mem": "384m",
+    "api_java_opts": "-Xmx1152m"
+  }
+}
