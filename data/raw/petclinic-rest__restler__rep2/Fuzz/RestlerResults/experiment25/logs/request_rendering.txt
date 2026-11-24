@@ -1,0 +1,530 @@
+
+2026-11-24 18:43:18.566: Generation-1
+2026-11-24 18:43:18.566: 	Rendered requests: 22 / 43
+2026-11-24 18:43:18.566: 	Rendered requests with "valid" status codes: 13 / 22
+2026-11-24 18:43:18.566: 	Rendered requests determined to be fully valid (no resource creation failures): 13 / 22
+2026-11-24 18:43:18.566: List of failing requests:
+	Request: 13
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+	Request: 20
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 21
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "date":'
+		+ restler_fuzzable_date: ["2013-01-01", "2019-06-26", ...]
+		- restler_static_string: ',\n    "description":'
+		+ restler_fuzzable_string: ["rabies shot", "fuzzstring", ...]
+		- restler_static_string: ',\n    "petId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 36
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 37
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 38
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 39
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 41
+		- restler_static_string: 'HEAD '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 42
+		- restler_static_string: 'PATCH '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+-------------------------
+
+
+2026-11-24 18:45:21.912: Generation-2
+2026-11-24 18:45:21.912: 	Rendered requests: 35 / 43
+2026-11-24 18:45:21.912: 	Rendered requests with "valid" status codes: 26 / 35
+2026-11-24 18:45:21.912: 	Rendered requests determined to be fully valid (no resource creation failures): 26 / 35
+2026-11-24 18:45:21.912: List of failing requests:
+	Request: 13
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+	Request: 20
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 21
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "date":'
+		+ restler_fuzzable_date: ["2013-01-01", "2019-06-26", ...]
+		- restler_static_string: ',\n    "description":'
+		+ restler_fuzzable_string: ["rabies shot", "fuzzstring", ...]
+		- restler_static_string: ',\n    "petId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 36
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 37
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 38
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 39
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 41
+		- restler_static_string: 'HEAD '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 42
+		- restler_static_string: 'PATCH '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+-------------------------
+
+
+2026-11-24 18:47:44.627: Generation-3
+2026-11-24 18:47:44.627: 	Rendered requests: 35 / 43
+2026-11-24 18:47:44.627: 	Rendered requests with "valid" status codes: 35 / 35
+2026-11-24 18:47:44.627: 	Rendered requests determined to be fully valid (no resource creation failures): 35 / 35
+2026-11-24 18:47:44.627: List of failing requests:
+-------------------------
+
+
+2026-11-24 18:49:24.356: Generation-4
+2026-11-24 18:49:24.356: 	Rendered requests: 35 / 43
+2026-11-24 18:49:24.356: 	Rendered requests with "valid" status codes: 35 / 35
+2026-11-24 18:49:24.356: 	Rendered requests determined to be fully valid (no resource creation failures): 35 / 35
+2026-11-24 18:49:24.356: List of failing requests:
+-------------------------
+
+
+2026-11-24 18:51:32.667: Generation-5
+2026-11-24 18:51:32.667: 	Rendered requests: 35 / 43
+2026-11-24 18:51:32.667: 	Rendered requests with "valid" status codes: 35 / 35
+2026-11-24 18:51:32.667: 	Rendered requests determined to be fully valid (no resource creation failures): 35 / 35
+2026-11-24 18:51:32.667: List of failing requests:
+-------------------------
+
+
+2026-11-24 18:54:05.913: Generation-6
+2026-11-24 18:54:05.913: 	Rendered requests: 35 / 43
+2026-11-24 18:54:05.913: 	Rendered requests with "valid" status codes: 35 / 35
+2026-11-24 18:54:05.913: 	Rendered requests determined to be fully valid (no resource creation failures): 35 / 35
+2026-11-24 18:54:05.913: List of failing requests:
+-------------------------
+
+
+2026-11-24 18:56:37.409: Generation-7
+2026-11-24 18:56:37.409: 	Rendered requests: 35 / 43
+2026-11-24 18:56:37.409: 	Rendered requests with "valid" status codes: 35 / 35
+2026-11-24 18:56:37.409: 	Rendered requests determined to be fully valid (no resource creation failures): 35 / 35
+2026-11-24 18:56:37.409: List of failing requests:
+-------------------------
+
+
+2026-11-24 18:59:10.091: Generation-8
+2026-11-24 18:59:10.091: 	Rendered requests: 35 / 43
+2026-11-24 18:59:10.091: 	Rendered requests with "valid" status codes: 35 / 35
+2026-11-24 18:59:10.091: 	Rendered requests determined to be fully valid (no resource creation failures): 35 / 35
+2026-11-24 18:59:10.091: List of failing requests:
+-------------------------
+
+
+2026-11-24 19:01:37.052: Generation-9
+2026-11-24 19:01:37.052: 	Rendered requests: 35 / 43
+2026-11-24 19:01:37.052: 	Rendered requests with "valid" status codes: 35 / 35
+2026-11-24 19:01:37.052: 	Rendered requests determined to be fully valid (no resource creation failures): 35 / 35
+2026-11-24 19:01:37.052: List of failing requests:
+-------------------------
+
+
+2026-11-24 19:04:12.193: Generation-10
+2026-11-24 19:04:12.193: 	Rendered requests: 35 / 43
+2026-11-24 19:04:12.193: 	Rendered requests with "valid" status codes: 35 / 35
+2026-11-24 19:04:12.193: 	Rendered requests determined to be fully valid (no resource creation failures): 35 / 35
+2026-11-24 19:04:12.193: List of failing requests:
+-------------------------
+
+
+2026-11-24 19:06:52.437: Generation-11
+2026-11-24 19:06:52.437: 	Rendered requests: 35 / 43
+2026-11-24 19:06:52.437: 	Rendered requests with "valid" status codes: 35 / 35
+2026-11-24 19:06:52.437: 	Rendered requests determined to be fully valid (no resource creation failures): 35 / 35
+2026-11-24 19:06:52.437: List of failing requests:
+-------------------------
+
+
+2026-11-24 19:10:19.951: Generation-12
+2026-11-24 19:10:19.951: 	Rendered requests: 35 / 43
+2026-11-24 19:10:19.951: 	Rendered requests with "valid" status codes: 35 / 35
+2026-11-24 19:10:19.951: 	Rendered requests determined to be fully valid (no resource creation failures): 35 / 35
+2026-11-24 19:10:19.951: List of failing requests:
+-------------------------
+
+
+2026-11-24 19:10:51.178: Generation-13
+2026-11-24 19:10:51.178: 	Rendered requests: 35 / 43
+2026-11-24 19:10:51.178: 	Rendered requests with "valid" status codes: 35 / 35
+2026-11-24 19:10:51.178: 	Rendered requests determined to be fully valid (no resource creation failures): 35 / 35
+2026-11-24 19:10:51.178: List of failing requests:
+-------------------------
+
+
+2026-11-24 19:10:51.179: 	Never Rendered requests:
+	Request: 0
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_visits_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 1
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_visits_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "date":'
+		+ restler_fuzzable_date: ["2013-01-01", "2019-06-26", ...]
+		- restler_static_string: ',\n    "description":'
+		+ restler_fuzzable_string: ["rabies shot", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_visits_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 12
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_pets__petId__put_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 14
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_pets__petId__put_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 18
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners__ownerId__pets_post_type_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 19
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners__ownerId__pets_post_type_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+	Request: 32
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners__ownerId__pets_post_type_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "date":'
+		+ restler_fuzzable_date: ["2013-01-01", "2019-06-26", ...]
+		- restler_static_string: ',\n    "description":'
+		+ restler_fuzzable_string: ["rabies shot", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+-------------------------
+

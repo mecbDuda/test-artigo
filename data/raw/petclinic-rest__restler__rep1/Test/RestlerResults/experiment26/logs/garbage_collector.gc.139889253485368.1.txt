@@ -1,0 +1,10 @@
+2026-11-24 00:26:00.785: Trying garbage collection of * 4 * objects
+_api_specialties_post_id: ['4', '5', '6', '7']
+2026-11-24 00:26:00.840: Trying garbage collection of * 4 * objects
+_api_pettypes_post_id: ['7', '8', '9', '10']
+2026-11-24 00:26:00.906: Trying garbage collection of * 4 * objects
+_api_visits_post_id: ['5', '6', '7', '8']
+2026-11-24 00:26:00.966: Trying garbage collection of * 5 * objects
+_api_vets_post_specialties_0_id: ['4', '4', '1', '1', '5']
+2026-11-24 00:26:01.032: Trying garbage collection of * 8 * objects
+_api_owners_post_id: ['11', '12', '13', '14', '15', '16', '17', '18']

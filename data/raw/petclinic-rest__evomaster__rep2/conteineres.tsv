@@ -1,0 +1,4 @@
+conteiner	papel	nano_cpus	mem_limite_bytes	mem_pico_bytes	vezes_no_limite	oom_killed	codigo_saida
+evomaster_s1	ferramenta:evomaster	4000000000	3185573888	431460352	0	false	0
+fuzzexp_1-api-1	api	2000000000	1610612736	610267136	0	false	0
+fuzzexp_1-proxy-1	proxy	1000000000	402653184	375259136	0	false	0

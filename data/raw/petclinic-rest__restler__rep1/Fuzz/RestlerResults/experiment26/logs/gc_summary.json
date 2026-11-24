@@ -1,0 +1,23 @@
+{
+    "delete_stats": {
+        "_api_visits_post_id": {
+            "204": 69
+        },
+        "_api_vets_post_specialties_0_id": {
+            "404": 1314,
+            "204": 487
+        },
+        "_api_specialties_post_id": {
+            "204": 2404,
+            "404": 34
+        },
+        "_api_pettypes_post_id": {
+            "204": 1388,
+            "404": 33
+        },
+        "_api_owners_post_id": {
+            "204": 2013,
+            "404": 46
+        }
+    }
+}

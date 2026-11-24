@@ -1,0 +1,282 @@
+{
+  "404": {
+    "055872f7-6aaf-4a6f-97e6-9055b06276a0": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/petclinic/api/owners/16/pets/1",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "",
+            "content": "",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "0fa59034-1a6b-4b17-9aae-3c77d84d960c": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/petclinic/api/owners",
+            "query": "lastName=fuzzstring",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "",
+            "content": "",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "276cb5e3-5f2e-44f4-95a3-af9768dfc686": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/petclinic/api/owners/16/pets/1",
+            "query": "",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "",
+            "content": "",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ],
+    "91f436c7-174d-4848-a152-94c453f0d313": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/petclinic/api/vets/1",
+            "query": "",
+            "body": "{\n    \"firstName\":\"James\",\n    \"lastName\":\"Carter\",\n    \"specialties\":\n    [\n        {\n            \"name\":\"radiology\"\n        }\n    ]}\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "",
+            "content": "",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ]
+  },
+  "500": {
+    "6a589393-e7eb-45a0-ae5b-fec895315863": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_",
+            "query": "",
+            "body": "{\"name\":\"fuzzstring\",\"birthDate\":\"2019-06-26\",\"type\":{\"name\":\"fuzzstring\",\"id\":1}}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "138\r\n{\"detail\":\"An unexpected error occurred while processing your request\",\"instance\":\"/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"status\":500,\"title\":\"MethodArgumentTypeMismatchException\",\"type\":\"http://api:8080/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"timestamp\":\"2026-11-24T00:25:58.801885189Z\",\"schemaValidationErrors\":[]}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_",
+            "query": "",
+            "body": "{\"name\":\"fuzzstring\",\"birthDate\":\"2019-06-26\",\"type\":{\"name\":\"cat\",\"id\":1}}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "138\r\n{\"detail\":\"An unexpected error occurred while processing your request\",\"instance\":\"/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"status\":500,\"title\":\"MethodArgumentTypeMismatchException\",\"type\":\"http://api:8080/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"timestamp\":\"2026-11-24T00:25:58.768906373Z\",\"schemaValidationErrors\":[]}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_",
+            "query": "",
+            "body": "{\"name\":\"fuzzstring\",\"birthDate\":\"2010-09-07\",\"type\":{\"name\":\"fuzzstring\",\"id\":1}}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "138\r\n{\"detail\":\"An unexpected error occurred while processing your request\",\"instance\":\"/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"status\":500,\"title\":\"MethodArgumentTypeMismatchException\",\"type\":\"http://api:8080/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"timestamp\":\"2026-11-24T00:25:58.738276947Z\",\"schemaValidationErrors\":[]}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_",
+            "query": "",
+            "body": "{\"name\":\"fuzzstring\",\"birthDate\":\"2010-09-07\",\"type\":{\"name\":\"cat\",\"id\":1}}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "138\r\n{\"detail\":\"An unexpected error occurred while processing your request\",\"instance\":\"/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"status\":500,\"title\":\"MethodArgumentTypeMismatchException\",\"type\":\"http://api:8080/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"timestamp\":\"2026-11-24T00:25:58.617693051Z\",\"schemaValidationErrors\":[]}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_",
+            "query": "",
+            "body": "{\"name\":\"Leo\",\"birthDate\":\"2019-06-26\",\"type\":{\"name\":\"fuzzstring\",\"id\":1}}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "138\r\n{\"detail\":\"An unexpected error occurred while processing your request\",\"instance\":\"/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"status\":500,\"title\":\"MethodArgumentTypeMismatchException\",\"type\":\"http://api:8080/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"timestamp\":\"2026-11-24T00:25:58.588474898Z\",\"schemaValidationErrors\":[]}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_",
+            "query": "",
+            "body": "{\"name\":\"Leo\",\"birthDate\":\"2019-06-26\",\"type\":{\"name\":\"cat\",\"id\":1}}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "138\r\n{\"detail\":\"An unexpected error occurred while processing your request\",\"instance\":\"/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"status\":500,\"title\":\"MethodArgumentTypeMismatchException\",\"type\":\"http://api:8080/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"timestamp\":\"2026-11-24T00:25:58.559205661Z\",\"schemaValidationErrors\":[]}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_",
+            "query": "",
+            "body": "{\"name\":\"Leo\",\"birthDate\":\"2010-09-07\",\"type\":{\"name\":\"fuzzstring\",\"id\":1}}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "138\r\n{\"detail\":\"An unexpected error occurred while processing your request\",\"instance\":\"/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"status\":500,\"title\":\"MethodArgumentTypeMismatchException\",\"type\":\"http://api:8080/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"timestamp\":\"2026-11-24T00:25:58.525679818Z\",\"schemaValidationErrors\":[]}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_",
+            "query": "",
+            "body": "{\"name\":\"Leo\",\"birthDate\":\"2010-09-07\",\"type\":{\"name\":\"cat\",\"id\":1}}"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "138\r\n{\"detail\":\"An unexpected error occurred while processing your request\",\"instance\":\"/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"status\":500,\"title\":\"MethodArgumentTypeMismatchException\",\"type\":\"http://api:8080/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"timestamp\":\"2026-11-24T00:25:58.495047715Z\",\"schemaValidationErrors\":[]}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_",
+            "query": "",
+            "body": "{\n    \"name\":\"fuzzstring\",\n    \"birthDate\":\"2019-06-26\",\n    \"type\":\n        {\n            \"name\":\"fuzzstring\",\n            \"id\":1\n        }\n    }\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "138\r\n{\"detail\":\"An unexpected error occurred while processing your request\",\"instance\":\"/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"status\":500,\"title\":\"MethodArgumentTypeMismatchException\",\"type\":\"http://api:8080/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"timestamp\":\"2026-11-24T00:25:58.464249660Z\",\"schemaValidationErrors\":[]}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      },
+      {
+        "request": {
+          "RequestData": {
+            "method": "PUT",
+            "path": "/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_",
+            "query": "",
+            "body": "{\n    \"name\":\"fuzzstring\",\n    \"birthDate\":\"2019-06-26\",\n    \"type\":\n        {\n            \"name\":\"cat\",\n            \"id\":1\n        }\n    }\r\n"
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 500,
+            "codeDescription": "",
+            "content": "138\r\n{\"detail\":\"An unexpected error occurred while processing your request\",\"instance\":\"/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"status\":500,\"title\":\"MethodArgumentTypeMismatchException\",\"type\":\"http://api:8080/petclinic/api/pets/petid_RANDOM_SUFFIX_ABSTRACTED_\",\"timestamp\":\"2026-11-24T00:25:58.431445745Z\",\"schemaValidationErrors\":[]}\r\n0\r\n\r\n",
+            "isFailure": true,
+            "isBug": true
+          }
+        }
+      }
+    ]
+  }
+}

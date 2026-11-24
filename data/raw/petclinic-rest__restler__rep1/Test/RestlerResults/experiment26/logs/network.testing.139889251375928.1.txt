@@ -1,0 +1,2682 @@
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 053838ef33733bad494457ce10e340cc0892955e
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pettypes'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:57.553: Sending: 'GET /petclinic/api/pettypes HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: a34489db-f642-42a9-8f63-40e3cde15114\r\n\r\n'
+
+2026-11-24 00:25:57.569: Received: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:57 GMT\r\n\r\n8f\r\n[{"name":"bird","id":5},{"name":"cat","id":1},{"name":"dog","id":2},{"name":"hamster","id":6},{"name":"lizard","id":3},{"name":"snake","id":4}]\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-2
+
+	Request: 1 (Remaining candidate combinations: 10)
+	Request hash: 0598e5eb1ba14fa0be2a3dc5d216ce66328d92c3
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "username":'
+		+ restler_fuzzable_string: ["john.doe", "fuzzstring", ...]
+		- restler_static_string: ',\n    "password":'
+		+ restler_fuzzable_string: ["1234abc", "fuzzstring", ...]
+		- restler_static_string: ',\n    "enabled":'
+		- restler_fuzzable_bool: 'true'
+		- restler_static_string: ',\n    "roles":\n    [\n        {\n            "name":'
+		+ restler_fuzzable_string: ["admin", "fuzzstring", ...]
+		- restler_static_string: '\n        }\n    ]}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:57.584: Sending: 'POST /petclinic/api/users HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 149\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: b395670a-9691-40db-88cb-b0b5066c030a\r\n\r\n{\n    "username":"john.doe",\n    "password":"1234abc",\n    "enabled":true,\n    "roles":\n    [\n        {\n            "name":"admin"\n        }\n    ]}\r\n'
+
+2026-11-24 00:25:57.865: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:57 GMT\r\n\r\n5b\r\n{"username":"john.doe","enabled":true,"password":"1234abc","roles":[{"name":"ROLE_admin"}]}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-3
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 091b0ce42eb0bd96169ea00b16dd938f6d63ac95
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:57.883: Sending: 'PUT /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 3a3dbdeb-0b17-47ab-9ab3-ef2ad32db593\r\n\r\n'
+
+2026-11-24 00:25:57.893: Received: 'HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:57 GMT\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-3
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: 091b0ce42eb0bd96169ea00b16dd938f6d63ac95
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:57.908: Sending: 'PUT /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 7157f401-df17-4fdd-8454-1fca6748d14e\r\n\r\n'
+
+2026-11-24 00:25:57.917: Received: 'HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:57 GMT\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-4
+
+	Request: 1 (Remaining candidate combinations: 4)
+	Request hash: 16561cbbfe6d2e5e6b095c91a994bbe11205da85
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'specialties'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["radiology", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:57.934: Sending: 'POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 27\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 7013d25e-8af4-4423-97ae-834945f63626\r\n\r\n{\n    "name":"radiology"}\r\n'
+
+2026-11-24 00:25:57.980: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/specialties/4\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:57 GMT\r\n\r\n1b\r\n{"id":4,"name":"radiology"}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-5
+
+	Request: 1 (Remaining candidate combinations: 4)
+	Request hash: 2040c87a7baefdfc12e4ed0f6fa94f18debc492a
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pettypes'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:57.995: Sending: 'POST /petclinic/api/pettypes HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 21\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: c95143a4-2a73-4870-9480-b0d2735c7ab7\r\n\r\n{\n    "name":"cat"}\r\n'
+
+2026-11-24 00:25:58.010: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/pettypes/7\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\n\r\n15\r\n{"name":"cat","id":7}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-6
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 2241241ab98f65a0dd2f427b4d84302e74e1a15f
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.025: Sending: 'GET /petclinic/api/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: be2eea83-9a13-4745-86c5-51e57256f625\r\n\r\n'
+
+2026-11-24 00:25:58.070: Received: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\n\r\n642\r\n[{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1},"id":1,"visits":[],"ownerId":1},{"name":"Basil","birthDate":"2012-08-06","type":{"name":"hamster","id":6},"id":2,"visits":[],"ownerId":2},{"name":"Rosy","birthDate":"2011-04-17","type":{"name":"dog","id":2},"id":3,"visits":[],"ownerId":3},{"name":"Jewel","birthDate":"2010-03-07","type":{"name":"dog","id":2},"id":4,"visits":[],"ownerId":3},{"name":"Iggy","birthDate":"2010-11-30","type":{"name":"lizard","id":3},"id":5,"visits":[],"ownerId":4},{"name":"George","birthDate":"2010-01-20","type":{"name":"snake","id":4},"id":6,"visits":[],"ownerId":5},{"name":"Samantha","birthDate":"2012-09-04","type":{"name":"cat","id":1},"id":7,"visits":[{"description":"spayed","id":4,"petId":7,"date":"2013-01-04"},{"description":"rabies shot","id":1,"petId":7,"date":"2013-01-01"}],"ownerId":6},{"name":"Max","birthDate":"2012-09-04","type":{"name":"cat","id":1},"id":8,"visits":[{"description":"neutered","id":3,"petId":8,"date":"2013-01-03"},{"description":"rabies shot","id":2,"petId":8,"date":"2013-01-02"}],"ownerId":6},{"name":"Lucky","birthDate":"2011-08-06","type":{"name":"bird","id":5},"id":9,"visits":[],"ownerId":7},{"name":"Mulligan","birthDate":"2007-02-24","type":{"name":"dog","id":2},"id":10,"visits":[],"ownerId":8},{"name":"Freddy","birthDate":"2010-03-09","type":{"name":"bird","id":5},"id":11,"visits":[],"ownerId":9},{"name":"Lucky","birthDate":"2010-06-24","type":{"name":"dog","id":2},"id":12,"visits":[],"ownerId":10},{"name":"Sly","birthDate":"2012-06-08","type":{"name":"cat","id":1},"id":13,"visits":[],"ownerId":10}]\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-7
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 25af6c2bd9d90ca040c589ffef967808b437d649
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'specialties'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.087: Sending: 'GET /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 681e7972-28d3-4c5d-a702-f70bfbc796c1\r\n\r\n'
+
+2026-11-24 00:25:58.099: Received: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\n\r\n6f\r\n[{"id":3,"name":"dentistry"},{"id":1,"name":"radiology"},{"id":4,"name":"radiology"},{"id":2,"name":"surgery"}]\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 16)
+	Request hash: 32e67800bf81a02d043f1b25fc64532e5b8eaf0f
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.114: Sending: 'PUT /petclinic/api/pets/petid9d56e15f95 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 134\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: cce92894-3013-40d9-a541-1cde9e5c3fc4\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n'
+
+2026-11-24 00:25:58.212: Received: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petid9d56e15f95","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petid9d56e15f95","timestamp":"2026-11-24T00:25:58.129859487Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:58.215: Parser exception: 'Error: all of the expected dynamic objects were not present in the response.'.
+2026-11-24 00:25:58.218: Attempting to reproduce bug...
+2026-11-24 00:25:58.223: Sending: 'PUT /petclinic/api/pets/petid9d56e15f95 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 134\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 77446920-b9c7-4589-8196-d066559c8ad8\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n'
+
+2026-11-24 00:25:58.235: Received: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petid9d56e15f95","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petid9d56e15f95","timestamp":"2026-11-24T00:25:58.231363894Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:58.237: Parser exception: 'Error: all of the expected dynamic objects were not present in the response.'.
+2026-11-24 00:25:58.240: Done replaying sequence.
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 15)
+	Request hash: 32e67800bf81a02d043f1b25fc64532e5b8eaf0f
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.260: Sending: 'PUT /petclinic/api/pets/petide789a90b52 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 141\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: e4b209bb-63e3-425b-aad2-f91827fee705\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"fuzzstring",\n            "id":1\n        }\n    }\r\n'
+
+2026-11-24 00:25:58.271: Received: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petide789a90b52","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petide789a90b52","timestamp":"2026-11-24T00:25:58.268657351Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:58.274: Parser exception: 'Error: all of the expected dynamic objects were not present in the response.'.
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 14)
+	Request hash: 32e67800bf81a02d043f1b25fc64532e5b8eaf0f
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.292: Sending: 'PUT /petclinic/api/pets/petidf1732a038f HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 134\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: ded99c85-50ed-43fb-9a76-78829e62fdbe\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2019-06-26",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n'
+
+2026-11-24 00:25:58.301: Received: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petidf1732a038f","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petidf1732a038f","timestamp":"2026-11-24T00:25:58.299500481Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:58.304: Parser exception: 'Error: all of the expected dynamic objects were not present in the response.'.
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 13)
+	Request hash: 32e67800bf81a02d043f1b25fc64532e5b8eaf0f
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.321: Sending: 'PUT /petclinic/api/pets/petidd41ecfd7d3 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 141\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 6756d477-613f-4d3a-894e-7f57f01de4d8\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2019-06-26",\n    "type":\n        {\n            "name":"fuzzstring",\n            "id":1\n        }\n    }\r\n'
+
+2026-11-24 00:25:58.330: Received: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petidd41ecfd7d3","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petidd41ecfd7d3","timestamp":"2026-11-24T00:25:58.328120357Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:58.332: Parser exception: 'Error: all of the expected dynamic objects were not present in the response.'.
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 12)
+	Request hash: 32e67800bf81a02d043f1b25fc64532e5b8eaf0f
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.359: Sending: 'PUT /petclinic/api/pets/petid5b627b0805 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 141\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 64d1f490-772e-4c4f-9368-494d3672a5be\r\n\r\n{\n    "name":"fuzzstring",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n'
+
+2026-11-24 00:25:58.368: Received: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petid5b627b0805","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petid5b627b0805","timestamp":"2026-11-24T00:25:58.366454885Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:58.372: Parser exception: 'Error: all of the expected dynamic objects were not present in the response.'.
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 11)
+	Request hash: 32e67800bf81a02d043f1b25fc64532e5b8eaf0f
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.392: Sending: 'PUT /petclinic/api/pets/petide1e13c7c98 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 148\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 8fe2dbed-619f-42d5-abf1-6ec7c0f5bd96\r\n\r\n{\n    "name":"fuzzstring",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"fuzzstring",\n            "id":1\n        }\n    }\r\n'
+
+2026-11-24 00:25:58.401: Received: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petide1e13c7c98","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petide1e13c7c98","timestamp":"2026-11-24T00:25:58.399572111Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:58.405: Parser exception: 'Error: all of the expected dynamic objects were not present in the response.'.
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 10)
+	Request hash: 32e67800bf81a02d043f1b25fc64532e5b8eaf0f
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.425: Sending: 'PUT /petclinic/api/pets/petidf6d2a545c4 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 141\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: fceb12dc-3814-4dde-b5e2-8c0871afe539\r\n\r\n{\n    "name":"fuzzstring",\n    "birthDate":"2019-06-26",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n'
+
+2026-11-24 00:25:58.433: Received: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petidf6d2a545c4","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petidf6d2a545c4","timestamp":"2026-11-24T00:25:58.431445745Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:58.436: Parser exception: 'Error: all of the expected dynamic objects were not present in the response.'.
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 9)
+	Request hash: 32e67800bf81a02d043f1b25fc64532e5b8eaf0f
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.457: Sending: 'PUT /petclinic/api/pets/petid3c84f73354 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 148\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 4a696c60-eace-49df-b72c-17b0376117da\r\n\r\n{\n    "name":"fuzzstring",\n    "birthDate":"2019-06-26",\n    "type":\n        {\n            "name":"fuzzstring",\n            "id":1\n        }\n    }\r\n'
+
+2026-11-24 00:25:58.466: Received: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petid3c84f73354","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petid3c84f73354","timestamp":"2026-11-24T00:25:58.464249660Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:58.468: Parser exception: 'Error: all of the expected dynamic objects were not present in the response.'.
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 8)
+	Request hash: 32e67800bf81a02d043f1b25fc64532e5b8eaf0f
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.488: Sending: 'PUT /petclinic/api/pets/petide9094046c3 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 68\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 58a631aa-aa7c-482b-85d6-20f2d00abd9b\r\n\r\n{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1}}'
+
+2026-11-24 00:25:58.497: Received: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petide9094046c3","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petide9094046c3","timestamp":"2026-11-24T00:25:58.495047715Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:58.500: Parser exception: 'Error: all of the expected dynamic objects were not present in the response.'.
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 7)
+	Request hash: 32e67800bf81a02d043f1b25fc64532e5b8eaf0f
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.518: Sending: 'PUT /petclinic/api/pets/petid53aad8f9fc HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 75\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: a08c0099-8212-42a8-982a-da57ae702217\r\n\r\n{"name":"Leo","birthDate":"2010-09-07","type":{"name":"fuzzstring","id":1}}'
+
+2026-11-24 00:25:58.527: Received: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petid53aad8f9fc","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petid53aad8f9fc","timestamp":"2026-11-24T00:25:58.525679818Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:58.530: Parser exception: 'Error: all of the expected dynamic objects were not present in the response.'.
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 6)
+	Request hash: 32e67800bf81a02d043f1b25fc64532e5b8eaf0f
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.549: Sending: 'PUT /petclinic/api/pets/petid45dd1715e3 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 68\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 1a30f85d-6743-4241-9bec-ef260b3c3f9a\r\n\r\n{"name":"Leo","birthDate":"2019-06-26","type":{"name":"cat","id":1}}'
+
+2026-11-24 00:25:58.561: Received: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petid45dd1715e3","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petid45dd1715e3","timestamp":"2026-11-24T00:25:58.559205661Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:58.564: Parser exception: 'Error: all of the expected dynamic objects were not present in the response.'.
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 5)
+	Request hash: 32e67800bf81a02d043f1b25fc64532e5b8eaf0f
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.582: Sending: 'PUT /petclinic/api/pets/petid81a0ee867f HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 75\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 2a6b7bfc-1c0a-4d31-9a7d-60baf315b6ac\r\n\r\n{"name":"Leo","birthDate":"2019-06-26","type":{"name":"fuzzstring","id":1}}'
+
+2026-11-24 00:25:58.590: Received: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petid81a0ee867f","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petid81a0ee867f","timestamp":"2026-11-24T00:25:58.588474898Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:58.593: Parser exception: 'Error: all of the expected dynamic objects were not present in the response.'.
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 4)
+	Request hash: 32e67800bf81a02d043f1b25fc64532e5b8eaf0f
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.611: Sending: 'PUT /petclinic/api/pets/petidd8b2e0f195 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 75\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 71aaff20-564f-4cf3-a84e-318488fdd3ca\r\n\r\n{"name":"fuzzstring","birthDate":"2010-09-07","type":{"name":"cat","id":1}}'
+
+2026-11-24 00:25:58.619: Received: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petidd8b2e0f195","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petidd8b2e0f195","timestamp":"2026-11-24T00:25:58.617693051Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:58.622: Parser exception: 'Error: all of the expected dynamic objects were not present in the response.'.
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 3)
+	Request hash: 32e67800bf81a02d043f1b25fc64532e5b8eaf0f
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.643: Sending: 'PUT /petclinic/api/pets/petid0d4c14c397 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 82\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 9a311181-1405-421e-bb1b-86c173b5ef75\r\n\r\n{"name":"fuzzstring","birthDate":"2010-09-07","type":{"name":"fuzzstring","id":1}}'
+
+2026-11-24 00:25:58.740: Received: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petid0d4c14c397","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petid0d4c14c397","timestamp":"2026-11-24T00:25:58.738276947Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:58.743: Parser exception: 'Error: all of the expected dynamic objects were not present in the response.'.
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 32e67800bf81a02d043f1b25fc64532e5b8eaf0f
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.762: Sending: 'PUT /petclinic/api/pets/petidbc2de60678 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 75\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 40d634b3-8060-489e-9e10-c76840c052c4\r\n\r\n{"name":"fuzzstring","birthDate":"2019-06-26","type":{"name":"cat","id":1}}'
+
+2026-11-24 00:25:58.771: Received: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petidbc2de60678","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petidbc2de60678","timestamp":"2026-11-24T00:25:58.768906373Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:58.774: Parser exception: 'Error: all of the expected dynamic objects were not present in the response.'.
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: 32e67800bf81a02d043f1b25fc64532e5b8eaf0f
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.794: Sending: 'PUT /petclinic/api/pets/petidc412ccb6f2 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 82\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 6e3b3017-e41b-4d9c-b4ab-6890e7da018c\r\n\r\n{"name":"fuzzstring","birthDate":"2019-06-26","type":{"name":"fuzzstring","id":1}}'
+
+2026-11-24 00:25:58.804: Received: 'HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petidc412ccb6f2","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petidc412ccb6f2","timestamp":"2026-11-24T00:25:58.801885189Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:58.806: Parser exception: 'Error: all of the expected dynamic objects were not present in the response.'.
+
+Generation-1: Rendering Sequence-9
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 35e345f6e92ee295a32d0d33134ad153a164a051
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '?'
+		- restler_static_string: 'lastName='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.826: Sending: 'GET /petclinic/api/owners?lastName=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 8b8f7cda-9d7c-4e76-98f8-205f337f4e7a\r\n\r\n'
+
+2026-11-24 00:25:58.888: Received: 'HTTP/1.1 404 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-9
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: 35e345f6e92ee295a32d0d33134ad153a164a051
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '?'
+		- restler_static_string: 'lastName='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.904: Sending: 'GET /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: a6d4d7cc-fc53-448e-9ccc-71afe133e9a8\r\n\r\n'
+
+2026-11-24 00:25:58.930: Received: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\n\r\nb67\r\n[{"firstName":"George","lastName":"Franklin","address":"110 W. Liberty St.","city":"Madison","telephone":"6085551023","pets":[{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1},"id":1,"visits":[],"ownerId":1}],"id":1},{"firstName":"Betty","lastName":"Davis","address":"638 Cardinal Ave.","city":"Sun Prairie","telephone":"6085551749","pets":[{"name":"Basil","birthDate":"2012-08-06","type":{"name":"hamster","id":6},"id":2,"visits":[],"ownerId":2}],"id":2},{"firstName":"Eduardo","lastName":"Rodriquez","address":"2693 Commerce St.","city":"McFarland","telephone":"6085558763","pets":[{"name":"Jewel","birthDate":"2010-03-07","type":{"name":"dog","id":2},"id":4,"visits":[],"ownerId":3},{"name":"Rosy","birthDate":"2011-04-17","type":{"name":"dog","id":2},"id":3,"visits":[],"ownerId":3}],"id":3},{"firstName":"Harold","lastName":"Davis","address":"563 Friendly St.","city":"Windsor","telephone":"6085553198","pets":[{"name":"Iggy","birthDate":"2010-11-30","type":{"name":"lizard","id":3},"id":5,"visits":[],"ownerId":4}],"id":4},{"firstName":"Peter","lastName":"McTavish","address":"2387 S. Fair Way","city":"Madison","telephone":"6085552765","pets":[{"name":"George","birthDate":"2010-01-20","type":{"name":"snake","id":4},"id":6,"visits":[],"ownerId":5}],"id":5},{"firstName":"Jean","lastName":"Coleman","address":"105 N. Lake St.","city":"Monona","telephone":"6085552654","pets":[{"name":"Max","birthDate":"2012-09-04","type":{"name":"cat","id":1},"id":8,"visits":[{"description":"neutered","id":3,"petId":8,"date":"2013-01-03"},{"description":"rabies shot","id":2,"petId":8,"date":"2013-01-02"}],"ownerId":6},{"name":"Samantha","birthDate":"2012-09-04","type":{"name":"cat","id":1},"id":7,"visits":[{"description":"spayed","id":4,"petId":7,"date":"2013-01-04"},{"description":"rabies shot","id":1,"petId":7,"date":"2013-01-01"}],"ownerId":6}],"id":6},{"firstName":"Jeff","lastName":"Black","address":"1450 Oak Blvd.","city":"Monona","telephone":"6085555387","pets":[{"name":"Lucky","birthDate":"2011-08-06","type":{"name":"bird","id":5},"id":9,"visits":[],"ownerId":7}],"id":7},{"firstName":"Maria","lastName":"Escobito","address":"345 Maple St.","city":"Madison","telephone":"6085557683","pets":[{"name":"Mulligan","birthDate":"2007-02-24","type":{"name":"dog","id":2},"id":10,"visits":[],"ownerId":8}],"id":8},{"firstName":"David","lastName":"Schroeder","address":"2749 Blackhawk Trail","city":"Madison","telephone":"6085559435","pets":[{"name":"Freddy","birthDate":"2010-03-09","type":{"name":"bird","id":5},"id":11,"visits":[],"ownerId":9}],"id":9},{"firstName":"Carlos","lastName":"Estaban","address":"2335 Independence La.","city":"Waunakee","telephone":"6085555487","pets":[{"name":"Lucky","birthDate":"2010-06-24","type":{"name":"dog","id":2},"id":12,"visits":[],"ownerId":10},{"name":"Sly","birthDate":"2012-06-08","type":{"name":"cat","id":1},"id":13,"visits":[],"ownerId":10}],"id":10}]\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-10
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 39dd320e8c4e9f06b35e0be0b4942ac2022fb9c1
+
+		- restler_static_string: 'OPTIONS '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.946: Sending: 'OPTIONS /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 70560b1c-0eca-4a87-aa3d-fb517e8ba5db\r\n\r\n'
+
+2026-11-24 00:25:58.954: Received: 'HTTP/1.1 200 \r\nAllow: GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS\r\nAccept-Patch: \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-11
+
+	Request: 1 (Remaining candidate combinations: 6)
+	Request hash: 412e528bcbdb589a7d65bede6705013dd74ab8cb
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "date":'
+		+ restler_fuzzable_date: ["2013-01-01", "2019-06-26", ...]
+		- restler_static_string: ',\n    "description":'
+		+ restler_fuzzable_string: ["rabies shot", "fuzzstring", ...]
+		- restler_static_string: ',\n    "petId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:58.972: Sending: 'POST /petclinic/api/visits HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 76\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 4646f169-4325-43aa-9da9-21eb43f7f9ee\r\n\r\n{\n    "date":"2013-01-01",\n    "description":"rabies shot",\n    "petId":1}\r\n'
+
+2026-11-24 00:25:59.003: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/visits/5\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n42\r\n{"description":"rabies shot","id":5,"petId":1,"date":"2013-01-01"}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-12
+
+	Request: 1 (Remaining candidate combinations: 16)
+	Request hash: 4552a3e207fa7c35d3ca1f393dc67bfe2887e62b
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'vets'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ["James", "fuzzstring", ...]
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ["Carter", "fuzzstring", ...]
+		- restler_static_string: ',\n    "specialties":\n    [\n        {\n            "name":'
+		+ restler_fuzzable_string: ["radiology", "fuzzstring", ...]
+		- restler_static_string: '\n        }\n    ]}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.027: Sending: 'POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 136\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 513e9e50-88c1-4a8e-a6d7-89a13264899b\r\n\r\n{\n    "firstName":"James",\n    "lastName":"Carter",\n    "specialties":\n    [\n        {\n            "name":"radiology"\n        }\n    ]}\r\n'
+
+2026-11-24 00:25:59.110: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/vets/7\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n78\r\n{"firstName":"James","lastName":"Carter","specialties":[{"id":4,"name":"radiology"},{"id":1,"name":"radiology"}],"id":7}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-13
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 45f71549262bf2d37031f93494ff120c375dd642
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'vets'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.127: Sending: 'GET /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 6d84bf21-a42f-4114-9c05-8cbece1570bd\r\n\r\n'
+
+2026-11-24 00:25:59.144: Received: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n28e\r\n[{"firstName":"James","lastName":"Carter","specialties":[],"id":1},{"firstName":"Helen","lastName":"Leary","specialties":[{"id":1,"name":"radiology"}],"id":2},{"firstName":"Linda","lastName":"Douglas","specialties":[{"id":3,"name":"dentistry"},{"id":2,"name":"surgery"}],"id":3},{"firstName":"Rafael","lastName":"Ortega","specialties":[{"id":2,"name":"surgery"}],"id":4},{"firstName":"Henry","lastName":"Stevens","specialties":[{"id":1,"name":"radiology"}],"id":5},{"firstName":"Sharon","lastName":"Jenkins","specialties":[],"id":6},{"firstName":"James","lastName":"Carter","specialties":[{"id":1,"name":"radiology"},{"id":4,"name":"radiology"}],"id":7}]\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-14
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 4c188fbad6a350ae59ab88276696235d5234d107
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v2'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '?'
+		- restler_static_string: 'page='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '&'
+		- restler_static_string: 'size='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.163: Sending: 'GET /petclinic/api/v2/pets?page=1&size=1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 677fded9-5532-4485-b8ac-4c7ed2cffa96\r\n\r\n'
+
+2026-11-24 00:25:59.209: Received: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\nac\r\n{"content":[{"name":"Basil","birthDate":"2012-08-06","type":{"name":"hamster","id":6},"id":2,"visits":[],"ownerId":2}],"page":1,"size":1,"totalElements":13,"totalPages":13}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-15
+
+	Request: 1 (Remaining candidate combinations: 20)
+	Request hash: 514ff1902a735c3aba1c5b223728f11bfb77c8ac
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ["George", "fuzzstring", ...]
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ["Franklin", "fuzzstring", ...]
+		- restler_static_string: ',\n    "address":'
+		+ restler_fuzzable_string: ["110 W. Liberty St.", "fuzzstring", ...]
+		- restler_static_string: ',\n    "city":'
+		+ restler_fuzzable_string: ["Madison", "fuzzstring", ...]
+		- restler_static_string: ',\n    "telephone":'
+		+ restler_fuzzable_string: ["6085551023", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.232: Sending: 'POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 144\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: fe9755f6-bd0e-473f-af18-4800c13fa738\r\n\r\n{\n    "firstName":"George",\n    "lastName":"Franklin",\n    "address":"110 W. Liberty St.",\n    "city":"Madison",\n    "telephone":"6085551023"}\r\n'
+
+2026-11-24 00:25:59.258: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/owners/11\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n87\r\n{"firstName":"George","lastName":"Franklin","address":"110 W. Liberty St.","city":"Madison","telephone":"6085551023","pets":[],"id":11}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-16
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 61ff81c30aa3c76e78afea62b2e3bd1dfa49e854
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.273: Sending: 'POST /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 53d18fba-1a95-4575-9765-a9d075e1f9f1\r\n\r\n'
+
+2026-11-24 00:25:59.281: Received: 'HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-16
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: 61ff81c30aa3c76e78afea62b2e3bd1dfa49e854
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.298: Sending: 'POST /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: e130f408-7d44-4513-a485-a08ae7e649cb\r\n\r\n'
+
+2026-11-24 00:25:59.305: Received: 'HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-17
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 7138a51661947b19b5088da5a2bfede2876f49b9
+
+		- restler_static_string: 'HEAD '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.322: Sending: 'HEAD /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 61e5fbd8-8fae-4e98-92af-4593e3a34d39\r\n\r\n'
+
+2026-11-24 00:25:59.328: Received: 'HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-17
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: 7138a51661947b19b5088da5a2bfede2876f49b9
+
+		- restler_static_string: 'HEAD '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.343: Sending: 'HEAD /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: dc427f06-2d10-4413-a66c-49a47c2054a0\r\n\r\n'
+
+2026-11-24 00:25:59.350: Received: 'HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-18
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 9fbe29d4d76ec756421aee06e0f34f17fa488ff3
+
+		- restler_static_string: 'PATCH '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.366: Sending: 'PATCH /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 658cb69d-f1e7-48e8-884c-e3ca89a7e482\r\n\r\n'
+
+2026-11-24 00:25:59.373: Received: 'HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-18
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: 9fbe29d4d76ec756421aee06e0f34f17fa488ff3
+
+		- restler_static_string: 'PATCH '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.389: Sending: 'PATCH /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 0c04ac3e-601f-436d-8af8-432382a7cd6c\r\n\r\n'
+
+2026-11-24 00:25:59.396: Received: 'HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-19
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: c8bbd9e7b9627c352e39d95a94861fcd04a8fc45
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v2'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '?'
+		- restler_static_string: 'lastName='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'page='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '&'
+		- restler_static_string: 'size='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.411: Sending: 'GET /petclinic/api/v2/owners?lastName=fuzzstring&page=1&size=1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 4411c129-54de-49b7-8a78-6f0c8143a90a\r\n\r\n'
+
+2026-11-24 00:25:59.439: Received: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n41\r\n{"content":[],"page":1,"size":1,"totalElements":0,"totalPages":0}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-20
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: d6f5636098cd458ce9d22939f8e3e8deab0e9bd0
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.455: Sending: 'DELETE /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 6679db60-04d7-4395-8ca5-6f7b40aa383c\r\n\r\n'
+
+2026-11-24 00:25:59.461: Received: 'HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-20
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: d6f5636098cd458ce9d22939f8e3e8deab0e9bd0
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.477: Sending: 'DELETE /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 8e6acfb4-750e-4be7-8e60-fda551803e89\r\n\r\n'
+
+2026-11-24 00:25:59.483: Received: 'HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-21
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: e3aa178c0dae9736f616a1613c22a38a8e7882d1
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.499: Sending: 'GET /petclinic/api/visits HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 188c2cb1-b87a-4526-96d2-bb47c8552c9e\r\n\r\n'
+
+2026-11-24 00:25:59.515: Received: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n148\r\n[{"description":"rabies shot","id":1,"petId":7,"date":"2013-01-01"},{"description":"rabies shot","id":2,"petId":8,"date":"2013-01-02"},{"description":"neutered","id":3,"petId":8,"date":"2013-01-03"},{"description":"spayed","id":4,"petId":7,"date":"2013-01-04"},{"description":"rabies shot","id":5,"petId":1,"date":"2013-01-01"}]\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-22
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: f030bbbd32966cde41037b98a8849c46b76e4bc1
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.532: Sending: 'GET /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: a13ac12f-fdfe-438d-bb57-8cc110563573\r\n\r\n'
+
+2026-11-24 00:25:59.538: Received: 'HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-22
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: f030bbbd32966cde41037b98a8849c46b76e4bc1
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.553: Sending: 'GET /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 0890e068-2172-44f7-bd67-7ed684cc5a73\r\n\r\n'
+
+2026-11-24 00:25:59.561: Received: 'HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n'
+
+
+Generation-2: Rendering Sequence-1
+
+	Request: 1 (Current combination: 1 / 4)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'specialties'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["radiology", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 4)
+	Request hash: 07d2030a0c2a28e91a28bfdeb328a47948fb9b02
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'specialties'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_specialties_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["radiology", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.586: Sending: 'POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 27\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 17e0288b-3074-48fc-877e-fd71a9de6b14\r\n\r\n{\n    "name":"radiology"}\r\n'
+
+2026-11-24 00:25:59.596: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/specialties/5\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n1b\r\n{"id":5,"name":"radiology"}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:59.600: Sending: 'PUT /petclinic/api/specialties/5 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 27\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 17e0288b-3074-48fc-877e-fd71a9de6b14\r\n\r\n{\n    "name":"radiology"}\r\n'
+
+2026-11-24 00:25:59.615: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n'
+
+
+Generation-2: Rendering Sequence-2
+
+	Request: 1 (Current combination: 1 / 6)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "date":'
+		+ restler_fuzzable_date: ["2013-01-01", "2019-06-26", ...]
+		- restler_static_string: ',\n    "description":'
+		+ restler_fuzzable_string: ["rabies shot", "fuzzstring", ...]
+		- restler_static_string: ',\n    "petId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 6)
+	Request hash: 133241ef47368639c15c9b3f5d6d77f4de070e8b
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_visits_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "date":'
+		+ restler_fuzzable_date: ["2013-01-01", "2019-06-26", ...]
+		- restler_static_string: ',\n    "description":'
+		+ restler_fuzzable_string: ["rabies shot", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.638: Sending: 'POST /petclinic/api/visits HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 76\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: a93259ac-622b-4143-b4ec-cf3391ff7a7c\r\n\r\n{\n    "date":"2013-01-01",\n    "description":"rabies shot",\n    "petId":1}\r\n'
+
+2026-11-24 00:25:59.650: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/visits/6\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n42\r\n{"description":"rabies shot","id":6,"petId":1,"date":"2013-01-01"}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:59.652: Sending: 'PUT /petclinic/api/visits/6 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 61\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: a93259ac-622b-4143-b4ec-cf3391ff7a7c\r\n\r\n{\n    "date":"2013-01-01",\n    "description":"rabies shot"}\r\n'
+
+2026-11-24 00:25:59.675: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n'
+
+
+Generation-2: Rendering Sequence-3
+
+	Request: 1 (Current combination: 1 / 20)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ["George", "fuzzstring", ...]
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ["Franklin", "fuzzstring", ...]
+		- restler_static_string: ',\n    "address":'
+		+ restler_fuzzable_string: ["110 W. Liberty St.", "fuzzstring", ...]
+		- restler_static_string: ',\n    "city":'
+		+ restler_fuzzable_string: ["Madison", "fuzzstring", ...]
+		- restler_static_string: ',\n    "telephone":'
+		+ restler_fuzzable_string: ["6085551023", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 20)
+	Request hash: 15ca9dc9089572890289bb66b1fa499eb28ed8b1
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ["George", "fuzzstring", ...]
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ["Franklin", "fuzzstring", ...]
+		- restler_static_string: ',\n    "address":'
+		+ restler_fuzzable_string: ["110 W. Liberty St.", "fuzzstring", ...]
+		- restler_static_string: ',\n    "city":'
+		+ restler_fuzzable_string: ["Madison", "fuzzstring", ...]
+		- restler_static_string: ',\n    "telephone":'
+		+ restler_fuzzable_string: ["6085551023", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.696: Sending: 'POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 144\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: c1ff4c84-42e3-47d3-b4ee-7739afdc531c\r\n\r\n{\n    "firstName":"George",\n    "lastName":"Franklin",\n    "address":"110 W. Liberty St.",\n    "city":"Madison",\n    "telephone":"6085551023"}\r\n'
+
+2026-11-24 00:25:59.707: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/owners/12\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n87\r\n{"firstName":"George","lastName":"Franklin","address":"110 W. Liberty St.","city":"Madison","telephone":"6085551023","pets":[],"id":12}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:59.711: Sending: 'PUT /petclinic/api/owners/12 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 144\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: c1ff4c84-42e3-47d3-b4ee-7739afdc531c\r\n\r\n{\n    "firstName":"George",\n    "lastName":"Franklin",\n    "address":"110 W. Liberty St.",\n    "city":"Madison",\n    "telephone":"6085551023"}\r\n'
+
+2026-11-24 00:25:59.729: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n'
+
+
+Generation-2: Rendering Sequence-4
+
+	Request: 1 (Current combination: 1 / 4)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pettypes'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 2)
+	Request hash: 1a90034e3f93193061bb877452a4e1240000f247
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pettypes'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_pettypes_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.750: Sending: 'POST /petclinic/api/pettypes HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 21\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: c333d69c-492e-400d-b806-e3172537ad4b\r\n\r\n{\n    "name":"cat"}\r\n'
+
+2026-11-24 00:25:59.760: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/pettypes/8\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n15\r\n{"name":"cat","id":8}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:59.763: Sending: 'DELETE /petclinic/api/pettypes/8 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: c333d69c-492e-400d-b806-e3172537ad4b\r\n\r\n'
+
+2026-11-24 00:25:59.805: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n'
+
+
+Generation-2: Rendering Sequence-5
+
+	Request: 1 (Current combination: 1 / 16)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'vets'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ["James", "fuzzstring", ...]
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ["Carter", "fuzzstring", ...]
+		- restler_static_string: ',\n    "specialties":\n    [\n        {\n            "name":'
+		+ restler_fuzzable_string: ["radiology", "fuzzstring", ...]
+		- restler_static_string: '\n        }\n    ]}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 2)
+	Request hash: 28cd5ae5ad1e5ec283b4712408be6fe99d4e731a
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'vets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.828: Sending: 'POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 136\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 84f0e4cd-63d1-4b63-a5c3-0ac7d55b7409\r\n\r\n{\n    "firstName":"James",\n    "lastName":"Carter",\n    "specialties":\n    [\n        {\n            "name":"radiology"\n        }\n    ]}\r\n'
+
+2026-11-24 00:25:59.842: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/vets/8\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n94\r\n{"firstName":"James","lastName":"Carter","specialties":[{"id":4,"name":"radiology"},{"id":1,"name":"radiology"},{"id":5,"name":"radiology"}],"id":8}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:59.845: Sending: 'GET /petclinic/api/vets/4 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 84f0e4cd-63d1-4b63-a5c3-0ac7d55b7409\r\n\r\n'
+
+2026-11-24 00:25:59.856: Received: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n5b\r\n{"firstName":"Rafael","lastName":"Ortega","specialties":[{"id":2,"name":"surgery"}],"id":4}\r\n0\r\n\r\n'
+
+
+Generation-2: Rendering Sequence-6
+
+	Request: 1 (Current combination: 1 / 20)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ["George", "fuzzstring", ...]
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ["Franklin", "fuzzstring", ...]
+		- restler_static_string: ',\n    "address":'
+		+ restler_fuzzable_string: ["110 W. Liberty St.", "fuzzstring", ...]
+		- restler_static_string: ',\n    "city":'
+		+ restler_fuzzable_string: ["Madison", "fuzzstring", ...]
+		- restler_static_string: ',\n    "telephone":'
+		+ restler_fuzzable_string: ["6085551023", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 2)
+	Request hash: 3034b01a02e2622e95e0dc6f7cb1be2a1451d8b5
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.877: Sending: 'POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 144\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 285fad92-95b4-4c10-b6c4-1dcb8dcb0c33\r\n\r\n{\n    "firstName":"George",\n    "lastName":"Franklin",\n    "address":"110 W. Liberty St.",\n    "city":"Madison",\n    "telephone":"6085551023"}\r\n'
+
+2026-11-24 00:25:59.889: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/owners/13\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n87\r\n{"firstName":"George","lastName":"Franklin","address":"110 W. Liberty St.","city":"Madison","telephone":"6085551023","pets":[],"id":13}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:59.892: Sending: 'DELETE /petclinic/api/owners/13 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 285fad92-95b4-4c10-b6c4-1dcb8dcb0c33\r\n\r\n'
+
+2026-11-24 00:25:59.908: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n'
+
+
+Generation-2: Rendering Sequence-7
+
+	Request: 1 (Current combination: 1 / 4)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pettypes'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 4)
+	Request hash: 47db08f2ebdfdaf7bae480c57390acc404ac1c9c
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pettypes'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_pettypes_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n    "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.931: Sending: 'POST /petclinic/api/pettypes HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 21\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: eefefa5d-0e7c-4884-b76c-0323f18b23b4\r\n\r\n{\n    "name":"cat"}\r\n'
+
+2026-11-24 00:25:59.943: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/pettypes/9\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n15\r\n{"name":"cat","id":9}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:59.946: Sending: 'PUT /petclinic/api/pettypes/9 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 33\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: eefefa5d-0e7c-4884-b76c-0323f18b23b4\r\n\r\n{\n    "name":"cat",\n    "id":1}\r\n'
+
+2026-11-24 00:25:59.962: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n'
+
+
+Generation-2: Rendering Sequence-8
+
+	Request: 1 (Current combination: 1 / 20)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ["George", "fuzzstring", ...]
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ["Franklin", "fuzzstring", ...]
+		- restler_static_string: ',\n    "address":'
+		+ restler_fuzzable_string: ["110 W. Liberty St.", "fuzzstring", ...]
+		- restler_static_string: ',\n    "city":'
+		+ restler_fuzzable_string: ["Madison", "fuzzstring", ...]
+		- restler_static_string: ',\n    "telephone":'
+		+ restler_fuzzable_string: ["6085551023", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 2)
+	Request hash: 6337bb7edcbd2d30304ea26b862c1df1e934dc93
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:25:59.983: Sending: 'POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 144\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: a54724b5-9962-4c9b-b967-2934aa279e69\r\n\r\n{\n    "firstName":"George",\n    "lastName":"Franklin",\n    "address":"110 W. Liberty St.",\n    "city":"Madison",\n    "telephone":"6085551023"}\r\n'
+
+2026-11-24 00:25:59.996: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/owners/14\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n87\r\n{"firstName":"George","lastName":"Franklin","address":"110 W. Liberty St.","city":"Madison","telephone":"6085551023","pets":[],"id":14}\r\n0\r\n\r\n'
+
+2026-11-24 00:25:59.998: Sending: 'GET /petclinic/api/owners/14 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: a54724b5-9962-4c9b-b967-2934aa279e69\r\n\r\n'
+
+2026-11-24 00:26:00.010: Received: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n87\r\n{"firstName":"George","lastName":"Franklin","address":"110 W. Liberty St.","city":"Madison","telephone":"6085551023","pets":[],"id":14}\r\n0\r\n\r\n'
+
+
+Generation-2: Rendering Sequence-9
+
+	Request: 1 (Current combination: 1 / 4)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'specialties'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["radiology", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 2)
+	Request hash: 66807a515f819080c405c1685a18dee97ffcdce9
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'specialties'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_specialties_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:26:00.032: Sending: 'POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 27\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: cbbe4d8f-faee-444f-a231-bddf50b8e9ed\r\n\r\n{\n    "name":"radiology"}\r\n'
+
+2026-11-24 00:26:00.042: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/specialties/6\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n1b\r\n{"id":6,"name":"radiology"}\r\n0\r\n\r\n'
+
+2026-11-24 00:26:00.045: Sending: 'GET /petclinic/api/specialties/6 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: cbbe4d8f-faee-444f-a231-bddf50b8e9ed\r\n\r\n'
+
+2026-11-24 00:26:00.057: Received: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n1b\r\n{"id":6,"name":"radiology"}\r\n0\r\n\r\n'
+
+
+Generation-2: Rendering Sequence-10
+
+	Request: 1 (Current combination: 1 / 6)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "date":'
+		+ restler_fuzzable_date: ["2013-01-01", "2019-06-26", ...]
+		- restler_static_string: ',\n    "description":'
+		+ restler_fuzzable_string: ["rabies shot", "fuzzstring", ...]
+		- restler_static_string: ',\n    "petId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 2)
+	Request hash: 66db29a6ce13e35f15034282530ae121d5f9d3c2
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_visits_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:26:00.080: Sending: 'POST /petclinic/api/visits HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 76\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 64a7f0a9-f065-49a8-8d9f-12a0a5b60f51\r\n\r\n{\n    "date":"2013-01-01",\n    "description":"rabies shot",\n    "petId":1}\r\n'
+
+2026-11-24 00:26:00.091: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/visits/7\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n42\r\n{"description":"rabies shot","id":7,"petId":1,"date":"2013-01-01"}\r\n0\r\n\r\n'
+
+2026-11-24 00:26:00.094: Sending: 'GET /petclinic/api/visits/7 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 64a7f0a9-f065-49a8-8d9f-12a0a5b60f51\r\n\r\n'
+
+2026-11-24 00:26:00.106: Received: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n42\r\n{"description":"rabies shot","id":7,"petId":1,"date":"2013-01-01"}\r\n0\r\n\r\n'
+
+
+Generation-2: Rendering Sequence-11
+
+	Request: 1 (Current combination: 1 / 4)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'specialties'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["radiology", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 2)
+	Request hash: 6d7e41dc63db2b109144305ccc49e1364399d0b4
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'specialties'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_specialties_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:26:00.130: Sending: 'POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 27\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 417a20fd-fa8d-45d2-9a2d-7ca7182df201\r\n\r\n{\n    "name":"radiology"}\r\n'
+
+2026-11-24 00:26:00.139: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/specialties/7\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n1b\r\n{"id":7,"name":"radiology"}\r\n0\r\n\r\n'
+
+2026-11-24 00:26:00.142: Sending: 'DELETE /petclinic/api/specialties/7 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 417a20fd-fa8d-45d2-9a2d-7ca7182df201\r\n\r\n'
+
+2026-11-24 00:26:00.176: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n'
+
+
+Generation-2: Rendering Sequence-12
+
+	Request: 1 (Current combination: 1 / 20)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ["George", "fuzzstring", ...]
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ["Franklin", "fuzzstring", ...]
+		- restler_static_string: ',\n    "address":'
+		+ restler_fuzzable_string: ["110 W. Liberty St.", "fuzzstring", ...]
+		- restler_static_string: ',\n    "city":'
+		+ restler_fuzzable_string: ["Madison", "fuzzstring", ...]
+		- restler_static_string: ',\n    "telephone":'
+		+ restler_fuzzable_string: ["6085551023", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 16)
+	Request hash: 8033d43f0c0ae2f3d25b77074223770681784813
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:26:00.200: Sending: 'POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 144\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 80f95f4f-5106-4046-8bc6-8d4d90a67118\r\n\r\n{\n    "firstName":"George",\n    "lastName":"Franklin",\n    "address":"110 W. Liberty St.",\n    "city":"Madison",\n    "telephone":"6085551023"}\r\n'
+
+2026-11-24 00:26:00.211: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/owners/15\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n87\r\n{"firstName":"George","lastName":"Franklin","address":"110 W. Liberty St.","city":"Madison","telephone":"6085551023","pets":[],"id":15}\r\n0\r\n\r\n'
+
+2026-11-24 00:26:00.215: Sending: 'POST /petclinic/api/owners/15/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 134\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 80f95f4f-5106-4046-8bc6-8d4d90a67118\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n'
+
+2026-11-24 00:26:00.238: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/pets/14\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n65\r\n{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1},"id":14,"visits":[],"ownerId":15}\r\n0\r\n\r\n'
+
+
+Generation-2: Rendering Sequence-13
+
+	Request: 1 (Current combination: 1 / 6)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "date":'
+		+ restler_fuzzable_date: ["2013-01-01", "2019-06-26", ...]
+		- restler_static_string: ',\n    "description":'
+		+ restler_fuzzable_string: ["rabies shot", "fuzzstring", ...]
+		- restler_static_string: ',\n    "petId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 2)
+	Request hash: c7034eff34cd10a6841d5ceed2eae309aaadef2c
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_visits_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:26:00.262: Sending: 'POST /petclinic/api/visits HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 76\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 4189f619-6aa0-4b7a-9876-12e46d629e76\r\n\r\n{\n    "date":"2013-01-01",\n    "description":"rabies shot",\n    "petId":1}\r\n'
+
+2026-11-24 00:26:00.273: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/visits/8\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n42\r\n{"description":"rabies shot","id":8,"petId":1,"date":"2013-01-01"}\r\n0\r\n\r\n'
+
+2026-11-24 00:26:00.276: Sending: 'DELETE /petclinic/api/visits/8 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 4189f619-6aa0-4b7a-9876-12e46d629e76\r\n\r\n'
+
+2026-11-24 00:26:00.292: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n'
+
+
+Generation-2: Rendering Sequence-14
+
+	Request: 1 (Current combination: 1 / 4)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pettypes'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 2)
+	Request hash: c944e12b5d38ab8f23df5df43a23ac1c409c0eba
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pettypes'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_pettypes_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:26:00.317: Sending: 'POST /petclinic/api/pettypes HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 21\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 1fe4e30b-ba54-458f-9e34-6f995568e0cd\r\n\r\n{\n    "name":"cat"}\r\n'
+
+2026-11-24 00:26:00.329: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/pettypes/10\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n16\r\n{"name":"cat","id":10}\r\n0\r\n\r\n'
+
+2026-11-24 00:26:00.333: Sending: 'GET /petclinic/api/pettypes/10 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 1fe4e30b-ba54-458f-9e34-6f995568e0cd\r\n\r\n'
+
+2026-11-24 00:26:00.343: Received: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n16\r\n{"name":"cat","id":10}\r\n0\r\n\r\n'
+
+
+Generation-2: Rendering Sequence-15
+
+	Request: 1 (Current combination: 1 / 16)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'vets'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ["James", "fuzzstring", ...]
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ["Carter", "fuzzstring", ...]
+		- restler_static_string: ',\n    "specialties":\n    [\n        {\n            "name":'
+		+ restler_fuzzable_string: ["radiology", "fuzzstring", ...]
+		- restler_static_string: '\n        }\n    ]}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 2)
+	Request hash: cf9d72c91730a6194fc6938eb35093deb2932c84
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'vets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:26:00.377: Sending: 'POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 136\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 5cdec656-4954-406b-9bd5-1bdb4a18a83d\r\n\r\n{\n    "firstName":"James",\n    "lastName":"Carter",\n    "specialties":\n    [\n        {\n            "name":"radiology"\n        }\n    ]}\r\n'
+
+2026-11-24 00:26:00.392: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/vets/9\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\nb0\r\n{"firstName":"James","lastName":"Carter","specialties":[{"id":1,"name":"radiology"},{"id":5,"name":"radiology"},{"id":6,"name":"radiology"},{"id":4,"name":"radiology"}],"id":9}\r\n0\r\n\r\n'
+
+2026-11-24 00:26:00.395: Sending: 'DELETE /petclinic/api/vets/1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 5cdec656-4954-406b-9bd5-1bdb4a18a83d\r\n\r\n'
+
+2026-11-24 00:26:00.407: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n'
+
+
+Generation-2: Rendering Sequence-16
+
+	Request: 1 (Current combination: 1 / 16)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'vets'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ["James", "fuzzstring", ...]
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ["Carter", "fuzzstring", ...]
+		- restler_static_string: ',\n    "specialties":\n    [\n        {\n            "name":'
+		+ restler_fuzzable_string: ["radiology", "fuzzstring", ...]
+		- restler_static_string: '\n        }\n    ]}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 16)
+	Request hash: edf53506461f0383c01d1da69f7bea2803255597
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'vets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ["James", "fuzzstring", ...]
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ["Carter", "fuzzstring", ...]
+		- restler_static_string: ',\n    "specialties":\n    [\n        {\n            "name":'
+		+ restler_fuzzable_string: ["radiology", "fuzzstring", ...]
+		- restler_static_string: '\n        }\n    ]}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:26:00.429: Sending: 'POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 136\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: c4b67666-fed2-4830-a2ae-4d95fda87fe5\r\n\r\n{\n    "firstName":"James",\n    "lastName":"Carter",\n    "specialties":\n    [\n        {\n            "name":"radiology"\n        }\n    ]}\r\n'
+
+2026-11-24 00:26:00.443: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/vets/10\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\nb1\r\n{"firstName":"James","lastName":"Carter","specialties":[{"id":1,"name":"radiology"},{"id":5,"name":"radiology"},{"id":4,"name":"radiology"},{"id":6,"name":"radiology"}],"id":10}\r\n0\r\n\r\n'
+
+2026-11-24 00:26:00.446: Sending: 'PUT /petclinic/api/vets/1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 136\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: c4b67666-fed2-4830-a2ae-4d95fda87fe5\r\n\r\n{\n    "firstName":"James",\n    "lastName":"Carter",\n    "specialties":\n    [\n        {\n            "name":"radiology"\n        }\n    ]}\r\n'
+
+2026-11-24 00:26:00.456: Received: 'HTTP/1.1 404 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n'
+
+
+Generation-2: Rendering Sequence-16
+
+	Request: 1 (Current combination: 1 / 16)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'vets'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ["James", "fuzzstring", ...]
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ["Carter", "fuzzstring", ...]
+		- restler_static_string: ',\n    "specialties":\n    [\n        {\n            "name":'
+		+ restler_fuzzable_string: ["radiology", "fuzzstring", ...]
+		- restler_static_string: '\n        }\n    ]}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 15)
+	Request hash: edf53506461f0383c01d1da69f7bea2803255597
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'vets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ["James", "fuzzstring", ...]
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ["Carter", "fuzzstring", ...]
+		- restler_static_string: ',\n    "specialties":\n    [\n        {\n            "name":'
+		+ restler_fuzzable_string: ["radiology", "fuzzstring", ...]
+		- restler_static_string: '\n        }\n    ]}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:26:00.478: Sending: 'POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 136\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 3041882b-5dcc-4272-a12c-24e39d9313c5\r\n\r\n{\n    "firstName":"James",\n    "lastName":"Carter",\n    "specialties":\n    [\n        {\n            "name":"radiology"\n        }\n    ]}\r\n'
+
+2026-11-24 00:26:00.492: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/vets/11\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\nb1\r\n{"firstName":"James","lastName":"Carter","specialties":[{"id":5,"name":"radiology"},{"id":4,"name":"radiology"},{"id":1,"name":"radiology"},{"id":6,"name":"radiology"}],"id":11}\r\n0\r\n\r\n'
+
+2026-11-24 00:26:00.495: Sending: 'PUT /petclinic/api/vets/5 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 137\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 3041882b-5dcc-4272-a12c-24e39d9313c5\r\n\r\n{\n    "firstName":"James",\n    "lastName":"Carter",\n    "specialties":\n    [\n        {\n            "name":"fuzzstring"\n        }\n    ]}\r\n'
+
+2026-11-24 00:26:00.517: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n'
+
+
+Generation-3: Rendering Sequence-1
+
+	Request: 1 (Current combination: 1 / 20)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ["George", "fuzzstring", ...]
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ["Franklin", "fuzzstring", ...]
+		- restler_static_string: ',\n    "address":'
+		+ restler_fuzzable_string: ["110 W. Liberty St.", "fuzzstring", ...]
+		- restler_static_string: ',\n    "city":'
+		+ restler_fuzzable_string: ["Madison", "fuzzstring", ...]
+		- restler_static_string: ',\n    "telephone":'
+		+ restler_fuzzable_string: ["6085551023", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Current combination: 1 / 16)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+	Request: 3 (Remaining candidate combinations: 2)
+	Request hash: 145b8b7079048851b121a7103de983bbbbc84b9e
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners__ownerId__pets_post_type_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:26:00.547: Sending: 'POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 144\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 1865a458-ecd9-4c68-9c6d-8e4ea96b0654\r\n\r\n{\n    "firstName":"George",\n    "lastName":"Franklin",\n    "address":"110 W. Liberty St.",\n    "city":"Madison",\n    "telephone":"6085551023"}\r\n'
+
+2026-11-24 00:26:00.558: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/owners/16\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n87\r\n{"firstName":"George","lastName":"Franklin","address":"110 W. Liberty St.","city":"Madison","telephone":"6085551023","pets":[],"id":16}\r\n0\r\n\r\n'
+
+2026-11-24 00:26:00.560: Sending: 'POST /petclinic/api/owners/16/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 134\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 1865a458-ecd9-4c68-9c6d-8e4ea96b0654\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n'
+
+2026-11-24 00:26:00.574: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/pets/15\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n65\r\n{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1},"id":15,"visits":[],"ownerId":16}\r\n0\r\n\r\n'
+
+2026-11-24 00:26:00.577: Sending: 'GET /petclinic/api/owners/16/pets/1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 1865a458-ecd9-4c68-9c6d-8e4ea96b0654\r\n\r\n'
+
+2026-11-24 00:26:00.588: Received: 'HTTP/1.1 404 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n'
+
+
+Generation-3: Rendering Sequence-1
+
+	Request: 1 (Current combination: 1 / 20)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ["George", "fuzzstring", ...]
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ["Franklin", "fuzzstring", ...]
+		- restler_static_string: ',\n    "address":'
+		+ restler_fuzzable_string: ["110 W. Liberty St.", "fuzzstring", ...]
+		- restler_static_string: ',\n    "city":'
+		+ restler_fuzzable_string: ["Madison", "fuzzstring", ...]
+		- restler_static_string: ',\n    "telephone":'
+		+ restler_fuzzable_string: ["6085551023", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Current combination: 1 / 16)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+	Request: 3 (Remaining candidate combinations: 1)
+	Request hash: 145b8b7079048851b121a7103de983bbbbc84b9e
+
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners__ownerId__pets_post_type_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:26:00.615: Sending: 'GET /petclinic/api/owners/16/pets/1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: b81c0021-8e84-42f2-acc8-5ebaaaf4e8bd\r\n\r\n'
+
+2026-11-24 00:26:00.625: Received: 'HTTP/1.1 404 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n'
+
+
+Generation-3: Rendering Sequence-2
+
+	Request: 1 (Current combination: 1 / 20)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ["George", "fuzzstring", ...]
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ["Franklin", "fuzzstring", ...]
+		- restler_static_string: ',\n    "address":'
+		+ restler_fuzzable_string: ["110 W. Liberty St.", "fuzzstring", ...]
+		- restler_static_string: ',\n    "city":'
+		+ restler_fuzzable_string: ["Madison", "fuzzstring", ...]
+		- restler_static_string: ',\n    "telephone":'
+		+ restler_fuzzable_string: ["6085551023", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Current combination: 1 / 16)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+	Request: 3 (Remaining candidate combinations: 16)
+	Request hash: 66ec81084e05aef9af4b0a68fb23d2bcca4d699f
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners__ownerId__pets_post_type_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:26:00.652: Sending: 'POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 144\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 8671ac74-3db1-46ae-92e7-996773b264c5\r\n\r\n{\n    "firstName":"George",\n    "lastName":"Franklin",\n    "address":"110 W. Liberty St.",\n    "city":"Madison",\n    "telephone":"6085551023"}\r\n'
+
+2026-11-24 00:26:00.662: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/owners/17\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n87\r\n{"firstName":"George","lastName":"Franklin","address":"110 W. Liberty St.","city":"Madison","telephone":"6085551023","pets":[],"id":17}\r\n0\r\n\r\n'
+
+2026-11-24 00:26:00.664: Sending: 'POST /petclinic/api/owners/17/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 134\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 8671ac74-3db1-46ae-92e7-996773b264c5\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n'
+
+2026-11-24 00:26:00.678: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/pets/16\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n65\r\n{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1},"id":16,"visits":[],"ownerId":17}\r\n0\r\n\r\n'
+
+2026-11-24 00:26:00.681: Sending: 'PUT /petclinic/api/owners/17/pets/1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 134\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 8671ac74-3db1-46ae-92e7-996773b264c5\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n'
+
+2026-11-24 00:26:00.702: Received: 'HTTP/1.1 204 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n'
+
+
+Generation-3: Rendering Sequence-3
+
+	Request: 1 (Current combination: 1 / 20)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ["George", "fuzzstring", ...]
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ["Franklin", "fuzzstring", ...]
+		- restler_static_string: ',\n    "address":'
+		+ restler_fuzzable_string: ["110 W. Liberty St.", "fuzzstring", ...]
+		- restler_static_string: ',\n    "city":'
+		+ restler_fuzzable_string: ["Madison", "fuzzstring", ...]
+		- restler_static_string: ',\n    "telephone":'
+		+ restler_fuzzable_string: ["6085551023", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Current combination: 1 / 16)
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ["Leo", "fuzzstring", ...]
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ["2010-09-07", "2019-06-26", ...]
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ["cat", "fuzzstring", ...]
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+	Request: 3 (Remaining candidate combinations: 6)
+	Request hash: 7cc068a174fc2a7f8c8cf0859e22061102523804
+
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners__ownerId__pets_post_type_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "date":'
+		+ restler_fuzzable_date: ["2013-01-01", "2019-06-26", ...]
+		- restler_static_string: ',\n    "description":'
+		+ restler_fuzzable_string: ["rabies shot", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 00:26:00.732: Sending: 'POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 144\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 244ce98a-ec02-429b-9a11-25598c2d42fb\r\n\r\n{\n    "firstName":"George",\n    "lastName":"Franklin",\n    "address":"110 W. Liberty St.",\n    "city":"Madison",\n    "telephone":"6085551023"}\r\n'
+
+2026-11-24 00:26:00.743: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/owners/18\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n87\r\n{"firstName":"George","lastName":"Franklin","address":"110 W. Liberty St.","city":"Madison","telephone":"6085551023","pets":[],"id":18}\r\n0\r\n\r\n'
+
+2026-11-24 00:26:00.746: Sending: 'POST /petclinic/api/owners/18/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 134\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 244ce98a-ec02-429b-9a11-25598c2d42fb\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n'
+
+2026-11-24 00:26:00.759: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/pets/17\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n65\r\n{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1},"id":17,"visits":[],"ownerId":18}\r\n0\r\n\r\n'
+
+2026-11-24 00:26:00.762: Sending: 'POST /petclinic/api/owners/18/pets/1/visits HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 61\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 244ce98a-ec02-429b-9a11-25598c2d42fb\r\n\r\n{\n    "date":"2013-01-01",\n    "description":"rabies shot"}\r\n'
+
+2026-11-24 00:26:00.773: Received: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/visits/9\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n42\r\n{"description":"rabies shot","id":9,"petId":1,"date":"2013-01-01"}\r\n0\r\n\r\n'
+

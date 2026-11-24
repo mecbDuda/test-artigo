@@ -1,0 +1,7 @@
+main_driver_500: 1
+Total Buckets: 1
+-------------
+main_driver_500 - Bug was reproduced - main_driver_500_1.replay.txt
+Hash: main_driver_500_828927429f87746bab3f7391f3fe7d713ce7ac0d
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring,\n    "birthDate":2019-06-26,\n    "type":\n        {\n            "name":fuzzstring,\n            "id":1\n        }\n    }\r\n
+--------------------------------------------------------------------------------

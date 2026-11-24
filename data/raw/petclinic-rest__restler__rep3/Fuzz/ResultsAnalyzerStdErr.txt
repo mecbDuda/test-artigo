@@ -1,0 +1,81 @@
+Warning: could not parse request in line 3215: PUT /petclinic/api/pets/"\r(L9Sf 7#a}[#P^"_ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 134\r\nUser-Agent: restler/9.2.4\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n
+Warning: could not parse request in line 3254: PUT /petclinic/api/pets/sn:6NQTYc<@ (fHP#{3| HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 134\r\nUser-Agent: restler/9.2.4\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n
+Warning: could not parse request in line 3306: PUT /petclinic/api/pets/7 ?Bt\'X) jTx#_uw)4]zS` HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 134\r\nUser-Agent: restler/9.2.4\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n
+Warning: could not parse request in line 3358: PUT /petclinic/api/pets/"\t\r.\n2ov|jul r\r{pvo. HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 134\r\nUser-Agent: restler/9.2.4\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n
+Warning: could not parse request in line 3397: PUT /petclinic/api/pets/l\x0c\rrT;Mmu2o{R\'O \rsGchH#_Jk\x0c=5ZIF HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 134\r\nUser-Agent: restler/9.2.4\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n
+Warning: could not parse request in line 3553: PUT /petclinic/api/pets/l}XVG 5?2WbvHFT|!]\ro/0l\'g\r\x0brza@m.\x0b<XjKzD$e HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 134\r\nUser-Agent: restler/9.2.4\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n
+Warning: could not parse request in line 3592: PUT /petclinic/api/pets/d3d3}`0X=\x0cDH0x\rWNUNm3uG+;N_|#R; Uj=K2.L.e HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 134\r\nUser-Agent: restler/9.2.4\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n
+Warning: could not parse request in line 3696: PUT /petclinic/api/pets/6wW-<C9dAWp`*w(/tY\nA\x0b-m,>LgV_uV^f^[]ssU"wJJ0Z;O; sxO HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 134\r\nUser-Agent: restler/9.2.4\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n
+Warning: could not parse request in line 3709: PUT /petclinic/api/pets/I\'e\no=:L6$Y?K$you}IY\x0c+^,xSt]3be3*WZ05 )%AB!38-M  HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 134\r\nUser-Agent: restler/9.2.4\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n
+Warning: could not parse request in line 3722: PUT /petclinic/api/pets/O,~V9/j/qX?{_xmw7dV ;^Y:=\t"nJ;,0y3=KOc%\tD;+1(tbe HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 134\r\nUser-Agent: restler/9.2.4\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n
+Warning: could not parse request in line 7705: PUT /petclinic/api/pets/"\r(L9Sf 7#a}[#P^"_ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 68\r\nUser-Agent: restler/9.2.4\r\n\r\n{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1}}
+Warning: could not parse request in line 7744: PUT /petclinic/api/pets/sn:6NQTYc<@ (fHP#{3| HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 68\r\nUser-Agent: restler/9.2.4\r\n\r\n{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1}}
+Warning: could not parse request in line 7796: PUT /petclinic/api/pets/7 ?Bt\'X) jTx#_uw)4]zS` HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 68\r\nUser-Agent: restler/9.2.4\r\n\r\n{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1}}
+Warning: could not parse request in line 7848: PUT /petclinic/api/pets/"\t\r.\n2ov|jul r\r{pvo. HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 68\r\nUser-Agent: restler/9.2.4\r\n\r\n{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1}}
+Warning: could not parse request in line 7887: PUT /petclinic/api/pets/l\x0c\rrT;Mmu2o{R\'O \rsGchH#_Jk\x0c=5ZIF HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 68\r\nUser-Agent: restler/9.2.4\r\n\r\n{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1}}
+Warning: could not parse request in line 8043: PUT /petclinic/api/pets/l}XVG 5?2WbvHFT|!]\ro/0l\'g\r\x0brza@m.\x0b<XjKzD$e HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 68\r\nUser-Agent: restler/9.2.4\r\n\r\n{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1}}
+Warning: could not parse request in line 8082: PUT /petclinic/api/pets/d3d3}`0X=\x0cDH0x\rWNUNm3uG+;N_|#R; Uj=K2.L.e HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 68\r\nUser-Agent: restler/9.2.4\r\n\r\n{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1}}
+Warning: could not parse request in line 8186: PUT /petclinic/api/pets/6wW-<C9dAWp`*w(/tY\nA\x0b-m,>LgV_uV^f^[]ssU"wJJ0Z;O; sxO HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 68\r\nUser-Agent: restler/9.2.4\r\n\r\n{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1}}
+Warning: could not parse request in line 8199: PUT /petclinic/api/pets/I\'e\no=:L6$Y?K$you}IY\x0c+^,xSt]3be3*WZ05 )%AB!38-M  HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 68\r\nUser-Agent: restler/9.2.4\r\n\r\n{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1}}
+Warning: could not parse request in line 8212: PUT /petclinic/api/pets/O,~V9/j/qX?{_xmw7dV ;^Y:=\t"nJ;,0y3=KOc%\tD;+1(tbe HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 68\r\nUser-Agent: restler/9.2.4\r\n\r\n{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1}}
+Warning: could not parse request in line 33241: GET /petclinic/api/owners?lastName="\r(L9Sf 7#a}[#P^"_ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 33265: GET /petclinic/api/owners?lastName=sn:6NQTYc<@ (fHP#{3| HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 33273: GET /petclinic/api/owners?lastName=p6\r$3{:76f?Eb<0Z\x0b{Eci HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 33329: GET /petclinic/api/owners?lastName="\t\r.\n2ov|jul r\r{pvo. HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 33345: GET /petclinic/api/owners?lastName=52gZ.$&-o_n,?*{5qxE+ODj\r9j;-[ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 33369: GET /petclinic/api/owners?lastName=Bw<\rL9Zk?L;e{]FMDemay6G>N HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 33393: GET /petclinic/api/owners?lastName=lY?\n.I8ib{\n0Y"\n>yc\\^7wP}IjG*))!) HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 33401: GET /petclinic/api/owners?lastName=tMblYow=}\x0b]y5~}iG]OK({|$xm)Z\nC,?C.](S} HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 33433: GET /petclinic/api/owners?lastName=3>e5+=;z1V#g\niEKu[Fu#0Y+?K]4uiZ+NYc\n"sm;Lv HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 33457: GET /petclinic/api/owners?lastName=RU-#!.3h8+-C_X?"82$(TP;-(E]IH)c#`=Dm HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 33473: GET /petclinic/api/owners?lastName=d3d3}`0X=\x0cDH0x\rWNUNm3uG+;N_|#R; Uj=K2.L.e HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 33497: GET /petclinic/api/owners?lastName=+Zf&\x0cw|8ILv\rPS[\x0c?W0Ji|il+|[4Bu\x0cMqxHNn2S$|0Q HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 33521: GET /petclinic/api/owners?lastName=Dpo"pJi*;]I`~~!(j.X\n7YA#W,r?vubNAB]FA`5rgXP HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 33537: GET /petclinic/api/owners?lastName=6wW-<C9dAWp`*w(/tY\nA\x0b-m,>LgV_uV^f^[]ssU"wJJ0Z;O; sxO HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 33553: GET /petclinic/api/owners?lastName=O,~V9/j/qX?{_xmw7dV ;^Y:=\t"nJ;,0y3=KOc%\tD;+1(tbe HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Unhandled exception. System.Exception: Unexpected response without prior request at 11/24/2026 21:21:18: { version = "HTTP/1.1"
+  statusCode = 400
+  statusDescription = "Bad Request"
+  headers =
+           map
+             [("Connection", "close"); ("Content-Type", "text/html");
+              ("Server", "mitmproxy 10.3.0"); ("content-length", "228")]
+  body =
+        "<html>
+<head>
+    <title>400 Bad Request</title>
+</head>
+<body>
+    <h1>400 Bad Request</h1>
+    <p>Bad HTTP request line: b&quot;GET /petclinic/api/owners?lastName=g&gt;gYK&lt;TyqK\
+&#x27;p`P_ HTTP/1.1&quot;</p>
+</body>
+</html>"
+  str = None }
+   at Microsoft.FSharp.Core.PrintfModule.PrintFormatToStringThenFail@1639.Invoke(String message) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\printf.fs:line 1639
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.choose@171.System-Collections-IEnumerator-MoveNext() in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 179
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.map@75.DoMoveNext(b& curr) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 81
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.MapEnumerator`1.System-Collections-IEnumerator-MoveNext() in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 68
+   at Microsoft.FSharp.Core.CompilerServices.RuntimeHelpers.takeInner@266[T,TResult](ConcatEnumerator`2 x, Unit unitVar0) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seqcore.fs:line 268
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.map@75.DoMoveNext(b& curr) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 81
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.MapEnumerator`1.System-Collections-IEnumerator-MoveNext() in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 68
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.map@75.DoMoveNext(b& curr) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 81
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.MapEnumerator`1.System-Collections-IEnumerator-MoveNext() in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 68
+   at Microsoft.FSharp.Core.CompilerServices.RuntimeHelpers.takeInner@266[T,TResult](ConcatEnumerator`2 x, Unit unitVar0) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seqcore.fs:line 268
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.next@193[T](FSharpFunc`2 f, IEnumerator`1 e, FSharpRef`1 started, Unit unitVar0) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 194
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.filter@188.System-Collections-IEnumerator-MoveNext() in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 196
+   at Microsoft.FSharp.Collections.SeqModule.oneStepTo@987[T](IEnumerable`1 source, List`1 prefix, FSharpRef`1 enumeratorR, Int32 i) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 996
+   at Microsoft.FSharp.Collections.SeqModule.action@4164-1[T](IEnumerable`1 source, List`1 prefix, FSharpRef`1 enumeratorR, Int32 i, Unit unitVar0) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 1011
+   at Microsoft.FSharp.Collections.SeqModule.result@1003.Invoke(Int32 i)
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.unfold@205.DoMoveNext(b& curr) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 207
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.MapEnumerator`1.System-Collections-IEnumerator-MoveNext() in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 68
+   at Microsoft.FSharp.Collections.SeqModule.Iterate[T](FSharpFunc`2 action, IEnumerable`1 source) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 496
+   at Microsoft.FSharp.Collections.SeqModule.groupByValueType[T,TKey](FSharpFunc`2 keyf, IEnumerable`1 seq) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 1068
+   at Microsoft.FSharp.Collections.SeqModule.GroupBy@1076.Invoke(Unit unitVar0) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 1076
+   at Microsoft.FSharp.Collections.SeqModule.mkDelayedSeq@471.Invoke(Unit unitVar0) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 471
+   at Restler.ResultsAnalyzer.Analyze.Buckets.getBuckets@98.GenerateNext(IEnumerable`1& next) in D:\a\1\s\src\ResultsAnalyzer\Analyze\Buckets.fs:line 98
+   at Microsoft.FSharp.Core.CompilerServices.GeneratedSequenceBase`1.MoveNextImpl() in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seqcore.fs:line 371
+   at Microsoft.FSharp.Core.CompilerServices.GeneratedSequenceBase`1.System-Collections-IEnumerator-MoveNext() in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seqcore.fs:line 403
+   at Microsoft.FSharp.Collections.SeqModule.ToList[T](IEnumerable`1 source)
+   at Restler.ResultsAnalyzer.Analyze.Main.main(AnalyzeArgs args) in D:\a\1\s\src\ResultsAnalyzer\Analyze\Main.fs:line 103
+   at Restler.ResultsAnalyzer.Program.main(String[] argv) in D:\a\1\s\src\ResultsAnalyzer\Program.fs:line 223

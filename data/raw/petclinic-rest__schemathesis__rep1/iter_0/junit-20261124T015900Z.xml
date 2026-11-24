@@ -1,0 +1,1654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites errors="0" failures="44" skipped="0" tests="44" time="1752.659354">
+  <testsuite name="schemathesis" hostname="DESKTOP-U498DNI" errors="0" failures="44" skipped="0" tests="44" time="1752.659354">
+    <testcase name="POST /" time="0.585497">
+      <failure type="failure" message="ST103">1. Test Case ID: e3LV2F
+
+- ST103 Undocumented status code
+
+    Received: 302
+    Documented: 200
+
+[302] Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X POST http://localhost:8081/petclinic/</failure>
+    </testcase>
+    <testcase name="POST /api/owners" time="8.936391">
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: iv7tJk
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/owners","status":500,"title":"HttpMediaTypeNotSupportedException","type":"http://api:8080/petclinic/api/owners","timestamp":"2026-11-24T01:59:10.094138732Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X POST http://localhost:8081/petclinic/api/owners</failure>
+    </testcase>
+    <testcase name="POST /api/pettypes" time="1.923196">
+      <failure type="failure" message="ST103">1. Test Case ID: u44fUZ
+
+- ST103 Undocumented status code
+
+    Received: 201
+    Documented: 200, 304, 400, 404, 500
+
+[201] Created:
+
+    `{"name":"cat","id":7}`
+
+Reproduce with:
+
+    curl -X POST -H 'Content-Type: application/json' -d '{"name": "cat"}' http://localhost:8081/petclinic/api/pettypes</failure>
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: m8Hyjv
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pettypes","status":500,"title":"HttpMessageNotReadableException","type":"http://api:8080/petclinic/api/pettypes","timestamp":"2026-11-24T01:59:14.243100972Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X POST -H 'Content-Type: application/json' -d $'\x00' http://localhost:8081/petclinic/api/pettypes
+
+    ⚠️  Request body contains non-printable characters. Actual value: b'\x00'</failure>
+    </testcase>
+    <testcase name="POST /api/specialties" time="1.998333">
+      <failure type="failure" message="ST103">1. Test Case ID: flslm1
+
+- ST103 Undocumented status code
+
+    Received: 201
+    Documented: 200, 304, 400, 404, 500
+
+[201] Created:
+
+    `{"id":4,"name":"radiology"}`
+
+Reproduce with:
+
+    curl -X POST -H 'Content-Type: application/json' -d '{"name": "radiology"}' http://localhost:8081/petclinic/api/specialties</failure>
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: dVaasX
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/specialties","status":500,"title":"HttpMessageNotReadableException","type":"http://api:8080/petclinic/api/specialties","timestamp":"2026-11-24T01:59:14.932347712Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X POST -H 'Content-Type: application/json' -d $'\x00' http://localhost:8081/petclinic/api/specialties
+
+    ⚠️  Request body contains non-printable characters. Actual value: b'\x00'</failure>
+    </testcase>
+    <testcase name="POST /api/users" time="12.773341">
+      <failure type="failure" message="ST103">1. Test Case ID: msnUpe
+
+- ST103 Undocumented status code
+
+    Received: 201
+    Documented: 200, 304, 400, 404, 500
+
+[201] Created:
+
+    `{"username":"john.doe","enabled":true,"password":"1234abc","roles":[{"name":"ROLE_admin"}]}`
+
+Reproduce with:
+
+    curl -X POST -H 'Content-Type: application/json' -d '{"username": "john.doe", "password": "[Filtered]", "enabled": true, "roles": [{"name": "admin"}]}' http://localhost:8081/petclinic/api/users</failure>
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: YUKLoN
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/users","status":500,"title":"IllegalArgumentException","type":"http://api:8080/petclinic/api/users","timestamp":"2026-11-24T01:59:10.268673563Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X POST -H 'Content-Type: application/json' -d '{"username": "john.doe", "password": "[Filtered]", "enabled": true, "roles": []}' http://localhost:8081/petclinic/api/users</failure>
+    </testcase>
+    <testcase name="POST /api/vets" time="2.833080">
+      <failure type="failure" message="ST103">1. Test Case ID: S4AnJQ
+
+- ST103 Undocumented status code
+
+    Received: 201
+    Documented: 200, 304, 400, 404, 500
+
+[201] Created:
+
+    `{"firstName":"James","lastName":"Carter","specialties":[{"id":1,"name":"radiology"},{"id":4,"name":"radiology"}],"id":7}`
+
+Reproduce with:
+
+    curl -X POST -H 'Content-Type: application/json' -d '{"firstName": "James", "lastName": "Carter", "specialties": [{"name": "radiology"}]}' http://localhost:8081/petclinic/api/vets</failure>
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: 3eJwgF
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/vets","status":500,"title":"HttpMessageNotReadableException","type":"http://api:8080/petclinic/api/vets","timestamp":"2026-11-24T01:59:16.706546377Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X POST -H 'Content-Type: application/json' -d $'\x00' http://localhost:8081/petclinic/api/vets
+
+    ⚠️  Request body contains non-printable characters. Actual value: b'\x00'</failure>
+    </testcase>
+    <testcase name="PUT /" time="0.504931">
+      <failure type="failure" message="ST103">1. Test Case ID: cTjkXy
+
+- ST103 Undocumented status code
+
+    Received: 302
+    Documented: 200
+
+[302] Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X PUT http://localhost:8081/petclinic/</failure>
+    </testcase>
+    <testcase name="GET /" time="0.412248">
+      <failure type="failure" message="ST103">1. Test Case ID: tsJ1G3
+
+- ST103 Undocumented status code
+
+    Received: 302
+    Documented: 200
+
+[302] Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/</failure>
+    </testcase>
+    <testcase name="GET /api/pets" time="0.494061">
+      <failure type="failure" message="ST204">1. Test Case ID: W3HVGG
+
+- ST204 Wrong response to undeclared method
+
+    Unsupported method QUERY returned 400, expected 405 Method Not Allowed
+
+    Return 405 for methods not listed in the OpenAPI spec
+
+[400] Bad Request:
+
+    `{"timestamp":"2026-11-24T01:59:10.358Z","status":400,"error":"Bad Request","path":"/petclinic/api/pets"}`
+
+Reproduce with:
+
+    curl -X QUERY http://localhost:8081/petclinic/api/pets</failure>
+    </testcase>
+    <testcase name="GET /api/pettypes" time="0.297847">
+      <failure type="failure" message="ST102">1. Test Case ID: ii0CgQ
+
+- ST102 Server error on undeclared request Content-Type
+
+    `Content-Type: multipart/form-data` without a boundary returned 500, expected 400 Bad Request or 415 Unsupported Media Type
+
+    Reject a malformed `Content-Type` before parsing the request body
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pettypes","status":500,"title":"MultipartException","type":"http://api:8080/petclinic/api/pettypes","timestamp":"2026-11-24T01:59:10.384768650Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET -H 'Content-Type: multipart/form-data' http://localhost:8081/petclinic/api/pettypes</failure>
+    </testcase>
+    <testcase name="GET /api/specialties" time="0.278837">
+      <failure type="failure" message="ST102">1. Test Case ID: WTHj1z
+
+- ST102 Server error on undeclared request Content-Type
+
+    `Content-Type: multipart/form-data` without a boundary returned 500, expected 400 Bad Request or 415 Unsupported Media Type
+
+    Reject a malformed `Content-Type` before parsing the request body
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/specialties","status":500,"title":"MultipartException","type":"http://api:8080/petclinic/api/specialties","timestamp":"2026-11-24T01:59:10.412246131Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET -H 'Content-Type: multipart/form-data' http://localhost:8081/petclinic/api/specialties</failure>
+    </testcase>
+    <testcase name="GET /api/v2/pets" time="1.837198">
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: RvzeFq
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/v2/pets","status":500,"title":"ConstraintViolationException","type":"http://api:8080/petclinic/api/v2/pets","timestamp":"2026-11-24T01:59:10.714661334Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/petclinic/api/v2/pets?size=0'</failure>
+    </testcase>
+    <testcase name="GET /api/vets" time="0.499155">
+      <failure type="failure" message="ST102">1. Test Case ID: 03S4HA
+
+- ST102 Server error on undeclared request Content-Type
+
+    `Content-Type: multipart/form-data` without a boundary returned 500, expected 400 Bad Request or 415 Unsupported Media Type
+
+    Reject a malformed `Content-Type` before parsing the request body
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/vets","status":500,"title":"MultipartException","type":"http://api:8080/petclinic/api/vets","timestamp":"2026-11-24T01:59:10.742255890Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET -H 'Content-Type: multipart/form-data' http://localhost:8081/petclinic/api/vets</failure>
+    </testcase>
+    <testcase name="GET /api/visits" time="0.499897">
+      <failure type="failure" message="ST204">1. Test Case ID: tq5b4n
+
+- ST204 Wrong response to undeclared method
+
+    Unsupported method QUERY returned 400, expected 405 Method Not Allowed
+
+    Return 405 for methods not listed in the OpenAPI spec
+
+[400] Bad Request:
+
+    `{"timestamp":"2026-11-24T01:59:10.779Z","status":400,"error":"Bad Request","path":"/petclinic/api/visits"}`
+
+Reproduce with:
+
+    curl -X QUERY http://localhost:8081/petclinic/api/visits</failure>
+      <failure type="failure" message="ST103">1. Test Case ID: Aj6FKo
+
+- ST103 Undocumented status code
+
+    Received: 404
+    Documented: 200, 304, 500
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/visits</failure>
+    </testcase>
+    <testcase name="HEAD /" time="0.449986">
+      <failure type="failure" message="ST103">1. Test Case ID: XM2m03
+
+- ST103 Undocumented status code
+
+    Received: 302
+    Documented: 200
+
+[302] Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X HEAD http://localhost:8081/petclinic/</failure>
+    </testcase>
+    <testcase name="OPTIONS /" time="0.248628">
+      <failure type="failure" message="ST102">1. Test Case ID: tZJ1uw
+
+- ST102 Server error on undeclared request Content-Type
+
+    `Content-Type: multipart/form-data` without a boundary returned 500, expected 400 Bad Request or 415 Unsupported Media Type
+
+    Reject a malformed `Content-Type` before parsing the request body
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/","status":500,"title":"MultipartException","type":"http://api:8080/petclinic/","timestamp":"2026-11-24T01:59:10.799299046Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X OPTIONS -H 'Content-Type: multipart/form-data' http://localhost:8081/petclinic/</failure>
+    </testcase>
+    <testcase name="PATCH /" time="0.459616">
+      <failure type="failure" message="ST103">1. Test Case ID: 4vG7R2
+
+- ST103 Undocumented status code
+
+    Received: 302
+    Documented: 200
+
+[302] Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X PATCH http://localhost:8081/petclinic/</failure>
+    </testcase>
+    <testcase name="DELETE /" time="0.551055">
+      <failure type="failure" message="ST103">1. Test Case ID: MlpXqO
+
+- ST103 Undocumented status code
+
+    Received: 302
+    Documented: 200
+
+[302] Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X DELETE http://localhost:8081/petclinic/</failure>
+    </testcase>
+    <testcase name="POST /api/owners/{ownerId}/pets" time="36.242330">
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: oc5TH0
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/owners/11/pets","status":500,"title":"HttpMediaTypeNotSupportedException","type":"http://api:8080/petclinic/api/owners/11/pets","timestamp":"2026-11-24T01:59:10.863006455Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X POST http://localhost:8081/petclinic/api/owners/11/pets</failure>
+      <failure type="failure" message="ST202">1. Test Case ID: waoIej
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[400] Bad Request:
+
+    `{"detail":"The request contains invalid or missing parameters","instance":"/petclinic/api/owners/12/pets","status":400,"title":"MethodArgumentNotValidException","type":"http://api:8080/petclinic/api/owners/12/pets","timestamp":"2026-11-24T01:59:22.053690807Z","schemaValidationErrors":[{"message":"Field 'birthDate' Birth date cannot be older than 50 years (rejected value: 1976-01-01)","field":"birthDate","defaultMessage":"Birth date cannot be older than 50 years","rejectedValue":"1976-01-01"}]}`
+
+Reproduce with:
+
+    curl -X POST -H 'Content-Type: application/json' -d '{"birthDate": "1976-01-01", "name": "cat", "type": {"id": 11, "name": "cat"}}' http://localhost:8081/petclinic/api/owners/12/pets</failure>
+    </testcase>
+    <testcase name="POST /api/owners/{ownerId}/pets/{petId}/visits" time="4.359081">
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: Wo08cR
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/owners/1/pets/15/visits","status":500,"title":"HttpMediaTypeNotSupportedException","type":"http://api:8080/petclinic/api/owners/1/pets/15/visits","timestamp":"2026-11-24T01:59:10.898108600Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X POST http://localhost:8081/petclinic/api/owners/1/pets/15/visits</failure>
+    </testcase>
+    <testcase name="POST /api/visits" time="21.324360">
+      <failure type="failure" message="ST103">1. Test Case ID: Fd3nDV
+
+- ST103 Undocumented status code
+
+    Received: 201
+    Documented: 200, 304, 400, 404, 500
+
+[201] Created:
+
+    `{"description":"rabies shot","id":8,"petId":15,"date":"2013-01-01"}`
+
+Reproduce with:
+
+    curl -X POST -H 'Content-Type: application/json' -d '{"date": "2013-01-01", "description": "rabies shot", "petId": 15}' http://localhost:8081/petclinic/api/visits</failure>
+      <failure type="failure" message="ST105">1. Test Case ID: zRYbOb
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[404] Not Found:
+
+    `{"detail":"The requested resource could not be processed due to a data constraint violation","instance":"/petclinic/api/visits","status":404,"title":"DataIntegrityViolationException","type":"http://api:8080/petclinic/api/visits","timestamp":"2026-11-24T01:59:23.642016549Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X POST -H 'Content-Type: application/json' -d '{"description": "rabies shot", "petId": 16}' http://localhost:8081/petclinic/api/visits</failure>
+    </testcase>
+    <testcase name="PUT /api/owners/{ownerId}" time="32.272450">
+      <failure type="failure" message="ST103">1. Test Case ID: qZs6kl
+
+- ST103 Undocumented status code
+
+    Received: 204
+    Documented: 200, 400, 404, 500
+
+[204] No Content:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"firstName": "George", "lastName": "Franklin", "address": "110 W. Liberty St.", "city": "Madison", "telephone": "6085551023"}' http://localhost:8081/petclinic/api/owners/1</failure>
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: i6BL9G
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/owners/11","status":500,"title":"HttpMessageNotReadableException","type":"http://api:8080/petclinic/api/owners/11","timestamp":"2026-11-24T01:59:32.002380031Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d $'\x00' http://localhost:8081/petclinic/api/owners/11
+
+    ⚠️  Request body contains non-printable characters. Actual value: b'\x00'</failure>
+    </testcase>
+    <testcase name="PUT /api/owners/{ownerId}/pets/{petId}" time="105.502815">
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: LgCOQY
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/owners/11/pets/16","status":500,"title":"HttpMediaTypeNotSupportedException","type":"http://api:8080/petclinic/api/owners/11/pets/16","timestamp":"2026-11-24T01:59:10.976712090Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X PUT http://localhost:8081/petclinic/api/owners/11/pets/16</failure>
+      <failure type="failure" message="ST104, ST109">1. Test Case ID: jbDiLy
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"birthDate": "2010-09-07", "name": "Leo", "type": {"id": 1, "name": "cat"}}' http://localhost:8081/petclinic/api/owners/1/pets/15</failure>
+    </testcase>
+    <testcase name="PUT /api/pets/{petId}" time="260.016103">
+      <failure type="failure" message="ST103">1. Test Case ID: pbgySB
+
+- ST103 Undocumented status code
+
+    Received: 204
+    Documented: 200, 304, 400, 404, 500
+
+[204] No Content:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"name": "Leo", "birthDate": "2010-09-07", "type": {"name": "cat", "id": 1}}' http://localhost:8081/petclinic/api/pets/1</failure>
+      <failure type="failure" message="ST101, ST104, ST105, ST109, ST202">1. Test Case ID: FtktBE
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+[400] Bad Request:
+
+    `{"detail":"The request contains invalid or missing parameters","instance":"/petclinic/api/pets/16","status":400,"title":"MethodArgumentNotValidException","type":"http://api:8080/petclinic/api/pets/16","timestamp":"2026-11-24T02:00:34.563318404Z","schemaValidationErrors":[{"message":"Field 'birthDate' Birth date cannot be older than 50 years (rejected value: 1976-01-01)","field":"birthDate","defaultMessage":"Birth date cannot be older than 50 years","rejectedValue":"1976-01-01"}]}`
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"birthDate": "1976-01-01", "name": "", "type": {"id": 0, "name": "0"}}' http://localhost:8081/petclinic/api/pets/16
+
+2. Test Case ID: JPH8DD
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"birthDate": "2000-01-01", "name": "", "type": {"id": 0, "name": "0"}}' http://localhost:8081/petclinic/api/pets/14
+
+3. Test Case ID: DL0VWr
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/16","status":500,"title":"HttpMessageNotReadableException","type":"http://api:8080/petclinic/api/pets/16","timestamp":"2026-11-24T02:00:36.419682260Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d $'\x00' http://localhost:8081/petclinic/api/pets/16
+
+    ⚠️  Request body contains non-printable characters. Actual value: b'\x00'</failure>
+    </testcase>
+    <testcase name="PUT /api/pettypes/{petTypeId}" time="292.292969">
+      <failure type="failure" message="ST103">1. Test Case ID: yoFM2r
+
+- ST103 Undocumented status code
+
+    Received: 204
+    Documented: 200, 304, 400, 404, 500
+
+[204] No Content:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"name": "cat", "id": 1}' http://localhost:8081/petclinic/api/pettypes/1</failure>
+      <failure type="failure" message="ST101, ST104, ST105, ST109">1. Test Case ID: IGiRP7
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"id": 12, "name": "surgery"}' http://localhost:8081/petclinic/api/pettypes/1
+
+2. Test Case ID: 7qS33G
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pettypes/7","status":500,"title":"HttpMessageNotReadableException","type":"http://api:8080/petclinic/api/pettypes/7","timestamp":"2026-11-24T02:00:43.867125802Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d $'\x00' http://localhost:8081/petclinic/api/pettypes/7
+
+    ⚠️  Request body contains non-printable characters. Actual value: b'\x00'</failure>
+      <failure type="failure" message="ST201">1. Test Case ID: no3gpR
+
+- ST201 Schema-violating request accepted
+
+    Invalid data should have been rejected
+    Expected: 400, 401, 403, 404, 405, 406, 409, 415, 422, 428, 429, 5xx
+    Invalid component: in body - violates `type` at /properties/name (was string, became boolean)
+
+[204] No Content:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"\u00b9_\u00e3\udb4e\udd91\u007f\uda4c\udd93\u0099\u0095\u00fc\u00cb\ud9a2\ude3c\udb95\udefb": [4.4912405310613335e-298, true, {"\u008a&lt;": true}], "\ud85a\udc70\u008a": {}, "\uda0d\udc05\u00c88:\udb09\ude72\u0098I": [{"\u008d\u00b9\u00e4\u00c0": "\u0e01 \u0e33\u0e01\u0e33", "": null}, {}, false], "\u00de\u00d2\u00e9}\ud92e\udece": [{"\"X": null, "NaN": 2489}, 35479, []], "NIL": [{"\ud979\udf60nCE\udb14\udea8\u00c9\u00ed\u000f\r\u23db\uc938\u00e1\ud934\udeaf": -6081, "\u000f\u0016": null}, -3.933473937795122e+16, {}], "name": true, "id": 33703}' http://localhost:8081/petclinic/api/pettypes/897</failure>
+    </testcase>
+    <testcase name="PUT /api/specialties/{specialtyId}" time="6.797930">
+      <failure type="failure" message="ST103">1. Test Case ID: QEY8Px
+
+- ST103 Undocumented status code
+
+    Received: 204
+    Documented: 200, 304, 400, 404, 500
+
+[204] No Content:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"name": "radiology"}' http://localhost:8081/petclinic/api/specialties/1</failure>
+      <failure type="failure" message="ST101, ST104, ST105, ST109">1. Test Case ID: Kdy0qR
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"name": "0"}' http://localhost:8081/petclinic/api/specialties/23
+
+2. Test Case ID: pkV92b
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/specialties/1","status":500,"title":"HttpMessageNotReadableException","type":"http://api:8080/petclinic/api/specialties/1","timestamp":"2026-11-24T02:00:47.740312081Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d $'\x00' http://localhost:8081/petclinic/api/specialties/1
+
+    ⚠️  Request body contains non-printable characters. Actual value: b'\x00'</failure>
+    </testcase>
+    <testcase name="PUT /api/vets/{vetId}" time="349.610820">
+      <failure type="failure" message="ST103">1. Test Case ID: yEkTTq
+
+- ST103 Undocumented status code
+
+    Received: 204
+    Documented: 200, 304, 400, 404, 500
+
+[204] No Content:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"firstName": "James", "lastName": "Carter", "specialties": [{"name": "radiology"}]}' http://localhost:8081/petclinic/api/vets/7</failure>
+      <failure type="failure" message="ST101, ST104, ST105, ST109">1. Test Case ID: jRTL7B
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/vets/7","status":500,"title":"HttpMessageNotReadableException","type":"http://api:8080/petclinic/api/vets/7","timestamp":"2026-11-24T02:00:52.694355901Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d $'\x00' http://localhost:8081/petclinic/api/vets/7
+
+    ⚠️  Request body contains non-printable characters. Actual value: b'\x00'
+
+2. Test Case ID: lIYdzB
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"firstName": "James", "lastName": "Carter", "specialties": []}' http://localhost:8081/petclinic/api/vets/1</failure>
+    </testcase>
+    <testcase name="PUT /api/visits/{visitId}" time="11.230808">
+      <failure type="failure" message="ST103">1. Test Case ID: E0RquW
+
+- ST103 Undocumented status code
+
+    Received: 204
+    Documented: 200, 304, 400, 404, 500
+
+[204] No Content:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"date": "2013-01-01", "description": "rabies shot"}' http://localhost:8081/petclinic/api/visits/8</failure>
+      <failure type="failure" message="ST104, ST109">1. Test Case ID: NJPlO7
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X PUT -H 'Content-Type: application/json' -d '{"description": "rabies shot"}' http://localhost:8081/petclinic/api/visits/5</failure>
+    </testcase>
+    <testcase name="GET /api/owners" time="5.947875">
+      <failure type="failure" message="ST102">1. Test Case ID: 3EFzju
+
+- ST102 Server error on undeclared request Content-Type
+
+    `Content-Type: multipart/form-data` without a boundary returned 500, expected 400 Bad Request or 415 Unsupported Media Type
+
+    Reject a malformed `Content-Type` before parsing the request body
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/owners","status":500,"title":"MultipartException","type":"http://api:8080/petclinic/api/owners","timestamp":"2026-11-24T01:59:11.107566518Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET -H 'Content-Type: multipart/form-data' 'http://localhost:8081/petclinic/api/owners?lastName=Franklin'</failure>
+      <failure type="failure" message="ST103">1. Test Case ID: K9eIbZ
+
+- ST103 Undocumented status code
+
+    Received: 404
+    Documented: 200, 304, 500
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/petclinic/api/owners?lastName=Coleman'</failure>
+    </testcase>
+    <testcase name="GET /api/owners/{ownerId}" time="3.598686">
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: I38gYs
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/owners/2147483648","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/owners/2147483648","timestamp":"2026-11-24T01:59:11.229618875Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/owners/2147483648</failure>
+      <failure type="failure" message="ST104, ST109">1. Test Case ID: 4iAz6L
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/owners/13</failure>
+    </testcase>
+    <testcase name="GET /api/owners/{ownerId}/pets/{petId}" time="3.814419">
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: URQo1V
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/owners/11/pets/2147483648","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/owners/11/pets/2147483648","timestamp":"2026-11-24T01:59:11.260690739Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/owners/11/pets/2147483648</failure>
+      <failure type="failure" message="ST104, ST109">1. Test Case ID: pLz7Ob
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/owners/1/pets/1</failure>
+    </testcase>
+    <testcase name="GET /api/pets/{petId}" time="0.917098">
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: MNzZ0v
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/2147483648","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/2147483648","timestamp":"2026-11-24T01:59:11.283598141Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/pets/2147483648</failure>
+      <failure type="failure" message="ST104, ST109">1. Test Case ID: 1HKQ8i
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/pets/1</failure>
+    </testcase>
+    <testcase name="GET /api/pettypes/{petTypeId}" time="0.905117">
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: hhDDzN
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pettypes/2147483648","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pettypes/2147483648","timestamp":"2026-11-24T01:59:11.306866004Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/pettypes/2147483648</failure>
+      <failure type="failure" message="ST104, ST109">1. Test Case ID: cQE4ha
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/pettypes/1</failure>
+    </testcase>
+    <testcase name="GET /api/specialties/{specialtyId}" time="1.242672">
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: XnPHE6
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/specialties/2147483648","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/specialties/2147483648","timestamp":"2026-11-24T01:59:11.330043294Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/specialties/2147483648</failure>
+      <failure type="failure" message="ST104, ST109">1. Test Case ID: eqYTRm
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/specialties/23</failure>
+    </testcase>
+    <testcase name="GET /api/v2/owners" time="3.098125">
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: 7qdl52
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/v2/owners","status":500,"title":"ConstraintViolationException","type":"http://api:8080/petclinic/api/v2/owners","timestamp":"2026-11-24T01:59:11.490432662Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/petclinic/api/v2/owners?size=0'</failure>
+    </testcase>
+    <testcase name="GET /api/vets/{vetId}" time="0.924187">
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: MHlY81
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/vets/2147483648","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/vets/2147483648","timestamp":"2026-11-24T01:59:11.528877889Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/vets/2147483648</failure>
+      <failure type="failure" message="ST104, ST109">1. Test Case ID: yDg7Ce
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/vets/1</failure>
+    </testcase>
+    <testcase name="GET /api/visits/{visitId}" time="7.365337">
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: mx4gaf
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/visits/2147483648","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/visits/2147483648","timestamp":"2026-11-24T01:59:11.549359462Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/visits/2147483648</failure>
+      <failure type="failure" message="ST104, ST109">1. Test Case ID: NO68X9
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/visits/5</failure>
+    </testcase>
+    <testcase name="DELETE /api/owners/{ownerId}" time="7.663504">
+      <failure type="failure" message="ST105">1. Test Case ID: GZKOVT
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[404] Not Found:
+
+    `{"detail":"The requested resource could not be processed due to a data constraint violation","instance":"/petclinic/api/owners/1","status":404,"title":"DataIntegrityViolationException","type":"http://api:8080/petclinic/api/owners/1","timestamp":"2026-11-24T01:59:11.586537617Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X DELETE http://localhost:8081/petclinic/api/owners/1</failure>
+      <failure type="failure" message="ST103">1. Test Case ID: cRPOhD
+
+- ST103 Undocumented status code
+
+    Received: 204
+    Documented: 200, 304, 400, 404, 500
+
+[204] No Content:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X DELETE http://localhost:8081/petclinic/api/owners/7</failure>
+    </testcase>
+    <testcase name="DELETE /api/pets/{petId}" time="16.961935">
+      <failure type="failure" message="ST103">1. Test Case ID: T8WSVD
+
+- ST103 Undocumented status code
+
+    Received: 204
+    Documented: 200, 304, 400, 404, 500
+
+[204] No Content:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X DELETE http://localhost:8081/petclinic/api/pets/1</failure>
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: vlRa1b
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/-1","status":500,"title":"ConstraintViolationException","type":"http://api:8080/petclinic/api/pets/-1","timestamp":"2026-11-24T02:01:01.802394977Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X DELETE http://localhost:8081/petclinic/api/pets/-1</failure>
+    </testcase>
+    <testcase name="DELETE /api/pettypes/{petTypeId}" time="0.803028">
+      <failure type="failure" message="ST103">1. Test Case ID: mwOltX
+
+- ST103 Undocumented status code
+
+    Received: 204
+    Documented: 200, 304, 400, 404, 500
+
+[204] No Content:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X DELETE http://localhost:8081/petclinic/api/pettypes/1</failure>
+    </testcase>
+    <testcase name="DELETE /api/specialties/{specialtyId}" time="0.717012">
+      <failure type="failure" message="ST103">1. Test Case ID: pHRc5L
+
+- ST103 Undocumented status code
+
+    Received: 204
+    Documented: 200, 304, 400, 404, 500
+
+[204] No Content:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X DELETE http://localhost:8081/petclinic/api/specialties/5</failure>
+      <failure type="failure" message="ST104, ST109">1. Test Case ID: uoCrKh
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X DELETE http://localhost:8081/petclinic/api/specialties/5</failure>
+    </testcase>
+    <testcase name="DELETE /api/vets/{vetId}" time="1.116335">
+      <failure type="failure" message="ST103">1. Test Case ID: sWqcjX
+
+- ST103 Undocumented status code
+
+    Received: 204
+    Documented: 200, 304, 400, 404, 500
+
+[204] No Content:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X DELETE http://localhost:8081/petclinic/api/vets/1</failure>
+      <failure type="failure" message="ST101, ST104, ST105, ST109">1. Test Case ID: 4PdPp8
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X DELETE http://localhost:8081/petclinic/api/vets/21376
+
+2. Test Case ID: tihIGq
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/vets/-1","status":500,"title":"ConstraintViolationException","type":"http://api:8080/petclinic/api/vets/-1","timestamp":"2026-11-24T02:01:05.604550407Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X DELETE http://localhost:8081/petclinic/api/vets/-1</failure>
+    </testcase>
+    <testcase name="DELETE /api/visits/{visitId}" time="0.885519">
+      <failure type="failure" message="ST104, ST109">1. Test Case ID: 5bz2i9
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X DELETE http://localhost:8081/petclinic/api/visits/6</failure>
+    </testcase>
+    <testcase name="Stateful tests" time="541.465543">
+      <failure type="failure" message="ST104, ST109">1. Test Case ID: FIRZgv
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/petclinic/api/owners?lastName=Estaban'
+    curl -X DELETE http://localhost:8081/petclinic/api/owners/10
+    curl -X DELETE http://localhost:8081/petclinic/api/owners/10</failure>
+      <failure type="failure" message="ST104, ST109">1. Test Case ID: 5txtep
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/petclinic/api/owners?lastName=Black'
+    curl -X DELETE http://localhost:8081/petclinic/api/owners/4
+    curl -X DELETE http://localhost:8081/petclinic/api/owners/4
+    curl -X DELETE http://localhost:8081/petclinic/api/pets/5</failure>
+      <failure type="failure" message="ST104, ST109">1. Test Case ID: j5WA47
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/pets
+    curl -X DELETE http://localhost:8081/petclinic/api/pettypes/12
+    curl -X DELETE http://localhost:8081/petclinic/api/owners/12
+    curl -X DELETE http://localhost:8081/petclinic/api/owners/12
+    curl -X DELETE http://localhost:8081/petclinic/api/pettypes/12</failure>
+      <failure type="failure" message="ST104, ST109">1. Test Case ID: dXQPkD
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X POST -H 'Content-Type: application/json' -d '{"Scunthorpe": {"\udaa3\udeb0\u0090\u00ae\u00a9\udbe8\udcfe": -100000000001, "1/0": null}, "name": "h\u00fe\u00cb9\u0089\udb84\udf3e", "type": {"\u0082[\u00b6Rf\u0080\u00b9f": [], "": {"\u00bclR": {}}, "name": "\u008c\u00da&lt;\nE\u0085\u00a7*\ud8da\udcab\ud9d0\ude51\u007f(\u00e9\u00fe\u008c", "id": 21}, "birthDate": "2010-11-30"}' http://localhost:8081/petclinic/api/owners/246/pets</failure>
+      <failure type="failure" message="ST103">1. Test Case ID: 1tjSbT
+
+- ST103 Undocumented status code
+
+    Received: 404
+    Documented: 200, 304, 500
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/pets</failure>
+      <failure type="failure" message="ST201">1. Test Case ID: 9Eso8W
+
+- ST201 Schema-violating request accepted
+
+    Invalid data should have been rejected
+    Expected: 400, 401, 403, 404, 405, 406, 409, 415, 422, 428, 429, 5xx
+    Invalid component: in body - violates `type` at /properties/name (was string, became integer)
+
+[201] Created:
+
+    `{"id":27,"name":"81"}`
+
+Reproduce with:
+
+    curl -X POST -H 'Content-Type: application/json' -d '{"\u00ebP": [], "": [{"\u00cc\u00f2(\u008c\u0012\ud962\udd0eZ\u0086ey\u00f0\u00e3\ud92e\udc35\ud90b\ude43j\u0015\u00d56\udb7c\udf43\u009eu\ud8bc\udcb5\"\uda08\udd1e\u00f1\ud83e\uddfaV": "\udb52\udcd8"}, [true, 1.4748791058659656e+31, "4'"'"'\ud8ab\ude24"]], "\u00c2\u00d3\u0083\u00ca\u00be\u0012\u0081X\u00f4{": "G\u00a0\u0085h\ud931\udeb9\u00d0\u00beT'"'"'3\u00cf!", "name": 81}' http://localhost:8081/petclinic/api/specialties</failure>
+      <failure type="failure" message="ST101">1. Test Case ID: 11HMUM
+
+- ST101 Server error
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/visits","status":500,"title":"HttpMessageNotReadableException","type":"http://api:8080/petclinic/api/visits","timestamp":"2026-11-24T02:01:08.710848087Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X POST -H 'Content-Type: application/json' -d $'\x00' http://localhost:8081/petclinic/api/visits
+
+    ⚠️  Request body contains non-printable characters. Actual value: b'\x00'</failure>
+      <failure type="failure" message="ST101">1. Test Case ID: me3gz3
+
+- ST101 Server error
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/owners/-1","status":500,"title":"ConstraintViolationException","type":"http://api:8080/petclinic/api/owners/-1","timestamp":"2026-11-24T02:01:09.423858272Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/petclinic/api/v2/owners?lastName=Davis&amp;page=11&amp;size=11'
+    curl -X DELETE http://localhost:8081/petclinic/api/owners/-1</failure>
+      <failure type="failure" message="ST103">1. Test Case ID: tGpcYg
+
+- ST103 Undocumented status code
+
+    Received: 404
+    Documented: 200, 304, 500
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/pettypes</failure>
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: Q3nck9
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/specialties/J%C2%8F","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/specialties/J%C2%8F","timestamp":"2026-11-24T02:01:17.146368072Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/vets
+    curl -X DELETE http://localhost:8081/petclinic/api/specialties/J%C2%8F</failure>
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: YDpX5E
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/owners","status":500,"title":"InvalidParameterException","type":"http://api:8080/petclinic/api/owners","timestamp":"2026-11-24T02:01:19.600035378Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/petclinic/api/owners?lastName=%C3%89&amp;=false'</failure>
+      <failure type="failure" message="ST104, ST109">1. Test Case ID: QE6t3a
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `application/json`
+
+[404] Not Found:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/petclinic/api/v2/owners?size=90&amp;page=403&amp;lastName=A%C5%91%C3%8D%27%C4%AEk-%C3%9C.'
+    curl -X PUT -H 'Content-Type: application/json' -d '{"telephone": "6085551023", "lastName": "Franklin", "address": "110 W. Liberty St.", "city": "Madison", "firstName": "George"}' http://localhost:8081/petclinic/api/owners/264</failure>
+      <failure type="failure" message="ST202">1. Test Case ID: PUFfal
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+    Hint: The request body contains 3 additional properties not defined in the schema (``, `Á`, `õ`). The server appears to reject properties the schema allows. Declare `additionalProperties: false` if extras are not accepted, or make the server ignore unknown fields.
+
+[400] Bad Request:
+
+    `{"detail":"The request contains invalid or missing parameters","instance":"/petclinic/api/owners/839775/pets/41","status":400,"title":"MethodArgumentNotValidException","type":"http://api:8080/petclinic/api/owners/839775/pets/41","timestamp":"2026-11-24T02:03:30.402805546Z","schemaValidationErrors":[{"message":"Field 'birthDate' Birth date cannot be in the future (rejected value: 4048-04-22)","field":"birthDate","defaultMessage":"Birth date cannot be in the future","rejectedValue":"4048-04-22"}]}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/v2/owners
+    curl -X PUT -H 'Content-Type: application/json' -d '{"\u00f5": [[]], "\u00c1": {"": -5e-324}, "": {}, "type": {"3\udb8f\udd4b\u00b7S\u00deI\ub1ab": {"\u023a": {"\ud87e\uddcd": null}, "\ud952\udd11\u00feZ\u00d5": {"\ud812\udce6\ud935\udf01": null, "": false, "\ud848\udf1c\u0004": 1.205892070605538e+16}}, "q\u00a4\u00dd\u00b4\u00a96\udbd0\udceb": {"\u00fd": [], "": {}}, "\u008c": {"Z": {"\u00d34\u0091": {"\udbbf\udfd3": "\u00d6\u00e6\uda31\udef0\u0083\u0010\fB"}}, "&lt;\ud967\udcf7": {"\u00cc\u0002'"'"'\ud8f1\udebd\u00b6\u00c9#\uda6e\uddb2": null, "!": "#\u00f0", "\u8804": null}}, "9\u0081\u00dd": {"\udbd7\udc2ct": null, "\udb0e\udc0b\\": {"\uda1e\udc55\ud851\udebd_": 6.103515625e-05, "B\u0087D\ud8e8\ude4e": false, "\ud835\udd4b\ud835\udd59\ud835\udd56 \ud835\udd62\ud835\udd66\ud835\udd5a\ud835\udd54\ud835\udd5c \ud835\udd53\ud835\udd63\ud835\udd60\ud835\udd68\ud835\udd5f \ud835\udd57\ud835\udd60\ud835\udd69 \ud835\udd5b\ud835\udd66\ud835\udd5e\ud835\udd61\ud835\udd64 \ud835\udd60\ud835\udd67\ud835\udd56\ud835\udd63 \ud835\udd65\ud835\udd59\ud835\udd56 \ud835\udd5d\ud835\udd52\ud835\udd6b\ud835\udd6a \ud835\udd55\ud835\udd60\ud835\udd58": 258}, "\uda95\ude11\uda11\udd19\u00ee5\u00a9\u00db\udaee\udf91": null}, "P\u0090\u00a0\u00a01": {}, "name": "true", "id": 6}, "name": "\udbd5\udda8\u00f2\u001e\u009f\u00ef\u00e2", "birthDate": "4048-04-22"}' http://localhost:8081/petclinic/api/owners/839775/pets/41</failure>
+      <failure type="failure" message="ST201">1. Test Case ID: mbbeA0
+
+- ST201 Schema-violating request accepted
+
+    Invalid data should have been rejected
+    Expected: 400, 401, 403, 404, 405, 406, 409, 415, 422, 428, 429, 5xx
+    Invalid component: in body - violates `type` at /properties/name (was string, became boolean)
+
+[201] Created:
+
+    `{"name":"false","id":158}`
+
+Reproduce with:
+
+    curl -X POST -H 'Content-Type: application/json' -d '{"": ["\u00ed\u00dbe\u0006]\udb8a\ude0b\ud8a0\udd7a\ud866\udcabcRS\u00e6u\u00da}\ud923\udcc5\u00eb\u0014\uda86\ude61\ud8d6\udf7d\f\udae8\udf73\ud8f9\ude61N\ud977\uddb1\u00c2\udb33\ude51\uda0f\udfbap", false, -8470902930889535488], "\u00b4": 8591, "name": false}' http://localhost:8081/petclinic/api/pettypes</failure>
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: kiYY0h
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pettypes/-1","status":500,"title":"ConstraintViolationException","type":"http://api:8080/petclinic/api/pettypes/-1","timestamp":"2026-11-24T02:08:35.427269439Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/v2/pets
+    curl -X DELETE http://localhost:8081/petclinic/api/pettypes/-1</failure>
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: Q1CCFH
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/visits/183","status":500,"title":"HttpMessageNotReadableException","type":"http://api:8080/petclinic/api/visits/183","timestamp":"2026-11-24T02:13:26.952378676Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/v2/pets
+    curl -X PUT -H 'Content-Type: application/json' -d '{"\u001a\u00f8": -30547, "\r\u00fc;": [4488514, 253532, ""], "\u00fdR\u00d9\u00c1\udb32\udf98V\u009a\u00ca\u00b3\u0086&gt;\u00cc\u00e7\u19c7\ue46b\u0000\u00b1J!J\u00b4A\u00e7": [[], {}, ["\u00cfC-&amp;R\u00bc", 2.0344026735200335e+98]], "": {}, "\u00cf\ud9ff\udeeb\u00b7M\udb58\udff3\u00b1\u00ce\udb1d\udc10C\uda5c\udf78\ud8c0\udc93\u0099\u008d": {"v\udb77\udfef\u009bm": null, "\u03a9\u2248\u00e7\u221a\u222b\u02dc\u00b5\u2264\u2265\u00f7\u00e5\u00df\u2202\u0192\u00a9\u02d9\u2206\u02da\u00ac\u2026\u00e6\u0153\u2211\u00b4\u00ae\u2020\u00a5\u00a8\u02c6\u00f8\u03c0\u201c\u2018\u00a1\u2122\u00a3\u00a2\u221e\u00a7\u00b6\u2022\u00aa\u00ba\u2013\u2260\u00b8\u02db\u00c7\u25ca\u0131\u02dc\u00c2\u00af\u02d8\u00bf\u00c5\u00cd\u00ce\u00cf\u02dd\u00d3\u00d4\uf8ff\u00d2\u00da\u00c6\u2603\u0152\u201e\u00b4\u2030\u02c7\u00c1\u00a8\u02c6\u00d8\u220f\u201d\u2019`\u2044\u20ac\u2039\u203a\ufb01\ufb02\u2021\u00b0\u00b7\u201a\u2014\u00b1": [-3533, 3.213480359725496e-285, -55922]}, "date": null, "description": [[3.951684499605806e-76, -14817709318, -3312]]}' http://localhost:8081/petclinic/api/visits/183</failure>
+      <failure type="failure" message="ST101, ST105">1. Test Case ID: RcdEOP
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/problem+json
+    Documented: application/json
+
+[500] Internal Server Error:
+
+    `{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/visits/7732545515","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/visits/7732545515","timestamp":"2026-11-24T02:22:38.734913830Z","schemaValidationErrors":[]}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/petclinic/api/v2/pets
+    curl -X DELETE http://localhost:8081/petclinic/api/visits/7732545515</failure>
+      <failure type="failure" message="ST201">1. Test Case ID: tYQHv3
+
+- ST201 Schema-violating request accepted
+
+    Invalid data should have been rejected
+    Expected: 400, 401, 403, 404, 405, 406, 409, 415, 422, 428, 429, 5xx
+    Invalid component: in body - violates `type` at /components/schemas/Vet/properties/firstName (was string, became boolean)
+
+[201] Created:
+
+    `{"firstName":"false","lastName":"XÞŃǡțŜÁŵð-ŎȺȶð.","specialties":[],"id":862}`
+
+Reproduce with:
+
+    curl -X POST -H 'Content-Type: application/json' -d '{"\u0084\u00f7g\ud98b\ude27\u00c5\u0017": {"_w\u00f6x;\ud941\udd85\ud92d\udc8a;\ud908\udcceR~\u001a\u00d5@\ud8d4\udc1c\tCx\u00a3\u00c2\u0014": 2.8054426362680936e+16}, "\f\u001c\u00c3\u00a0S\u00faBm\udac6\udcfd\ud98c\ude4d\udb04\udc22\ud917\ude21s\u00b5\udae3\udd480\uda1c\ude71\u00b7\u00ac\udb51\udfbd\u00b0": [-1.175494351e-38, null, null], "-Infinity": [], "": [[false, -143], null, null], "q\u00cd\u00e0\u00caK": {"true": -251, " ": false, ";\ud808\udec4\u0005\ud93b\udd8d\u00a7n\u00c5\ud837\udcf8\u00d5\u00fe\u00daoq": " \u009cP\u00de\u00e4\ud8a5\uddd9m\u00f3"}, "lastName": "X\u00de\u0143\u01e1\u021b\u015c\u00c1\u0175\u00f0-\u014e\u023a\u0236\u00f0.", "specialties": [{"\u00ffafq": [{"\nb\u00ad\u0016\u0081\u009bV\ud803\uddd5@\u00f9\ud887\udde4\u00e7\u0018\u00bd\uda70\udfed\u00d6L\u00b5\u0013u\u0082\u0097%": false, "\u00df\u0004q\ud8c7\udd27\ud8cc\udf0c": 29428417, "": true}, {}], "\u0015\u00a9\u00c7\u00f5p\u008e\uda7a\udedd\u001a\u00fa": [], "\u00fa\uda8c\udf5b": {"": {"\udb2d\udcd9\u00f1\u0010": null, "|4": false}, "\u00f8\u00a2\u0017\u007f\u00b6\udbb1\uddc0": {}, "o#=\n": 469464027623217.0}, "+\u00fe\u00d2w\u00a1\u0088\u00d8\u00e0": null, "name": "\u00cdhT{@\u00dc\u0097l\ud844\udd32"}, {"-Infinity": {"w": [], "\u564f": {"\udb33\udf6c": [false, -1796]}}, "\u009e\u00dd\u00ca#\u008cPS\u00c0z": {}, "\u0088,": [], "": {}, "|I\u00af\u00e0\u0007,\udb24\udc41\ud940\ude29\u0001\ud924\udfb4\u0013\u00dd\u00fa\u0000\u009ap[Q\ud91e\udea6\u0017v\u00db\ud86c\uddad": {"\udb60\udcdak\u00ab\u00cb": [], "7\u00cc\t\u00dc\u000b\ud916\ude0c\ud8e5\udee3": 750333}, "name": "\ud8f1\udd6e\u009e\u00fa-\u00f5^\u00d8s\u009f\u0081:\ud881\udd86"}, {"name": "P'"'"'It\udb6f\ude82\ud994\udfc11G1\u00e3"}, {"\udab1\udea8": [2959929282], "\n\u0098\u97ca\u00f6u\u00aa\u000f\u00b7\u0014": [], "name": "\ud9e3\udf85G"}, {"o\u0013": [], "name": "&lt;\u00ac\u00e1\u00d3$"}, {"__proto__": {" Hlx\u00ae\u00c7": -2.2250738585072014e-308, "\u0000\udbf9\udef2\u009d_\u0014\u00c1\ud8f7\udd93\udb91\udfec\u00b6@\udbca\udcd3": true, "": 197}, "\udb58\udeeb\u00eb": -1.3862972191427268e+16, "name": "\u00c8"}, {"\"\u00a4\u00f2M\u00ec\u0005\u0006\udbe1\udffb\u00ef\t\u00cb\u00a0s\u00f4:\u00c7`\ud865\udc9c": {"TRUE": -486, "o\u00e7": -118}, "\u00a0\uda92\ude65\u00f6\u0093\uda37\udf1a\u009cq\n\u00b3\u00e1oT\uda93\ude29": -17408993107175, "name": "W\u009f"}, {"\u0002\u00b1\udba9\ude64\u0006\ud9ea\udc95\u00db\u009dY\u000f\u0000%\uda6f\udcd7": [-1.7976931348623155e+308, "\u00ea\u00e6\u009f", []], "\udacc\udf2c\u00b7": {"\u023e": 83769891850526}, "\ud9f6\udd9d\"\udb17\udf88\u00d5\u009f\ud925\udf6f\u00aa2": {"7\u00f7.,\ud886\udf81m\udbf7\udfdeY": 30094, "": null, "\ud84e\udf2e\u00d7\u00b4}\u00a0~I\u00cc\u00bb\ud960\udd6c[\udbc7\udf77O\u00f1\u00b9\ud97e\udfc7": "\u00e7J\ud975\ude9aM"}, "name": "*\uda6c\udc89\u00b6\u00e6\u00c6\u0000\udbe6\udd5f8\u00a2\u007f\ud977\udd11#5"}, {"\u00f3\u001d\udb5e\udfd4\u00d1\u000e": [true], "name": "\u009c"}, {"\u00a3\u000bv\b\u15e7rx\u00ce\u00ae": 1.2347158620428268e-06, "q\u00c5\u0096\u001d\ud82e\udc47\u00a20i\u008f": -101346, "\uda9d\ude5eh\uda35\uded0\u00c5\u00e9\ud95c\udfd6\u0007n\u00b7y/`\u0003\udaee\udfa7\u00ac\u00bd\u00aa\u00f5\u0095-\u00b8": ["", -6.856810597122187e+16], "": [], "\u00f9": {}, "name": "\ud986\udcc6\u00b2\u00a0\udb05\udd26\u00d5\u00c2^f\uda88\ude38?\uda0d\udef9"}, {"name": "\ud958\udcd7\u00e2\udbce\udf23\ud9e5\udd62\u0097\u007f\u00be"}, {"s\u00ab\u0096\u00f8\u00d5+\u001aN": [true], "q": {"\u00a3": 2019, "": [], "\ud908\ude9dj\ud8de\udd72\u00ec": {"\udb64\udd50\ud817\uddebL\ud8ac\udf5b": -131746, "\u00dd\nQ\u00fd\u00b3\udb8a\udf8f\u00f9A\u0015\ud9a2\ude6a\u007f": false}}, "H\u008a\u009eF": 595309865186, "\u0088\ud86e\udf99\u0013\u00e4": {"}7": "\u007f\udbd9\udfd6\u00cea\u009c&amp;\u00e1"}, "name": "\u001f\u0011\u00fd*r\u00fav\u00ac\u00bf"}, {"O\u0082~\u24e4PSe\u0013\uda76\ude572\uda5e\udd1c\ud8fa\ude72\ud801\udfa2\u00e6": -22864, "name": "\ud876\udd76\u000f\u00f0\u0098\u00c2_\u009f"}], "firstName": false}' http://localhost:8081/petclinic/api/vets</failure>
+      <failure type="failure" message="ST103">1. Test Case ID: W2pj7S
+
+- ST103 Undocumented status code
+
+    Received: 204
+    Documented: 200, 304, 400, 404, 500
+
+[204] No Content:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X POST -H 'Content-Type: application/json' -d '{"7~": -135064427920, "\udaa4\ude04\u00b1N\uc083\u00bc\u00f8\u00f5\u00ebn_": {"\u00e6a5;x\ud878\udc26": 1615998, "\udbbe\udf6f\uda53\udd20": [], "u1\u00f0\u00e8\u00d6yO\u00b6\ud917\udc58e\u00ed\u0098\u00d6\udab7\udd4c?$\ud8fe\udc64\u00e0\u00be`\u0086\ud945\udd52": []}, "\udbaf\udeb9": "c|", "\u00b0\u00c5": {"": "7\udbb3\udffe\udb01\udc9fA\u0017&gt;8V", "\u0016": false, "\ud8cd\udf71\rTs\ud99b\udc54\u00bf\u008f\u001f\ud98e\udf43\u00d4\u0082Y\u00b4": true}, "description": "\b", "date": "2010-06-24"}' http://localhost:8081/petclinic/api/owners/50/pets/234/visits
+    curl -X DELETE http://localhost:8081/petclinic/api/visits/4110</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

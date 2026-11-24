@@ -1,0 +1,1186 @@
+Random seed: 1002
+Setting fuzzing schemes: directed-smoke-test
+2026-11-24 18:40:56.888: Going to fuzz a set with 43 requests
+2026-11-24 18:40:56.888: Request-0: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-1: Value Combinations: 10
+2026-11-24 18:40:56.888: Request-2: Value Combinations: 4
+2026-11-24 18:40:56.888: Request-3: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-4: Value Combinations: 6
+2026-11-24 18:40:56.888: Request-5: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-6: Value Combinations: 20
+2026-11-24 18:40:56.888: Request-7: Value Combinations: 4
+2026-11-24 18:40:56.888: Request-8: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-9: Value Combinations: 4
+2026-11-24 18:40:56.888: Request-10: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-11: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-12: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-13: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-14: Value Combinations: 16
+2026-11-24 18:40:56.888: Request-15: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-16: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-17: Value Combinations: 6
+2026-11-24 18:40:56.888: Request-18: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-19: Value Combinations: 16
+2026-11-24 18:40:56.888: Request-20: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-21: Value Combinations: 4
+2026-11-24 18:40:56.888: Request-22: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-23: Value Combinations: 20
+2026-11-24 18:40:56.888: Request-24: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-25: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-26: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-27: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-28: Value Combinations: 16
+2026-11-24 18:40:56.888: Request-29: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-30: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-31: Value Combinations: 6
+2026-11-24 18:40:56.888: Request-32: Value Combinations: 16
+2026-11-24 18:40:56.888: Request-33: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-34: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-35: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-36: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-37: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-38: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-39: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-40: Value Combinations: 2
+2026-11-24 18:40:56.888: Request-41: Value Combinations: 16
+2026-11-24 18:40:56.888: Request-42: Value Combinations: 2
+2026-11-24 18:40:56.888: Avg. Value Combinations per Request: 5.116279069767442
+2026-11-24 18:40:56.888: Median Value Combinations per Request: 2
+2026-11-24 18:40:56.888: Min Value Combinations per Request: 2
+2026-11-24 18:40:56.888: Max Value Combinations per Request: 20
+2026-11-24 18:40:56.888: Total dependencies: 31
+
+2026-11-24 18:40:56.895: Generation: 1 / Sequences Collection Size: 22 
+(After directed-smoke-test Extend)
+
+Rendering request 0 from scratch
+
+2026-11-24 18:40:56.924: Request 0
+2026-11-24 18:40:56.924: Endpoint - /api/pettypes
+2026-11-24 18:40:56.924: Hex Def - 053838ef33733bad494457ce10e340cc0892955e
+2026-11-24 18:40:56.924: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:56.924: Rendering VALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pettypes'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Rendering request 1 from scratch
+
+2026-11-24 18:40:57.192: Request 1
+2026-11-24 18:40:57.192: Endpoint - /api/users
+2026-11-24 18:40:57.192: Hex Def - 0598e5eb1ba14fa0be2a3dc5d216ce66328d92c3
+2026-11-24 18:40:57.192: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:57.192: Rendering VALID
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'users'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "username":'
+		+ restler_fuzzable_string: ['"john.doe"', '"fuzzstring"']
+		- restler_static_string: ',\n    "password":'
+		+ restler_fuzzable_string: ['"1234abc"', '"fuzzstring"']
+		- restler_static_string: ',\n    "enabled":'
+		- restler_fuzzable_bool: 'true'
+		- restler_static_string: ',\n    "roles":\n    [\n        {\n            "name":'
+		+ restler_fuzzable_string: ['"admin"', '"fuzzstring"']
+		- restler_static_string: '\n        }\n    ]}'
+		- restler_static_string: '\r\n'
+
+Rendering request 2 from scratch
+
+2026-11-24 18:40:57.237: Request 2
+2026-11-24 18:40:57.237: Endpoint - 
+2026-11-24 18:40:57.237: Hex Def - 091b0ce42eb0bd96169ea00b16dd938f6d63ac95
+2026-11-24 18:40:57.237: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:57.237: Rendering INVALID
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Rendering request 3 from scratch
+
+2026-11-24 18:40:57.295: Request 3
+2026-11-24 18:40:57.295: Endpoint - /api/specialties
+2026-11-24 18:40:57.295: Hex Def - 16561cbbfe6d2e5e6b095c91a994bbe11205da85
+2026-11-24 18:40:57.295: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:57.295: Rendering VALID
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'specialties'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ['"radiology"', '"fuzzstring"']
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+Rendering request 4 from scratch
+
+2026-11-24 18:40:57.324: Request 4
+2026-11-24 18:40:57.324: Endpoint - /api/pettypes
+2026-11-24 18:40:57.324: Hex Def - 2040c87a7baefdfc12e4ed0f6fa94f18debc492a
+2026-11-24 18:40:57.324: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:57.324: Rendering VALID
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pettypes'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ['"cat"', '"fuzzstring"']
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+Rendering request 5 from scratch
+
+2026-11-24 18:40:57.383: Request 5
+2026-11-24 18:40:57.383: Endpoint - /api/pets
+2026-11-24 18:40:57.383: Hex Def - 2241241ab98f65a0dd2f427b4d84302e74e1a15f
+2026-11-24 18:40:57.383: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:57.383: Rendering VALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Rendering request 6 from scratch
+
+2026-11-24 18:40:57.410: Request 6
+2026-11-24 18:40:57.410: Endpoint - /api/specialties
+2026-11-24 18:40:57.410: Hex Def - 25af6c2bd9d90ca040c589ffef967808b437d649
+2026-11-24 18:40:57.410: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:57.410: Rendering VALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'specialties'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Rendering request 7 from scratch
+
+2026-11-24 18:40:57.983: Request 7
+2026-11-24 18:40:57.983: Endpoint - /api/pets/{petId}
+2026-11-24 18:40:57.983: Hex Def - 32e67800bf81a02d043f1b25fc64532e5b8eaf0f
+2026-11-24 18:40:57.983: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:57.983: Rendering INVALID
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_custom_payload_uuid4_suffix: 'p'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ['"Leo"', '"fuzzstring"']
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ['"2010-09-07"', '"2019-06-26"']
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ['"cat"', '"fuzzstring"']
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+Rendering request 8 from scratch
+
+2026-11-24 18:40:58.094: Request 8
+2026-11-24 18:40:58.094: Endpoint - /api/owners
+2026-11-24 18:40:58.094: Hex Def - 35e345f6e92ee295a32d0d33134ad153a164a051
+2026-11-24 18:40:58.094: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:58.094: Rendering VALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '?'
+		- restler_static_string: 'lastName='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Rendering request 9 from scratch
+
+2026-11-24 18:40:58.117: Request 9
+2026-11-24 18:40:58.117: Endpoint - 
+2026-11-24 18:40:58.117: Hex Def - 39dd320e8c4e9f06b35e0be0b4942ac2022fb9c1
+2026-11-24 18:40:58.117: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:58.117: Rendering VALID
+		- restler_static_string: 'OPTIONS '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Rendering request 10 from scratch
+
+2026-11-24 18:40:58.165: Request 10
+2026-11-24 18:40:58.165: Endpoint - /api/visits
+2026-11-24 18:40:58.165: Hex Def - 412e528bcbdb589a7d65bede6705013dd74ab8cb
+2026-11-24 18:40:58.165: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:58.165: Rendering VALID
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "date":'
+		+ restler_fuzzable_date: ['"2013-01-01"', '"2019-06-26"']
+		- restler_static_string: ',\n    "description":'
+		+ restler_fuzzable_string: ['"rabies shot"', '"fuzzstring"']
+		- restler_static_string: ',\n    "petId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+Rendering request 11 from scratch
+
+2026-11-24 18:40:58.250: Request 11
+2026-11-24 18:40:58.250: Endpoint - /api/vets
+2026-11-24 18:40:58.250: Hex Def - 4552a3e207fa7c35d3ca1f393dc67bfe2887e62b
+2026-11-24 18:40:58.250: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:58.250: Rendering VALID
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'vets'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ['"James"', '"fuzzstring"']
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ['"Carter"', '"fuzzstring"']
+		- restler_static_string: ',\n    "specialties":\n    [\n        {\n            "name":'
+		+ restler_fuzzable_string: ['"radiology"', '"fuzzstring"']
+		- restler_static_string: '\n        }\n    ]}'
+		- restler_static_string: '\r\n'
+
+Rendering request 12 from scratch
+
+2026-11-24 18:40:58.279: Request 12
+2026-11-24 18:40:58.279: Endpoint - /api/vets
+2026-11-24 18:40:58.279: Hex Def - 45f71549262bf2d37031f93494ff120c375dd642
+2026-11-24 18:40:58.279: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:58.280: Rendering VALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'vets'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Rendering request 13 from scratch
+
+2026-11-24 18:40:58.329: Request 13
+2026-11-24 18:40:58.329: Endpoint - /api/v2/pets
+2026-11-24 18:40:58.329: Hex Def - 4c188fbad6a350ae59ab88276696235d5234d107
+2026-11-24 18:40:58.329: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:58.329: Rendering VALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v2'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '?'
+		- restler_static_string: 'page='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '&'
+		- restler_static_string: 'size='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Rendering request 14 from scratch
+
+2026-11-24 18:40:58.358: Request 14
+2026-11-24 18:40:58.358: Endpoint - /api/owners
+2026-11-24 18:40:58.358: Hex Def - 514ff1902a735c3aba1c5b223728f11bfb77c8ac
+2026-11-24 18:40:58.358: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:58.358: Rendering VALID
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ['"George"', '"fuzzstring"']
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ['"Franklin"', '"fuzzstring"']
+		- restler_static_string: ',\n    "address":'
+		+ restler_fuzzable_string: ['"110 W. Liberty St."', '"fuzzstring"']
+		- restler_static_string: ',\n    "city":'
+		+ restler_fuzzable_string: ['"Madison"', '"fuzzstring"']
+		- restler_static_string: ',\n    "telephone":'
+		+ restler_fuzzable_string: ['"6085551023"', '"fuzzstring"']
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+Rendering request 15 from scratch
+
+2026-11-24 18:40:58.398: Request 15
+2026-11-24 18:40:58.398: Endpoint - 
+2026-11-24 18:40:58.398: Hex Def - 61ff81c30aa3c76e78afea62b2e3bd1dfa49e854
+2026-11-24 18:40:58.398: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:58.398: Rendering INVALID
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Rendering request 16 from scratch
+
+2026-11-24 18:40:58.439: Request 16
+2026-11-24 18:40:58.439: Endpoint - 
+2026-11-24 18:40:58.440: Hex Def - 7138a51661947b19b5088da5a2bfede2876f49b9
+2026-11-24 18:40:58.440: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:58.440: Rendering INVALID
+		- restler_static_string: 'HEAD '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Rendering request 17 from scratch
+
+2026-11-24 18:40:58.482: Request 17
+2026-11-24 18:40:58.482: Endpoint - 
+2026-11-24 18:40:58.482: Hex Def - 9fbe29d4d76ec756421aee06e0f34f17fa488ff3
+2026-11-24 18:40:58.482: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:58.482: Rendering INVALID
+		- restler_static_string: 'PATCH '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Rendering request 18 from scratch
+
+2026-11-24 18:40:58.520: Request 18
+2026-11-24 18:40:58.520: Endpoint - /api/v2/owners
+2026-11-24 18:40:58.520: Hex Def - c8bbd9e7b9627c352e39d95a94861fcd04a8fc45
+2026-11-24 18:40:58.520: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:58.520: Rendering VALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'v2'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '?'
+		- restler_static_string: 'lastName='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'page='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '&'
+		- restler_static_string: 'size='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Rendering request 19 from scratch
+
+2026-11-24 18:40:58.561: Request 19
+2026-11-24 18:40:58.561: Endpoint - 
+2026-11-24 18:40:58.561: Hex Def - d6f5636098cd458ce9d22939f8e3e8deab0e9bd0
+2026-11-24 18:40:58.561: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:58.561: Rendering INVALID
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Rendering request 20 from scratch
+
+2026-11-24 18:40:58.589: Request 20
+2026-11-24 18:40:58.589: Endpoint - /api/visits
+2026-11-24 18:40:58.589: Hex Def - e3aa178c0dae9736f616a1613c22a38a8e7882d1
+2026-11-24 18:40:58.589: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:58.589: Rendering VALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Rendering request 21 from scratch
+
+2026-11-24 18:40:58.629: Request 21
+2026-11-24 18:40:58.629: Endpoint - 
+2026-11-24 18:40:58.629: Hex Def - f030bbbd32966cde41037b98a8849c46b76e4bc1
+2026-11-24 18:40:58.629: Sequence length that satisfies dependencies: 1
+2026-11-24 18:40:58.630: Rendering INVALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+2026-11-24 18:40:58.630: Generation: 1 / Sequences Collection Size: 15 
+(After directed-smoke-test Render)
+
+2026-11-24 18:40:58.630: Final Swagger spec coverage: 15 / 43
+2026-11-24 18:40:58.630: Rendered requests: 22 / 43
+2026-11-24 18:40:58.630: Rendered requests with "valid" status codes: 15 / 22
+2026-11-24 18:40:58.630: Num fully valid requests (no resource creation failures): 15
+2026-11-24 18:40:58.630: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-24 18:40:58.630: Num invalid requests caused by failed resource creations: 0
+2026-11-24 18:40:58.630: Total Creations of Dyn Objects: 5
+2026-11-24 18:40:58.630: Total Requests Sent: {'gc': 0, 'main_driver': 44}
+2026-11-24 18:40:58.630: Bug Buckets: {'main_driver_500': 1}
+2026-11-24 18:40:58.633: Generation: 2 / Sequences Collection Size: 18 
+(After directed-smoke-test Extend)
+
+Found a matching prefix of length 1 for request 22 with previous request 3
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:58.679: Request 22
+2026-11-24 18:40:58.679: Endpoint - /api/specialties/{specialtyId}
+2026-11-24 18:40:58.679: Hex Def - 07d2030a0c2a28e91a28bfdeb328a47948fb9b02
+2026-11-24 18:40:58.679: Sequence length that satisfies dependencies: 2
+2026-11-24 18:40:58.679: Rendering VALID
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'specialties'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_specialties_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ['"radiology"', '"fuzzstring"']
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 1 for request 23 with previous request 10
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:58.738: Request 23
+2026-11-24 18:40:58.738: Endpoint - /api/visits/{visitId}
+2026-11-24 18:40:58.738: Hex Def - 133241ef47368639c15c9b3f5d6d77f4de070e8b
+2026-11-24 18:40:58.738: Sequence length that satisfies dependencies: 2
+2026-11-24 18:40:58.738: Rendering VALID
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_visits_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "date":'
+		+ restler_fuzzable_date: ['"2013-01-01"', '"2019-06-26"']
+		- restler_static_string: ',\n    "description":'
+		+ restler_fuzzable_string: ['"rabies shot"', '"fuzzstring"']
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 1 for request 24 with previous request 14
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:58.789: Request 24
+2026-11-24 18:40:58.789: Endpoint - /api/owners/{ownerId}
+2026-11-24 18:40:58.789: Hex Def - 15ca9dc9089572890289bb66b1fa499eb28ed8b1
+2026-11-24 18:40:58.789: Sequence length that satisfies dependencies: 2
+2026-11-24 18:40:58.789: Rendering VALID
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ['"George"', '"fuzzstring"']
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ['"Franklin"', '"fuzzstring"']
+		- restler_static_string: ',\n    "address":'
+		+ restler_fuzzable_string: ['"110 W. Liberty St."', '"fuzzstring"']
+		- restler_static_string: ',\n    "city":'
+		+ restler_fuzzable_string: ['"Madison"', '"fuzzstring"']
+		- restler_static_string: ',\n    "telephone":'
+		+ restler_fuzzable_string: ['"6085551023"', '"fuzzstring"']
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 1 for request 25 with previous request 4
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:58.869: Request 25
+2026-11-24 18:40:58.869: Endpoint - /api/pettypes/{petTypeId}
+2026-11-24 18:40:58.869: Hex Def - 1a90034e3f93193061bb877452a4e1240000f247
+2026-11-24 18:40:58.869: Sequence length that satisfies dependencies: 2
+2026-11-24 18:40:58.869: Rendering VALID
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pettypes'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_pettypes_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 1 for request 26 with previous request 11
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:58.916: Request 26
+2026-11-24 18:40:58.916: Endpoint - /api/vets/{vetId}
+2026-11-24 18:40:58.916: Hex Def - 28cd5ae5ad1e5ec283b4712408be6fe99d4e731a
+2026-11-24 18:40:58.916: Sequence length that satisfies dependencies: 2
+2026-11-24 18:40:58.916: Rendering VALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'vets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 1 for request 27 with previous request 14
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:58.961: Request 27
+2026-11-24 18:40:58.961: Endpoint - /api/owners/{ownerId}
+2026-11-24 18:40:58.961: Hex Def - 3034b01a02e2622e95e0dc6f7cb1be2a1451d8b5
+2026-11-24 18:40:58.961: Sequence length that satisfies dependencies: 2
+2026-11-24 18:40:58.961: Rendering VALID
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 1 for request 28 with previous request 7
+	but that prefix was INVALID (root = 7)
+
+2026-11-24 18:40:58.962: Request 28
+2026-11-24 18:40:58.962: Endpoint - /api/pets/{petId}
+2026-11-24 18:40:58.962: Hex Def - 420721f5e207098eecf8095a3955950a36e855da
+2026-11-24 18:40:58.962: Sequence length that satisfies dependencies: 2
+2026-11-24 18:40:58.962: Rendering INVALID
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_pets__petId__put_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 1 for request 29 with previous request 4
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:59.006: Request 29
+2026-11-24 18:40:59.006: Endpoint - /api/pettypes/{petTypeId}
+2026-11-24 18:40:59.006: Hex Def - 47db08f2ebdfdaf7bae480c57390acc404ac1c9c
+2026-11-24 18:40:59.006: Sequence length that satisfies dependencies: 2
+2026-11-24 18:40:59.006: Rendering VALID
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pettypes'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_pettypes_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ['"cat"', '"fuzzstring"']
+		- restler_static_string: ',\n    "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 1 for request 30 with previous request 14
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:59.046: Request 30
+2026-11-24 18:40:59.046: Endpoint - /api/owners/{ownerId}
+2026-11-24 18:40:59.046: Hex Def - 6337bb7edcbd2d30304ea26b862c1df1e934dc93
+2026-11-24 18:40:59.046: Sequence length that satisfies dependencies: 2
+2026-11-24 18:40:59.046: Rendering VALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 1 for request 31 with previous request 3
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:59.088: Request 31
+2026-11-24 18:40:59.088: Endpoint - /api/specialties/{specialtyId}
+2026-11-24 18:40:59.088: Hex Def - 66807a515f819080c405c1685a18dee97ffcdce9
+2026-11-24 18:40:59.088: Sequence length that satisfies dependencies: 2
+2026-11-24 18:40:59.088: Rendering VALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'specialties'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_specialties_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 1 for request 32 with previous request 10
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:59.133: Request 32
+2026-11-24 18:40:59.133: Endpoint - /api/visits/{visitId}
+2026-11-24 18:40:59.133: Hex Def - 66db29a6ce13e35f15034282530ae121d5f9d3c2
+2026-11-24 18:40:59.133: Sequence length that satisfies dependencies: 2
+2026-11-24 18:40:59.133: Rendering VALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_visits_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 1 for request 33 with previous request 3
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:59.196: Request 33
+2026-11-24 18:40:59.196: Endpoint - /api/specialties/{specialtyId}
+2026-11-24 18:40:59.196: Hex Def - 6d7e41dc63db2b109144305ccc49e1364399d0b4
+2026-11-24 18:40:59.196: Sequence length that satisfies dependencies: 2
+2026-11-24 18:40:59.196: Rendering VALID
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'specialties'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_specialties_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 1 for request 34 with previous request 14
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:59.255: Request 34
+2026-11-24 18:40:59.255: Endpoint - /api/owners/{ownerId}/pets
+2026-11-24 18:40:59.255: Hex Def - 8033d43f0c0ae2f3d25b77074223770681784813
+2026-11-24 18:40:59.255: Sequence length that satisfies dependencies: 2
+2026-11-24 18:40:59.255: Rendering VALID
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ['"Leo"', '"fuzzstring"']
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ['"2010-09-07"', '"2019-06-26"']
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ['"cat"', '"fuzzstring"']
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 1 for request 35 with previous request 7
+	but that prefix was INVALID (root = 7)
+
+2026-11-24 18:40:59.256: Request 35
+2026-11-24 18:40:59.256: Endpoint - /api/pets/{petId}
+2026-11-24 18:40:59.256: Hex Def - a4ab831f19c7a9ec0a991769d64f7204daa93b42
+2026-11-24 18:40:59.256: Sequence length that satisfies dependencies: 2
+2026-11-24 18:40:59.256: Rendering INVALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_pets__petId__put_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 1 for request 36 with previous request 10
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:59.309: Request 36
+2026-11-24 18:40:59.309: Endpoint - /api/visits/{visitId}
+2026-11-24 18:40:59.309: Hex Def - c7034eff34cd10a6841d5ceed2eae309aaadef2c
+2026-11-24 18:40:59.309: Sequence length that satisfies dependencies: 2
+2026-11-24 18:40:59.309: Rendering VALID
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_visits_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 1 for request 37 with previous request 4
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:59.357: Request 37
+2026-11-24 18:40:59.357: Endpoint - /api/pettypes/{petTypeId}
+2026-11-24 18:40:59.357: Hex Def - c944e12b5d38ab8f23df5df43a23ac1c409c0eba
+2026-11-24 18:40:59.357: Sequence length that satisfies dependencies: 2
+2026-11-24 18:40:59.357: Rendering VALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'pettypes'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_pettypes_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 1 for request 38 with previous request 11
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:59.410: Request 38
+2026-11-24 18:40:59.410: Endpoint - /api/vets/{vetId}
+2026-11-24 18:40:59.410: Hex Def - cf9d72c91730a6194fc6938eb35093deb2932c84
+2026-11-24 18:40:59.410: Sequence length that satisfies dependencies: 2
+2026-11-24 18:40:59.410: Rendering VALID
+		- restler_static_string: 'DELETE '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'vets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 1 for request 39 with previous request 11
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:59.469: Request 39
+2026-11-24 18:40:59.469: Endpoint - /api/vets/{vetId}
+2026-11-24 18:40:59.469: Hex Def - edf53506461f0383c01d1da69f7bea2803255597
+2026-11-24 18:40:59.469: Sequence length that satisfies dependencies: 2
+2026-11-24 18:40:59.469: Rendering VALID
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'vets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "firstName":'
+		+ restler_fuzzable_string: ['"James"', '"fuzzstring"']
+		- restler_static_string: ',\n    "lastName":'
+		+ restler_fuzzable_string: ['"Carter"', '"fuzzstring"']
+		- restler_static_string: ',\n    "specialties":\n    [\n        {\n            "name":'
+		+ restler_fuzzable_string: ['"radiology"', '"fuzzstring"']
+		- restler_static_string: '\n        }\n    ]}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 18:40:59.470: Generation: 2 / Sequences Collection Size: 16 
+(After directed-smoke-test Render)
+
+2026-11-24 18:40:59.470: Final Swagger spec coverage: 31 / 43
+2026-11-24 18:40:59.470: Rendered requests: 38 / 43
+2026-11-24 18:40:59.470: Rendered requests with "valid" status codes: 31 / 38
+2026-11-24 18:40:59.470: Num fully valid requests (no resource creation failures): 31
+2026-11-24 18:40:59.470: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-24 18:40:59.470: Num invalid requests caused by failed resource creations: 0
+2026-11-24 18:40:59.470: Total Creations of Dyn Objects: 22
+2026-11-24 18:40:59.470: Total Requests Sent: {'gc': 0, 'main_driver': 76}
+2026-11-24 18:40:59.470: Bug Buckets: {'main_driver_500': 1}
+2026-11-24 18:40:59.473: Generation: 3 / Sequences Collection Size: 3 
+(After directed-smoke-test Extend)
+
+Found a matching prefix of length 2 for request 40 with previous request 34
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:59.565: Request 40
+2026-11-24 18:40:59.565: Endpoint - /api/owners/{ownerId}/pets/{petId}
+2026-11-24 18:40:59.565: Hex Def - 145b8b7079048851b121a7103de983bbbbc84b9e
+2026-11-24 18:40:59.565: Sequence length that satisfies dependencies: 3
+2026-11-24 18:40:59.565: Rendering INVALID
+		- restler_static_string: 'GET '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners__ownerId__pets_post_type_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 2 for request 41 with previous request 34
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:59.635: Request 41
+2026-11-24 18:40:59.635: Endpoint - /api/owners/{ownerId}/pets/{petId}
+2026-11-24 18:40:59.635: Hex Def - 66ec81084e05aef9af4b0a68fb23d2bcca4d699f
+2026-11-24 18:40:59.635: Sequence length that satisfies dependencies: 3
+2026-11-24 18:40:59.635: Rendering VALID
+		- restler_static_string: 'PUT '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners__ownerId__pets_post_type_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "name":'
+		+ restler_fuzzable_string: ['"Leo"', '"fuzzstring"']
+		- restler_static_string: ',\n    "birthDate":'
+		+ restler_fuzzable_date: ['"2010-09-07"', '"2019-06-26"']
+		- restler_static_string: ',\n    "type":\n        {\n            "name":'
+		+ restler_fuzzable_string: ['"cat"', '"fuzzstring"']
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    }'
+		- restler_static_string: '\r\n'
+
+Found a matching prefix of length 2 for request 42 with previous request 34
+	and re-using that VALID prefix (1 rendering combinations)
+
+2026-11-24 18:40:59.698: Request 42
+2026-11-24 18:40:59.698: Endpoint - /api/owners/{ownerId}/pets/{petId}/visits
+2026-11-24 18:40:59.698: Hex Def - 7cc068a174fc2a7f8c8cf0859e22061102523804
+2026-11-24 18:40:59.698: Sequence length that satisfies dependencies: 3
+2026-11-24 18:40:59.698: Rendering VALID
+		- restler_static_string: 'POST '
+		- restler_static_string: '/petclinic'
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'owners'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners_post_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'pets'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_owners__ownerId__pets_post_type_id_READER_DELIM'
+		- restler_static_string: '/'
+		- restler_static_string: 'visits'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: ['token_auth_method', 'token_refresh_interval']
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "date":'
+		+ restler_fuzzable_date: ['"2013-01-01"', '"2019-06-26"']
+		- restler_static_string: ',\n    "description":'
+		+ restler_fuzzable_string: ['"rabies shot"', '"fuzzstring"']
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 18:40:59.699: Generation: 3 / Sequences Collection Size: 2 
+(After directed-smoke-test Render)
+
+2026-11-24 18:40:59.699: Final Swagger spec coverage: 34 / 43
+2026-11-24 18:40:59.699: Rendered requests: 41 / 43
+2026-11-24 18:40:59.699: Rendered requests with "valid" status codes: 34 / 41
+2026-11-24 18:40:59.699: Num fully valid requests (no resource creation failures): 34
+2026-11-24 18:40:59.699: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-24 18:40:59.699: Num invalid requests caused by failed resource creations: 0
+2026-11-24 18:40:59.699: Total Creations of Dyn Objects: 28
+2026-11-24 18:40:59.699: Total Requests Sent: {'gc': 0, 'main_driver': 86}
+2026-11-24 18:40:59.699: Bug Buckets: {'main_driver_500': 1}
+
+Testing completed -- below are the final stats:
+
+2026-11-24 18:41:00.022: Final Swagger spec coverage: 34 / 43
+2026-11-24 18:41:00.022: Rendered requests: 41 / 43
+2026-11-24 18:41:00.022: Rendered requests with "valid" status codes: 34 / 41
+2026-11-24 18:41:00.022: Num fully valid requests (no resource creation failures): 34
+2026-11-24 18:41:00.022: Num requests not rendered due to invalid sequence re-renders: 0
+2026-11-24 18:41:00.022: Num invalid requests caused by failed resource creations: 0
+2026-11-24 18:41:00.022: Total Creations of Dyn Objects: 28
+2026-11-24 18:41:00.022: Total Requests Sent: {'gc': 24, 'main_driver': 86}
+2026-11-24 18:41:00.022: Bug Buckets: {'main_driver_500': 1}

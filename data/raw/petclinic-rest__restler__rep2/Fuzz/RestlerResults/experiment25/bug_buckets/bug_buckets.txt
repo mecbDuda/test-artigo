@@ -1,0 +1,701 @@
+main_driver_500: 2
+LeakageRuleChecker_500: 1
+PayloadBodyChecker_500: 125
+InvalidValueChecker_500: 14
+InvalidDynamicObjectChecker_20x: 8
+InvalidDynamicObjectChecker_500: 12
+Total Buckets: 162
+-------------
+main_driver_500 - Bug was reproduced - main_driver_500_1.replay.txt
+Hash: main_driver_500_828927429f87746bab3f7391f3fe7d713ce7ac0d
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring,\n    "birthDate":2019-06-26,\n    "type":\n        {\n            "name":fuzzstring,\n            "id":1\n        }\n    }\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_2.replay.txt
+Hash: main_driver_500_da9b2fcf404f786c76d2cfcbbbc9f8ff6e46bed5
+POST /petclinic/api/users HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "username":fuzzstring,\n    "password":fuzzstring,\n    "enabled":true,\n    "roles":\n    [\n        {\n            "name":fuzzstring\n        }\n    ]}\r\n
+--------------------------------------------------------------------------------
+LeakageRuleChecker_500 - Bug was reproduced - LeakageRuleChecker_500_1.replay.txt
+Hash: LeakageRuleChecker_500_701301d4a70f0489fcb7f9f5dd1c80a36f401b99
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring,\n    "birthDate":2019-06-26,\n    "type":\n        {\n            "name":fuzzstring,\n            "id":1\n        }\n    }\r\n
+GET /petclinic/api/pets/_READER_DELIM_api_pets__petId__put_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_1.replay.txt
+Hash: PayloadBodyChecker_500_34d8d8ffe87c2838aedaf13cfcbfcee12a9d28aa
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"fuzzstring","birthDate":"fuzzstring","type":{"name":"fuzzstring","id":0},"id":0,"ownerId":0,"visits":[{"date":"fuzzstring","description":"fuzzstring","id":0,"petId":0}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_2.replay.txt
+Hash: PayloadBodyChecker_500_583c61040c85938426d81e778c13fbdf596b02ae
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"type":{"name":"fuzzstring","id":0}}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_3.replay.txt
+Hash: PayloadBodyChecker_500_b582b2094efcc9fab4a4bfa73a6488354c8ab08f
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"type":{"id":0}}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_4.replay.txt
+Hash: PayloadBodyChecker_500_a34f76a24153b3a94151ea9c5342420db4115447
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"visits":[{"date":"fuzzstring","description":"fuzzstring","id":0,"petId":0}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_5.replay.txt
+Hash: PayloadBodyChecker_500_bd7733ad15eecc65d4d35956e82d9f068fd3bfd1
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"visits":[{"petId":0}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_6.replay.txt
+Hash: PayloadBodyChecker_500_8afe2fb2c52510bb78bdf0e7966e7f1a0a7502fe
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"visits":[{"description":"fuzzstring"}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_7.replay.txt
+Hash: PayloadBodyChecker_500_7d34c908d3178f08d07196c25f529ca18cda39cd
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"type":{"name":"fuzzstring"}}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_8.replay.txt
+Hash: PayloadBodyChecker_500_64246f2fb2f140fc9229c352b23f83bd57335ab0
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"fuzzstring","birthDate":"fuzzstring","type":{"name":"fuzzstring","id":0},"id":0,"ownerId":0,"visits":[{"date":"fuzzstring"}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_9.replay.txt
+Hash: PayloadBodyChecker_500_c9b4e89f6e2f15d280e7249488b5f7499718b86a
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"fuzzstring","birthDate":"fuzzstring","type":{"id":0},"id":0,"ownerId":0,"visits":[{"date":"fuzzstring","description":"fuzzstring","id":0,"petId":0}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_10.replay.txt
+Hash: PayloadBodyChecker_500_01d348017e90200fcef8c62111c6a0ebaee1c11b
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"fuzzstring","birthDate":"fuzzstring","type":{"name":"fuzzstring","id":0},"id":0,"ownerId":0,"visits":[{"id":0}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_11.replay.txt
+Hash: PayloadBodyChecker_500_44b0bf269277499f83d12ce9101de922b02fa560
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"visits":[{"id":0}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_12.replay.txt
+Hash: PayloadBodyChecker_500_60356ef6044414813f841458d73fb9d658957f6a
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"fuzzstring","birthDate":"fuzzstring","type":{"name":"fuzzstring","id":0},"id":0,"ownerId":0,"visits":[{"description":"fuzzstring"}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_13.replay.txt
+Hash: PayloadBodyChecker_500_5104dcdd070cfa07017a08073b5798e56b962e25
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"fuzzstring","birthDate":"fuzzstring","type":{"name":"fuzzstring","id":0},"id":0,"ownerId":0,"visits":[{"petId":0}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_14.replay.txt
+Hash: PayloadBodyChecker_500_774aab2f360c8d59c8f2aabb7971b50a1d408859
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"fuzzstring"}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_15.replay.txt
+Hash: PayloadBodyChecker_500_33bb734eb27d62fcec14735e0a39f0c6e2540473
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"visits":[{"date":"fuzzstring"}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_16.replay.txt
+Hash: PayloadBodyChecker_500_773d5a1450b7285cc07388efbaf03da7f719b10c
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"birthDate":"fuzzstring"}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_17.replay.txt
+Hash: PayloadBodyChecker_500_9e807fe14f9798b4eaed3d36b20d42d94f9daef1
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"fuzzstring","birthDate":"fuzzstring","type":{"name":"fuzzstring"},"id":0,"ownerId":0,"visits":[{"date":"fuzzstring","description":"fuzzstring","id":0,"petId":0}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_18.replay.txt
+Hash: PayloadBodyChecker_500_dde1c63d6c856b06c80e3e066f018e6734b12d3e
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"ownerId":0}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_19.replay.txt
+Hash: PayloadBodyChecker_500_7ff628dbb6a53a548a1b25dd47e1313e11ab842a
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"id":0}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_20.replay.txt
+Hash: PayloadBodyChecker_500_ef6c8159d1196af13ca7a2fa4e125ce5c9f4eb75
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"type":false}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_21.replay.txt
+Hash: PayloadBodyChecker_500_9731195e21c4bf7312b4e41807798751751edd1e
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"type":{"name":{ "fuzz" : false },"id":0}}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_22.replay.txt
+Hash: PayloadBodyChecker_500_5d01ba8c3906d098d4c095090d44f2b081d9feeb
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"type":{"name":"fuzzstring","id":{ "fuzz" : false }}}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_23.replay.txt
+Hash: PayloadBodyChecker_500_58182a166346fff5174217c3863afd792d94bc70
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\nfalse
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_24.replay.txt
+Hash: PayloadBodyChecker_500_ef2b42327e9db69fe038eb4d8a4efb5edb65162e
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"visits":[false]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_25.replay.txt
+Hash: PayloadBodyChecker_500_21ba413b0af778284e2dbe79297e4b621291b2a4
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"visits":[{"date":"fuzzstring","description":"fuzzstring","id":{ "fuzz" : false },"petId":0}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_26.replay.txt
+Hash: PayloadBodyChecker_500_a1c684d75e785bf1ad468b4e99669572efdf8ece
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"visits":[{"date":"fuzzstring","description":{ "fuzz" : false },"id":0,"petId":0}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_27.replay.txt
+Hash: PayloadBodyChecker_500_c0c5f7798a510726792624417f4c05ac879b8aaf
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"visits":[{"date":{ "fuzz" : false },"description":"fuzzstring","id":0,"petId":0}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_28.replay.txt
+Hash: PayloadBodyChecker_500_043aad9661fbc4c234b34adb4ae7e1eab67f8f65
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"visits":false}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_29.replay.txt
+Hash: PayloadBodyChecker_500_d95c75c8005b4ab6aa05f044a1e50eda841607c1
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"visits":[{"date":"fuzzstring","description":"fuzzstring","id":0,"petId":{ "fuzz" : false }}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_30.replay.txt
+Hash: PayloadBodyChecker_500_1a8add2f48d7019fc32b1f4b4e787eaf1874335c
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"fuzzstring","birthDate":{ "fuzz" : false },"type":{"name":"fuzzstring","id":0},"id":0,"ownerId":0,"visits":[{"date":"fuzzstring","description":"fuzzstring","id":0,"petId":0}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_31.replay.txt
+Hash: PayloadBodyChecker_500_e3e808e69c0d94b1fb31404bf705aeb981bc6a7e
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"fuzzstring","birthDate":"fuzzstring","type":{"name":"fuzzstring","id":0},"id":{ "fuzz" : false },"ownerId":0,"visits":[{"date":"fuzzstring","description":"fuzzstring","id":0,"petId":0}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_32.replay.txt
+Hash: PayloadBodyChecker_500_5c4caa64118e793d8481fe24655050ba16b077bd
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"fuzzstring","birthDate":"fuzzstring","type":{"name":"fuzzstring","id":0},"id":0,"ownerId":{ "fuzz" : false },"visits":[{"date":"fuzzstring","description":"fuzzstring","id":0,"petId":0}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_33.replay.txt
+Hash: PayloadBodyChecker_500_afc06ad3bf6bfcacb2acfd855a3e2582c7ce8bfa
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":{ "fuzz" : false },"birthDate":"fuzzstring","type":{"name":"fuzzstring","id":0},"id":0,"ownerId":0,"visits":[{"date":"fuzzstring","description":"fuzzstring","id":0,"petId":0}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_34.replay.txt
+Hash: PayloadBodyChecker_500_ea6dc335509b1466d46680b4d382c847b7aace6b
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{ "fuzz" : false }
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_35.replay.txt
+Hash: PayloadBodyChecker_500_6dae5ca1c8085eb02a6d166f144a6ebdbb6d3040
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"type":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_36.replay.txt
+Hash: PayloadBodyChecker_500_9e537c023bfa32bf0c7ca1ae530323e5eb7376de
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"visits":[{ "fuzz" : false }]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_37.replay.txt
+Hash: PayloadBodyChecker_500_5764306833205987ea2408cec4b1b014922ccfb3
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"fuzzstring","birthDate":"fuzzstring","type":{ "fuzz" : false },"id":0,"ownerId":0,"visits":[{"date":"fuzzstring","description":"fuzzstring","id":0,"petId":0}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_38.replay.txt
+Hash: PayloadBodyChecker_500_ffc51940b6ee781ec31ceac9861ea9fe676a7f5a
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"fuzzstring","birthDate":"fuzzstring","type":{"name":"fuzzstring","id":0},"id":0,"ownerId":0,"visits":[{ "fuzz" : false }]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_39.replay.txt
+Hash: PayloadBodyChecker_500_879011f098674e0c915c8260931e2192c9b9afba
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"fuzzstring","birthDate":"fuzzstring","type":{ "fuzz" : false },"id":0,"ownerId":0,"visits":[{"id":0}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_40.replay.txt
+Hash: PayloadBodyChecker_500_c626b21c33dea6d67041bdc3911d0241b34f5f09
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"fuzzstring","birthDate":"fuzzstring","type":{ "fuzz" : false },"id":0,"ownerId":0,"visits":[{"petId":0}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_41.replay.txt
+Hash: PayloadBodyChecker_500_2ce80e4afb96cf2cb782915f362a0a2508647784
+POST /petclinic/api/visits HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"date":"fuzzstring","description":"fuzzstring","id":0,"petId":0}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_42.replay.txt
+Hash: PayloadBodyChecker_500_8f58e686de5dcf07fc26ced447d75168a83e3971
+POST /petclinic/api/visits HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"date":"fuzzstring"}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_43.replay.txt
+Hash: PayloadBodyChecker_500_6e6db1c847f56122a70ae26b4d744fe84ca0a58f
+POST /petclinic/api/visits HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"description":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_44.replay.txt
+Hash: PayloadBodyChecker_500_654326040e639a91943ccfa965ae0079d1c4a72a
+POST /petclinic/api/visits HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\nfalse
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_45.replay.txt
+Hash: PayloadBodyChecker_500_f5163e0512bb887c72d0869dc642a56d111cb243
+POST /petclinic/api/visits HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"date":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_46.replay.txt
+Hash: PayloadBodyChecker_500_7a256efb2f43d3d0adda91873c234792c65582be
+POST /petclinic/api/visits HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"petId":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_47.replay.txt
+Hash: PayloadBodyChecker_500_dc5e6b1935d25a0d3d527a09513bba4169db3604
+POST /petclinic/api/visits HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"id":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_48.replay.txt
+Hash: PayloadBodyChecker_500_cf3f11c97d7ee28752a60b9d78c07fd442f725a2
+POST /petclinic/api/visits HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"petId":false}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_49.replay.txt
+Hash: PayloadBodyChecker_500_07beed00b01fec07070f8a33ba3de77427e8be9c
+POST /petclinic/api/visits HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"id":false}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_50.replay.txt
+Hash: PayloadBodyChecker_500_7e0206bcccff2d45933c935d8c9da853fa33dbbd
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"fuzzstring","lastName":"fuzzstring","specialties":[{"id":0,"name":"fuzzstring"}],"id":0}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_51.replay.txt
+Hash: PayloadBodyChecker_500_12f5d6587ac7429c8fbb39bf37d942534c600a15
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"James","lastName":"Carter","specialties":[false],"id":13}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_52.replay.txt
+Hash: PayloadBodyChecker_500_314b4ecb3b91c009981938ebf5a7595c774338de
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"James","lastName":"Carter","specialties":[{"name":{ "fuzz" : false }}],"id":15}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_53.replay.txt
+Hash: PayloadBodyChecker_500_bafaab5c77587a61015295292a1b3bc8af8d03cc
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"James","lastName":{ "fuzz" : false },"specialties":[{"name":"radiology"}],"id":17}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_54.replay.txt
+Hash: PayloadBodyChecker_500_63236ba152d01e4904ceeacc30d490e437072e69
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":{ "fuzz" : false },"lastName":"Carter","specialties":[{"name":"radiology"}],"id":19}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_55.replay.txt
+Hash: PayloadBodyChecker_500_61df640f9eee4d83479d9041e5dd52618bca564b
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"James","lastName":"Carter","specialties":false,"id":21}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_56.replay.txt
+Hash: PayloadBodyChecker_500_4346ac3b800aeeb112a18c1938fcb5eb68d00ccd
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"James","lastName":"Carter","specialties":[{"name":"radiology"}],"id":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_57.replay.txt
+Hash: PayloadBodyChecker_500_1ddf5b3cbe97de868bdc41bc76a7c7c98b1311f6
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\nfalse
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_58.replay.txt
+Hash: PayloadBodyChecker_500_582d3e76f5a9a831c23f05ca2e93f4d648cdfad5
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"James","lastName":"Carter","specialties":[{"id":{ "fuzz" : false },"name":"radiology"}],"id":31}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_59.replay.txt
+Hash: PayloadBodyChecker_500_3e63777b7b79e7732948bf33cb38feb09e988d06
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"James","lastName":"Carter","specialties":[{"name":"radiology"}],"id":false}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_60.replay.txt
+Hash: PayloadBodyChecker_500_96da9c83594f275c8f2b6d364ca5f7e13127d7b8
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"specialties":[{"id":false,"name":"radiology"}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_61.replay.txt
+Hash: PayloadBodyChecker_500_0d1852c9f03fb2867df6243a2ae8ece77cfe1f12
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"James","lastName":"Carter","specialties":[{"id":false}],"id":133}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_62.replay.txt
+Hash: PayloadBodyChecker_500_fe735f63e902ce5722d037405f77a6021b67a8c2
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"id":false}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_63.replay.txt
+Hash: PayloadBodyChecker_500_fda1936da2d2f2a5477edc9029c0e9b0ff0e5682
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"specialties":[{"id":false}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_64.replay.txt
+Hash: PayloadBodyChecker_500_579e56cb069a123d7c56fb226ee12602f32b05eb
+POST /petclinic/api/users HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"username":"fuzzstring"}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_65.replay.txt
+Hash: PayloadBodyChecker_500_4cfa53da09f5c1380ca87c25b0e9c58c09155d83
+POST /petclinic/api/users HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"password":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_66.replay.txt
+Hash: PayloadBodyChecker_500_66248c4b9d00c475c7a64df05860c6c2572e864a
+POST /petclinic/api/users HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\nfalse
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_67.replay.txt
+Hash: PayloadBodyChecker_500_a70518724cdea58809195804bee28013118e2b5c
+POST /petclinic/api/users HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"username":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_68.replay.txt
+Hash: PayloadBodyChecker_500_9e71896b4ea935d0a073f4012e5970fc49ed3cc1
+POST /petclinic/api/users HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"username":"fuzzstring","password":"fuzzstring","enabled":false,"roles":[false]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_69.replay.txt
+Hash: PayloadBodyChecker_500_5c3b5d01df45ae73e4518e0e5b68b08c6ffda370
+POST /petclinic/api/users HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"username":"fuzzstring","password":"fuzzstring","enabled":{ "fuzz" : false },"roles":[{"name":"ROLE_fuzzstring"}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_70.replay.txt
+Hash: PayloadBodyChecker_500_659c652f11f3660f40e9732dc28ca3f92c135785
+POST /petclinic/api/users HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"username":"fuzzstring","password":"fuzzstring","enabled":false,"roles":false}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_71.replay.txt
+Hash: PayloadBodyChecker_500_5ddb631d998caa77ea6d068aa7dbcfb1663d3e12
+POST /petclinic/api/users HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"username":"fuzzstring","password":"fuzzstring","enabled":false,"roles":[{"name":{ "fuzz" : false }}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_72.replay.txt
+Hash: PayloadBodyChecker_500_fcdd9f1d972e3821f8c878b0bfd3258c19c0d7bf
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"id":0,"name":"fuzzstring"}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_73.replay.txt
+Hash: PayloadBodyChecker_500_e27ffec42b3fda4264064a1caa82ebbbb1d8e103
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"id":{ "fuzz" : false },"name":"radiology"}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_74.replay.txt
+Hash: PayloadBodyChecker_500_7c9fc0d20f608d5926349288eed064cc01245e9c
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\nfalse
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_75.replay.txt
+Hash: PayloadBodyChecker_500_8fe00745db22c304c24b0a0f7fcee6c07cd01146
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"id":15,"name":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_76.replay.txt
+Hash: PayloadBodyChecker_500_f0a56e165b62701410e1e7911d0876fb876523f9
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"id":false}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_77.replay.txt
+Hash: PayloadBodyChecker_500_f8c65e19bdd4c2e1152a682b610b17c167f1d058
+POST /petclinic/api/pettypes HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_78.replay.txt
+Hash: PayloadBodyChecker_500_8d91a214661869b39f80c79eafe8895e982d096d
+POST /petclinic/api/pettypes HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\nfalse
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_79.replay.txt
+Hash: PayloadBodyChecker_500_7fbdbd0c5c7a64f1a8c620762e6811184eb5d40b
+POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"George","lastName":"Franklin","address":"110 W. Liberty St.","city":"Madison","telephone":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_80.replay.txt
+Hash: PayloadBodyChecker_500_14acd3bed8ca77eecbf5ec59f7950dc1d5165172
+POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"George","lastName":"Franklin","address":{ "fuzz" : false },"city":"Madison","telephone":"6085551023"}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_81.replay.txt
+Hash: PayloadBodyChecker_500_acdb3d4ebadf126995b8a48df3cc5b514ea3f904
+POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"George","lastName":{ "fuzz" : false },"address":"110 W. Liberty St.","city":"Madison","telephone":"6085551023"}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_82.replay.txt
+Hash: PayloadBodyChecker_500_0986bf30dbfde6dee3d0fc1b4b78b13eb1d6d199
+POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":{ "fuzz" : false },"lastName":"Franklin","address":"110 W. Liberty St.","city":"Madison","telephone":"6085551023"}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_83.replay.txt
+Hash: PayloadBodyChecker_500_e7196dd438cebf900708628168b30eb16b6ccd52
+POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\nfalse
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_84.replay.txt
+Hash: PayloadBodyChecker_500_e5b50c8ff3a02533f9af9b4fc0c25f6ab2f0feb5
+POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"George","lastName":"Franklin","address":"110 W. Liberty St.","city":{ "fuzz" : false },"telephone":"6085551023"}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_85.replay.txt
+Hash: PayloadBodyChecker_500_2d86c7c2c2360136cbcabb7f02b2deba61cf4231
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "specialties":\n    [\n        {\n            "name":fuzzstring\n        }\n    ]}\r\n
+PUT /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"specialties":false}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_86.replay.txt
+Hash: PayloadBodyChecker_500_8590a7aad9b314d6aaf9c87b26ef167585ac070e
+PUT /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"specialties":[{"name":{ "fuzz" : false }}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_87.replay.txt
+Hash: PayloadBodyChecker_500_dc98c368ff6f402c19f2810c790b6bac9443ef59
+PUT /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"specialties":[false]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_88.replay.txt
+Hash: PayloadBodyChecker_500_8cf2ef0417e595276affbec45f015ce3553d5363
+PUT /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\nfalse
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_89.replay.txt
+Hash: PayloadBodyChecker_500_48edaa570acb4590e512b866d8f1bea44cf1ac0b
+PUT /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"specialties":[{"id":{ "fuzz" : false },"name":"radiology"}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_90.replay.txt
+Hash: PayloadBodyChecker_500_4e99fd6a0e13b4ffcf836cda2f7342203a55695f
+PUT /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"James","lastName":{ "fuzz" : false },"specialties":[{"id":1}],"id":324}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_91.replay.txt
+Hash: PayloadBodyChecker_500_e3420311963f8d39675e476851e3097499888f80
+PUT /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":{ "fuzz" : false },"lastName":"Carter","specialties":[{"id":1}],"id":327}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_92.replay.txt
+Hash: PayloadBodyChecker_500_c63cf4f2f69195bba059de1c4eed29d13ef63d0e
+PUT /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"James","lastName":"Carter","specialties":[{"id":1}],"id":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_93.replay.txt
+Hash: PayloadBodyChecker_500_b1695ac93bda32fa78554912f50c7872a1d903ca
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "specialties":\n    [\n        {\n            "name":fuzzstring\n        }\n    ]}\r\n
+PUT /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"specialties":[{"id":false,"name":"radiology"}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_94.replay.txt
+Hash: PayloadBodyChecker_500_90a3b7fff9c64cae0ea28dc8fcac4a3da1cacdfa
+PUT /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"James","lastName":"Carter","specialties":[{"id":false}],"id":380}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_95.replay.txt
+Hash: PayloadBodyChecker_500_3ff378f2a8a863f7f74bb6e98cf164af67285533
+PUT /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"James","lastName":"Carter","specialties":[{"name":"radiology"}],"id":false}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_96.replay.txt
+Hash: PayloadBodyChecker_500_95306ff93da170203a6f626ee4de6a679cd836ea
+PUT /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"id":false}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_97.replay.txt
+Hash: PayloadBodyChecker_500_1cbb7a9543d73a573d669b3d2008651165418a17
+PUT /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"specialties":[{"id":false}]}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_98.replay.txt
+Hash: PayloadBodyChecker_500_a42b53924fd3ba74d9e4ad37b91792229ae974b4
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+PUT /petclinic/api/specialties/_READER_DELIM_api_specialties_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"id":{ "fuzz" : false },"name":"radiology"}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_99.replay.txt
+Hash: PayloadBodyChecker_500_884e76541e58297375019cfcbddf31af64443a1c
+PUT /petclinic/api/specialties/_READER_DELIM_api_specialties_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\nfalse
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_100.replay.txt
+Hash: PayloadBodyChecker_500_7ea3ef15c6e4ddbcbc2bd857b2ad3875c91f8f0a
+PUT /petclinic/api/specialties/_READER_DELIM_api_specialties_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"id":174,"name":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_101.replay.txt
+Hash: PayloadBodyChecker_500_41d52648abcf3681a8ed3466111eed4de8a718ad
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+PUT /petclinic/api/specialties/_READER_DELIM_api_specialties_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"id":false,"name":"radiology"}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_102.replay.txt
+Hash: PayloadBodyChecker_500_3a3f45a5c93eb4fa3ede0e24b1051a3217026314
+PUT /petclinic/api/specialties/_READER_DELIM_api_specialties_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"id":false}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_103.replay.txt
+Hash: PayloadBodyChecker_500_7089c5c46a93e36af6390f2c1de079fcd22ca338
+POST /petclinic/api/pettypes HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+PUT /petclinic/api/pettypes/_READER_DELIM_api_pettypes_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":{ "fuzz" : false },"id":155}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_104.replay.txt
+Hash: PayloadBodyChecker_500_53bf23f79b7b14de6a185cc7a1ccc3b96f4903cc
+PUT /petclinic/api/pettypes/_READER_DELIM_api_pettypes_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\nfalse
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_105.replay.txt
+Hash: PayloadBodyChecker_500_3572603e6ed9df4f333046749623196c4dcb1542
+PUT /petclinic/api/pettypes/_READER_DELIM_api_pettypes_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"cat","id":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_106.replay.txt
+Hash: PayloadBodyChecker_500_ef6130f5bc84dccf85dbed73c4c24c12c70a8d30
+PUT /petclinic/api/pettypes/_READER_DELIM_api_pettypes_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"cat","id":false}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_107.replay.txt
+Hash: PayloadBodyChecker_500_ec0ee16730ee9346cb671f23c75b7c305b608eee
+PUT /petclinic/api/pettypes/_READER_DELIM_api_pettypes_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"id":false}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_108.replay.txt
+Hash: PayloadBodyChecker_500_124cdc6676923bfc220a505a84fafde68c0d6865
+POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "address":fuzzstring,\n    "city":fuzzstring,\n    "telephone":fuzzstring}\r\n
+PUT /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"city":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_109.replay.txt
+Hash: PayloadBodyChecker_500_d41edd7937d58cbb39281b0d1af8111ded98d566
+PUT /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\nfalse
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_110.replay.txt
+Hash: PayloadBodyChecker_500_ba207cf39d6c08130da638a9d004490cd1fd251b
+PUT /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"lastName":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_111.replay.txt
+Hash: PayloadBodyChecker_500_68ce52a1efff160eaf19efe57fe0db719ac8386c
+PUT /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_112.replay.txt
+Hash: PayloadBodyChecker_500_8c751bec9126271c6ba271f1f2d0a8ed50caf9f5
+PUT /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"George","lastName":"Franklin","address":"110 W. Liberty St.","city":"Madison","telephone":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_113.replay.txt
+Hash: PayloadBodyChecker_500_0362dc3186f844a08d90959058984ca0f9744137
+PUT /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"firstName":"George","lastName":"Franklin","address":{ "fuzz" : false },"city":"Madison","telephone":"6085551023"}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_114.replay.txt
+Hash: PayloadBodyChecker_500_9173d1c68fe854a82a1f49af00a9f653154cb30e
+POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "address":fuzzstring,\n    "city":fuzzstring,\n    "telephone":fuzzstring}\r\n
+POST /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"fuzzstring","birthDate":"fuzzstring","type":{"name":"fuzzstring","id":0}}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_115.replay.txt
+Hash: PayloadBodyChecker_500_290c98ea660ace3194da1fc0b53b2727d152b600
+POST /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"birthDate":"fuzzstring"}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_116.replay.txt
+Hash: PayloadBodyChecker_500_c20d5f4003f3292167abc9d9138f0d854943aa5c
+POST /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"fuzzstring","birthDate":"fuzzstring","type":{"name":"fuzzstring"}}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_117.replay.txt
+Hash: PayloadBodyChecker_500_ee2e3c4f0d9256c359c0cb43292f1710eb304633
+POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "address":fuzzstring,\n    "city":fuzzstring,\n    "telephone":fuzzstring}\r\n
+POST /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":"fuzzstring","birthDate":"fuzzstring","type":{"id":454}}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_118.replay.txt
+Hash: PayloadBodyChecker_500_8f64b7164a9a5ed720f163bb2cdda875080e8d6f
+POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "address":fuzzstring,\n    "city":fuzzstring,\n    "telephone":fuzzstring}\r\n
+POST /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"birthDate":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_119.replay.txt
+Hash: PayloadBodyChecker_500_98d8abbfdbd1eafd7c0d782165117cdd57f2a425
+POST /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\nfalse
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_120.replay.txt
+Hash: PayloadBodyChecker_500_6ee940de9305eff556dad7d3c1b91ae9eb1d58f6
+POST /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"type":false}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_121.replay.txt
+Hash: PayloadBodyChecker_500_fa1f8dc0c997d0a1b3fe9cb911bd6f8338cf7c4d
+POST /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"type":{"name":{ "fuzz" : false },"id":467}}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_122.replay.txt
+Hash: PayloadBodyChecker_500_b77ea45608d0c836c7e69743229b0e49c37f76f4
+POST /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"type":{"name":"fuzzstring","id":{ "fuzz" : false }}}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_123.replay.txt
+Hash: PayloadBodyChecker_500_9245f2d1ed567f3d935747deff44dcb3eeddff9c
+POST /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"name":{ "fuzz" : false }}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_124.replay.txt
+Hash: PayloadBodyChecker_500_fd563d9392a36b1f3420b480bed1382cb7ca17da
+POST /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"type":{"name":"fuzzstring","id":false}}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Bug was reproduced - PayloadBodyChecker_500_125.replay.txt
+Hash: PayloadBodyChecker_500_86cb40d48f2a7d96c2b9ce5221af17b43d51e85d
+POST /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"type":{"id":false}}
+--------------------------------------------------------------------------------
+InvalidValueChecker_500 - Bug was reproduced - InvalidValueChecker_500_1.replay.txt
+Hash: InvalidValueChecker_500_828927429f87746bab3f7391f3fe7d713ce7ac0d
+PUT /petclinic/api/pets/petId HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring,\n    "birthDate":2019-06-26,\n    "type":\n        {\n            "name":fuzzstring,\n            "id":1\n        }\n    }\r\n
+--------------------------------------------------------------------------------
+InvalidValueChecker_500 - Bug was reproduced - InvalidValueChecker_500_2.replay.txt
+Hash: InvalidValueChecker_500_effa2addc8aaa189480f5fdbba31b3dc396f32f3
+POST /petclinic/api/visits HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "date":2019-06-26,\n    "description":fuzzstring,\n    "petId":1}\r\n
+--------------------------------------------------------------------------------
+InvalidValueChecker_500 - Bug was reproduced - InvalidValueChecker_500_3.replay.txt
+Hash: InvalidValueChecker_500_b0ce0648447af9a8a30be44c0d7aa4c59537a5df
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "specialties":\n    [\n        {\n            "name":fuzzstring\n        }\n    ]}\r\n
+--------------------------------------------------------------------------------
+InvalidValueChecker_500 - Bug was reproduced - InvalidValueChecker_500_4.replay.txt
+Hash: InvalidValueChecker_500_da9b2fcf404f786c76d2cfcbbbc9f8ff6e46bed5
+POST /petclinic/api/users HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "username":fuzzstring,\n    "password":fuzzstring,\n    "enabled":true,\n    "roles":\n    [\n        {\n            "name":fuzzstring\n        }\n    ]}\r\n
+--------------------------------------------------------------------------------
+InvalidValueChecker_500 - Bug was reproduced - InvalidValueChecker_500_5.replay.txt
+Hash: InvalidValueChecker_500_8c19a39375196cdb1bbe170dd23f0ecce51c0b32
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+--------------------------------------------------------------------------------
+InvalidValueChecker_500 - Bug was reproduced - InvalidValueChecker_500_6.replay.txt
+Hash: InvalidValueChecker_500_efd198cc4f91a283da73c0098bab2a6674f7f9ff
+POST /petclinic/api/pettypes HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+--------------------------------------------------------------------------------
+InvalidValueChecker_500 - Bug was reproduced - InvalidValueChecker_500_7.replay.txt
+Hash: InvalidValueChecker_500_c4756ded702671b55c5e3fb4c0edb96ebc388276
+POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "address":fuzzstring,\n    "city":fuzzstring,\n    "telephone":fuzzstring}\r\n
+--------------------------------------------------------------------------------
+InvalidValueChecker_500 - Bug was reproduced - InvalidValueChecker_500_8.replay.txt
+Hash: InvalidValueChecker_500_94c2739db7152e2f666272a29c1cf4951887a05e
+GET /petclinic/api/v2/pets?page=1&size=1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidValueChecker_500 - Bug was reproduced - InvalidValueChecker_500_9.replay.txt
+Hash: InvalidValueChecker_500_c86a14ba281784628d2cc9acc42e5d9a90394097
+GET /petclinic/api/v2/owners?lastName=fuzzstring&page=1&size=1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidValueChecker_500 - Bug was reproduced - InvalidValueChecker_500_10.replay.txt
+Hash: InvalidValueChecker_500_fcae2eb43cab8a71fe55b89dd6d20044c8c062aa
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "specialties":\n    [\n        {\n            "name":fuzzstring\n        }\n    ]}\r\n
+PUT /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "specialties":\n    [\n        {\n            "name":fuzzstring\n        }\n    ]}\r\n
+--------------------------------------------------------------------------------
+InvalidValueChecker_500 - Bug was reproduced - InvalidValueChecker_500_11.replay.txt
+Hash: InvalidValueChecker_500_552acef874ecce1732aea3093e538dc886ef7e83
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+PUT /petclinic/api/specialties/_READER_DELIM_api_specialties_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+--------------------------------------------------------------------------------
+InvalidValueChecker_500 - Bug was reproduced - InvalidValueChecker_500_12.replay.txt
+Hash: InvalidValueChecker_500_dfea1db50bc449b80d6d8fd3444fafbb3106d29f
+POST /petclinic/api/pettypes HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+PUT /petclinic/api/pettypes/_READER_DELIM_api_pettypes_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring,\n    "id":1}\r\n
+--------------------------------------------------------------------------------
+InvalidValueChecker_500 - Bug was reproduced - InvalidValueChecker_500_13.replay.txt
+Hash: InvalidValueChecker_500_830521fe80e89c1404e4a5bcbab8232ae6f4ce9d
+POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "address":fuzzstring,\n    "city":fuzzstring,\n    "telephone":fuzzstring}\r\n
+PUT /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "address":fuzzstring,\n    "city":fuzzstring,\n    "telephone":fuzzstring}\r\n
+--------------------------------------------------------------------------------
+InvalidValueChecker_500 - Bug was reproduced - InvalidValueChecker_500_14.replay.txt
+Hash: InvalidValueChecker_500_a8030d73a5466c6aea5950f5b80fbe13701e9d07
+POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "address":fuzzstring,\n    "city":fuzzstring,\n    "telephone":fuzzstring}\r\n
+POST /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring,\n    "birthDate":2019-06-26,\n    "type":\n        {\n            "name":fuzzstring,\n            "id":1\n        }\n    }\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_20x - Bug was reproduced - InvalidDynamicObjectChecker_20x_1.replay.txt
+Hash: InvalidDynamicObjectChecker_20x_cd4656a197e738258d1588db56f6b59f29d4e6c0
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+GET /petclinic/api/specialties/_READER_DELIM_api_specialties_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_20x - Bug was reproduced - InvalidDynamicObjectChecker_20x_2.replay.txt
+Hash: InvalidDynamicObjectChecker_20x_552acef874ecce1732aea3093e538dc886ef7e83
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+PUT /petclinic/api/specialties/_READER_DELIM_api_specialties_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_20x - Bug was reproduced - InvalidDynamicObjectChecker_20x_3.replay.txt
+Hash: InvalidDynamicObjectChecker_20x_cd1d85f87f210ec207cb5238cfabdc34c260e2c0
+POST /petclinic/api/pettypes HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+GET /petclinic/api/pettypes/_READER_DELIM_api_pettypes_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_20x - Bug was reproduced - InvalidDynamicObjectChecker_20x_4.replay.txt
+Hash: InvalidDynamicObjectChecker_20x_dfea1db50bc449b80d6d8fd3444fafbb3106d29f
+POST /petclinic/api/pettypes HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+PUT /petclinic/api/pettypes/_READER_DELIM_api_pettypes_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring,\n    "id":1}\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_20x - Bug was reproduced - InvalidDynamicObjectChecker_20x_5.replay.txt
+Hash: InvalidDynamicObjectChecker_20x_979f91b7a47876c48cdf2b81f84a2da19994c255
+POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "address":fuzzstring,\n    "city":fuzzstring,\n    "telephone":fuzzstring}\r\n
+GET /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_20x - Bug was reproduced - InvalidDynamicObjectChecker_20x_6.replay.txt
+Hash: InvalidDynamicObjectChecker_20x_830521fe80e89c1404e4a5bcbab8232ae6f4ce9d
+POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "address":fuzzstring,\n    "city":fuzzstring,\n    "telephone":fuzzstring}\r\n
+PUT /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "address":fuzzstring,\n    "city":fuzzstring,\n    "telephone":fuzzstring}\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_20x - Bug was reproduced - InvalidDynamicObjectChecker_20x_7.replay.txt
+Hash: InvalidDynamicObjectChecker_20x_1497c2b9e3ae6282e348783590d6a533a6670850
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+GET /petclinic/api/specialties/_READER_DELIM_api_specialties_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "specialties":\n    [\n        {\n            "name":fuzzstring\n        }\n    ]}\r\n
+GET /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_20x - Bug was reproduced - InvalidDynamicObjectChecker_20x_8.replay.txt
+Hash: InvalidDynamicObjectChecker_20x_fcae2eb43cab8a71fe55b89dd6d20044c8c062aa
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+GET /petclinic/api/specialties/_READER_DELIM_api_specialties_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "specialties":\n    [\n        {\n            "name":fuzzstring\n        }\n    ]}\r\n
+PUT /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "specialties":\n    [\n        {\n            "name":fuzzstring\n        }\n    ]}\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_500 - Bug was reproduced - InvalidDynamicObjectChecker_500_1.replay.txt
+Hash: InvalidDynamicObjectChecker_500_cd4656a197e738258d1588db56f6b59f29d4e6c0
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+GET /petclinic/api/specialties/_READER_DELIM_api_specialties_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_500 - Bug was reproduced - InvalidDynamicObjectChecker_500_2.replay.txt
+Hash: InvalidDynamicObjectChecker_500_552acef874ecce1732aea3093e538dc886ef7e83
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+PUT /petclinic/api/specialties/_READER_DELIM_api_specialties_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_500 - Bug was reproduced - InvalidDynamicObjectChecker_500_3.replay.txt
+Hash: InvalidDynamicObjectChecker_500_6494a46eab377823208d9862c288486733ca5ae4
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+DELETE /petclinic/api/specialties/_READER_DELIM_api_specialties_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_500 - Bug was reproduced - InvalidDynamicObjectChecker_500_4.replay.txt
+Hash: InvalidDynamicObjectChecker_500_cd1d85f87f210ec207cb5238cfabdc34c260e2c0
+POST /petclinic/api/pettypes HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+GET /petclinic/api/pettypes/_READER_DELIM_api_pettypes_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_500 - Bug was reproduced - InvalidDynamicObjectChecker_500_5.replay.txt
+Hash: InvalidDynamicObjectChecker_500_dfea1db50bc449b80d6d8fd3444fafbb3106d29f
+POST /petclinic/api/pettypes HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+PUT /petclinic/api/pettypes/_READER_DELIM_api_pettypes_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring,\n    "id":1}\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_500 - Bug was reproduced - InvalidDynamicObjectChecker_500_6.replay.txt
+Hash: InvalidDynamicObjectChecker_500_dfd22df9e91081bc2879fea8f75afe901479b9d9
+POST /petclinic/api/pettypes HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+DELETE /petclinic/api/pettypes/_READER_DELIM_api_pettypes_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_500 - Bug was reproduced - InvalidDynamicObjectChecker_500_7.replay.txt
+Hash: InvalidDynamicObjectChecker_500_979f91b7a47876c48cdf2b81f84a2da19994c255
+POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "address":fuzzstring,\n    "city":fuzzstring,\n    "telephone":fuzzstring}\r\n
+GET /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_500 - Bug was reproduced - InvalidDynamicObjectChecker_500_8.replay.txt
+Hash: InvalidDynamicObjectChecker_500_830521fe80e89c1404e4a5bcbab8232ae6f4ce9d
+POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "address":fuzzstring,\n    "city":fuzzstring,\n    "telephone":fuzzstring}\r\n
+PUT /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "address":fuzzstring,\n    "city":fuzzstring,\n    "telephone":fuzzstring}\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_500 - Bug was reproduced - InvalidDynamicObjectChecker_500_9.replay.txt
+Hash: InvalidDynamicObjectChecker_500_6628f7c1fe61722506f503bcd5b68719f43ea7e9
+POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "address":fuzzstring,\n    "city":fuzzstring,\n    "telephone":fuzzstring}\r\n
+DELETE /petclinic/api/owners/_READER_DELIM_api_owners_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_500 - Bug was reproduced - InvalidDynamicObjectChecker_500_10.replay.txt
+Hash: InvalidDynamicObjectChecker_500_1497c2b9e3ae6282e348783590d6a533a6670850
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+GET /petclinic/api/specialties/_READER_DELIM_api_specialties_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "specialties":\n    [\n        {\n            "name":fuzzstring\n        }\n    ]}\r\n
+GET /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_500 - Bug was reproduced - InvalidDynamicObjectChecker_500_11.replay.txt
+Hash: InvalidDynamicObjectChecker_500_fcae2eb43cab8a71fe55b89dd6d20044c8c062aa
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+GET /petclinic/api/specialties/_READER_DELIM_api_specialties_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "specialties":\n    [\n        {\n            "name":fuzzstring\n        }\n    ]}\r\n
+PUT /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "specialties":\n    [\n        {\n            "name":fuzzstring\n        }\n    ]}\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_500 - Bug was reproduced - InvalidDynamicObjectChecker_500_12.replay.txt
+Hash: InvalidDynamicObjectChecker_500_ec1a04c18d135a5039e8683ec4a74e381dab26a4
+POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "name":fuzzstring}\r\n
+GET /petclinic/api/specialties/_READER_DELIM_api_specialties_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "firstName":fuzzstring,\n    "lastName":fuzzstring,\n    "specialties":\n    [\n        {\n            "name":fuzzstring\n        }\n    ]}\r\n
+DELETE /petclinic/api/vets/_READER_DELIM_api_vets_post_specialties_0_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------

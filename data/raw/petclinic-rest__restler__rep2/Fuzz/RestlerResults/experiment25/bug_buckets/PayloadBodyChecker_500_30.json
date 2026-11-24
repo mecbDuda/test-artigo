@@ -1,0 +1,16 @@
+{
+    "status_code": "500",
+    "checker_name": "PayloadBodyChecker",
+    "reproducible": true,
+    "verb": "PUT",
+    "endpoint": null,
+    "status_text": "",
+    "request_sequence": [
+        {
+            "producer_timing_delay": 0,
+            "max_async_wait_time": 0,
+            "replay_request": "PUT /petclinic/api/pets/petide4108ac5c5 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{\"name\":\"fuzzstring\",\"birthDate\":{ \"fuzz\" : false },\"type\":{\"name\":\"fuzzstring\",\"id\":0},\"id\":0,\"ownerId\":0,\"visits\":[{\"date\":\"fuzzstring\",\"description\":\"fuzzstring\",\"id\":0,\"petId\":0}]}",
+            "response": "HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 18:41:10 GMT\r\nConnection: close\r\n\r\n138\r\n{\"detail\":\"An unexpected error occurred while processing your request\",\"instance\":\"/petclinic/api/pets/petide4108ac5c5\",\"status\":500,\"title\":\"MethodArgumentTypeMismatchException\",\"type\":\"http://api:8080/petclinic/api/pets/petide4108ac5c5\",\"timestamp\":\"2026-11-24T18:41:10.466609015Z\",\"schemaValidationErrors\":[]}\r\n0\r\n\r\n"
+        }
+    ]
+}

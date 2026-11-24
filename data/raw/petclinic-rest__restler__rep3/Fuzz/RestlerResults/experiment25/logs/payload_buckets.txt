@@ -1,0 +1,363 @@
+PUT /api/pets/{petId}
+	Other
+	{'name': 'fuzzstring', 'birthDate': 'fuzzstring', 'type': {'name': 'fuzzstring', 'id': 0}, 'id': 0, 'ownerId': 0, 'visits': [{'date': 'fuzzstring', 'description': 'fuzzstring', 'id': 0, 'petId': 0}]}
+
+	StructMissing_/name/birthDate/id/ownerId/visits[...]
+	{'type': {'name': 'fuzzstring', 'id': 0}}
+
+	StructMissing_/name/birthDate/+name/id/ownerId/visits[...]
+	{'type': {'id': 0}}
+
+	StructMissing_/name/birthDate/type{...}/id/ownerId
+	{'visits': [{'date': 'fuzzstring', 'description': 'fuzzstring', 'id': 0, 'petId': 0}]}
+
+	StructMissing_/name/birthDate/type{...}/id/ownerId/+date/+description/+id
+	{'visits': [{'petId': 0}]}
+
+	StructMissing_/name/birthDate/type{...}/id/ownerId/+date/+id/+petId
+	{'visits': [{'description': 'fuzzstring'}]}
+
+	StructMissing_/name/birthDate/+id/id/ownerId/visits[...]
+	{'type': {'name': 'fuzzstring'}}
+
+	StructMissing_/+description/+id/+petId
+	{'name': 'fuzzstring', 'birthDate': 'fuzzstring', 'type': {'name': 'fuzzstring', 'id': 0}, 'id': 0, 'ownerId': 0, 'visits': [{'date': 'fuzzstring'}]}
+
+	StructMissing_/+name
+	{'name': 'fuzzstring', 'birthDate': 'fuzzstring', 'type': {'id': 0}, 'id': 0, 'ownerId': 0, 'visits': [{'date': 'fuzzstring', 'description': 'fuzzstring', 'id': 0, 'petId': 0}]}
+
+	StructMissing_/+date/+description/+petId
+	{'name': 'fuzzstring', 'birthDate': 'fuzzstring', 'type': {'name': 'fuzzstring', 'id': 0}, 'id': 0, 'ownerId': 0, 'visits': [{'id': 0}]}
+
+	StructMissing_/name/birthDate/type{...}/id/ownerId/+date/+description/+petId
+	{'visits': [{'id': 0}]}
+
+	StructMissing_/+date/+id/+petId
+	{'name': 'fuzzstring', 'birthDate': 'fuzzstring', 'type': {'name': 'fuzzstring', 'id': 0}, 'id': 0, 'ownerId': 0, 'visits': [{'description': 'fuzzstring'}]}
+
+	StructMissing_/+date/+description/+id
+	{'name': 'fuzzstring', 'birthDate': 'fuzzstring', 'type': {'name': 'fuzzstring', 'id': 0}, 'id': 0, 'ownerId': 0, 'visits': [{'petId': 0}]}
+
+	StructMissing_/birthDate/type{...}/id/ownerId/visits[...]
+	{'name': 'fuzzstring'}
+
+	StructMissing_/name/birthDate/type{...}/id/ownerId/+description/+id/+petId
+	{'visits': [{'date': 'fuzzstring'}]}
+
+	StructMissing_/name/type{...}/id/ownerId/visits[...]
+	{'birthDate': 'fuzzstring'}
+
+	StructMissing_/+id
+	{'name': 'fuzzstring', 'birthDate': 'fuzzstring', 'type': {'name': 'fuzzstring'}, 'id': 0, 'ownerId': 0, 'visits': [{'date': 'fuzzstring', 'description': 'fuzzstring', 'id': 0, 'petId': 0}]}
+
+	StructMissing_/name/birthDate/type{...}/id/visits[...]
+	{'ownerId': 0}
+
+	StructMissing_/name/birthDate/type{...}/ownerId/visits[...]
+	{'id': 0}
+
+	TypeMismatch_type__object
+	{'type': False}
+
+	TypeMismatch_type_name
+	{'type': {'name': {'fuzz': False}, 'id': 0}}
+
+	TypeMismatch_type_id
+	{'type': {'name': 'fuzzstring', 'id': {'fuzz': False}}}
+
+	InvalidJson
+	false
+
+	TypeMismatch_visits__object
+	{'visits': [False]}
+
+	TypeMismatch_visits_id
+	{'visits': [{'date': 'fuzzstring', 'description': 'fuzzstring', 'id': {'fuzz': False}, 'petId': 0}]}
+
+	TypeMismatch_visits_description
+	{'visits': [{'date': 'fuzzstring', 'description': {'fuzz': False}, 'id': 0, 'petId': 0}]}
+
+	TypeMismatch_visits_date
+	{'visits': [{'date': {'fuzz': False}, 'description': 'fuzzstring', 'id': 0, 'petId': 0}]}
+
+	TypeMismatch_visits_array
+	{'visits': False}
+
+	TypeMismatch_visits_petId
+	{'visits': [{'date': 'fuzzstring', 'description': 'fuzzstring', 'id': 0, 'petId': {'fuzz': False}}]}
+
+	StructMissing_/name/birthDate/type{...}/id/ownerId/visits[...]
+	{'fuzz': False}
+
+	StructMissing_/name/birthDate/+name/+id/id/ownerId/visits[...]
+	{'type': {'fuzz': False}}
+
+	StructMissing_/name/birthDate/type{...}/id/ownerId/+date/+description/+id/+petId
+	{'visits': [{'fuzz': False}]}
+
+POST /api/visits
+	Other
+	{'date': 'fuzzstring', 'description': 'fuzzstring', 'id': 0, 'petId': 0}
+
+	StructMissing_/description/id/petId
+	{'date': 'fuzzstring'}
+
+	TypeMismatch_description
+	{'description': {'fuzz': False}}
+
+	InvalidJson
+	false
+
+	TypeMismatch_date
+	{'date': {'fuzz': False}}
+
+	TypeMismatch_petId
+	{'petId': {'fuzz': False}}
+
+	TypeMismatch_id
+	{'id': {'fuzz': False}}
+
+	StructMissing_/date/description/id
+	{'petId': False}
+
+	StructMissing_/date/description/petId
+	{'id': False}
+
+POST /api/vets
+	Other
+	{'firstName': 'fuzzstring', 'lastName': 'fuzzstring', 'specialties': [{'id': 0, 'name': 'fuzzstring'}], 'id': 0}
+
+	TypeMismatch_specialties__object
+	{'firstName': 'James', 'lastName': 'Carter', 'specialties': [False], 'id': 13}
+
+	TypeMismatch_specialties_name
+	{'firstName': 'James', 'lastName': 'Carter', 'specialties': [{'name': {'fuzz': False}}], 'id': 15}
+
+	TypeMismatch_lastName
+	{'firstName': 'James', 'lastName': {'fuzz': False}, 'specialties': [{'name': 'radiology'}], 'id': 17}
+
+	TypeMismatch_firstName
+	{'firstName': {'fuzz': False}, 'lastName': 'Carter', 'specialties': [{'name': 'radiology'}], 'id': 19}
+
+	TypeMismatch_specialties_array
+	{'firstName': 'James', 'lastName': 'Carter', 'specialties': False, 'id': 21}
+
+	TypeMismatch_id
+	{'firstName': 'James', 'lastName': 'Carter', 'specialties': [{'name': 'radiology'}], 'id': {'fuzz': False}}
+
+	InvalidJson
+	false
+
+	TypeMismatch_specialties_id
+	{'firstName': 'James', 'lastName': 'Carter', 'specialties': [{'id': {'fuzz': False}, 'name': 'radiology'}], 'id': 31}
+
+	StructMissing_/+id
+	{'firstName': 'James', 'lastName': 'Carter', 'specialties': [{'name': 'radiology'}], 'id': False}
+
+	StructMissing_/firstName/lastName/id
+	{'specialties': [{'id': False, 'name': 'radiology'}]}
+
+	StructMissing_/+name
+	{'firstName': 'James', 'lastName': 'Carter', 'specialties': [{'id': False}], 'id': 133}
+
+	StructMissing_/firstName/lastName/specialties[...]
+	{'id': False}
+
+	StructMissing_/firstName/lastName/+name/id
+	{'specialties': [{'id': False}]}
+
+POST /api/users
+	StructMissing_/password/enabled/roles[...]
+	{'username': 'fuzzstring'}
+
+	TypeMismatch_password
+	{'password': {'fuzz': False}}
+
+	InvalidJson
+	false
+
+	TypeMismatch_username
+	{'username': {'fuzz': False}}
+
+	TypeMismatch_roles__object
+	{'username': 'fuzzstring', 'password': 'fuzzstring', 'enabled': False, 'roles': [False]}
+
+	TypeMismatch_enabled
+	{'username': 'fuzzstring', 'password': 'fuzzstring', 'enabled': {'fuzz': False}, 'roles': [{'name': 'ROLE_fuzzstring'}]}
+
+	TypeMismatch_roles_array
+	{'username': 'fuzzstring', 'password': 'fuzzstring', 'enabled': False, 'roles': False}
+
+	TypeMismatch_roles_name
+	{'username': 'fuzzstring', 'password': 'fuzzstring', 'enabled': False, 'roles': [{'name': {'fuzz': False}}]}
+
+POST /api/specialties
+	Other
+	{'id': 0, 'name': 'fuzzstring'}
+
+	TypeMismatch_id
+	{'id': {'fuzz': False}, 'name': 'radiology'}
+
+	InvalidJson
+	false
+
+	TypeMismatch_name
+	{'id': 15, 'name': {'fuzz': False}}
+
+	StructMissing_/name
+	{'id': False}
+
+POST /api/pettypes
+	TypeMismatch_name
+	{'name': {'fuzz': False}}
+
+	InvalidJson
+	false
+
+POST /api/owners
+	TypeMismatch_telephone
+	{'firstName': 'George', 'lastName': 'Franklin', 'address': '110 W. Liberty St.', 'city': 'Madison', 'telephone': {'fuzz': False}}
+
+	TypeMismatch_address
+	{'firstName': 'George', 'lastName': 'Franklin', 'address': {'fuzz': False}, 'city': 'Madison', 'telephone': '6085551023'}
+
+	TypeMismatch_lastName
+	{'firstName': 'George', 'lastName': {'fuzz': False}, 'address': '110 W. Liberty St.', 'city': 'Madison', 'telephone': '6085551023'}
+
+	TypeMismatch_firstName
+	{'firstName': {'fuzz': False}, 'lastName': 'Franklin', 'address': '110 W. Liberty St.', 'city': 'Madison', 'telephone': '6085551023'}
+
+	InvalidJson
+	false
+
+	TypeMismatch_city
+	{'firstName': 'George', 'lastName': 'Franklin', 'address': '110 W. Liberty St.', 'city': {'fuzz': False}, 'telephone': '6085551023'}
+
+PUT /api/vets/{vetId}
+	TypeMismatch_specialties_array
+	{'specialties': False}
+
+	TypeMismatch_specialties_name
+	{'specialties': [{'name': {'fuzz': False}}]}
+
+	TypeMismatch_specialties__object
+	{'specialties': [False]}
+
+	InvalidJson
+	false
+
+	TypeMismatch_specialties_id
+	{'specialties': [{'id': {'fuzz': False}, 'name': 'radiology'}]}
+
+	TypeMismatch_lastName
+	{'firstName': 'James', 'lastName': {'fuzz': False}, 'specialties': [{'id': 1}], 'id': 330}
+
+	TypeMismatch_firstName
+	{'firstName': {'fuzz': False}, 'lastName': 'Carter', 'specialties': [{'id': 1}], 'id': 333}
+
+	TypeMismatch_id
+	{'firstName': 'James', 'lastName': 'Carter', 'specialties': [{'id': 12}], 'id': {'fuzz': False}}
+
+	StructMissing_/firstName/lastName/id
+	{'specialties': [{'id': False, 'name': 'radiology'}]}
+
+	StructMissing_/+name
+	{'firstName': 'James', 'lastName': 'Carter', 'specialties': [{'id': False}], 'id': 386}
+
+	StructMissing_/+id
+	{'firstName': 'James', 'lastName': 'Carter', 'specialties': [{'name': 'radiology'}], 'id': False}
+
+	StructMissing_/firstName/lastName/specialties[...]
+	{'id': False}
+
+	StructMissing_/firstName/lastName/+name/id
+	{'specialties': [{'id': False}]}
+
+PUT /api/specialties/{specialtyId}
+	TypeMismatch_id
+	{'id': {'fuzz': False}, 'name': 'radiology'}
+
+	InvalidJson
+	false
+
+	TypeMismatch_name
+	{'id': 174, 'name': {'fuzz': False}}
+
+	Other
+	{'id': False, 'name': 'radiology'}
+
+	StructMissing_/name
+	{'id': False}
+
+PUT /api/pettypes/{petTypeId}
+	TypeMismatch_name
+	{'name': {'fuzz': False}, 'id': 155}
+
+	InvalidJson
+	false
+
+	TypeMismatch_id
+	{'name': 'cat', 'id': {'fuzz': False}}
+
+	Other
+	{'name': 'cat', 'id': False}
+
+	StructMissing_/name
+	{'id': False}
+
+PUT /api/owners/{ownerId}
+	TypeMismatch_city
+	{'city': {'fuzz': False}}
+
+	InvalidJson
+	false
+
+	TypeMismatch_lastName
+	{'lastName': {'fuzz': False}}
+
+	TypeMismatch_firstName
+	{'firstName': {'fuzz': False}}
+
+	TypeMismatch_telephone
+	{'firstName': 'George', 'lastName': 'Franklin', 'address': '110 W. Liberty St.', 'city': 'Madison', 'telephone': {'fuzz': False}}
+
+	TypeMismatch_address
+	{'firstName': 'George', 'lastName': 'Franklin', 'address': {'fuzz': False}, 'city': 'Madison', 'telephone': '6085551023'}
+
+POST /api/owners/{ownerId}/pets
+	Other
+	{'name': 'fuzzstring', 'birthDate': 'fuzzstring', 'type': {'name': 'fuzzstring', 'id': 0}}
+
+	StructMissing_/name/type{...}
+	{'birthDate': 'fuzzstring'}
+
+	StructMissing_/+id
+	{'name': 'fuzzstring', 'birthDate': 'fuzzstring', 'type': {'name': 'fuzzstring'}}
+
+	StructMissing_/+name
+	{'name': 'fuzzstring', 'birthDate': 'fuzzstring', 'type': {'id': 454}}
+
+	TypeMismatch_birthDate
+	{'birthDate': {'fuzz': False}}
+
+	InvalidJson
+	false
+
+	TypeMismatch_type__object
+	{'type': False}
+
+	TypeMismatch_type_name
+	{'type': {'name': {'fuzz': False}, 'id': 467}}
+
+	TypeMismatch_type_id
+	{'type': {'name': 'fuzzstring', 'id': {'fuzz': False}}}
+
+	TypeMismatch_name
+	{'name': {'fuzz': False}}
+
+	StructMissing_/name/birthDate
+	{'type': {'name': 'fuzzstring', 'id': False}}
+
+	StructMissing_/name/birthDate/+name
+	{'type': {'id': False}}
+

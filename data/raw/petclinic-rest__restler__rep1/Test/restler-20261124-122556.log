@@ -1,0 +1,43 @@
+Restler Information: 0 : Starting task Test...
+    DateTime=2026-11-24T00:25:56.1644551Z
+Restler Information: 0 : Launching 'python3 --version'
+    DateTime=2026-11-24T00:25:57.2655197Z
+Restler Information: 0 : Launching 'python --version'
+    DateTime=2026-11-24T00:25:57.2655875Z
+Restler Information: 0 : Process execution terminated in 00:00:00.0322189 with exit code 0x0: 'python3 --version'
+    DateTime=2026-11-24T00:25:57.3032299Z
+Restler Information: 0 : Process execution terminated in 00:00:00.0321284 with exit code 0x0: 'python --version'
+    DateTime=2026-11-24T00:25:57.3032855Z
+Restler Information: 0 : (23) python --version exited with code: 0
+    DateTime=2026-11-24T00:25:57.3084901Z
+Restler Information: 0 : (22) python3 --version exited with code: 0
+    DateTime=2026-11-24T00:25:57.3085378Z
+Restler Information: 0 : Launching 'python3 -B "/RESTler/restler/../engine/restler.py" --restler_grammar "/work/Compile/grammar.py" --custom_mutations "/work/Compile/dict.json" --set_version 9.2.4    --no_ssl   --settings "/work/Compile/engine_settings.json"   --target_ip 127.0.0.1 --target_port 8081 --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode directed-smoke-test'
+    DateTime=2026-11-24T00:25:57.3245199Z
+Restler Information: 0 : Process execution terminated in 00:00:03.8373291 with exit code 0x0: 'python3 -B "/RESTler/restler/../engine/restler.py" --restler_grammar "/work/Compile/grammar.py" --custom_mutations "/work/Compile/dict.json" --set_version 9.2.4    --no_ssl   --settings "/work/Compile/engine_settings.json"   --target_ip 127.0.0.1 --target_port 8081 --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode directed-smoke-test'
+    DateTime=2026-11-24T00:26:01.1619376Z
+Restler Information: 0 : (26) python3 -B "/RESTler/restler/../engine/restler.py" --restler_grammar "/work/Compile/grammar.py" --custom_mutations "/work/Compile/dict.json" --set_version 9.2.4    --no_ssl   --settings "/work/Compile/engine_settings.json"   --target_ip 127.0.0.1 --target_port 8081 --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode directed-smoke-test exited with code: 0
+    DateTime=2026-11-24T00:26:01.1620796Z
+Restler Information: 0 : Launching 'dotnet "/RESTler/restler/../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "/work/Test" --output_dir "/work/Test/ResponseBuckets" --dictionary_file "/work/Compile/dict.json" --max_instances_per_bucket 10'
+    DateTime=2026-11-24T00:26:01.1680875Z
+Restler Information: 0 : Process execution terminated in 00:00:00.3961310 with exit code 0x0: 'dotnet "/RESTler/restler/../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "/work/Test" --output_dir "/work/Test/ResponseBuckets" --dictionary_file "/work/Compile/dict.json" --max_instances_per_bucket 10'
+    DateTime=2026-11-24T00:26:01.5642871Z
+Restler Information: 0 : (29) dotnet "/RESTler/restler/../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "/work/Test" --output_dir "/work/Test/ResponseBuckets" --dictionary_file "/work/Compile/dict.json" --max_instances_per_bucket 10 exited with code: 0
+    DateTime=2026-11-24T00:26:01.5643595Z
+Restler Information: 0 : Request coverage (successful / total): 34 / 43
+    DateTime=2026-11-24T00:26:01.6798666Z
+Restler Information: 0 : Attempted requests: 41 / 43
+    DateTime=2026-11-24T00:26:01.6799425Z
+Restler Information: 0 : Bugs were found!
+    DateTime=2026-11-24T00:26:01.6844120Z
+Restler Information: 0 : Bug buckets:
+    DateTime=2026-11-24T00:26:01.6844255Z
+Restler Information: 0 : 
+main_driver_500: 1
+    DateTime=2026-11-24T00:26:01.6849923Z
+Restler Information: 0 : See 'coverage_failures_to_investigate.txt' to investigate API coverage.
+    DateTime=2026-11-24T00:26:01.7548522Z
+Restler Information: 0 : Task Test succeeded.
+    DateTime=2026-11-24T00:26:01.7569994Z
+Restler Information: 0 : Collecting logs...
+    DateTime=2026-11-24T00:26:02.1593609Z

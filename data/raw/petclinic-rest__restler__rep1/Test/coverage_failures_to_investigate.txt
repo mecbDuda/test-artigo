@@ -1,0 +1,168 @@
+This file contains the failing requests, ordered by the number of blocked dependent requests.
+To improve coverage, fix the failing requests in the order listed in this file.
+
+Note: some requests are labeled as 'sequence failure'.
+This means the request depends on another request that is failing intermittently.
+For example, a DELETE request for a resource may be skipped because the resource
+PUT request failed due to exceeding quota.  The same PUT request succeeded earlier (and may
+succeed later depending on the resource clean-up behavior in the service), so it is
+considered an intermittent failure.
+
+-----------------------------------------------
+Request: Put /api/pets/{petId}
+Number of blocked dependent requests: 2
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> PUT /petclinic/api/pets/petid9d56e15f95 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n
+	< HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petid9d56e15f95","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petid9d56e15f95","timestamp":"2026-11-24T00:25:58.129859487Z","schemaValidationErrors":[]}\r\n0\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> PUT /petclinic/api/pets/petide789a90b52 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"fuzzstring",\n            "id":1\n        }\n    }\r\n
+	< HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petide789a90b52","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petide789a90b52","timestamp":"2026-11-24T00:25:58.268657351Z","schemaValidationErrors":[]}\r\n0\r\n\r\n
+
+
+	+++ Combination 3 +++:
+	Request sequence: 
+	> PUT /petclinic/api/pets/petidf1732a038f HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2019-06-26",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n
+	< HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petidf1732a038f","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petidf1732a038f","timestamp":"2026-11-24T00:25:58.299500481Z","schemaValidationErrors":[]}\r\n0\r\n\r\n
+
+
+	+++ Combination 4 +++:
+	Request sequence: 
+	> PUT /petclinic/api/pets/petidd41ecfd7d3 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2019-06-26",\n    "type":\n        {\n            "name":"fuzzstring",\n            "id":1\n        }\n    }\r\n
+	< HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petidd41ecfd7d3","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petidd41ecfd7d3","timestamp":"2026-11-24T00:25:58.328120357Z","schemaValidationErrors":[]}\r\n0\r\n\r\n
+
+
+	+++ Combination 5 +++:
+	Request sequence: 
+	> PUT /petclinic/api/pets/petid5b627b0805 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{\n    "name":"fuzzstring",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n
+	< HTTP/1.1 500 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:58 GMT\r\nConnection: close\r\n\r\n138\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/pets/petid5b627b0805","status":500,"title":"MethodArgumentTypeMismatchException","type":"http://api:8080/petclinic/api/pets/petid5b627b0805","timestamp":"2026-11-24T00:25:58.366454885Z","schemaValidationErrors":[]}\r\n0\r\n\r\n
+
+
+-----------------------------------------------
+Request: Put 
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> PUT /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:57 GMT\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> PUT /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:57 GMT\r\n\r\n
+
+
+-----------------------------------------------
+Request: Post 
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> POST /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> POST /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n
+
+
+-----------------------------------------------
+Request: Head 
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> HEAD /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> HEAD /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n
+
+
+-----------------------------------------------
+Request: Patch 
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> PATCH /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> PATCH /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n
+
+
+-----------------------------------------------
+Request: Delete 
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> DELETE /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> DELETE /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get 
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /petclinic/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 302 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nLocation: http://api:8080/petclinic/swagger-ui/index.html\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /api/owners/{ownerId}/pets/{petId}
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{\n    "firstName":"George",\n    "lastName":"Franklin",\n    "address":"110 W. Liberty St.",\n    "city":"Madison",\n    "telephone":"6085551023"}\r\n
+	< HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/owners/11\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n87\r\n{"firstName":"George","lastName":"Franklin","address":"110 W. Liberty St.","city":"Madison","telephone":"6085551023","pets":[],"id":11}\r\n0\r\n\r\n
+
+	> POST /petclinic/api/owners/15/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n
+	< HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/pets/14\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n65\r\n{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1},"id":14,"visits":[],"ownerId":15}\r\n0\r\n\r\n
+
+	> GET /petclinic/api/owners/16/pets/1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 404 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> POST /petclinic/api/owners HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{\n    "firstName":"George",\n    "lastName":"Franklin",\n    "address":"110 W. Liberty St.",\n    "city":"Madison",\n    "telephone":"6085551023"}\r\n
+	< HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/owners/11\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:25:59 GMT\r\n\r\n87\r\n{"firstName":"George","lastName":"Franklin","address":"110 W. Liberty St.","city":"Madison","telephone":"6085551023","pets":[],"id":11}\r\n0\r\n\r\n
+
+	> POST /petclinic/api/owners/15/pets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{\n    "name":"Leo",\n    "birthDate":"2010-09-07",\n    "type":\n        {\n            "name":"cat",\n            "id":1\n        }\n    }\r\n
+	< HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/pets/14\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n65\r\n{"name":"Leo","birthDate":"2010-09-07","type":{"name":"cat","id":1},"id":14,"visits":[],"ownerId":15}\r\n0\r\n\r\n
+
+	> GET /petclinic/api/owners/16/pets/1 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 404 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 00:26:00 GMT\r\n\r\n
+
+

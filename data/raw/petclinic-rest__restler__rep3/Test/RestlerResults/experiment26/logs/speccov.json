@@ -1,0 +1,1955 @@
+{
+    "053838ef33733bad494457ce10e340cc0892955e_1": {
+        "verb": "GET",
+        "endpoint": "/api/pettypes",
+        "verb_endpoint": "GET /api/pettypes",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 0,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:19:58",
+            "request_verb": "GET",
+            "request_uri": "/petclinic/api/pettypes",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:19:58 GMT"
+            ],
+            "response_body": "8f\r\n[{\"name\":\"bird\",\"id\":5},{\"name\":\"cat\",\"id\":1},{\"name\":\"dog\",\"id\":2},{\"name\":\"hamster\",\"id\":6},{\"name\":\"lizard\",\"id\":3},{\"name\":\"snake\",\"id\":4}]\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "0598e5eb1ba14fa0be2a3dc5d216ce66328d92c3_1": {
+        "verb": "POST",
+        "endpoint": "/api/users",
+        "verb_endpoint": "POST /api/users",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "201",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 1,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:19:58",
+            "request_verb": "POST",
+            "request_uri": "/petclinic/api/users",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080",
+                "Content-Type: application/json"
+            ],
+            "request_body": "{\n    \"username\":\"john.doe\",\n    \"password\":\"1234abc\",\n    \"enabled\":true,\n    \"roles\":\n    [\n        {\n            \"name\":\"admin\"\n        }\n    ]}\r\n",
+            "response_status_code": "201",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:19:58 GMT"
+            ],
+            "response_body": "5b\r\n{\"username\":\"john.doe\",\"enabled\":true,\"password\":\"1234abc\",\"roles\":[{\"name\":\"ROLE_admin\"}]}\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "091b0ce42eb0bd96169ea00b16dd938f6d63ac95_1": {
+        "verb": "PUT",
+        "endpoint": "",
+        "verb_endpoint": "PUT ",
+        "valid": 0,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "302",
+        "status_text": "",
+        "error_message": "",
+        "request_order": 2,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:19:58",
+            "request_verb": "PUT",
+            "request_uri": "/petclinic/",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "302",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Location: http://api:8080/petclinic/swagger-ui/index.html",
+                "Content-Length: 0",
+                "Date: Tue, 24 Nov 2026 21:19:58 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "16561cbbfe6d2e5e6b095c91a994bbe11205da85_1": {
+        "verb": "POST",
+        "endpoint": "/api/specialties",
+        "verb_endpoint": "POST /api/specialties",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "201",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 3,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:19:59",
+            "request_verb": "POST",
+            "request_uri": "/petclinic/api/specialties",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080",
+                "Content-Type: application/json"
+            ],
+            "request_body": "{\n    \"name\":\"radiology\"}\r\n",
+            "response_status_code": "201",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "Location: /api/specialties/4",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:19:58 GMT"
+            ],
+            "response_body": "1b\r\n{\"id\":4,\"name\":\"radiology\"}\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "2040c87a7baefdfc12e4ed0f6fa94f18debc492a_1": {
+        "verb": "POST",
+        "endpoint": "/api/pettypes",
+        "verb_endpoint": "POST /api/pettypes",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "201",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 4,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:19:59",
+            "request_verb": "POST",
+            "request_uri": "/petclinic/api/pettypes",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080",
+                "Content-Type: application/json"
+            ],
+            "request_body": "{\n    \"name\":\"cat\"}\r\n",
+            "response_status_code": "201",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "Location: /api/pettypes/7",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:19:59 GMT"
+            ],
+            "response_body": "15\r\n{\"name\":\"cat\",\"id\":7}\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "2241241ab98f65a0dd2f427b4d84302e74e1a15f_1": {
+        "verb": "GET",
+        "endpoint": "/api/pets",
+        "verb_endpoint": "GET /api/pets",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 5,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:19:59",
+            "request_verb": "GET",
+            "request_uri": "/petclinic/api/pets",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:19:59 GMT"
+            ],
+            "response_body": "642\r\n[{\"name\":\"Leo\",\"birthDate\":\"2010-09-07\",\"type\":{\"name\":\"cat\",\"id\":1},\"id\":1,\"visits\":[],\"ownerId\":1},{\"name\":\"Basil\",\"birthDate\":\"2012-08-06\",\"type\":{\"name\":\"hamster\",\"id\":6},\"id\":2,\"visits\":[],\"ownerId\":2},{\"name\":\"Rosy\",\"birthDate\":\"2011-04-17\",\"type\":{\"name\":\"dog\",\"id\":2},\"id\":3,\"visits\":[],\"ownerId\":3},{\"name\":\"Jewel\",\"birthDate\":\"2010-03-07\",\"type\":{\"name\":\"dog\",\"id\":2},\"id\":4,\"visits\":[],\"ownerId\":3},{\"name\":\"Iggy\",\"birthDate\":\"2010-11-30\",\"type\":{\"name\":\"lizard\",\"id\":3},\"id\":5,\"visits\":[],\"ownerId\":4},{\"name\":\"George\",\"birthDate\":\"2010-01-20\",\"type\":{\"name\":\"snake\",\"id\":4},\"id\":6,\"visits\":[],\"ownerId\":5},{\"name\":\"Samantha\",\"birthDate\":\"2012-09-04\",\"type\":{\"name\":\"cat\",\"id\":1},\"id\":7,\"visits\":[{\"description\":\"spayed\",\"id\":4,\"petId\":7,\"date\":\"2013-01-04\"},{\"description\":\"rabies shot\",\"id\":1,\"petId\":7,\"date\":\"2013-01-01\"}],\"ownerId\":6},{\"name\":\"Max\",\"birthDate\":\"2012-09-04\",\"type\":{\"name\":\"cat\",\"id\":1},\"id\":8,\"visits\":[{\"description\":\"neutered\",\"id\":3,\"petId\":8,\"date\":\"2013-01-03\"},{\"description\":\"rabies shot\",\"id\":2,\"petId\":8,\"date\":\"2013-01-02\"}],\"ownerId\":6},{\"name\":\"Lucky\",\"birthDate\":\"2011-08-06\",\"type\":{\"name\":\"bird\",\"id\":5},\"id\":9,\"visits\":[],\"ownerId\":7},{\"name\":\"Mulligan\",\"birthDate\":\"2007-02-24\",\"type\":{\"name\":\"dog\",\"id\":2},\"id\":10,\"visits\":[],\"ownerId\":8},{\"name\":\"Freddy\",\"birthDate\":\"2010-03-09\",\"type\":{\"name\":\"bird\",\"id\":5},\"id\":11,\"visits\":[],\"ownerId\":9},{\"name\":\"Lucky\",\"birthDate\":\"2010-06-24\",\"type\":{\"name\":\"dog\",\"id\":2},\"id\":12,\"visits\":[],\"ownerId\":10},{\"name\":\"Sly\",\"birthDate\":\"2012-06-08\",\"type\":{\"name\":\"cat\",\"id\":1},\"id\":13,\"visits\":[],\"ownerId\":10}]\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "25af6c2bd9d90ca040c589ffef967808b437d649_1": {
+        "verb": "GET",
+        "endpoint": "/api/specialties",
+        "verb_endpoint": "GET /api/specialties",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 6,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:19:59",
+            "request_verb": "GET",
+            "request_uri": "/petclinic/api/specialties",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:19:59 GMT"
+            ],
+            "response_body": "6f\r\n[{\"id\":3,\"name\":\"dentistry\"},{\"id\":1,\"name\":\"radiology\"},{\"id\":4,\"name\":\"radiology\"},{\"id\":2,\"name\":\"surgery\"}]\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "32e67800bf81a02d043f1b25fc64532e5b8eaf0f_1": {
+        "verb": "PUT",
+        "endpoint": "/api/pets/{petId}",
+        "verb_endpoint": "PUT /api/pets/{petId}",
+        "valid": 0,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 1,
+        "status_code": "500",
+        "status_text": "",
+        "error_message": "138\r\n{\"detail\":\"An unexpected error occurred while processing your request\",\"instance\":\"/petclinic/api/pets/petida65bdf9b6f\",\"status\":500,\"title\":\"MethodArgumentTypeMismatchException\",\"type\":\"http://api:8080/petclinic/api/pets/petida65bdf9b6f\",\"timestamp\":\"2026-11-24T21:19:59.121144008Z\",\"schemaValidationErrors\":[]}\r\n0",
+        "request_order": 7,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:19:59",
+            "request_verb": "PUT",
+            "request_uri": "/petclinic/api/pets/petida65bdf9b6f",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080",
+                "Content-Type: application/json"
+            ],
+            "request_body": "{\n    \"name\":\"Leo\",\n    \"birthDate\":\"2010-09-07\",\n    \"type\":\n        {\n            \"name\":\"cat\",\n            \"id\":1\n        }\n    }\r\n",
+            "response_status_code": "500",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/problem+json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:19:59 GMT",
+                "Connection: close"
+            ],
+            "response_body": "138\r\n{\"detail\":\"An unexpected error occurred while processing your request\",\"instance\":\"/petclinic/api/pets/petida65bdf9b6f\",\"status\":500,\"title\":\"MethodArgumentTypeMismatchException\",\"type\":\"http://api:8080/petclinic/api/pets/petida65bdf9b6f\",\"timestamp\":\"2026-11-24T21:19:59.121144008Z\",\"schemaValidationErrors\":[]}\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "35e345f6e92ee295a32d0d33134ad153a164a051_2": {
+        "verb": "GET",
+        "endpoint": "/api/owners",
+        "verb_endpoint": "GET /api/owners",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 8,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:02",
+            "request_verb": "GET",
+            "request_uri": "/petclinic/api/owners",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:20:02 GMT"
+            ],
+            "response_body": "b67\r\n[{\"firstName\":\"George\",\"lastName\":\"Franklin\",\"address\":\"110 W. Liberty St.\",\"city\":\"Madison\",\"telephone\":\"6085551023\",\"pets\":[{\"name\":\"Leo\",\"birthDate\":\"2010-09-07\",\"type\":{\"name\":\"cat\",\"id\":1},\"id\":1,\"visits\":[],\"ownerId\":1}],\"id\":1},{\"firstName\":\"Betty\",\"lastName\":\"Davis\",\"address\":\"638 Cardinal Ave.\",\"city\":\"Sun Prairie\",\"telephone\":\"6085551749\",\"pets\":[{\"name\":\"Basil\",\"birthDate\":\"2012-08-06\",\"type\":{\"name\":\"hamster\",\"id\":6},\"id\":2,\"visits\":[],\"ownerId\":2}],\"id\":2},{\"firstName\":\"Eduardo\",\"lastName\":\"Rodriquez\",\"address\":\"2693 Commerce St.\",\"city\":\"McFarland\",\"telephone\":\"6085558763\",\"pets\":[{\"name\":\"Jewel\",\"birthDate\":\"2010-03-07\",\"type\":{\"name\":\"dog\",\"id\":2},\"id\":4,\"visits\":[],\"ownerId\":3},{\"name\":\"Rosy\",\"birthDate\":\"2011-04-17\",\"type\":{\"name\":\"dog\",\"id\":2},\"id\":3,\"visits\":[],\"ownerId\":3}],\"id\":3},{\"firstName\":\"Harold\",\"lastName\":\"Davis\",\"address\":\"563 Friendly St.\",\"city\":\"Windsor\",\"telephone\":\"6085553198\",\"pets\":[{\"name\":\"Iggy\",\"birthDate\":\"2010-11-30\",\"type\":{\"name\":\"lizard\",\"id\":3},\"id\":5,\"visits\":[],\"ownerId\":4}],\"id\":4},{\"firstName\":\"Peter\",\"lastName\":\"McTavish\",\"address\":\"2387 S. Fair Way\",\"city\":\"Madison\",\"telephone\":\"6085552765\",\"pets\":[{\"name\":\"George\",\"birthDate\":\"2010-01-20\",\"type\":{\"name\":\"snake\",\"id\":4},\"id\":6,\"visits\":[],\"ownerId\":5}],\"id\":5},{\"firstName\":\"Jean\",\"lastName\":\"Coleman\",\"address\":\"105 N. Lake St.\",\"city\":\"Monona\",\"telephone\":\"6085552654\",\"pets\":[{\"name\":\"Max\",\"birthDate\":\"2012-09-04\",\"type\":{\"name\":\"cat\",\"id\":1},\"id\":8,\"visits\":[{\"description\":\"neutered\",\"id\":3,\"petId\":8,\"date\":\"2013-01-03\"},{\"description\":\"rabies shot\",\"id\":2,\"petId\":8,\"date\":\"2013-01-02\"}],\"ownerId\":6},{\"name\":\"Samantha\",\"birthDate\":\"2012-09-04\",\"type\":{\"name\":\"cat\",\"id\":1},\"id\":7,\"visits\":[{\"description\":\"spayed\",\"id\":4,\"petId\":7,\"date\":\"2013-01-04\"},{\"description\":\"rabies shot\",\"id\":1,\"petId\":7,\"date\":\"2013-01-01\"}],\"ownerId\":6}],\"id\":6},{\"firstName\":\"Jeff\",\"lastName\":\"Black\",\"address\":\"1450 Oak Blvd.\",\"city\":\"Monona\",\"telephone\":\"6085555387\",\"pets\":[{\"name\":\"Lucky\",\"birthDate\":\"2011-08-06\",\"type\":{\"name\":\"bird\",\"id\":5},\"id\":9,\"visits\":[],\"ownerId\":7}],\"id\":7},{\"firstName\":\"Maria\",\"lastName\":\"Escobito\",\"address\":\"345 Maple St.\",\"city\":\"Madison\",\"telephone\":\"6085557683\",\"pets\":[{\"name\":\"Mulligan\",\"birthDate\":\"2007-02-24\",\"type\":{\"name\":\"dog\",\"id\":2},\"id\":10,\"visits\":[],\"ownerId\":8}],\"id\":8},{\"firstName\":\"David\",\"lastName\":\"Schroeder\",\"address\":\"2749 Blackhawk Trail\",\"city\":\"Madison\",\"telephone\":\"6085559435\",\"pets\":[{\"name\":\"Freddy\",\"birthDate\":\"2010-03-09\",\"type\":{\"name\":\"bird\",\"id\":5},\"id\":11,\"visits\":[],\"ownerId\":9}],\"id\":9},{\"firstName\":\"Carlos\",\"lastName\":\"Estaban\",\"address\":\"2335 Independence La.\",\"city\":\"Waunakee\",\"telephone\":\"6085555487\",\"pets\":[{\"name\":\"Lucky\",\"birthDate\":\"2010-06-24\",\"type\":{\"name\":\"dog\",\"id\":2},\"id\":12,\"visits\":[],\"ownerId\":10},{\"name\":\"Sly\",\"birthDate\":\"2012-06-08\",\"type\":{\"name\":\"cat\",\"id\":1},\"id\":13,\"visits\":[],\"ownerId\":10}],\"id\":10}]\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "39dd320e8c4e9f06b35e0be0b4942ac2022fb9c1_1": {
+        "verb": "OPTIONS",
+        "endpoint": "",
+        "verb_endpoint": "OPTIONS ",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 9,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:02",
+            "request_verb": "OPTIONS",
+            "request_uri": "/petclinic/",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "",
+            "response_headers": [
+                "Allow: GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS",
+                "Accept-Patch: ",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Length: 0",
+                "Date: Tue, 24 Nov 2026 21:20:02 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "412e528bcbdb589a7d65bede6705013dd74ab8cb_1": {
+        "verb": "POST",
+        "endpoint": "/api/visits",
+        "verb_endpoint": "POST /api/visits",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "201",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 10,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:02",
+            "request_verb": "POST",
+            "request_uri": "/petclinic/api/visits",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080",
+                "Content-Type: application/json"
+            ],
+            "request_body": "{\n    \"date\":\"2013-01-01\",\n    \"description\":\"rabies shot\",\n    \"petId\":1}\r\n",
+            "response_status_code": "201",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "Location: /api/visits/5",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:20:02 GMT"
+            ],
+            "response_body": "42\r\n{\"description\":\"rabies shot\",\"id\":5,\"petId\":1,\"date\":\"2013-01-01\"}\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "4552a3e207fa7c35d3ca1f393dc67bfe2887e62b_1": {
+        "verb": "POST",
+        "endpoint": "/api/vets",
+        "verb_endpoint": "POST /api/vets",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "201",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 11,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:02",
+            "request_verb": "POST",
+            "request_uri": "/petclinic/api/vets",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080",
+                "Content-Type: application/json"
+            ],
+            "request_body": "{\n    \"firstName\":\"James\",\n    \"lastName\":\"Carter\",\n    \"specialties\":\n    [\n        {\n            \"name\":\"radiology\"\n        }\n    ]}\r\n",
+            "response_status_code": "201",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "Location: /api/vets/7",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:20:02 GMT"
+            ],
+            "response_body": "78\r\n{\"firstName\":\"James\",\"lastName\":\"Carter\",\"specialties\":[{\"id\":4,\"name\":\"radiology\"},{\"id\":1,\"name\":\"radiology\"}],\"id\":7}\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "45f71549262bf2d37031f93494ff120c375dd642_1": {
+        "verb": "GET",
+        "endpoint": "/api/vets",
+        "verb_endpoint": "GET /api/vets",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 12,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:02",
+            "request_verb": "GET",
+            "request_uri": "/petclinic/api/vets",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:20:02 GMT"
+            ],
+            "response_body": "28e\r\n[{\"firstName\":\"James\",\"lastName\":\"Carter\",\"specialties\":[],\"id\":1},{\"firstName\":\"Helen\",\"lastName\":\"Leary\",\"specialties\":[{\"id\":1,\"name\":\"radiology\"}],\"id\":2},{\"firstName\":\"Linda\",\"lastName\":\"Douglas\",\"specialties\":[{\"id\":3,\"name\":\"dentistry\"},{\"id\":2,\"name\":\"surgery\"}],\"id\":3},{\"firstName\":\"Rafael\",\"lastName\":\"Ortega\",\"specialties\":[{\"id\":2,\"name\":\"surgery\"}],\"id\":4},{\"firstName\":\"Henry\",\"lastName\":\"Stevens\",\"specialties\":[{\"id\":1,\"name\":\"radiology\"}],\"id\":5},{\"firstName\":\"Sharon\",\"lastName\":\"Jenkins\",\"specialties\":[],\"id\":6},{\"firstName\":\"James\",\"lastName\":\"Carter\",\"specialties\":[{\"id\":4,\"name\":\"radiology\"},{\"id\":1,\"name\":\"radiology\"}],\"id\":7}]\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "4c188fbad6a350ae59ab88276696235d5234d107_1": {
+        "verb": "GET",
+        "endpoint": "/api/v2/pets",
+        "verb_endpoint": "GET /api/v2/pets",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 13,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:02",
+            "request_verb": "GET",
+            "request_uri": "/petclinic/api/v2/pets?page=1&size=1",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:20:02 GMT"
+            ],
+            "response_body": "ac\r\n{\"content\":[{\"name\":\"Basil\",\"birthDate\":\"2012-08-06\",\"type\":{\"name\":\"hamster\",\"id\":6},\"id\":2,\"visits\":[],\"ownerId\":2}],\"page\":1,\"size\":1,\"totalElements\":13,\"totalPages\":13}\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "514ff1902a735c3aba1c5b223728f11bfb77c8ac_1": {
+        "verb": "POST",
+        "endpoint": "/api/owners",
+        "verb_endpoint": "POST /api/owners",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "201",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 14,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:02",
+            "request_verb": "POST",
+            "request_uri": "/petclinic/api/owners",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080",
+                "Content-Type: application/json"
+            ],
+            "request_body": "{\n    \"firstName\":\"George\",\n    \"lastName\":\"Franklin\",\n    \"address\":\"110 W. Liberty St.\",\n    \"city\":\"Madison\",\n    \"telephone\":\"6085551023\"}\r\n",
+            "response_status_code": "201",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "Location: /api/owners/11",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:20:02 GMT"
+            ],
+            "response_body": "87\r\n{\"firstName\":\"George\",\"lastName\":\"Franklin\",\"address\":\"110 W. Liberty St.\",\"city\":\"Madison\",\"telephone\":\"6085551023\",\"pets\":[],\"id\":11}\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "61ff81c30aa3c76e78afea62b2e3bd1dfa49e854_1": {
+        "verb": "POST",
+        "endpoint": "",
+        "verb_endpoint": "POST ",
+        "valid": 0,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "302",
+        "status_text": "",
+        "error_message": "",
+        "request_order": 15,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:02",
+            "request_verb": "POST",
+            "request_uri": "/petclinic/",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "302",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Location: http://api:8080/petclinic/swagger-ui/index.html",
+                "Content-Length: 0",
+                "Date: Tue, 24 Nov 2026 21:20:02 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "7138a51661947b19b5088da5a2bfede2876f49b9_1": {
+        "verb": "HEAD",
+        "endpoint": "",
+        "verb_endpoint": "HEAD ",
+        "valid": 0,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "302",
+        "status_text": "",
+        "error_message": "",
+        "request_order": 16,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:02",
+            "request_verb": "HEAD",
+            "request_uri": "/petclinic/",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "302",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Location: http://api:8080/petclinic/swagger-ui/index.html",
+                "Date: Tue, 24 Nov 2026 21:20:02 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "9fbe29d4d76ec756421aee06e0f34f17fa488ff3_1": {
+        "verb": "PATCH",
+        "endpoint": "",
+        "verb_endpoint": "PATCH ",
+        "valid": 0,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "302",
+        "status_text": "",
+        "error_message": "",
+        "request_order": 17,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:02",
+            "request_verb": "PATCH",
+            "request_uri": "/petclinic/",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "302",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Location: http://api:8080/petclinic/swagger-ui/index.html",
+                "Content-Length: 0",
+                "Date: Tue, 24 Nov 2026 21:20:02 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "c8bbd9e7b9627c352e39d95a94861fcd04a8fc45_1": {
+        "verb": "GET",
+        "endpoint": "/api/v2/owners",
+        "verb_endpoint": "GET /api/v2/owners",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 18,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "GET",
+            "request_uri": "/petclinic/api/v2/owners?lastName=fuzzstring&page=1&size=1",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": "41\r\n{\"content\":[],\"page\":1,\"size\":1,\"totalElements\":0,\"totalPages\":0}\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "d6f5636098cd458ce9d22939f8e3e8deab0e9bd0_1": {
+        "verb": "DELETE",
+        "endpoint": "",
+        "verb_endpoint": "DELETE ",
+        "valid": 0,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "302",
+        "status_text": "",
+        "error_message": "",
+        "request_order": 19,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "DELETE",
+            "request_uri": "/petclinic/",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "302",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Location: http://api:8080/petclinic/swagger-ui/index.html",
+                "Content-Length: 0",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "e3aa178c0dae9736f616a1613c22a38a8e7882d1_1": {
+        "verb": "GET",
+        "endpoint": "/api/visits",
+        "verb_endpoint": "GET /api/visits",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 20,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "GET",
+            "request_uri": "/petclinic/api/visits",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": "148\r\n[{\"description\":\"rabies shot\",\"id\":1,\"petId\":7,\"date\":\"2013-01-01\"},{\"description\":\"rabies shot\",\"id\":2,\"petId\":8,\"date\":\"2013-01-02\"},{\"description\":\"neutered\",\"id\":3,\"petId\":8,\"date\":\"2013-01-03\"},{\"description\":\"spayed\",\"id\":4,\"petId\":7,\"date\":\"2013-01-04\"},{\"description\":\"rabies shot\",\"id\":5,\"petId\":1,\"date\":\"2013-01-01\"}]\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "f030bbbd32966cde41037b98a8849c46b76e4bc1_1": {
+        "verb": "GET",
+        "endpoint": "",
+        "verb_endpoint": "GET ",
+        "valid": 0,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "302",
+        "status_text": "",
+        "error_message": "",
+        "request_order": 21,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "GET",
+            "request_uri": "/petclinic/",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "302",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Location: http://api:8080/petclinic/swagger-ui/index.html",
+                "Content-Length: 0",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "07d2030a0c2a28e91a28bfdeb328a47948fb9b02_1__1": {
+        "verb": "PUT",
+        "endpoint": "/api/specialties/{specialtyId}",
+        "verb_endpoint": "PUT /api/specialties/{specialtyId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "16561cbbfe6d2e5e6b095c91a994bbe11205da85_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "204",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 22,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "PUT",
+            "request_uri": "/petclinic/api/specialties/5",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080",
+                "Content-Type: application/json"
+            ],
+            "request_body": "{\n    \"name\":\"radiology\"}\r\n",
+            "response_status_code": "204",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "133241ef47368639c15c9b3f5d6d77f4de070e8b_1__1": {
+        "verb": "PUT",
+        "endpoint": "/api/visits/{visitId}",
+        "verb_endpoint": "PUT /api/visits/{visitId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "412e528bcbdb589a7d65bede6705013dd74ab8cb_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "204",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 23,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "PUT",
+            "request_uri": "/petclinic/api/visits/6",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080",
+                "Content-Type: application/json"
+            ],
+            "request_body": "{\n    \"date\":\"2013-01-01\",\n    \"description\":\"rabies shot\"}\r\n",
+            "response_status_code": "204",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "15ca9dc9089572890289bb66b1fa499eb28ed8b1_1__1": {
+        "verb": "PUT",
+        "endpoint": "/api/owners/{ownerId}",
+        "verb_endpoint": "PUT /api/owners/{ownerId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "514ff1902a735c3aba1c5b223728f11bfb77c8ac_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "204",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 24,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "PUT",
+            "request_uri": "/petclinic/api/owners/12",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080",
+                "Content-Type: application/json"
+            ],
+            "request_body": "{\n    \"firstName\":\"George\",\n    \"lastName\":\"Franklin\",\n    \"address\":\"110 W. Liberty St.\",\n    \"city\":\"Madison\",\n    \"telephone\":\"6085551023\"}\r\n",
+            "response_status_code": "204",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "1a90034e3f93193061bb877452a4e1240000f247_1__1": {
+        "verb": "DELETE",
+        "endpoint": "/api/pettypes/{petTypeId}",
+        "verb_endpoint": "DELETE /api/pettypes/{petTypeId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "2040c87a7baefdfc12e4ed0f6fa94f18debc492a_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "204",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 25,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "DELETE",
+            "request_uri": "/petclinic/api/pettypes/8",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "204",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "28cd5ae5ad1e5ec283b4712408be6fe99d4e731a_1__1": {
+        "verb": "GET",
+        "endpoint": "/api/vets/{vetId}",
+        "verb_endpoint": "GET /api/vets/{vetId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "4552a3e207fa7c35d3ca1f393dc67bfe2887e62b_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 26,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "GET",
+            "request_uri": "/petclinic/api/vets/5",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": "5d\r\n{\"firstName\":\"Henry\",\"lastName\":\"Stevens\",\"specialties\":[{\"id\":1,\"name\":\"radiology\"}],\"id\":5}\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "3034b01a02e2622e95e0dc6f7cb1be2a1451d8b5_1__1": {
+        "verb": "DELETE",
+        "endpoint": "/api/owners/{ownerId}",
+        "verb_endpoint": "DELETE /api/owners/{ownerId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "514ff1902a735c3aba1c5b223728f11bfb77c8ac_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "204",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 27,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "DELETE",
+            "request_uri": "/petclinic/api/owners/13",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "204",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "420721f5e207098eecf8095a3955950a36e855da": {
+        "verb": "DELETE",
+        "endpoint": "/api/pets/{petId}",
+        "verb_endpoint": "DELETE /api/pets/{petId}",
+        "valid": 0,
+        "matching_prefix": [
+            {
+                "id": "32e67800bf81a02d043f1b25fc64532e5b8eaf0f_16",
+                "valid": 0
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": null,
+        "status_text": null,
+        "error_message": null,
+        "request_order": 28
+    },
+    "47db08f2ebdfdaf7bae480c57390acc404ac1c9c_1__1": {
+        "verb": "PUT",
+        "endpoint": "/api/pettypes/{petTypeId}",
+        "verb_endpoint": "PUT /api/pettypes/{petTypeId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "2040c87a7baefdfc12e4ed0f6fa94f18debc492a_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "204",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 29,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "PUT",
+            "request_uri": "/petclinic/api/pettypes/9",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080",
+                "Content-Type: application/json"
+            ],
+            "request_body": "{\n    \"name\":\"cat\",\n    \"id\":1}\r\n",
+            "response_status_code": "204",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "6337bb7edcbd2d30304ea26b862c1df1e934dc93_1__1": {
+        "verb": "GET",
+        "endpoint": "/api/owners/{ownerId}",
+        "verb_endpoint": "GET /api/owners/{ownerId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "514ff1902a735c3aba1c5b223728f11bfb77c8ac_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 30,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "GET",
+            "request_uri": "/petclinic/api/owners/14",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": "87\r\n{\"firstName\":\"George\",\"lastName\":\"Franklin\",\"address\":\"110 W. Liberty St.\",\"city\":\"Madison\",\"telephone\":\"6085551023\",\"pets\":[],\"id\":14}\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "66807a515f819080c405c1685a18dee97ffcdce9_1__1": {
+        "verb": "GET",
+        "endpoint": "/api/specialties/{specialtyId}",
+        "verb_endpoint": "GET /api/specialties/{specialtyId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "16561cbbfe6d2e5e6b095c91a994bbe11205da85_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 31,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "GET",
+            "request_uri": "/petclinic/api/specialties/6",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": "1b\r\n{\"id\":6,\"name\":\"radiology\"}\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "66db29a6ce13e35f15034282530ae121d5f9d3c2_1__1": {
+        "verb": "GET",
+        "endpoint": "/api/visits/{visitId}",
+        "verb_endpoint": "GET /api/visits/{visitId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "412e528bcbdb589a7d65bede6705013dd74ab8cb_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 32,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "GET",
+            "request_uri": "/petclinic/api/visits/7",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": "42\r\n{\"description\":\"rabies shot\",\"id\":7,\"petId\":1,\"date\":\"2013-01-01\"}\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "6d7e41dc63db2b109144305ccc49e1364399d0b4_1__1": {
+        "verb": "DELETE",
+        "endpoint": "/api/specialties/{specialtyId}",
+        "verb_endpoint": "DELETE /api/specialties/{specialtyId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "16561cbbfe6d2e5e6b095c91a994bbe11205da85_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "204",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 33,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "DELETE",
+            "request_uri": "/petclinic/api/specialties/7",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "204",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "8033d43f0c0ae2f3d25b77074223770681784813_1__1": {
+        "verb": "POST",
+        "endpoint": "/api/owners/{ownerId}/pets",
+        "verb_endpoint": "POST /api/owners/{ownerId}/pets",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "514ff1902a735c3aba1c5b223728f11bfb77c8ac_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "201",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 34,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "POST",
+            "request_uri": "/petclinic/api/owners/15/pets",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080",
+                "Content-Type: application/json"
+            ],
+            "request_body": "{\n    \"name\":\"Leo\",\n    \"birthDate\":\"2010-09-07\",\n    \"type\":\n        {\n            \"name\":\"cat\",\n            \"id\":1\n        }\n    }\r\n",
+            "response_status_code": "201",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "Location: /api/pets/14",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": "65\r\n{\"name\":\"Leo\",\"birthDate\":\"2010-09-07\",\"type\":{\"name\":\"cat\",\"id\":1},\"id\":14,\"visits\":[],\"ownerId\":15}\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "a4ab831f19c7a9ec0a991769d64f7204daa93b42": {
+        "verb": "GET",
+        "endpoint": "/api/pets/{petId}",
+        "verb_endpoint": "GET /api/pets/{petId}",
+        "valid": 0,
+        "matching_prefix": [
+            {
+                "id": "32e67800bf81a02d043f1b25fc64532e5b8eaf0f_16",
+                "valid": 0
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": null,
+        "status_text": null,
+        "error_message": null,
+        "request_order": 35
+    },
+    "c7034eff34cd10a6841d5ceed2eae309aaadef2c_1__1": {
+        "verb": "DELETE",
+        "endpoint": "/api/visits/{visitId}",
+        "verb_endpoint": "DELETE /api/visits/{visitId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "412e528bcbdb589a7d65bede6705013dd74ab8cb_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "204",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 36,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "DELETE",
+            "request_uri": "/petclinic/api/visits/8",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "204",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "c944e12b5d38ab8f23df5df43a23ac1c409c0eba_1__1": {
+        "verb": "GET",
+        "endpoint": "/api/pettypes/{petTypeId}",
+        "verb_endpoint": "GET /api/pettypes/{petTypeId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "2040c87a7baefdfc12e4ed0f6fa94f18debc492a_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 37,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "GET",
+            "request_uri": "/petclinic/api/pettypes/10",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": "16\r\n{\"name\":\"cat\",\"id\":10}\r\n0"
+        },
+        "tracked_parameters": {}
+    },
+    "cf9d72c91730a6194fc6938eb35093deb2932c84_1__1": {
+        "verb": "DELETE",
+        "endpoint": "/api/vets/{vetId}",
+        "verb_endpoint": "DELETE /api/vets/{vetId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "4552a3e207fa7c35d3ca1f393dc67bfe2887e62b_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "204",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 38,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "DELETE",
+            "request_uri": "/petclinic/api/vets/1",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "204",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "edf53506461f0383c01d1da69f7bea2803255597_1__1": {
+        "verb": "PUT",
+        "endpoint": "/api/vets/{vetId}",
+        "verb_endpoint": "PUT /api/vets/{vetId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "4552a3e207fa7c35d3ca1f393dc67bfe2887e62b_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "204",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 39,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "PUT",
+            "request_uri": "/petclinic/api/vets/6",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080",
+                "Content-Type: application/json"
+            ],
+            "request_body": "{\n    \"firstName\":\"James\",\n    \"lastName\":\"Carter\",\n    \"specialties\":\n    [\n        {\n            \"name\":\"radiology\"\n        }\n    ]}\r\n",
+            "response_status_code": "204",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "145b8b7079048851b121a7103de983bbbbc84b9e_1__1_1": {
+        "verb": "GET",
+        "endpoint": "/api/owners/{ownerId}/pets/{petId}",
+        "verb_endpoint": "GET /api/owners/{ownerId}/pets/{petId}",
+        "valid": 0,
+        "matching_prefix": [
+            {
+                "id": "514ff1902a735c3aba1c5b223728f11bfb77c8ac_1",
+                "valid": 1
+            },
+            {
+                "id": "8033d43f0c0ae2f3d25b77074223770681784813_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "404",
+        "status_text": "",
+        "error_message": "",
+        "request_order": 40,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:03",
+            "request_verb": "GET",
+            "request_uri": "/petclinic/api/owners/16/pets/1",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080"
+            ],
+            "request_body": null,
+            "response_status_code": "404",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Length: 0",
+                "Date: Tue, 24 Nov 2026 21:20:03 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "66ec81084e05aef9af4b0a68fb23d2bcca4d699f_1__1_1": {
+        "verb": "PUT",
+        "endpoint": "/api/owners/{ownerId}/pets/{petId}",
+        "verb_endpoint": "PUT /api/owners/{ownerId}/pets/{petId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "514ff1902a735c3aba1c5b223728f11bfb77c8ac_1",
+                "valid": 1
+            },
+            {
+                "id": "8033d43f0c0ae2f3d25b77074223770681784813_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "204",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 41,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:04",
+            "request_verb": "PUT",
+            "request_uri": "/petclinic/api/owners/17/pets/1",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080",
+                "Content-Type: application/json"
+            ],
+            "request_body": "{\n    \"name\":\"Leo\",\n    \"birthDate\":\"2010-09-07\",\n    \"type\":\n        {\n            \"name\":\"cat\",\n            \"id\":1\n        }\n    }\r\n",
+            "response_status_code": "204",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Date: Tue, 24 Nov 2026 21:20:04 GMT"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "7cc068a174fc2a7f8c8cf0859e22061102523804_1__1_1": {
+        "verb": "POST",
+        "endpoint": "/api/owners/{ownerId}/pets/{petId}/visits",
+        "verb_endpoint": "POST /api/owners/{ownerId}/pets/{petId}/visits",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "514ff1902a735c3aba1c5b223728f11bfb77c8ac_1",
+                "valid": 1
+            },
+            {
+                "id": "8033d43f0c0ae2f3d25b77074223770681784813_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "201",
+        "status_text": "",
+        "error_message": null,
+        "request_order": 42,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2026-11-24 21:20:04",
+            "request_verb": "POST",
+            "request_uri": "/petclinic/api/owners/18/pets/1/visits",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: localhost:8080",
+                "Content-Type: application/json"
+            ],
+            "request_body": "{\n    \"date\":\"2013-01-01\",\n    \"description\":\"rabies shot\"}\r\n",
+            "response_status_code": "201",
+            "response_status_text": "",
+            "response_headers": [
+                "Vary: Origin",
+                "Vary: Access-Control-Request-Method",
+                "Vary: Access-Control-Request-Headers",
+                "Location: /api/visits/9",
+                "X-Content-Type-Options: nosniff",
+                "X-XSS-Protection: 0",
+                "Cache-Control: no-cache, no-store, max-age=0, must-revalidate",
+                "Pragma: no-cache",
+                "Expires: 0",
+                "X-Frame-Options: SAMEORIGIN",
+                "Content-Type: application/json",
+                "Transfer-Encoding: chunked",
+                "Date: Tue, 24 Nov 2026 21:20:04 GMT"
+            ],
+            "response_body": "42\r\n{\"description\":\"rabies shot\",\"id\":9,\"petId\":1,\"date\":\"2013-01-01\"}\r\n0"
+        },
+        "tracked_parameters": {}
+    }
+}

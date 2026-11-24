@@ -1,0 +1,41 @@
+################################################################################
+ InvalidDynamicObjectChecker_500
+
+ Hash: InvalidDynamicObjectChecker_500_1497c2b9e3ae6282e348783590d6a533a6670850
+
+ To attempt to reproduce this bug using restler, run restler with the command
+ line option of --replay_log <path_to_this_log>.
+ If an authentication token is required, you must also specify the token_refresh_cmd.
+
+ This log may contain specific values for IDs or names that were generated
+ during fuzzing, using the fuzzing dictionary. Such names will be re-played
+ without modification. You must update the replay log manually with any changes
+ required to execute the requests in your environment (for example, replacing
+ pre-created account, subscription, or other resource IDs, as needed).
+################################################################################
+
+-> POST /petclinic/api/specialties HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{\n    "name":"radiology"}\r\n
+! producer_timing_delay 0
+! max_async_wait_time 20
+PREVIOUS RESPONSE: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/specialties/566\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 18:47:44 GMT\r\n\r\n1d\r\n{"id":566,"name":"radiology"}\r\n0\r\n\r\n'
+
+-> GET /petclinic/api/specialties/566 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+! producer_timing_delay 0
+! max_async_wait_time 20
+PREVIOUS RESPONSE: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 18:47:44 GMT\r\n\r\n1d\r\n{"id":566,"name":"radiology"}\r\n0\r\n\r\n'
+
+-> POST /petclinic/api/vets HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{\n    "firstName":"James",\n    "lastName":"Carter",\n    "specialties":\n    [\n        {\n            "name":"radiology"\n        }\n    ]}\r\n
+! producer_timing_delay 0
+! max_async_wait_time 20
+PREVIOUS RESPONSE: 'HTTP/1.1 201 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nLocation: /api/vets/732\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 18:47:44 GMT\r\n\r\n6d0\r\n{"firstName":"James","lastName":"Carter","specialties":[{"id":520,"name":"radiology"},{"id":523,"name":"radiology"},{"id":553,"name":"radiology"},{"id":525,"name":"radiology"},{"id":163,"name":"radiology"},{"id":529,"name":"radiology"},{"id":180,"name":"radiology"},{"id":563,"name":"radiology"},{"id":549,"name":"radiology"},{"id":547,"name":"radiology"},{"id":179,"name":"radiology"},{"id":551,"name":"radiology"},{"id":527,"name":"radiology"},{"id":535,"name":"radiology"},{"id":564,"name":"radiology"},{"id":531,"name":"radiology"},{"id":536,"name":"radiology"},{"id":172,"name":"radiology"},{"id":556,"name":"radiology"},{"id":544,"name":"radiology"},{"id":552,"name":"radiology"},{"id":545,"name":"radiology"},{"id":533,"name":"radiology"},{"id":559,"name":"radiology"},{"id":554,"name":"radiology"},{"id":537,"name":"radiology"},{"id":565,"name":"radiology"},{"id":538,"name":"radiology"},{"id":1,"name":"radiology"},{"id":519,"name":"radiology"},{"id":532,"name":"radiology"},{"id":542,"name":"radiology"},{"id":546,"name":"radiology"},{"id":557,"name":"radiology"},{"id":522,"name":"radiology"},{"id":566,"name":"radiology"},{"id":460,"name":"radiology"},{"id":543,"name":"radiology"},{"id":526,"name":"radiology"},{"id":541,"name":"radiology"},{"id":548,"name":"radiology"},{"id":459,"name":"radiology"},{"id":539,"name":"radiology"},{"id":561,"name":"radiology"},{"id":562,"name":"radiology"},{"id":530,"name":"radiology"},{"id":555,"name":"radiology"},{"id":517,"name":"radiology"},{"id":540,"name":"radiology"},{"id":521,"name":"radiology"},{"id":524,"name":"radiology"},{"id":550,"name":"radiology"},{"id":534,"name":"radiology"},{"id":560,"name":"radiology"},{"id":528,"name":"radiology"},{"id":558,"name":"radiology"}],"id":732}\r\n0\r\n\r\n'
+
+-> GET /petclinic/api/vets/520?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+! producer_timing_delay 0
+! max_async_wait_time 0
+PREVIOUS RESPONSE: 'HTTP/1.1 200 \r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 18:47:44 GMT\r\n\r\n43\r\n{"firstName":"James","lastName":"Carter","specialties":[],"id":520}\r\n0\r\n\r\n'
+
+-> GET /petclinic/api/vets/520/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+! producer_timing_delay 0
+! max_async_wait_time 0
+PREVIOUS RESPONSE: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 0\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: SAMEORIGIN\r\nContent-Type: application/problem+json\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 18:47:44 GMT\r\nConnection: close\r\n\r\n117\r\n{"detail":"An unexpected error occurred while processing your request","instance":"/petclinic/api/vets/520/","status":500,"title":"NoResourceFoundException","type":"http://api:8080/petclinic/api/vets/520/","timestamp":"2026-11-24T18:47:44.812657488Z","schemaValidationErrors":[]}\r\n0\r\n\r\n'
+

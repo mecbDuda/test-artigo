@@ -1,0 +1,4 @@
+conteiner	papel	nano_cpus	mem_limite_bytes	mem_pico_bytes	vezes_no_limite	oom_killed	codigo_saida
+st_0_s1	ferramenta:st_0	4000000000	3185573888	517386240	0	false	1
+fuzzexp_1-api-1	api	2000000000	1610612736	418721792	0	false	0
+fuzzexp_1-proxy-1	proxy	1000000000	402653184	130670592	0	false	0

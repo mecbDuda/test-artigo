@@ -1,0 +1,18 @@
+Starting task Fuzz...
+Using python: 'python3' (Python 3.11.8)
+
+ERROR: Results analyzer for logs in /work/Fuzz failed.
+
+Request coverage (successful / total): 35 / 43
+Attempted requests: 35 / 43
+Bugs were found!
+Bug buckets:
+
+InvalidDynamicObjectChecker_20x: 8
+InvalidDynamicObjectChecker_500: 12
+InvalidValueChecker_500: 14
+LeakageRuleChecker_500: 1
+PayloadBodyChecker_500: 117
+main_driver_500: 2
+Task Fuzz succeeded.
+Collecting logs...
