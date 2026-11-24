@@ -1,0 +1,191 @@
+* [34m
+ _____          ___  ___          _
+|  ___|         |  \/  |         | |
+| |____   _____ | .  . | __ _ ___| |_ ___ _ __
+|  __\ \ / / _ \| |\/| |/ _` / __| __/ _ \ '__|
+| |___\ V / (_) | |  | | (_| \__ \ ||  __/ |
+\____/ \_/ \___/\_|  |_/\__,_|___/\__\___|_|
+
+                    [0m
+* EvoMaster version: 5.1.0
+* [31mWARNING: You are doing Black-Box testing, but you did not specify the 'problemType'. The system will default to RESTful API testing.[0m
+* [31mWARNING: You have not setup 'ratePerMinute'. If you are doing testing of a remote service which you do not own, you might want to put a rate-limiter to prevent EvoMaster from bombarding such service with HTTP requests.[0m
+* Going to create configuration file at: /em.yaml
+* [31mWARNING: [33mYou are modifying the value of some internal settings. In general, this is not recommended, especially if it is first time you use EvoMaster, unless you are an experienced user. Involved features: [runningInDocker, seed]. Especially for beginners, you should only modify the 'important' settings:[0m[34m [bbSwaggerUrl, bbTargetUrl, blackBox, configPath, dtoForRequestPayload, endpointExclude, endpointFocus, endpointPrefix, endpointTagFilter, header0, header1, header2, maxTestsPerTestSuite, maxTime, outputFilePrefix, outputFileSuffix, outputFolder, outputFormat, overrideOpenAPIUrl, prematureStop, ratePerMinute, sutControllerHost, sutControllerPort, testTimeout].[0m[33m For more information, see the documentation at:[0m[34m https://github.com/WebFuzzing/EvoMaster/blob/master/docs/options.md[0m[0m
+* Loading configuration file from: /em.yaml
+* [32mYou are running EvoMaster inside Docker. To access the generated test suite under '/generated_tests', you will need to mount a folder or volume. Also references to host machine on 'localhost' would need to be replaced with 'host.docker.internal'. If this is the first time you run EvoMaster in Docker, you are strongly recommended to first check the documentation at:[0m [34mhttps://github.com/WebFuzzing/EvoMaster/blob/master/docs/docker.md[0m
+* Initializing...
+* [33mWARNING: No authentication info was provided. Unless you are testing an example API, you should setup some authentication info for different users. If this is the first time you are using EvoMaster, and you just want to get a feeling of how it works, then ignore this warning. However, to get better results, you will need setup authentication info, eventually. More info is currently available at [0m[34mhttps://github.com/WebFuzzing/EvoMaster/blob/master/docs/auth.md[0m
+* There are 23 usable RESTful API endpoints defined in the schema configuration
+* Starting to generate test cases
+01:30:21.349 [main] WARN  o.e.c.s.service.SearchTimeController - The SUT sent a 'Connection: close' HTTP header. This should be avoided, if possible
+
+
+[1A[2K[1A[2K* Consumed search budget: 0.009%
+* Covered targets: 0; time per test: 159.0ms (1.0 actions); since last improvement: 0s
+[1A[2K[1A[2K* Consumed search budget: 1.854%
+* Covered targets: 68; time per test: 3033.5ms (1.0 actions); since last improvement: 32s
+[1A[2K[1A[2K* Consumed search budget: 1.883%
+* Covered targets: 68; time per test: 890.9ms (1.1 actions); since last improvement: 0s
+[1A[2K[1A[2K* Consumed search budget: 3.431%
+* Covered targets: 160; time per test: 1341.3ms (1.1 actions); since last improvement: 27s
+[1A[2K[1A[2K* Consumed search budget: 3.459%
+* Covered targets: 160; time per test: 928.2ms (1.5 actions); since last improvement: 0s
+[1A[2K[1A[2K* Consumed search budget: 5.291%
+* Covered targets: 227; time per test: 1235.7ms (1.7 actions); since last improvement: 32s
+[1A[2K[1A[2K* Consumed search budget: 6.835%
+* Covered targets: 227; time per test: 1576.4ms (1.7 actions); since last improvement: 60s
+[1A[2K[1A[2K* Consumed search budget: 8.662%
+* Covered targets: 237; time per test: 1877.5ms (1.8 actions); since last improvement: 32s
+[1A[2K[1A[2K* Consumed search budget: 10.218%
+* Covered targets: 237; time per test: 2113.0ms (2.0 actions); since last improvement: 60s
+[1A[2K[1A[2K* Consumed search budget: 12.043%
+* Covered targets: 239; time per test: 2407.4ms (2.1 actions); since last improvement: 32s
+[1A[2K[1A[2K* Consumed search budget: 12.078%
+* Covered targets: 239; time per test: 2336.5ms (2.1 actions); since last improvement: 0s
+[1A[2K[1A[2K* Consumed search budget: 12.106%
+* Covered targets: 239; time per test: 1840.6ms (2.1 actions); since last improvement: 0s
+[1A[2K[1A[2K* Consumed search budget: 13.657%
+* Covered targets: 248; time per test: 2118.1ms (2.2 actions); since last improvement: 27s
+[1A[2K[1A[2K* Consumed search budget: 15.476%
+* Covered targets: 248; time per test: 2445.4ms (2.2 actions); since last improvement: 60s
+[1A[2K[1A[2K* Consumed search budget: 17.034%
+* Covered targets: 250; time per test: 2445.4ms (2.2 actions); since last improvement: 28s
+[1A[2K[1A[2K* Consumed search budget: 18.854%
+* Covered targets: 250; time per test: 2772.6ms (2.3 actions); since last improvement: 60s
+[1A[2K[1A[2K* Consumed search budget: 20.256%
+* Covered targets: 250; time per test: 3022.0ms (2.3 actions); since last improvement: 86s
+[1A[2K[1A[2K* Consumed search budget: 22.082%
+* Covered targets: 250; time per test: 3348.6ms (2.2 actions); since last improvement: 118s
+[1A[2K[1A[2K* Consumed search budget: 23.638%
+* Covered targets: 251; time per test: 2694.1ms (2.3 actions); since last improvement: 27s
+[1A[2K[1A[2K* Consumed search budget: 25.469%
+* Covered targets: 251; time per test: 2408.7ms (2.2 actions); since last improvement: 60s
+[1A[2K[1A[2K* Consumed search budget: 27.028%
+* Covered targets: 251; time per test: 2686.1ms (2.2 actions); since last improvement: 88s
+[1A[2K[1A[2K* Consumed search budget: 28.851%
+* Covered targets: 251; time per test: 3013.8ms (2.2 actions); since last improvement: 121s
+[1A[2K[1A[2K* Consumed search budget: 30.395%
+* Covered targets: 251; time per test: 3291.8ms (2.3 actions); since last improvement: 149s
+[1A[2K[1A[2K* Consumed search budget: 30.424%
+* Covered targets: 251; time per test: 2081.3ms (2.2 actions); since last improvement: 0s
+[1A[2K[1A[2K* Consumed search budget: 32.247%
+* Covered targets: 256; time per test: 2409.1ms (2.3 actions); since last improvement: 32s
+[1A[2K[1A[2K* Consumed search budget: 33.791%
+* Covered targets: 256; time per test: 2686.6ms (2.2 actions); since last improvement: 60s
+[1A[2K[1A[2K* Consumed search budget: 35.627%
+* Covered targets: 256; time per test: 2435.6ms (2.2 actions); since last improvement: 93s
+[1A[2K[1A[2K* Consumed search budget: 35.655%
+* Covered targets: 256; time per test: 944.9ms (1.9 actions); since last improvement: 94s
+[1A[2K[1A[2K* Consumed search budget: 39.024%
+* Covered targets: 256; time per test: 1550.0ms (2.0 actions); since last improvement: 154s
+[1A[2K[1A[2K* Consumed search budget: 39.052%
+* Covered targets: 256; time per test: 946.3ms (2.3 actions); since last improvement: 155s
+[1A[2K[1A[2K* Consumed search budget: 40.462%
+* Covered targets: 256; time per test: 869.4ms (2.3 actions); since last improvement: 180s
+[1A[2K[1A[2K* Consumed search budget: 42.251%
+* Covered targets: 256; time per test: 1188.9ms (2.1 actions); since last improvement: 213s
+[1A[2K[1A[2K* Consumed search budget: 42.449%
+* Covered targets: 256; time per test: 1223.5ms (2.2 actions); since last improvement: 216s
+[1A[2K[1A[2K* Consumed search budget: 43.843%
+* Covered targets: 256; time per test: 1474.1ms (2.3 actions); since last improvement: 241s
+[1A[2K[1A[2K* Consumed search budget: 45.664%
+* Covered targets: 256; time per test: 1801.3ms (2.2 actions); since last improvement: 274s
+[1A[2K[1A[2K* Consumed search budget: 47.212%
+* Covered targets: 256; time per test: 2079.1ms (2.3 actions); since last improvement: 302s
+[1A[2K[1A[2K* Consumed search budget: 49.053%
+* Covered targets: 257; time per test: 1799.8ms (2.0 actions); since last improvement: 33s
+[1A[2K[1A[2K* Consumed search budget: 50.596%
+* Covered targets: 257; time per test: 2077.4ms (2.0 actions); since last improvement: 60s
+[1A[2K[1A[2K* Consumed search budget: 52.420%
+* Covered targets: 257; time per test: 2405.2ms (2.0 actions); since last improvement: 93s
+[1A[2K[1A[2K* Consumed search budget: 53.970%
+* Covered targets: 257; time per test: 2682.9ms (2.1 actions); since last improvement: 121s
+[1A[2K[1A[2K* Consumed search budget: 55.810%
+* Covered targets: 257; time per test: 2439.8ms (2.1 actions); since last improvement: 154s
+[1A[2K[1A[2K* Consumed search budget: 57.367%
+* Covered targets: 257; time per test: 1827.1ms (1.9 actions); since last improvement: 182s
+[1A[2K[1A[2K* Consumed search budget: 59.194%
+* Covered targets: 257; time per test: 2154.7ms (1.9 actions); since last improvement: 215s
+[1A[2K[1A[2K* Consumed search budget: 60.741%
+* Covered targets: 257; time per test: 2432.4ms (1.9 actions); since last improvement: 243s
+[1A[2K[1A[2K* Consumed search budget: 62.561%
+* Covered targets: 257; time per test: 2759.8ms (1.9 actions); since last improvement: 276s
+[1A[2K[1A[2K* Consumed search budget: 63.953%
+* Covered targets: 257; time per test: 3009.5ms (1.8 actions); since last improvement: 301s
+[1A[2K[1A[2K* Consumed search budget: 65.775%
+* Covered targets: 257; time per test: 3337.0ms (1.8 actions); since last improvement: 334s
+[1A[2K[1A[2K* Consumed search budget: 67.321%
+* Covered targets: 257; time per test: 3009.3ms (1.8 actions); since last improvement: 361s
+[1A[2K[1A[2K* Consumed search budget: 69.145%
+* Covered targets: 258; time per test: 2730.7ms (1.8 actions); since last improvement: 32s
+[1A[2K[1A[2K* Consumed search budget: 72.513%
+* Covered targets: 258; time per test: 3335.8ms (1.8 actions); since last improvement: 93s
+[1A[2K[1A[2K* Consumed search budget: 74.057%
+* Covered targets: 258; time per test: 3613.1ms (1.7 actions); since last improvement: 121s
+[1A[2K[1A[2K* Consumed search budget: 75.883%
+* Covered targets: 258; time per test: 3940.5ms (1.7 actions); since last improvement: 154s
+[1A[2K[1A[2K* Consumed search budget: 77.429%
+* Covered targets: 258; time per test: 3890.7ms (1.8 actions); since last improvement: 181s
+[1A[2K[1A[2K* Consumed search budget: 79.267%
+* Covered targets: 259; time per test: 3006.7ms (1.6 actions); since last improvement: 32s
+[1A[2K[1A[2K* Consumed search budget: 80.810%
+* Covered targets: 259; time per test: 3284.2ms (1.6 actions); since last improvement: 60s
+[1A[2K[1A[2K* Consumed search budget: 82.636%
+* Covered targets: 259; time per test: 3612.7ms (1.8 actions); since last improvement: 93s
+[1A[2K[1A[2K* Consumed search budget: 84.052%
+* Covered targets: 259; time per test: 1798.1ms (1.8 actions); since last improvement: 119s
+[1A[2K[1A[2K* Consumed search budget: 85.875%
+* Covered targets: 259; time per test: 1797.7ms (1.7 actions); since last improvement: 151s
+[1A[2K[1A[2K* Consumed search budget: 87.422%
+* Covered targets: 259; time per test: 1797.2ms (1.6 actions); since last improvement: 179s
+[1A[2K[1A[2K* Consumed search budget: 89.243%
+* Covered targets: 259; time per test: 2124.7ms (1.7 actions); since last improvement: 212s
+[1A[2K[1A[2K* Consumed search budget: 90.789%
+* Covered targets: 259; time per test: 2402.8ms (1.8 actions); since last improvement: 240s
+[1A[2K[1A[2K* Consumed search budget: 92.609%
+* Covered targets: 259; time per test: 2729.8ms (1.7 actions); since last improvement: 273s
+[1A[2K[1A[2K* Consumed search budget: 94.164%
+* Covered targets: 259; time per test: 3009.5ms (1.8 actions); since last improvement: 301s
+[1A[2K[1A[2K* Consumed search budget: 95.989%
+* Covered targets: 259; time per test: 3337.4ms (1.8 actions); since last improvement: 333s
+[1A[2K[1A[2K* Consumed search budget: 96.017%
+* Covered targets: 259; time per test: 3014.3ms (1.9 actions); since last improvement: 334s
+[1A[2K[1A[2K* Consumed search budget: 96.045%
+* Covered targets: 259; time per test: 2411.1ms (1.8 actions); since last improvement: 0s
+[1A[2K[1A[2K* Consumed search budget: 97.598%
+* Covered targets: 260; time per test: 2688.3ms (1.8 actions); since last improvement: 28s
+[1A[2K[1A[2K* Consumed search budget: 99.432%
+* Covered targets: 260; time per test: 2439.2ms (2.0 actions); since last improvement: 61s
+[1A[2K[1A[2K* Consumed search budget: 100.976%
+* Covered targets: 260; time per test: 2717.0ms (2.1 actions); since last improvement: 89s
+* Phase SEARCH lasted: 0h 30m 17s
+* Starting to apply minimization phase
+* Recomputing full coverage for 59 tests
+* Analyzing 5 tests with size greater than 1
+
+[1A[2K* Minimization progress: 0/5
+[1A[2K* Minimization progress: 1/5
+[1A[2K* Minimization progress: 2/5
+[1A[2K* Minimization progress: 3/5
+[1A[2K* Minimization progress: 4/5
+[1A[2K* Minimization progress: 5/5
+* Minimization phase took 179 seconds
+* Evaluated tests: 816
+* Evaluated actions: 1619
+* Needed budget: 92%
+* Passed time (seconds): 1997
+* Execution time per test (ms): Avg=2226.69 , min=-707.00 , max=60535.00
+* Execution time per action (ms): Avg=1355.87 , min=-707.00 , max=32794.00
+* Computation overhead between tests (ms): Avg=0.70 , min=0.00 , max=18.00
+* Starting to apply security testing
+* Phase MINIMIZATION lasted: 0h 2m 59s
+* Phase SECURITY lasted: 0h 0m 0s
+* Going to save 58 tests to /generated_tests
+02:03:38.426 [main] WARN  o.e.c.o.service.HttpWsTestCaseWriter - Currently no assertions are generated for response type: text/html;charset=UTF-8
+* TCP timeouts: 24
+* Potential faults: 32
+* Successfully executed (HTTP code 2xx) 9 endpoints out of 23 (39%)
+* Phase WRITE_OUTPUT lasted: 0h 0m 0s
+* EvoMaster process has completed successfully
+* Use [32m--help[0m and visit [34mhttps://www.evomaster.org[0m to learn more about available options

@@ -1,0 +1,11 @@
+Starting task Test...
+Using python: 'python3' (Python 3.11.8)
+Request coverage (successful / total): 9 / 23
+Attempted requests: 23 / 23
+Bugs were found!
+Bug buckets:
+
+main_driver_500: 10
+See 'coverage_failures_to_investigate.txt' to investigate API coverage.
+Task Test succeeded.
+Collecting logs...

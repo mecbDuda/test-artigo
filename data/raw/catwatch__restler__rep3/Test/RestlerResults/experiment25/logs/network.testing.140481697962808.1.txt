@@ -1,0 +1,1226 @@
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 133acdb060e535358d786669942a972a8619a752
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'statistics'
+		- restler_static_string: '?'
+		- restler_static_string: 'organizations='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'start_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'end_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:21:19.179: Sending: 'GET /statistics?organizations=fuzzstring&start_date=fuzzstring&end_date=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 3e1abaf4-311a-427b-ac29-b0acc0dfbfb8\r\n\r\n'
+
+2026-11-24 20:21:19.195: Received: 'HTTP/1.1 400 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nContent-Length: 33\r\nDate: Tue, 24 Nov 2026 20:21:19 GMT\r\nConnection: close\r\n\r\nInvalid date format for stardDate'
+
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: 133acdb060e535358d786669942a972a8619a752
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'statistics'
+		- restler_static_string: '?'
+		- restler_static_string: 'organizations='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'start_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'end_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:21:19.209: Sending: 'GET /statistics HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: fb62e714-54ce-49c1-a57f-20815029d9dd\r\n\r\n'
+
+2026-11-24 20:21:19.261: Received: 'HTTP/1.1 200 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:21:19 GMT\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-2
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 1503a103a33337084a9f0b6d0284af45771daf41
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'config'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:21:19.276: Sending: 'GET /config HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 02d1c32d-32e8-4696-8b0a-05b98455bd03\r\n\r\n'
+
+2026-11-24 20:21:19.285: Received: 'HTTP/1.1 200 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:21:19 GMT\r\n\r\n3fb\r\n{"cache.path":"target/cache","cache.size":"50","endpoints.enabled":"false","endpoints.health.enabled":"true","github.login":null,"organization.list":"zalando,zalando-stups,zalando-incubator","schedule":"0 1 8 * * *","scoring.project":"function(project) {var daysSinceLastPush = 0;if (project.lastPushed) {var tokens = project.lastPushed.split(\\" \\");var day = tokens[2];var month = tokens[1];var year = tokens[5];var lastPushedDate = new Date(day + \' \' + month + \' \' + year);var millisInDay = 86400000;daysSinceLastPush = Math.floor((new Date() - lastPushedDate) / millisInDay);}var maintainersPenalty = 0;if (project.maintainers.length < 2) {maintainersPenalty = 100;}return project.starsCount * 3 + project.forksCount * 2 + project.contributorsCount * 5 - daysSinceLastPush - maintainersPenalty}","spring.database.driverClassName":null,"spring.datasource.platform":null,"spring.datasource.url":"jdbc:h2:mem:testdb","spring.datasource.username":"sa","spring.jpa.database":null,"spring.jpa.hibernate.ddl-auto":"update"}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-3
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 253dab9a7cb2afdbe02a9fc9ec731154b9c315c6
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'languages'
+		- restler_static_string: '?'
+		- restler_static_string: 'organizations='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'limit='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '&'
+		- restler_static_string: 'offset='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '&'
+		- restler_static_string: 'q='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:21:19.298: Sending: 'GET /languages?organizations=fuzzstring&limit=1&offset=1&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 0a49e2e7-a42b-44c0-be6e-6605277336df\r\n\r\n'
+
+2026-11-24 20:21:19.374: Received: 'HTTP/1.1 200 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:21:19 GMT\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-4
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 27d0385a8cf335b0371e8e71d1b3c8dea465c761
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'export'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:21:19.389: Sending: 'GET /export HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 80ef184b-dc65-4f71-8c29-90ec9fbbfe8f\r\n\r\n'
+
+2026-11-24 20:21:19.428: Received: 'HTTP/1.1 200 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:21:19 GMT\r\n\r\n31\r\n{"contributors":[],"projects":[],"statistics":[]}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-5
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 2c5cba7e4f0058173e4855aeb562f6ec10fc710a
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:21:19.442: Sending: 'GET /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: b24061fe-ea66-4cd4-8faf-8d9827673f42\r\n\r\n'
+
+2026-11-24 20:21:19.453: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:21:19 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551679447,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n'
+
+2026-11-24 20:21:19.457: Attempting to reproduce bug...
+2026-11-24 20:21:19.460: Sending: 'GET /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: fe42275b-8c6d-4fa6-b2c5-cd626c7c203e\r\n\r\n'
+
+2026-11-24 20:21:19.468: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:21:19 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551679466,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n'
+
+2026-11-24 20:21:19.470: Done replaying sequence.
+
+Generation-1: Rendering Sequence-5
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: 2c5cba7e4f0058173e4855aeb562f6ec10fc710a
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:21:19.499: Sending: 'GET /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 3f14ff83-985d-4dcd-bbb4-945bc68549cb\r\n\r\n'
+
+2026-11-24 20:21:19.506: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:21:19 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551679505,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-6
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 2e769664f820d537b236da210cda507accf8ff79
+
+		- restler_static_string: 'OPTIONS '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:21:19.528: Sending: 'OPTIONS /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 6d12309c-ff38-49eb-932b-4f0639a77444\r\n\r\n'
+
+2026-11-24 20:21:19.538: Received: 'HTTP/1.1 200 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nAllow: GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS\r\nContent-Length: 0\r\nDate: Tue, 24 Nov 2026 20:21:19 GMT\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-7
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 57e4f8870527cfb192135f63354aede074bf46e8
+
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'import'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "contributors":\n    [\n        {\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "key":\n                {\n                    "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n                    "organizationId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n                    "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: '\n                }\n            ,\n            "loginId":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "name":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "organizationId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "organizationName":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "organizationalCommitsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "organizationalProjectsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "personalCommitsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "personalProjectsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: ',\n            "url":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\n        }\n    ],\n    "projects":\n    [\n        {\n            "commitsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "contributorsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "description":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "externalContributorsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "forksCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "gitHubProjectId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "image":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "languageList":\n            [\n                '
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\n            ],\n            "lastPushed":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "maintainers":\n            [\n                '
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\n            ],\n            "name":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "organizationName":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "primaryLanguage":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "score":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: ',\n            "starsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "title":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "url":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\n        }\n    ],\n    "statistics":\n    [\n        {\n            "allContributorsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "allForksCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "allSizeCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "allStarsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "externalContributorsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "key":\n                {\n                    "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n                    "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: '\n                }\n            ,\n            "membersCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "organizationName":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "privateProjectCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "programLanguagesCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "publicProjectCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: ',\n            "tagsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "teamsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    ]}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:21:19.557: Sending: 'POST /import HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 2172\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: fe0c3d92-5eba-4f71-8410-e2898f037bfa\r\n\r\n{\n    "contributors":\n    [\n        {\n            "id":1,\n            "key":\n                {\n                    "id":1,\n                    "organizationId":1,\n                    "snapshotDate":"2019-06-26T20:20:39+00:00"\n                }\n            ,\n            "loginId":"fuzzstring",\n            "name":"fuzzstring",\n            "organizationId":1,\n            "organizationName":"fuzzstring",\n            "organizationalCommitsCount":1,\n            "organizationalProjectsCount":1,\n            "personalCommitsCount":1,\n            "personalProjectsCount":1,\n            "snapshotDate":"2019-06-26T20:20:39+00:00",\n            "url":"fuzzstring"\n        }\n    ],\n    "projects":\n    [\n        {\n            "commitsCount":1,\n            "contributorsCount":1,\n            "description":"fuzzstring",\n            "externalContributorsCount":1,\n            "forksCount":1,\n            "gitHubProjectId":1,\n            "image":"fuzzstring",\n            "languageList":\n            [\n                "fuzzstring"\n            ],\n            "lastPushed":"fuzzstring",\n            "maintainers":\n            [\n                "fuzzstring"\n            ],\n            "name":"fuzzstring",\n            "organizationName":"fuzzstring",\n            "primaryLanguage":"fuzzstring",\n            "score":1,\n            "snapshotDate":"2019-06-26T20:20:39+00:00",\n            "starsCount":1,\n            "title":"fuzzstring",\n            "url":"fuzzstring"\n        }\n    ],\n    "statistics":\n    [\n        {\n            "allContributorsCount":1,\n            "allForksCount":1,\n            "allSizeCount":1,\n            "allStarsCount":1,\n            "externalContributorsCount":1,\n            "id":1,\n            "key":\n                {\n                    "id":1,\n                    "snapshotDate":"2019-06-26T20:20:39+00:00"\n                }\n            ,\n            "membersCount":1,\n            "organizationName":"fuzzstring",\n            "privateProjectCount":1,\n            "programLanguagesCount":1,\n            "publicProjectCount":1,\n            "snapshotDate":"2019-06-26T20:20:39+00:00",\n            "tagsCount":1,\n            "teamsCount":1\n        }\n    ]}\r\n'
+
+2026-11-24 20:21:19.618: Received: 'HTTP/1.1 403 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nContent-Length: 29\r\nDate: Tue, 24 Nov 2026 20:21:19 GMT\r\n\r\nThis endpoint is deactivated.'
+
+
+Generation-1: Rendering Sequence-7
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: 57e4f8870527cfb192135f63354aede074bf46e8
+
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'import'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "contributors":\n    [\n        {\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "key":\n                {\n                    "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n                    "organizationId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n                    "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: '\n                }\n            ,\n            "loginId":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "name":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "organizationId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "organizationName":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "organizationalCommitsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "organizationalProjectsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "personalCommitsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "personalProjectsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: ',\n            "url":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\n        }\n    ],\n    "projects":\n    [\n        {\n            "commitsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "contributorsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "description":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "externalContributorsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "forksCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "gitHubProjectId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "image":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "languageList":\n            [\n                '
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\n            ],\n            "lastPushed":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "maintainers":\n            [\n                '
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\n            ],\n            "name":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "organizationName":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "primaryLanguage":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "score":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: ',\n            "starsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "title":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "url":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\n        }\n    ],\n    "statistics":\n    [\n        {\n            "allContributorsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "allForksCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "allSizeCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "allStarsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "externalContributorsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "key":\n                {\n                    "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n                    "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: '\n                }\n            ,\n            "membersCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "organizationName":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "privateProjectCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "programLanguagesCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "publicProjectCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: ',\n            "tagsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "teamsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    ]}'
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:21:19.634: Sending: 'POST /import HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 2\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 4ae33c17-bb36-4804-9a1e-c28f690111da\r\n\r\n{}'
+
+2026-11-24 20:21:19.640: Received: 'HTTP/1.1 403 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nContent-Length: 29\r\nDate: Tue, 24 Nov 2026 20:21:19 GMT\r\n\r\nThis endpoint is deactivated.'
+
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 5ac4b3e0f0e8846b7c13cf87e3393d3ef6bef74a
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'fetch'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:21:19.656: Sending: 'GET /fetch HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: c203982d-c4b4-4cb8-b4f6-36c6f3cd644d\r\n\r\n'
+
+2026-11-24 20:21:52.866: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:21:52 GMT\r\nConnection: close\r\n\r\n1ec\r\n{"timestamp":1795551712863,"status":500,"error":"Internal Server Error","exception":"org.springframework.mail.MailSendException","message":"Mail server connection failed; nested exception is javax.mail.MessagingException: Unknown SMTP host: mailtrap.io;\\n  nested exception is:\\n\\tjava.net.UnknownHostException: mailtrap.io. Failed messages: javax.mail.MessagingException: Unknown SMTP host: mailtrap.io;\\n  nested exception is:\\n\\tjava.net.UnknownHostException: mailtrap.io","path":"/fetch"}\r\n0\r\n\r\n'
+
+2026-11-24 20:21:52.868: Attempting to reproduce bug...
+2026-11-24 20:21:52.873: Sending: 'GET /fetch HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 2a0393ec-6fea-419d-b6d9-84feeaac15c1\r\n\r\n'
+
+2026-11-24 20:22:20.833: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:20 GMT\r\nConnection: close\r\n\r\n1ec\r\n{"timestamp":1795551740831,"status":500,"error":"Internal Server Error","exception":"org.springframework.mail.MailSendException","message":"Mail server connection failed; nested exception is javax.mail.MessagingException: Unknown SMTP host: mailtrap.io;\\n  nested exception is:\\n\\tjava.net.UnknownHostException: mailtrap.io. Failed messages: javax.mail.MessagingException: Unknown SMTP host: mailtrap.io;\\n  nested exception is:\\n\\tjava.net.UnknownHostException: mailtrap.io","path":"/fetch"}\r\n0\r\n\r\n'
+
+2026-11-24 20:22:20.836: Done replaying sequence.
+
+Generation-1: Rendering Sequence-8
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: 5ac4b3e0f0e8846b7c13cf87e3393d3ef6bef74a
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'fetch'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:20.854: Sending: 'GET /fetch HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 238e5b15-7d22-4857-95c1-6f7085a767fc\r\n\r\n'
+
+2026-11-24 20:22:53.819: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n1ec\r\n{"timestamp":1795551773817,"status":500,"error":"Internal Server Error","exception":"org.springframework.mail.MailSendException","message":"Mail server connection failed; nested exception is javax.mail.MessagingException: Unknown SMTP host: mailtrap.io;\\n  nested exception is:\\n\\tjava.net.UnknownHostException: mailtrap.io. Failed messages: javax.mail.MessagingException: Unknown SMTP host: mailtrap.io;\\n  nested exception is:\\n\\tjava.net.UnknownHostException: mailtrap.io","path":"/fetch"}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-9
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 624b05551bc2d7b798a26671b70577d9dafee482
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'projects'
+		- restler_static_string: '?'
+		- restler_static_string: 'organizations='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'limit='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '&'
+		- restler_static_string: 'offset='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '&'
+		- restler_static_string: 'start_date='
+		- restler_fuzzable_datetime: '2019-06-26T20:20:39+00:00'
+		- restler_static_string: '&'
+		- restler_static_string: 'end_date='
+		- restler_fuzzable_datetime: '2019-06-26T20:20:39+00:00'
+		- restler_static_string: '&'
+		- restler_static_string: 'sortBy='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'q='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'language='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:53.838: Sending: 'GET /projects?organizations=fuzzstring&limit=1&offset=1&start_date=2019-06-26T20%3A20%3A39%2B00%3A00&end_date=2019-06-26T20%3A20%3A39%2B00%3A00&sortBy=fuzzstring&q=fuzzstring&language=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 6fc8e3e9-b6c9-4895-b75c-6fbe4e998869\r\n\r\n'
+
+2026-11-24 20:22:53.863: Received: 'HTTP/1.1 200 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-10
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 680aded5dc64a19b3f9885a24363af8601a181f0
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'health.json'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:53.881: Sending: 'GET /health.json HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 74746524-d660-4ba7-a262-e5c87d46a533\r\n\r\n'
+
+2026-11-24 20:22:53.907: Received: 'HTTP/1.1 200 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\n\r\nf\r\n{"status":"UP"}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-11
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 6dceeb1bb852acbfaad0eb5d1ba89e884d2c6b27
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'statistics'
+		- restler_static_string: '/'
+		- restler_static_string: 'languages'
+		- restler_static_string: '?'
+		- restler_static_string: 'organizations='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'start_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'end_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:53.920: Sending: 'GET /statistics/languages?organizations=fuzzstring&start_date=fuzzstring&end_date=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 896cf12f-aec6-4a2b-a896-e5a91b54ba3f\r\n\r\n'
+
+2026-11-24 20:22:53.927: Received: "HTTP/1.1 400 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nContent-Length: 38\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\nCouldn't parse date string fuzzstring."
+
+
+Generation-1: Rendering Sequence-11
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: 6dceeb1bb852acbfaad0eb5d1ba89e884d2c6b27
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'statistics'
+		- restler_static_string: '/'
+		- restler_static_string: 'languages'
+		- restler_static_string: '?'
+		- restler_static_string: 'organizations='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'start_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'end_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:53.947: Sending: 'GET /statistics/languages HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 34c72d4e-1b31-4c81-ae28-c100ed3adbc0\r\n\r\n'
+
+2026-11-24 20:22:53.959: Received: 'HTTP/1.1 200 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\n\r\n2\r\n[]\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-12
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 7a296510193c0339765204a4d4beef2d66544ad3
+
+		- restler_static_string: 'HEAD '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:53.977: Sending: 'HEAD /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 4d8bc8e2-0e70-4995-ad87-ba47d650ceb8\r\n\r\n'
+
+2026-11-24 20:22:53.984: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n'
+
+2026-11-24 20:22:53.987: Attempting to reproduce bug...
+2026-11-24 20:22:53.989: Sending: 'HEAD /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 64d697db-38d0-4665-b5a5-b3aa6d76f2f7\r\n\r\n'
+
+2026-11-24 20:22:53.995: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n'
+
+2026-11-24 20:22:53.997: Done replaying sequence.
+
+Generation-1: Rendering Sequence-12
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: 7a296510193c0339765204a4d4beef2d66544ad3
+
+		- restler_static_string: 'HEAD '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.014: Sending: 'HEAD /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 894605c5-ab4d-418c-b0d4-23e0bd9fdb71\r\n\r\n'
+
+2026-11-24 20:22:54.020: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-13
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 7bd80786fb8b0185ebb7df4c1c4cee354a4e9b60
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.038: Sending: 'DELETE /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: c2ad3e3a-061d-4fdb-934f-4893051beca5\r\n\r\n'
+
+2026-11-24 20:22:54.045: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774043,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n'
+
+2026-11-24 20:22:54.047: Attempting to reproduce bug...
+2026-11-24 20:22:54.049: Sending: 'DELETE /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: fe4eac94-1c20-46a0-83c6-8b4a526480e8\r\n\r\n'
+
+2026-11-24 20:22:54.055: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774053,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n'
+
+2026-11-24 20:22:54.057: Done replaying sequence.
+
+Generation-1: Rendering Sequence-13
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: 7bd80786fb8b0185ebb7df4c1c4cee354a4e9b60
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.074: Sending: 'DELETE /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 94441e3b-d5c5-4ca1-bc6b-470d82ea7993\r\n\r\n'
+
+2026-11-24 20:22:54.081: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774080,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-14
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 922a7f7ea7adbf316cc824c372390b75b736a61d
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'init'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.105: Sending: 'GET /init HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: e292caba-f4db-42ec-aa60-84cc0bd5b736\r\n\r\n'
+
+2026-11-24 20:22:54.130: Received: 'HTTP/1.1 401 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nCache-Control: no-store\r\nPragma: no-cache\r\nWWW-Authenticate: Bearer realm="oauth2-resource", error="unauthorized", error_description="Full authentication is required to access this resource"\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\n\r\n66\r\n{"error":"unauthorized","error_description":"Full authentication is required to access this resource"}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-14
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: 922a7f7ea7adbf316cc824c372390b75b736a61d
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'init'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.144: Sending: 'GET /init HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: c9f70ad1-0bf3-45a8-a187-e18d0eb26a6e\r\n\r\n'
+
+2026-11-24 20:22:54.151: Received: 'HTTP/1.1 401 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nCache-Control: no-store\r\nPragma: no-cache\r\nWWW-Authenticate: Bearer realm="oauth2-resource", error="unauthorized", error_description="Full authentication is required to access this resource"\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\n\r\n66\r\n{"error":"unauthorized","error_description":"Full authentication is required to access this resource"}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-15
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: a1c083a2d598da99a14e7c5e5ba80d98ac111289
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'contributors'
+		- restler_static_string: '?'
+		- restler_static_string: 'organizations='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'limit='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '&'
+		- restler_static_string: 'offset='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '&'
+		- restler_static_string: 'start_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'end_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'sortBy='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'q='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.164: Sending: 'GET /contributors?organizations=fuzzstring&limit=1&offset=1&start_date=fuzzstring&end_date=fuzzstring&sortBy=fuzzstring&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 59d979ef-a9ce-4a22-8940-b5ef4abfa11b\r\n\r\n'
+
+2026-11-24 20:22:54.180: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n164\r\n{"timestamp":1795551774178,"status":500,"error":"Internal Server Error","exception":"java.lang.IllegalArgumentException","message":"sortBy must be empty or have a valid value but was fuzzstring. Valid values are organizationalCommitsCount,organizationalProjectsCount,personalCommitsCount,personalProjectsCount,organizationName,name","path":"/contributors"}\r\n0\r\n\r\n'
+
+2026-11-24 20:22:54.182: Attempting to reproduce bug...
+2026-11-24 20:22:54.184: Sending: 'GET /contributors?organizations=fuzzstring&limit=1&offset=1&start_date=fuzzstring&end_date=fuzzstring&sortBy=fuzzstring&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: d6653c08-c3ea-47ec-91a6-12feb8e767b6\r\n\r\n'
+
+2026-11-24 20:22:54.194: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n164\r\n{"timestamp":1795551774192,"status":500,"error":"Internal Server Error","exception":"java.lang.IllegalArgumentException","message":"sortBy must be empty or have a valid value but was fuzzstring. Valid values are organizationalCommitsCount,organizationalProjectsCount,personalCommitsCount,personalProjectsCount,organizationName,name","path":"/contributors"}\r\n0\r\n\r\n'
+
+2026-11-24 20:22:54.196: Done replaying sequence.
+
+Generation-1: Rendering Sequence-15
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: a1c083a2d598da99a14e7c5e5ba80d98ac111289
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'contributors'
+		- restler_static_string: '?'
+		- restler_static_string: 'organizations='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'limit='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '&'
+		- restler_static_string: 'offset='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '&'
+		- restler_static_string: 'start_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'end_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'sortBy='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'q='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.215: Sending: 'GET /contributors?organizations=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: cd627a3c-24c7-4649-b5d6-01da83bd61f9\r\n\r\n'
+
+2026-11-24 20:22:54.229: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-16
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: a9a4251a11e7b3e579144d2db114d77ac6a52079
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'delete'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.248: Sending: 'GET /delete HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: f63a7b32-ebd7-46a1-af07-e6b2365db271\r\n\r\n'
+
+2026-11-24 20:22:54.255: Received: 'HTTP/1.1 401 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nCache-Control: no-store\r\nPragma: no-cache\r\nWWW-Authenticate: Bearer realm="oauth2-resource", error="unauthorized", error_description="Full authentication is required to access this resource"\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\n\r\n66\r\n{"error":"unauthorized","error_description":"Full authentication is required to access this resource"}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-16
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: a9a4251a11e7b3e579144d2db114d77ac6a52079
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'delete'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.269: Sending: 'GET /delete HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 40715104-3739-41c3-a0cc-e205ce7d110d\r\n\r\n'
+
+2026-11-24 20:22:54.275: Received: 'HTTP/1.1 401 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nCache-Control: no-store\r\nPragma: no-cache\r\nWWW-Authenticate: Bearer realm="oauth2-resource", error="unauthorized", error_description="Full authentication is required to access this resource"\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\n\r\n66\r\n{"error":"unauthorized","error_description":"Full authentication is required to access this resource"}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-17
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: a9d9d541b2679246323b4f1d209fdc6323dae356
+
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.289: Sending: 'POST /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 65b0b360-492a-4e3a-83d0-279202fb551d\r\n\r\n'
+
+2026-11-24 20:22:54.295: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774293,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n'
+
+2026-11-24 20:22:54.297: Attempting to reproduce bug...
+2026-11-24 20:22:54.299: Sending: 'POST /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 2c8c4c36-4a2b-44e0-8c3c-9d28a05dfbf6\r\n\r\n'
+
+2026-11-24 20:22:54.305: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774304,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n'
+
+2026-11-24 20:22:54.308: Done replaying sequence.
+
+Generation-1: Rendering Sequence-17
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: a9d9d541b2679246323b4f1d209fdc6323dae356
+
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.326: Sending: 'POST /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 67073bb3-791e-40e8-8d39-ae45612046d9\r\n\r\n'
+
+2026-11-24 20:22:54.332: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774331,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-18
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: c06c053c78540a7cbf1030e795ade3deb5eb07db
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'statistics'
+		- restler_static_string: '/'
+		- restler_static_string: 'contributors'
+		- restler_static_string: '?'
+		- restler_static_string: 'organizations='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'start_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'end_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.351: Sending: 'GET /statistics/contributors?organizations=fuzzstring&start_date=fuzzstring&end_date=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 8518da2e-53bc-4f5b-aded-a53046e0da20\r\n\r\n'
+
+2026-11-24 20:22:54.360: Received: "HTTP/1.1 400 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nContent-Length: 38\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\nCouldn't parse date string fuzzstring."
+
+
+Generation-1: Rendering Sequence-18
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: c06c053c78540a7cbf1030e795ade3deb5eb07db
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'statistics'
+		- restler_static_string: '/'
+		- restler_static_string: 'contributors'
+		- restler_static_string: '?'
+		- restler_static_string: 'organizations='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'start_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'end_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.375: Sending: 'GET /statistics/contributors HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 425e79bd-4638-4c9e-875c-28596ad2c43f\r\n\r\n'
+
+2026-11-24 20:22:54.393: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\nb5\r\n{"timestamp":1795551774392,"status":500,"error":"Internal Server Error","exception":"java.lang.IndexOutOfBoundsException","message":"toIndex = 10","path":"/statistics/contributors"}\r\n0\r\n\r\n'
+
+2026-11-24 20:22:54.396: Attempting to reproduce bug...
+2026-11-24 20:22:54.398: Sending: 'GET /statistics/contributors HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: a812c8dd-8408-409e-a441-acccc21efe20\r\n\r\n'
+
+2026-11-24 20:22:54.408: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\nb5\r\n{"timestamp":1795551774406,"status":500,"error":"Internal Server Error","exception":"java.lang.IndexOutOfBoundsException","message":"toIndex = 10","path":"/statistics/contributors"}\r\n0\r\n\r\n'
+
+2026-11-24 20:22:54.411: Done replaying sequence.
+
+Generation-1: Rendering Sequence-19
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: d863e69c9b2f14f9c48cf047b671b6877220a550
+
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'config'
+		- restler_static_string: '/'
+		- restler_static_string: 'scoring.project'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'X-Organizations: '
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.430: Sending: 'POST /config/scoring.project HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nX-Organizations: fuzzstring\r\nContent-Type: application/json\r\nContent-Length: 14\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 1583f5c0-eb12-4362-8dc6-29c97018d1b5\r\n\r\n"fuzzstring"\r\n'
+
+2026-11-24 20:22:54.439: Received: 'HTTP/1.1 403 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nContent-Length: 29\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\n\r\nThis endpoint is deactivated.'
+
+
+Generation-1: Rendering Sequence-19
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: d863e69c9b2f14f9c48cf047b671b6877220a550
+
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'config'
+		- restler_static_string: '/'
+		- restler_static_string: 'scoring.project'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'X-Organizations: '
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.453: Sending: 'POST /config/scoring.project HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\nContent-Length: 12\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 153b729e-92c6-4884-a915-24e193cf6a56\r\n\r\n"fuzzstring"'
+
+2026-11-24 20:22:54.460: Received: 'HTTP/1.1 403 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nContent-Length: 29\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\n\r\nThis endpoint is deactivated.'
+
+
+Generation-1: Rendering Sequence-20
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: df5b21d3b0c7140e0e6fbaa8e654c291b9fcb659
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'statistics'
+		- restler_static_string: '/'
+		- restler_static_string: 'projects'
+		- restler_static_string: '?'
+		- restler_static_string: 'organizations='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'start_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'end_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.473: Sending: 'GET /statistics/projects?organizations=fuzzstring&start_date=fuzzstring&end_date=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 5b8846a9-6d37-4ba6-9597-5d633947e3d0\r\n\r\n'
+
+2026-11-24 20:22:54.480: Received: "HTTP/1.1 400 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nContent-Length: 38\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\nCouldn't parse date string fuzzstring."
+
+
+Generation-1: Rendering Sequence-20
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: df5b21d3b0c7140e0e6fbaa8e654c291b9fcb659
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'statistics'
+		- restler_static_string: '/'
+		- restler_static_string: 'projects'
+		- restler_static_string: '?'
+		- restler_static_string: 'organizations='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'start_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'end_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.494: Sending: 'GET /statistics/projects HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 551759e6-0de3-4c73-9402-b975e9b94e53\r\n\r\n'
+
+2026-11-24 20:22:54.504: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\nb1\r\n{"timestamp":1795551774502,"status":500,"error":"Internal Server Error","exception":"java.lang.IndexOutOfBoundsException","message":"toIndex = 10","path":"/statistics/projects"}\r\n0\r\n\r\n'
+
+2026-11-24 20:22:54.507: Attempting to reproduce bug...
+2026-11-24 20:22:54.509: Sending: 'GET /statistics/projects HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 4193a298-c109-415e-9d34-ce0a425ec53a\r\n\r\n'
+
+2026-11-24 20:22:54.517: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\nb1\r\n{"timestamp":1795551774515,"status":500,"error":"Internal Server Error","exception":"java.lang.IndexOutOfBoundsException","message":"toIndex = 10","path":"/statistics/projects"}\r\n0\r\n\r\n'
+
+2026-11-24 20:22:54.519: Done replaying sequence.
+
+Generation-1: Rendering Sequence-21
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: e8528fb9baab2d369fe358cf654f9ce9975a96c1
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'health'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.539: Sending: 'GET /health HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: e1d9ec19-7a60-4e92-b2f6-e316c5b02069\r\n\r\n'
+
+2026-11-24 20:22:54.545: Received: 'HTTP/1.1 200 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\n\r\nf\r\n{"status":"UP"}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-22
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: f11d4f50baea693e1bd8b1cde1c5698e4e6cd402
+
+		- restler_static_string: 'PATCH '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.558: Sending: 'PATCH /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 8899ec2b-3353-4343-b4e9-bc5ec9fc81b4\r\n\r\n'
+
+2026-11-24 20:22:54.564: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774563,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n'
+
+2026-11-24 20:22:54.566: Attempting to reproduce bug...
+2026-11-24 20:22:54.568: Sending: 'PATCH /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: e0c102ef-f801-4634-9ea0-8163fc6667ac\r\n\r\n'
+
+2026-11-24 20:22:54.574: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n'
+
+2026-11-24 20:22:54.579: Done replaying sequence.
+
+Generation-1: Rendering Sequence-22
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: f11d4f50baea693e1bd8b1cde1c5698e4e6cd402
+
+		- restler_static_string: 'PATCH '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.599: Sending: 'PATCH /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: ec025c25-0fe5-43db-ac79-e4c8ce63ccdf\r\n\r\n'
+
+2026-11-24 20:22:54.605: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774603,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n'
+
+
+Generation-1: Rendering Sequence-23
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: f99e83174ff025eac1c36d0bafe607a96be0fc4b
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.620: Sending: 'PUT /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: f6c16cdc-7f6d-4d6f-8372-87ac729d07ec\r\n\r\n'
+
+2026-11-24 20:22:54.626: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774624,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n'
+
+2026-11-24 20:22:54.628: Attempting to reproduce bug...
+2026-11-24 20:22:54.630: Sending: 'PUT /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: edd9dedc-f3f0-41ab-a1c2-ab06b7bd0ec3\r\n\r\n'
+
+2026-11-24 20:22:54.636: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774635,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n'
+
+2026-11-24 20:22:54.638: Done replaying sequence.
+
+Generation-1: Rendering Sequence-23
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: f99e83174ff025eac1c36d0bafe607a96be0fc4b
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2026-11-24 20:22:54.659: Sending: 'PUT /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\nx-restler-sequence-id: 6dcb8107-ef17-4601-b698-eed89734d1cc\r\n\r\n'
+
+2026-11-24 20:22:54.665: Received: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774663,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n'
+

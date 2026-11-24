@@ -1,0 +1,234 @@
+This file contains the failing requests, ordered by the number of blocked dependent requests.
+To improve coverage, fix the failing requests in the order listed in this file.
+
+Note: some requests are labeled as 'sequence failure'.
+This means the request depends on another request that is failing intermittently.
+For example, a DELETE request for a resource may be skipped because the resource
+PUT request failed due to exceeding quota.  The same PUT request succeeded earlier (and may
+succeed later depending on the resource clean-up behavior in the service), so it is
+considered an intermittent failure.
+
+-----------------------------------------------
+Request: Get /error
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:21:19 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551679447,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:21:19 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551679505,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n
+
+
+-----------------------------------------------
+Request: Post /import
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> POST /import HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{\n    "contributors":\n    [\n        {\n            "id":1,\n            "key":\n                {\n                    "id":1,\n                    "organizationId":1,\n                    "snapshotDate":"2019-06-26T20:20:39+00:00"\n                }\n            ,\n            "loginId":"fuzzstring",\n            "name":"fuzzstring",\n            "organizationId":1,\n            "organizationName":"fuzzstring",\n            "organizationalCommitsCount":1,\n            "organizationalProjectsCount":1,\n            "personalCommitsCount":1,\n            "personalProjectsCount":1,\n            "snapshotDate":"2019-06-26T20:20:39+00:00",\n            "url":"fuzzstring"\n        }\n    ],\n    "projects":\n    [\n        {\n            "commitsCount":1,\n            "contributorsCount":1,\n            "description":"fuzzstring",\n            "externalContributorsCount":1,\n            "forksCount":1,\n            "gitHubProjectId":1,\n            "image":"fuzzstring",\n            "languageList":\n            [\n                "fuzzstring"\n            ],\n            "lastPushed":"fuzzstring",\n            "maintainers":\n            [\n                "fuzzstring"\n            ],\n            "name":"fuzzstring",\n            "organizationName":"fuzzstring",\n            "primaryLanguage":"fuzzstring",\n            "score":1,\n            "snapshotDate":"2019-06-26T20:20:39+00:00",\n            "starsCount":1,\n            "title":"fuzzstring",\n            "url":"fuzzstring"\n        }\n    ],\n    "statistics":\n    [\n        {\n            "allContributorsCount":1,\n            "allForksCount":1,\n            "allSizeCount":1,\n            "allStarsCount":1,\n            "externalContributorsCount":1,\n            "id":1,\n            "key":\n                {\n                    "id":1,\n                    "snapshotDate":"2019-06-26T20:20:39+00:00"\n                }\n            ,\n            "membersCount":1,\n            "organizationName":"fuzzstring",\n            "privateProjectCount":1,\n            "programLanguagesCount":1,\n            "publicProjectCount":1,\n            "snapshotDate":"2019-06-26T20:20:39+00:00",\n            "tagsCount":1,\n            "teamsCount":1\n        }\n    ]}\r\n
+	< HTTP/1.1 403 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nContent-Length: 29\r\nDate: Tue, 24 Nov 2026 20:21:19 GMT\r\n\r\nThis endpoint is deactivated.
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> POST /import HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n{}
+	< HTTP/1.1 403 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nContent-Length: 29\r\nDate: Tue, 24 Nov 2026 20:21:19 GMT\r\n\r\nThis endpoint is deactivated.
+
+
+-----------------------------------------------
+Request: Get /fetch
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /fetch HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:21:52 GMT\r\nConnection: close\r\n\r\n1ec\r\n{"timestamp":1795551712863,"status":500,"error":"Internal Server Error","exception":"org.springframework.mail.MailSendException","message":"Mail server connection failed; nested exception is javax.mail.MessagingException: Unknown SMTP host: mailtrap.io;\n  nested exception is:\n\tjava.net.UnknownHostException: mailtrap.io. Failed messages: javax.mail.MessagingException: Unknown SMTP host: mailtrap.io;\n  nested exception is:\n\tjava.net.UnknownHostException: mailtrap.io","path":"/fetch"}\r\n0\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /fetch HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n1ec\r\n{"timestamp":1795551773817,"status":500,"error":"Internal Server Error","exception":"org.springframework.mail.MailSendException","message":"Mail server connection failed; nested exception is javax.mail.MessagingException: Unknown SMTP host: mailtrap.io;\n  nested exception is:\n\tjava.net.UnknownHostException: mailtrap.io. Failed messages: javax.mail.MessagingException: Unknown SMTP host: mailtrap.io;\n  nested exception is:\n\tjava.net.UnknownHostException: mailtrap.io","path":"/fetch"}\r\n0\r\n\r\n
+
+
+-----------------------------------------------
+Request: Head /error
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> HEAD /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> HEAD /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n
+
+
+-----------------------------------------------
+Request: Delete /error
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> DELETE /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774043,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> DELETE /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774080,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /init
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /init HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 401 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nCache-Control: no-store\r\nPragma: no-cache\r\nWWW-Authenticate: Bearer realm="oauth2-resource", error="unauthorized", error_description="Full authentication is required to access this resource"\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\n\r\n66\r\n{"error":"unauthorized","error_description":"Full authentication is required to access this resource"}\r\n0\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /init HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 401 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nCache-Control: no-store\r\nPragma: no-cache\r\nWWW-Authenticate: Bearer realm="oauth2-resource", error="unauthorized", error_description="Full authentication is required to access this resource"\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\n\r\n66\r\n{"error":"unauthorized","error_description":"Full authentication is required to access this resource"}\r\n0\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /contributors
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /contributors?organizations=fuzzstring&limit=1&offset=1&start_date=fuzzstring&end_date=fuzzstring&sortBy=fuzzstring&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n164\r\n{"timestamp":1795551774178,"status":500,"error":"Internal Server Error","exception":"java.lang.IllegalArgumentException","message":"sortBy must be empty or have a valid value but was fuzzstring. Valid values are organizationalCommitsCount,organizationalProjectsCount,personalCommitsCount,personalProjectsCount,organizationName,name","path":"/contributors"}\r\n0\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /contributors?organizations=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /delete
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /delete HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 401 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nCache-Control: no-store\r\nPragma: no-cache\r\nWWW-Authenticate: Bearer realm="oauth2-resource", error="unauthorized", error_description="Full authentication is required to access this resource"\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\n\r\n66\r\n{"error":"unauthorized","error_description":"Full authentication is required to access this resource"}\r\n0\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /delete HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 401 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nCache-Control: no-store\r\nPragma: no-cache\r\nWWW-Authenticate: Bearer realm="oauth2-resource", error="unauthorized", error_description="Full authentication is required to access this resource"\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\n\r\n66\r\n{"error":"unauthorized","error_description":"Full authentication is required to access this resource"}\r\n0\r\n\r\n
+
+
+-----------------------------------------------
+Request: Post /error
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> POST /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774293,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> POST /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774331,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n
+
+
+-----------------------------------------------
+Request: Get /statistics/contributors
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /statistics/contributors?organizations=fuzzstring&start_date=fuzzstring&end_date=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 400 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nContent-Length: 38\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\nCouldn't parse date string fuzzstring.
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /statistics/contributors HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\nb5\r\n{"timestamp":1795551774392,"status":500,"error":"Internal Server Error","exception":"java.lang.IndexOutOfBoundsException","message":"toIndex = 10","path":"/statistics/contributors"}\r\n0\r\n\r\n
+
+
+-----------------------------------------------
+Request: Post /config/scoring.project
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> POST /config/scoring.project HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nX-Organizations: fuzzstring\r\nContent-Type: application/json\r\n\r\n"fuzzstring"\r\n
+	< HTTP/1.1 403 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nContent-Length: 29\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\n\r\nThis endpoint is deactivated.
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> POST /config/scoring.project HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Type: application/json\r\n\r\n"fuzzstring"
+	< HTTP/1.1 403 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nContent-Length: 29\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\n\r\nThis endpoint is deactivated.
+
+
+-----------------------------------------------
+Request: Get /statistics/projects
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> GET /statistics/projects?organizations=fuzzstring&start_date=fuzzstring&end_date=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 400 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nContent-Length: 38\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\nCouldn't parse date string fuzzstring.
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> GET /statistics/projects HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\nb1\r\n{"timestamp":1795551774502,"status":500,"error":"Internal Server Error","exception":"java.lang.IndexOutOfBoundsException","message":"toIndex = 10","path":"/statistics/projects"}\r\n0\r\n\r\n
+
+
+-----------------------------------------------
+Request: Patch /error
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> PATCH /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774563,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> PATCH /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774603,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n
+
+
+-----------------------------------------------
+Request: Put /error
+Number of blocked dependent requests: 0
+
+	+++ Combination 1 +++:
+	Request sequence: 
+	> PUT /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774624,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n
+
+
+	+++ Combination 2 +++:
+	Request sequence: 
+	> PUT /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+	< HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:22:53 GMT\r\nConnection: close\r\n\r\n58\r\n{"timestamp":1795551774663,"status":999,"error":"None","message":"No message available"}\r\n0\r\n\r\n
+
+

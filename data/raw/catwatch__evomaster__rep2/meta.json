@@ -1,0 +1,28 @@
+{
+  "run_id": "catwatch__evomaster__rep2",
+  "api": "catwatch",
+  "tool": "evomaster",
+  "rep": 2,
+  "seed": 1002,
+  "budget_sec": 1800,
+  "start_ts": 1795545847.2226074,
+  "end_ts": 1795547729.9826152,
+  "schema_file": "apis/catwatch/openapi.json",
+  "slot": 0,
+  "proxy_port": 8080,
+  "schema_port": 8099,
+  "slots_paralelos": 2,
+  "vizinhos": [
+    "petclinic-rest__restler__rep2",
+    "catwatch__schemathesis__rep3"
+  ],
+  "limites": {
+    "tool_cpus": "4.00",
+    "tool_mem": "3038m",
+    "api_cpus": "2.00",
+    "api_mem": "1536m",
+    "proxy_cpus": "1.00",
+    "proxy_mem": "384m",
+    "api_java_opts": "-Xmx1152m"
+  }
+}

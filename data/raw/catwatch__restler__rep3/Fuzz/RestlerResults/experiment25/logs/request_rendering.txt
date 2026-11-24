@@ -1,0 +1,723 @@
+
+2026-11-24 20:26:31.506: Generation-1
+2026-11-24 20:26:31.506: 	Rendered requests: 23 / 23
+2026-11-24 20:26:31.506: 	Rendered requests with "valid" status codes: 9 / 23
+2026-11-24 20:26:31.506: 	Rendered requests determined to be fully valid (no resource creation failures): 9 / 23
+2026-11-24 20:26:31.506: List of failing requests:
+	Request: 1
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'config'
+		- restler_static_string: '/'
+		- restler_static_string: 'scoring.project'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'X-Organizations: '
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\r\n'
+
+	Request: 2
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'contributors'
+		- restler_static_string: '?'
+		- restler_static_string: 'organizations='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'limit='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '&'
+		- restler_static_string: 'offset='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '&'
+		- restler_static_string: 'start_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'end_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'sortBy='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'q='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 3
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'delete'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 4
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 5
+		- restler_static_string: 'HEAD '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 6
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 7
+		- restler_static_string: 'PUT '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 8
+		- restler_static_string: 'DELETE '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 10
+		- restler_static_string: 'PATCH '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 12
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'fetch'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 15
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'import'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "contributors":\n    [\n        {\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "key":\n                {\n                    "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n                    "organizationId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n                    "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: '\n                }\n            ,\n            "loginId":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "name":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "organizationId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "organizationName":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "organizationalCommitsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "organizationalProjectsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "personalCommitsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "personalProjectsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: ',\n            "url":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\n        }\n    ],\n    "projects":\n    [\n        {\n            "commitsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "contributorsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "description":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "externalContributorsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "forksCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "gitHubProjectId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "image":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "languageList":\n            [\n                '
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\n            ],\n            "lastPushed":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "maintainers":\n            [\n                '
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\n            ],\n            "name":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "organizationName":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "primaryLanguage":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "score":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: ',\n            "starsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "title":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "url":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\n        }\n    ],\n    "statistics":\n    [\n        {\n            "allContributorsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "allForksCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "allSizeCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "allStarsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "externalContributorsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "key":\n                {\n                    "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n                    "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: '\n                }\n            ,\n            "membersCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "organizationName":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "privateProjectCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "programLanguagesCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "publicProjectCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: ',\n            "tagsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "teamsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    ]}'
+		- restler_static_string: '\r\n'
+
+	Request: 16
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'init'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 20
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'statistics'
+		- restler_static_string: '/'
+		- restler_static_string: 'contributors'
+		- restler_static_string: '?'
+		- restler_static_string: 'organizations='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'start_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'end_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 22
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'statistics'
+		- restler_static_string: '/'
+		- restler_static_string: 'projects'
+		- restler_static_string: '?'
+		- restler_static_string: 'organizations='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'start_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'end_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+-------------------------
+
+
+2026-11-24 20:26:44.690: Generation-2
+2026-11-24 20:26:44.690: 	Rendered requests: 23 / 23
+2026-11-24 20:26:44.690: 	Rendered requests with "valid" status codes: 9 / 23
+2026-11-24 20:26:44.690: 	Rendered requests determined to be fully valid (no resource creation failures): 9 / 23
+2026-11-24 20:26:44.690: List of failing requests:
+	Request: 1
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'config'
+		- restler_static_string: '/'
+		- restler_static_string: 'scoring.project'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'X-Organizations: '
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\r\n'
+
+	Request: 2
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'contributors'
+		- restler_static_string: '?'
+		- restler_static_string: 'organizations='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'limit='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '&'
+		- restler_static_string: 'offset='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '&'
+		- restler_static_string: 'start_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'end_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'sortBy='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'q='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 3
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'delete'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 4
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 5
+		- restler_static_string: 'HEAD '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 6
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 7
+		- restler_static_string: 'PUT '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 8
+		- restler_static_string: 'DELETE '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 10
+		- restler_static_string: 'PATCH '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'error'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 12
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'fetch'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 15
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'import'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "contributors":\n    [\n        {\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "key":\n                {\n                    "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n                    "organizationId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n                    "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: '\n                }\n            ,\n            "loginId":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "name":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "organizationId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "organizationName":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "organizationalCommitsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "organizationalProjectsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "personalCommitsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "personalProjectsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: ',\n            "url":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\n        }\n    ],\n    "projects":\n    [\n        {\n            "commitsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "contributorsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "description":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "externalContributorsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "forksCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "gitHubProjectId":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "image":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "languageList":\n            [\n                '
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\n            ],\n            "lastPushed":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "maintainers":\n            [\n                '
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\n            ],\n            "name":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "organizationName":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "primaryLanguage":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "score":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: ',\n            "starsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "title":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "url":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: '\n        }\n    ],\n    "statistics":\n    [\n        {\n            "allContributorsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "allForksCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "allSizeCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "allStarsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "externalContributorsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "key":\n                {\n                    "id":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n                    "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: '\n                }\n            ,\n            "membersCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "organizationName":'
+		- restler_fuzzable_string: '"fuzzstring"'
+		- restler_static_string: ',\n            "privateProjectCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "programLanguagesCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "publicProjectCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "snapshotDate":'
+		- restler_fuzzable_datetime: '"2019-06-26T20:20:39+00:00"'
+		- restler_static_string: ',\n            "tagsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ',\n            "teamsCount":'
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '\n        }\n    ]}'
+		- restler_static_string: '\r\n'
+
+	Request: 16
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'init'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 20
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'statistics'
+		- restler_static_string: '/'
+		- restler_static_string: 'contributors'
+		- restler_static_string: '?'
+		- restler_static_string: 'organizations='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'start_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'end_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+	Request: 22
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'statistics'
+		- restler_static_string: '/'
+		- restler_static_string: 'projects'
+		- restler_static_string: '?'
+		- restler_static_string: 'organizations='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'start_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: '&'
+		- restler_static_string: 'end_date='
+		- restler_fuzzable_string: 'fuzzstring'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: localhost:8080\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+-------------------------
+
+
+2026-11-24 20:29:10.225: Generation-3
+2026-11-24 20:29:10.225: 	Rendered requests: 23 / 23
+2026-11-24 20:29:10.225: 	Rendered requests with "valid" status codes: 23 / 23
+2026-11-24 20:29:10.225: 	Rendered requests determined to be fully valid (no resource creation failures): 23 / 23
+
+2026-11-24 20:29:23.075: Generation-4
+2026-11-24 20:29:23.075: 	Rendered requests: 23 / 23
+2026-11-24 20:29:23.075: 	Rendered requests with "valid" status codes: 23 / 23
+2026-11-24 20:29:23.075: 	Rendered requests determined to be fully valid (no resource creation failures): 23 / 23
+
+2026-11-24 20:31:49.842: Generation-5
+2026-11-24 20:31:49.842: 	Rendered requests: 23 / 23
+2026-11-24 20:31:49.842: 	Rendered requests with "valid" status codes: 23 / 23
+2026-11-24 20:31:49.842: 	Rendered requests determined to be fully valid (no resource creation failures): 23 / 23
+
+2026-11-24 20:32:06.578: Generation-6
+2026-11-24 20:32:06.578: 	Rendered requests: 23 / 23
+2026-11-24 20:32:06.578: 	Rendered requests with "valid" status codes: 23 / 23
+2026-11-24 20:32:06.578: 	Rendered requests determined to be fully valid (no resource creation failures): 23 / 23
+
+2026-11-24 20:34:38.800: Generation-7
+2026-11-24 20:34:38.800: 	Rendered requests: 23 / 23
+2026-11-24 20:34:38.800: 	Rendered requests with "valid" status codes: 23 / 23
+2026-11-24 20:34:38.800: 	Rendered requests determined to be fully valid (no resource creation failures): 23 / 23
+
+2026-11-24 20:34:52.668: Generation-8
+2026-11-24 20:34:52.668: 	Rendered requests: 23 / 23
+2026-11-24 20:34:52.668: 	Rendered requests with "valid" status codes: 23 / 23
+2026-11-24 20:34:52.668: 	Rendered requests determined to be fully valid (no resource creation failures): 23 / 23
+
+2026-11-24 20:37:32.703: Generation-9
+2026-11-24 20:37:32.703: 	Rendered requests: 23 / 23
+2026-11-24 20:37:32.703: 	Rendered requests with "valid" status codes: 23 / 23
+2026-11-24 20:37:32.703: 	Rendered requests determined to be fully valid (no resource creation failures): 23 / 23
+
+2026-11-24 20:37:47.596: Generation-10
+2026-11-24 20:37:47.596: 	Rendered requests: 23 / 23
+2026-11-24 20:37:47.596: 	Rendered requests with "valid" status codes: 23 / 23
+2026-11-24 20:37:47.596: 	Rendered requests determined to be fully valid (no resource creation failures): 23 / 23
+
+2026-11-24 20:40:27.485: Generation-11
+2026-11-24 20:40:27.485: 	Rendered requests: 23 / 23
+2026-11-24 20:40:27.485: 	Rendered requests with "valid" status codes: 23 / 23
+2026-11-24 20:40:27.485: 	Rendered requests determined to be fully valid (no resource creation failures): 23 / 23
+
+2026-11-24 20:40:44.377: Generation-12
+2026-11-24 20:40:44.377: 	Rendered requests: 23 / 23
+2026-11-24 20:40:44.377: 	Rendered requests with "valid" status codes: 23 / 23
+2026-11-24 20:40:44.377: 	Rendered requests determined to be fully valid (no resource creation failures): 23 / 23
+
+2026-11-24 20:43:18.640: Generation-13
+2026-11-24 20:43:18.640: 	Rendered requests: 23 / 23
+2026-11-24 20:43:18.640: 	Rendered requests with "valid" status codes: 23 / 23
+2026-11-24 20:43:18.640: 	Rendered requests determined to be fully valid (no resource creation failures): 23 / 23
+
+2026-11-24 20:43:34.382: Generation-14
+2026-11-24 20:43:34.382: 	Rendered requests: 23 / 23
+2026-11-24 20:43:34.382: 	Rendered requests with "valid" status codes: 23 / 23
+2026-11-24 20:43:34.382: 	Rendered requests determined to be fully valid (no resource creation failures): 23 / 23
+
+2026-11-24 20:46:20.807: Generation-15
+2026-11-24 20:46:20.807: 	Rendered requests: 23 / 23
+2026-11-24 20:46:20.807: 	Rendered requests with "valid" status codes: 23 / 23
+2026-11-24 20:46:20.807: 	Rendered requests determined to be fully valid (no resource creation failures): 23 / 23
+
+2026-11-24 20:46:37.811: Generation-16
+2026-11-24 20:46:37.811: 	Rendered requests: 23 / 23
+2026-11-24 20:46:37.811: 	Rendered requests with "valid" status codes: 23 / 23
+2026-11-24 20:46:37.811: 	Rendered requests determined to be fully valid (no resource creation failures): 23 / 23
+
+2026-11-24 20:49:12.107: Generation-17
+2026-11-24 20:49:12.107: 	Rendered requests: 23 / 23
+2026-11-24 20:49:12.107: 	Rendered requests with "valid" status codes: 23 / 23
+2026-11-24 20:49:12.107: 	Rendered requests determined to be fully valid (no resource creation failures): 23 / 23
+
+2026-11-24 20:49:28.259: Generation-18
+2026-11-24 20:49:28.259: 	Rendered requests: 23 / 23
+2026-11-24 20:49:28.259: 	Rendered requests with "valid" status codes: 23 / 23
+2026-11-24 20:49:28.259: 	Rendered requests determined to be fully valid (no resource creation failures): 23 / 23
+
+2026-11-24 20:51:13.463: Generation-19
+2026-11-24 20:51:13.463: 	Rendered requests: 23 / 23
+2026-11-24 20:51:13.463: 	Rendered requests with "valid" status codes: 23 / 23
+2026-11-24 20:51:13.463: 	Rendered requests determined to be fully valid (no resource creation failures): 23 / 23
+
+2026-11-24 20:51:13.463: 	Never Rendered requests:
+-------------------------
+

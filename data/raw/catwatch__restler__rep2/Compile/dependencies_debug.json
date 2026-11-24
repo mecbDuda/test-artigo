@@ -1,0 +1,2986 @@
+[
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/contributors",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "contributors",
+        "PathContainerName": "contributors",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/contributors",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "contributors",
+        "PathContainerName": "contributors",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/contributors",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "organizations"
+        },
+        "ContainerName": "contributors",
+        "PathContainerName": "contributors",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "organizations",
+        "ProducerParameterName": "organizations",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/contributors",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "start_date"
+        },
+        "ContainerName": "contributors",
+        "PathContainerName": "contributors",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "start_date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/contributors",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "end_date"
+        },
+        "ContainerName": "contributors",
+        "PathContainerName": "contributors",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "end_date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/contributors",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "q"
+        },
+        "ContainerName": "contributors",
+        "PathContainerName": "contributors",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "q",
+        "ProducerParameterName": "q",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/contributors",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sortBy"
+        },
+        "ContainerName": "contributors",
+        "PathContainerName": "contributors",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sortBy",
+        "ProducerParameterName": "by",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "contributors",
+            "fullPath": {
+              "path": [
+                "contributors",
+                "[0]"
+              ]
+            }
+          }
+        },
+        "ContainerName": "import",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "import"
+        ],
+        "AccessPath": "contributors/[0]",
+        "AccessPathParts": {
+          "path": [
+            "contributors",
+            "[0]"
+          ]
+        },
+        "ResourceName": "contributors",
+        "ProducerParameterName": "contributors",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "id",
+            "fullPath": {
+              "path": [
+                "contributors",
+                "[0]",
+                "id"
+              ]
+            }
+          }
+        },
+        "ContainerName": "contributors",
+        "BodyContainerName": "contributors",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPath": "contributors/[0]/id",
+        "AccessPathParts": {
+          "path": [
+            "contributors",
+            "[0]",
+            "id"
+          ]
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "key",
+            "fullPath": {
+              "path": [
+                "contributors",
+                "[0]",
+                "key"
+              ]
+            }
+          }
+        },
+        "ContainerName": "contributors",
+        "BodyContainerName": "contributors",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPath": "contributors/[0]/key",
+        "AccessPathParts": {
+          "path": [
+            "contributors",
+            "[0]",
+            "key"
+          ]
+        },
+        "ResourceName": "key",
+        "ProducerParameterName": "key",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "id",
+            "fullPath": {
+              "path": [
+                "contributors",
+                "[0]",
+                "key",
+                "id"
+              ]
+            }
+          }
+        },
+        "ContainerName": "key",
+        "BodyContainerName": "key",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "key"
+        ],
+        "AccessPath": "contributors/[0]/key/id",
+        "AccessPathParts": {
+          "path": [
+            "contributors",
+            "[0]",
+            "key",
+            "id"
+          ]
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "organizationId",
+            "fullPath": {
+              "path": [
+                "contributors",
+                "[0]",
+                "key",
+                "organizationId"
+              ]
+            }
+          }
+        },
+        "ContainerName": "key",
+        "BodyContainerName": "key",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "key"
+        ],
+        "AccessPath": "contributors/[0]/key/organizationId",
+        "AccessPathParts": {
+          "path": [
+            "contributors",
+            "[0]",
+            "key",
+            "organizationId"
+          ]
+        },
+        "ResourceName": "organizationId",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "snapshotDate",
+            "fullPath": {
+              "path": [
+                "contributors",
+                "[0]",
+                "key",
+                "snapshotDate"
+              ]
+            }
+          }
+        },
+        "ContainerName": "key",
+        "BodyContainerName": "key",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "key"
+        ],
+        "AccessPath": "contributors/[0]/key/snapshotDate",
+        "AccessPathParts": {
+          "path": [
+            "contributors",
+            "[0]",
+            "key",
+            "snapshotDate"
+          ]
+        },
+        "ResourceName": "snapshotDate",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "DateTime"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "loginId",
+            "fullPath": {
+              "path": [
+                "contributors",
+                "[0]",
+                "loginId"
+              ]
+            }
+          }
+        },
+        "ContainerName": "contributors",
+        "BodyContainerName": "contributors",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPath": "contributors/[0]/loginId",
+        "AccessPathParts": {
+          "path": [
+            "contributors",
+            "[0]",
+            "loginId"
+          ]
+        },
+        "ResourceName": "loginId",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "name",
+            "fullPath": {
+              "path": [
+                "contributors",
+                "[0]",
+                "name"
+              ]
+            }
+          }
+        },
+        "ContainerName": "contributors",
+        "BodyContainerName": "contributors",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPath": "contributors/[0]/name",
+        "AccessPathParts": {
+          "path": [
+            "contributors",
+            "[0]",
+            "name"
+          ]
+        },
+        "ResourceName": "name",
+        "ProducerParameterName": "name",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "organizationId",
+            "fullPath": {
+              "path": [
+                "contributors",
+                "[0]",
+                "organizationId"
+              ]
+            }
+          }
+        },
+        "ContainerName": "contributors",
+        "BodyContainerName": "contributors",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPath": "contributors/[0]/organizationId",
+        "AccessPathParts": {
+          "path": [
+            "contributors",
+            "[0]",
+            "organizationId"
+          ]
+        },
+        "ResourceName": "organizationId",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "organizationName",
+            "fullPath": {
+              "path": [
+                "contributors",
+                "[0]",
+                "organizationName"
+              ]
+            }
+          }
+        },
+        "ContainerName": "contributors",
+        "BodyContainerName": "contributors",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPath": "contributors/[0]/organizationName",
+        "AccessPathParts": {
+          "path": [
+            "contributors",
+            "[0]",
+            "organizationName"
+          ]
+        },
+        "ResourceName": "organizationName",
+        "ProducerParameterName": "name",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "organizationalCommitsCount",
+            "fullPath": {
+              "path": [
+                "contributors",
+                "[0]",
+                "organizationalCommitsCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "contributors",
+        "BodyContainerName": "contributors",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPath": "contributors/[0]/organizationalCommitsCount",
+        "AccessPathParts": {
+          "path": [
+            "contributors",
+            "[0]",
+            "organizationalCommitsCount"
+          ]
+        },
+        "ResourceName": "organizationalCommitsCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "organizationalProjectsCount",
+            "fullPath": {
+              "path": [
+                "contributors",
+                "[0]",
+                "organizationalProjectsCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "contributors",
+        "BodyContainerName": "contributors",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPath": "contributors/[0]/organizationalProjectsCount",
+        "AccessPathParts": {
+          "path": [
+            "contributors",
+            "[0]",
+            "organizationalProjectsCount"
+          ]
+        },
+        "ResourceName": "organizationalProjectsCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "personalCommitsCount",
+            "fullPath": {
+              "path": [
+                "contributors",
+                "[0]",
+                "personalCommitsCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "contributors",
+        "BodyContainerName": "contributors",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPath": "contributors/[0]/personalCommitsCount",
+        "AccessPathParts": {
+          "path": [
+            "contributors",
+            "[0]",
+            "personalCommitsCount"
+          ]
+        },
+        "ResourceName": "personalCommitsCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "personalProjectsCount",
+            "fullPath": {
+              "path": [
+                "contributors",
+                "[0]",
+                "personalProjectsCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "contributors",
+        "BodyContainerName": "contributors",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPath": "contributors/[0]/personalProjectsCount",
+        "AccessPathParts": {
+          "path": [
+            "contributors",
+            "[0]",
+            "personalProjectsCount"
+          ]
+        },
+        "ResourceName": "personalProjectsCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "snapshotDate",
+            "fullPath": {
+              "path": [
+                "contributors",
+                "[0]",
+                "snapshotDate"
+              ]
+            }
+          }
+        },
+        "ContainerName": "contributors",
+        "BodyContainerName": "contributors",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPath": "contributors/[0]/snapshotDate",
+        "AccessPathParts": {
+          "path": [
+            "contributors",
+            "[0]",
+            "snapshotDate"
+          ]
+        },
+        "ResourceName": "snapshotDate",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "DateTime"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "url",
+            "fullPath": {
+              "path": [
+                "contributors",
+                "[0]",
+                "url"
+              ]
+            }
+          }
+        },
+        "ContainerName": "contributors",
+        "BodyContainerName": "contributors",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPath": "contributors/[0]/url",
+        "AccessPathParts": {
+          "path": [
+            "contributors",
+            "[0]",
+            "url"
+          ]
+        },
+        "ResourceName": "url",
+        "ProducerParameterName": "url",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "projects",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]"
+              ]
+            }
+          }
+        },
+        "ContainerName": "import",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "import"
+        ],
+        "AccessPath": "projects/[0]",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]"
+          ]
+        },
+        "ResourceName": "projects",
+        "ProducerParameterName": "projects",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "commitsCount",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]",
+                "commitsCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "projects",
+        "BodyContainerName": "projects",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPath": "projects/[0]/commitsCount",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]",
+            "commitsCount"
+          ]
+        },
+        "ResourceName": "commitsCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "contributorsCount",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]",
+                "contributorsCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "projects",
+        "BodyContainerName": "projects",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPath": "projects/[0]/contributorsCount",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]",
+            "contributorsCount"
+          ]
+        },
+        "ResourceName": "contributorsCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "description",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]",
+                "description"
+              ]
+            }
+          }
+        },
+        "ContainerName": "projects",
+        "BodyContainerName": "projects",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPath": "projects/[0]/description",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]",
+            "description"
+          ]
+        },
+        "ResourceName": "description",
+        "ProducerParameterName": "description",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "externalContributorsCount",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]",
+                "externalContributorsCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "projects",
+        "BodyContainerName": "projects",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPath": "projects/[0]/externalContributorsCount",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]",
+            "externalContributorsCount"
+          ]
+        },
+        "ResourceName": "externalContributorsCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "forksCount",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]",
+                "forksCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "projects",
+        "BodyContainerName": "projects",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPath": "projects/[0]/forksCount",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]",
+            "forksCount"
+          ]
+        },
+        "ResourceName": "forksCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "gitHubProjectId",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]",
+                "gitHubProjectId"
+              ]
+            }
+          }
+        },
+        "ContainerName": "projects",
+        "BodyContainerName": "projects",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPath": "projects/[0]/gitHubProjectId",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]",
+            "gitHubProjectId"
+          ]
+        },
+        "ResourceName": "gitHubProjectId",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "image",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]",
+                "image"
+              ]
+            }
+          }
+        },
+        "ContainerName": "projects",
+        "BodyContainerName": "projects",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPath": "projects/[0]/image",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]",
+            "image"
+          ]
+        },
+        "ResourceName": "image",
+        "ProducerParameterName": "image",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "languageList",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]",
+                "languageList",
+                "[0]"
+              ]
+            }
+          }
+        },
+        "ContainerName": "projects",
+        "BodyContainerName": "projects",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPath": "projects/[0]/languageList/[0]",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]",
+            "languageList",
+            "[0]"
+          ]
+        },
+        "ResourceName": "languageList",
+        "ProducerParameterName": "list",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "lastPushed",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]",
+                "lastPushed"
+              ]
+            }
+          }
+        },
+        "ContainerName": "projects",
+        "BodyContainerName": "projects",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPath": "projects/[0]/lastPushed",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]",
+            "lastPushed"
+          ]
+        },
+        "ResourceName": "lastPushed",
+        "ProducerParameterName": "pushed",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "maintainers",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]",
+                "maintainers",
+                "[0]"
+              ]
+            }
+          }
+        },
+        "ContainerName": "projects",
+        "BodyContainerName": "projects",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPath": "projects/[0]/maintainers/[0]",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]",
+            "maintainers",
+            "[0]"
+          ]
+        },
+        "ResourceName": "maintainers",
+        "ProducerParameterName": "maintainers",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "name",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]",
+                "name"
+              ]
+            }
+          }
+        },
+        "ContainerName": "projects",
+        "BodyContainerName": "projects",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPath": "projects/[0]/name",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]",
+            "name"
+          ]
+        },
+        "ResourceName": "name",
+        "ProducerParameterName": "name",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "organizationName",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]",
+                "organizationName"
+              ]
+            }
+          }
+        },
+        "ContainerName": "projects",
+        "BodyContainerName": "projects",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPath": "projects/[0]/organizationName",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]",
+            "organizationName"
+          ]
+        },
+        "ResourceName": "organizationName",
+        "ProducerParameterName": "name",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "primaryLanguage",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]",
+                "primaryLanguage"
+              ]
+            }
+          }
+        },
+        "ContainerName": "projects",
+        "BodyContainerName": "projects",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPath": "projects/[0]/primaryLanguage",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]",
+            "primaryLanguage"
+          ]
+        },
+        "ResourceName": "primaryLanguage",
+        "ProducerParameterName": "language",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "score",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]",
+                "score"
+              ]
+            }
+          }
+        },
+        "ContainerName": "projects",
+        "BodyContainerName": "projects",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPath": "projects/[0]/score",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]",
+            "score"
+          ]
+        },
+        "ResourceName": "score",
+        "ProducerParameterName": "score",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "snapshotDate",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]",
+                "snapshotDate"
+              ]
+            }
+          }
+        },
+        "ContainerName": "projects",
+        "BodyContainerName": "projects",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPath": "projects/[0]/snapshotDate",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]",
+            "snapshotDate"
+          ]
+        },
+        "ResourceName": "snapshotDate",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "DateTime"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "starsCount",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]",
+                "starsCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "projects",
+        "BodyContainerName": "projects",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPath": "projects/[0]/starsCount",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]",
+            "starsCount"
+          ]
+        },
+        "ResourceName": "starsCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "title",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]",
+                "title"
+              ]
+            }
+          }
+        },
+        "ContainerName": "projects",
+        "BodyContainerName": "projects",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPath": "projects/[0]/title",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]",
+            "title"
+          ]
+        },
+        "ResourceName": "title",
+        "ProducerParameterName": "title",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "url",
+            "fullPath": {
+              "path": [
+                "projects",
+                "[0]",
+                "url"
+              ]
+            }
+          }
+        },
+        "ContainerName": "projects",
+        "BodyContainerName": "projects",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPath": "projects/[0]/url",
+        "AccessPathParts": {
+          "path": [
+            "projects",
+            "[0]",
+            "url"
+          ]
+        },
+        "ResourceName": "url",
+        "ProducerParameterName": "url",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "statistics",
+            "fullPath": {
+              "path": [
+                "statistics",
+                "[0]"
+              ]
+            }
+          }
+        },
+        "ContainerName": "import",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "import"
+        ],
+        "AccessPath": "statistics/[0]",
+        "AccessPathParts": {
+          "path": [
+            "statistics",
+            "[0]"
+          ]
+        },
+        "ResourceName": "statistics",
+        "ProducerParameterName": "statistics",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "allContributorsCount",
+            "fullPath": {
+              "path": [
+                "statistics",
+                "[0]",
+                "allContributorsCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "statistics",
+        "BodyContainerName": "statistics",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "statistic"
+        ],
+        "AccessPath": "statistics/[0]/allContributorsCount",
+        "AccessPathParts": {
+          "path": [
+            "statistics",
+            "[0]",
+            "allContributorsCount"
+          ]
+        },
+        "ResourceName": "allContributorsCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "allForksCount",
+            "fullPath": {
+              "path": [
+                "statistics",
+                "[0]",
+                "allForksCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "statistics",
+        "BodyContainerName": "statistics",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "statistic"
+        ],
+        "AccessPath": "statistics/[0]/allForksCount",
+        "AccessPathParts": {
+          "path": [
+            "statistics",
+            "[0]",
+            "allForksCount"
+          ]
+        },
+        "ResourceName": "allForksCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "allSizeCount",
+            "fullPath": {
+              "path": [
+                "statistics",
+                "[0]",
+                "allSizeCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "statistics",
+        "BodyContainerName": "statistics",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "statistic"
+        ],
+        "AccessPath": "statistics/[0]/allSizeCount",
+        "AccessPathParts": {
+          "path": [
+            "statistics",
+            "[0]",
+            "allSizeCount"
+          ]
+        },
+        "ResourceName": "allSizeCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "allStarsCount",
+            "fullPath": {
+              "path": [
+                "statistics",
+                "[0]",
+                "allStarsCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "statistics",
+        "BodyContainerName": "statistics",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "statistic"
+        ],
+        "AccessPath": "statistics/[0]/allStarsCount",
+        "AccessPathParts": {
+          "path": [
+            "statistics",
+            "[0]",
+            "allStarsCount"
+          ]
+        },
+        "ResourceName": "allStarsCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "externalContributorsCount",
+            "fullPath": {
+              "path": [
+                "statistics",
+                "[0]",
+                "externalContributorsCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "statistics",
+        "BodyContainerName": "statistics",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "statistic"
+        ],
+        "AccessPath": "statistics/[0]/externalContributorsCount",
+        "AccessPathParts": {
+          "path": [
+            "statistics",
+            "[0]",
+            "externalContributorsCount"
+          ]
+        },
+        "ResourceName": "externalContributorsCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "id",
+            "fullPath": {
+              "path": [
+                "statistics",
+                "[0]",
+                "id"
+              ]
+            }
+          }
+        },
+        "ContainerName": "statistics",
+        "BodyContainerName": "statistics",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "statistic"
+        ],
+        "AccessPath": "statistics/[0]/id",
+        "AccessPathParts": {
+          "path": [
+            "statistics",
+            "[0]",
+            "id"
+          ]
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "key",
+            "fullPath": {
+              "path": [
+                "statistics",
+                "[0]",
+                "key"
+              ]
+            }
+          }
+        },
+        "ContainerName": "statistics",
+        "BodyContainerName": "statistics",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "statistic"
+        ],
+        "AccessPath": "statistics/[0]/key",
+        "AccessPathParts": {
+          "path": [
+            "statistics",
+            "[0]",
+            "key"
+          ]
+        },
+        "ResourceName": "key",
+        "ProducerParameterName": "key",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "id",
+            "fullPath": {
+              "path": [
+                "statistics",
+                "[0]",
+                "key",
+                "id"
+              ]
+            }
+          }
+        },
+        "ContainerName": "key",
+        "BodyContainerName": "key",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "key"
+        ],
+        "AccessPath": "statistics/[0]/key/id",
+        "AccessPathParts": {
+          "path": [
+            "statistics",
+            "[0]",
+            "key",
+            "id"
+          ]
+        },
+        "ResourceName": "id",
+        "ProducerParameterName": "id",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "snapshotDate",
+            "fullPath": {
+              "path": [
+                "statistics",
+                "[0]",
+                "key",
+                "snapshotDate"
+              ]
+            }
+          }
+        },
+        "ContainerName": "key",
+        "BodyContainerName": "key",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "key"
+        ],
+        "AccessPath": "statistics/[0]/key/snapshotDate",
+        "AccessPathParts": {
+          "path": [
+            "statistics",
+            "[0]",
+            "key",
+            "snapshotDate"
+          ]
+        },
+        "ResourceName": "snapshotDate",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "DateTime"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "membersCount",
+            "fullPath": {
+              "path": [
+                "statistics",
+                "[0]",
+                "membersCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "statistics",
+        "BodyContainerName": "statistics",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "statistic"
+        ],
+        "AccessPath": "statistics/[0]/membersCount",
+        "AccessPathParts": {
+          "path": [
+            "statistics",
+            "[0]",
+            "membersCount"
+          ]
+        },
+        "ResourceName": "membersCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "organizationName",
+            "fullPath": {
+              "path": [
+                "statistics",
+                "[0]",
+                "organizationName"
+              ]
+            }
+          }
+        },
+        "ContainerName": "statistics",
+        "BodyContainerName": "statistics",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "statistic"
+        ],
+        "AccessPath": "statistics/[0]/organizationName",
+        "AccessPathParts": {
+          "path": [
+            "statistics",
+            "[0]",
+            "organizationName"
+          ]
+        },
+        "ResourceName": "organizationName",
+        "ProducerParameterName": "name",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "privateProjectCount",
+            "fullPath": {
+              "path": [
+                "statistics",
+                "[0]",
+                "privateProjectCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "statistics",
+        "BodyContainerName": "statistics",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "statistic"
+        ],
+        "AccessPath": "statistics/[0]/privateProjectCount",
+        "AccessPathParts": {
+          "path": [
+            "statistics",
+            "[0]",
+            "privateProjectCount"
+          ]
+        },
+        "ResourceName": "privateProjectCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "programLanguagesCount",
+            "fullPath": {
+              "path": [
+                "statistics",
+                "[0]",
+                "programLanguagesCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "statistics",
+        "BodyContainerName": "statistics",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "statistic"
+        ],
+        "AccessPath": "statistics/[0]/programLanguagesCount",
+        "AccessPathParts": {
+          "path": [
+            "statistics",
+            "[0]",
+            "programLanguagesCount"
+          ]
+        },
+        "ResourceName": "programLanguagesCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "publicProjectCount",
+            "fullPath": {
+              "path": [
+                "statistics",
+                "[0]",
+                "publicProjectCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "statistics",
+        "BodyContainerName": "statistics",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "statistic"
+        ],
+        "AccessPath": "statistics/[0]/publicProjectCount",
+        "AccessPathParts": {
+          "path": [
+            "statistics",
+            "[0]",
+            "publicProjectCount"
+          ]
+        },
+        "ResourceName": "publicProjectCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "snapshotDate",
+            "fullPath": {
+              "path": [
+                "statistics",
+                "[0]",
+                "snapshotDate"
+              ]
+            }
+          }
+        },
+        "ContainerName": "statistics",
+        "BodyContainerName": "statistics",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "statistic"
+        ],
+        "AccessPath": "statistics/[0]/snapshotDate",
+        "AccessPathParts": {
+          "path": [
+            "statistics",
+            "[0]",
+            "snapshotDate"
+          ]
+        },
+        "ResourceName": "snapshotDate",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "DateTime"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "tagsCount",
+            "fullPath": {
+              "path": [
+                "statistics",
+                "[0]",
+                "tagsCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "statistics",
+        "BodyContainerName": "statistics",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "statistic"
+        ],
+        "AccessPath": "statistics/[0]/tagsCount",
+        "AccessPathParts": {
+          "path": [
+            "statistics",
+            "[0]",
+            "tagsCount"
+          ]
+        },
+        "ResourceName": "tagsCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/import",
+          "method": "Post"
+        },
+        "ResourceReference": {
+          "BodyResource": {
+            "name": "teamsCount",
+            "fullPath": {
+              "path": [
+                "statistics",
+                "[0]",
+                "teamsCount"
+              ]
+            }
+          }
+        },
+        "ContainerName": "statistics",
+        "BodyContainerName": "statistics",
+        "PathContainerName": "import",
+        "CandidateTypeNames": [
+          "statistic"
+        ],
+        "AccessPath": "statistics/[0]/teamsCount",
+        "AccessPathParts": {
+          "path": [
+            "statistics",
+            "[0]",
+            "teamsCount"
+          ]
+        },
+        "ResourceName": "teamsCount",
+        "ProducerParameterName": "count",
+        "IsNestedBodyResource": true,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Body"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/languages",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "languages",
+        "PathContainerName": "languages",
+        "CandidateTypeNames": [
+          "language"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/languages",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "languages",
+        "PathContainerName": "languages",
+        "CandidateTypeNames": [
+          "language"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/languages",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "organizations"
+        },
+        "ContainerName": "languages",
+        "PathContainerName": "languages",
+        "CandidateTypeNames": [
+          "language"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "organizations",
+        "ProducerParameterName": "organizations",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/languages",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "q"
+        },
+        "ContainerName": "languages",
+        "PathContainerName": "languages",
+        "CandidateTypeNames": [
+          "language"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "q",
+        "ProducerParameterName": "q",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/projects",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "limit"
+        },
+        "ContainerName": "projects",
+        "PathContainerName": "projects",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "limit",
+        "ProducerParameterName": "limit",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/projects",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "offset"
+        },
+        "ContainerName": "projects",
+        "PathContainerName": "projects",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "offset",
+        "ProducerParameterName": "offset",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "Int"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/projects",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "organizations"
+        },
+        "ContainerName": "projects",
+        "PathContainerName": "projects",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "organizations",
+        "ProducerParameterName": "organizations",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/projects",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "start_date"
+        },
+        "ContainerName": "projects",
+        "PathContainerName": "projects",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "start_date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "DateTime"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/projects",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "end_date"
+        },
+        "ContainerName": "projects",
+        "PathContainerName": "projects",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "end_date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "DateTime"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/projects",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "q"
+        },
+        "ContainerName": "projects",
+        "PathContainerName": "projects",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "q",
+        "ProducerParameterName": "q",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/projects",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "sortBy"
+        },
+        "ContainerName": "projects",
+        "PathContainerName": "projects",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "sortBy",
+        "ProducerParameterName": "by",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/projects",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "language"
+        },
+        "ContainerName": "projects",
+        "PathContainerName": "projects",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "language",
+        "ProducerParameterName": "language",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/statistics",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "organizations"
+        },
+        "ContainerName": "statistics",
+        "PathContainerName": "statistics",
+        "CandidateTypeNames": [
+          "statistic"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "organizations",
+        "ProducerParameterName": "organizations",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/statistics",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "start_date"
+        },
+        "ContainerName": "statistics",
+        "PathContainerName": "statistics",
+        "CandidateTypeNames": [
+          "statistic"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "start_date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/statistics",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "end_date"
+        },
+        "ContainerName": "statistics",
+        "PathContainerName": "statistics",
+        "CandidateTypeNames": [
+          "statistic"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "end_date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/statistics/contributors",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "organizations"
+        },
+        "ContainerName": "contributors",
+        "PathContainerName": "contributors",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "organizations",
+        "ProducerParameterName": "organizations",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/statistics/contributors",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "start_date"
+        },
+        "ContainerName": "contributors",
+        "PathContainerName": "contributors",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "start_date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/statistics/contributors",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "end_date"
+        },
+        "ContainerName": "contributors",
+        "PathContainerName": "contributors",
+        "CandidateTypeNames": [
+          "contributor"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "end_date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/statistics/languages",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "organizations"
+        },
+        "ContainerName": "languages",
+        "PathContainerName": "languages",
+        "CandidateTypeNames": [
+          "language"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "organizations",
+        "ProducerParameterName": "organizations",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/statistics/languages",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "start_date"
+        },
+        "ContainerName": "languages",
+        "PathContainerName": "languages",
+        "CandidateTypeNames": [
+          "language"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "start_date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/statistics/languages",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "end_date"
+        },
+        "ContainerName": "languages",
+        "PathContainerName": "languages",
+        "CandidateTypeNames": [
+          "language"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "end_date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/statistics/projects",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "organizations"
+        },
+        "ContainerName": "projects",
+        "PathContainerName": "projects",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "organizations",
+        "ProducerParameterName": "organizations",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/statistics/projects",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "start_date"
+        },
+        "ContainerName": "projects",
+        "PathContainerName": "projects",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "start_date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  },
+  {
+    "consumer": {
+      "id": {
+        "RequestId": {
+          "endpoint": "/statistics/projects",
+          "method": "Get"
+        },
+        "ResourceReference": {
+          "QueryResource": "end_date"
+        },
+        "ContainerName": "projects",
+        "PathContainerName": "projects",
+        "CandidateTypeNames": [
+          "project"
+        ],
+        "AccessPathParts": {
+          "path": []
+        },
+        "ResourceName": "end_date",
+        "ProducerParameterName": "date",
+        "IsNestedBodyResource": false,
+        "PrimitiveType": "String"
+      },
+      "parameterKind": "Query"
+    }
+  }
+]

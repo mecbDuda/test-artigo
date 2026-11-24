@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites errors="1" failures="17" skipped="1" tests="23" time="1785.670202">
+  <testsuite name="schemathesis" hostname="DESKTOP-U498DNI" errors="1" failures="17" skipped="1" tests="23" time="1785.670202">
+    <testcase name="POST /config/scoring.project" time="577.648608">
+      <failure type="failure" message="ST102">1. Test Case ID: 4z67sg
+
+- ST102 Server error on undeclared request Content-Type
+
+    `Content-Type: multipart/form-data` without a boundary returned 500, expected 400 Bad Request or 415 Unsupported Media Type
+
+    Reject a malformed `Content-Type` before parsing the request body
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795541873318,"status":500,"error":"Internal Server Error","exception":"org.springframework.web.multipart.MultipartException","message":"Could not parse multipart servlet request; nested exception is java.io.IOException: org.apache.tomcat.util.http.fileupload.FileUploadException: the request was rejected because no multipart boundary was found","path":"/config/scoring.project"}`
+
+Reproduce with:
+
+    curl -X POST -H 'X-Organizations;' -H 'Content-Type: multipart/form-data' -d '""' http://localhost:8080/config/scoring.project</failure>
+    </testcase>
+    <testcase name="POST /error" time="9.653922">
+      <failure type="failure" message="ST101, ST103, ST105">1. Test Case ID: vG1mrE
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/json;charset=UTF-8
+    Documented: text/html
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 201, 401, 403, 404
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795541873377,"status":999,"error":"None","message":"No message available"}`
+
+Reproduce with:
+
+    curl -X POST http://localhost:8080/error</failure>
+    </testcase>
+    <testcase name="PUT /error" time="8.908981">
+      <failure type="failure" message="ST101, ST103, ST105">1. Test Case ID: 2IMCe9
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/json;charset=UTF-8
+    Documented: text/html
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 201, 401, 403, 404
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795541873385,"status":999,"error":"None","message":"No message available"}`
+
+Reproduce with:
+
+    curl -X PUT http://localhost:8080/error</failure>
+    </testcase>
+    <testcase name="POST /import" time="10.797592">
+      <failure type="failure" message="ST103">1. Test Case ID: mLOI56
+
+- ST103 Undocumented status code
+
+    Received: 400
+    Documented: 200, 201, 401, 403, 404
+
+[400] Bad Request:
+
+    `{"timestamp":1795541873621,"status":400,"error":"Bad Request","exception":"org.springframework.http.converter.HttpMessageNotReadableException","message":"Required request body is missing: public java.lang.String org.zalando.catwatch.backend.web.admin.AdminController.importJson(org.zalando.catwatch.backend.web.admin.DatabaseDto)","path":"/import"}`
+
+Reproduce with:
+
+    curl -X POST http://localhost:8080/import</failure>
+    </testcase>
+    <testcase name="GET /config" time="8.038113">
+      <failure type="failure" message="ST108">1. Test Case ID: SYrRZe
+
+- ST108 Response violates schema
+
+    null is not of type "string"
+
+    Validated against the response schema for status code 200.
+
+    Schema at /additionalProperties:
+
+        {
+            "type": "string"
+        }
+
+    Value:
+
+        null
+
+[200] OK:
+
+    `{"cache.path":"target/cache","cache.size":"50","endpoints.enabled":"false","endpoints.health.enabled":"true","github.login":null,"organization.list":"zalando,zalando-stups,zalando-incubator","schedule":"0 1 8 * * *","scoring.project":"function(project) {var daysSinceLastPush = 0;if (project.lastPushed) {var tokens = project.lastPushed.split(\" \");var day = tokens[2];var month = tokens[1];var year = tokens[5];var lastPushedDate = new Date(day + ' ' + month + ' ' + year);var millisInDay = 86400000;daysSinceL // Output truncated...`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8080/config</failure>
+    </testcase>
+    <testcase name="GET /contributors" time="21.978414">
+      <failure type="failure" message="ST101, ST103">1. Test Case ID: BHPdlt
+
+- ST101 Server error
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 0, 200, 401, 403, 404
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795541873751,"status":500,"error":"Internal Server Error","exception":"java.lang.IllegalArgumentException","message":"offset must be greater than zero but was -2147483648","path":"/contributors"}`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8080/contributors?organizations=&amp;limit=-2147483648&amp;offset=-2147483648&amp;start_date=&amp;end_date=&amp;sortBy=&amp;q='</failure>
+      <failure type="failure" message="ST103">1. Test Case ID: pEZpvP
+
+- ST103 Undocumented status code
+
+    Received: 400
+    Documented: 0, 200, 401, 403, 404
+
+[400] Bad Request:
+
+    `{"timestamp":1795541886725,"status":400,"error":"Bad Request","exception":"org.springframework.web.bind.MissingServletRequestParameterException","message":"Required String parameter 'organizations' is not present","path":"/contributors"}`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8080/contributors?end_date=&amp;=null'</failure>
+    </testcase>
+    <testcase name="GET /delete" time="4.737019" />
+    <testcase name="GET /error" time="8.167598">
+      <failure type="failure" message="ST101, ST103, ST105">1. Test Case ID: BdRwxE
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/json;charset=UTF-8
+    Documented: text/html
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 401, 403, 404
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795541873831,"status":999,"error":"None","message":"No message available"}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8080/error</failure>
+    </testcase>
+    <testcase name="HEAD /error" time="8.841941">
+      <failure type="failure" message="ST101, ST103, ST105">1. Test Case ID: FNIZfI
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/json;charset=UTF-8
+    Documented: text/html
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 204, 401, 403
+
+[500] Internal Server Error:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X HEAD http://localhost:8080/error</failure>
+    </testcase>
+    <testcase name="OPTIONS /error" time="8.158655">
+      <failure type="failure" message="ST104, ST109">1. Test Case ID: FgoHrN
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `text/html`
+
+[200] OK:
+
+    &lt;EMPTY&gt;
+
+Reproduce with:
+
+    curl -X OPTIONS http://localhost:8080/error</failure>
+    </testcase>
+    <testcase name="PATCH /error" time="8.129612">
+      <failure type="failure" message="ST101, ST103, ST105">1. Test Case ID: ePdana
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/json;charset=UTF-8
+    Documented: text/html
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 204, 401, 403
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795541873856,"status":999,"error":"None","message":"No message available"}`
+
+Reproduce with:
+
+    curl -X PATCH http://localhost:8080/error</failure>
+    </testcase>
+    <testcase name="GET /export" time="4.870296" />
+    <testcase name="GET /fetch" time="990.003353">
+      <error type="error">Network Error
+
+Read timed out after 10 seconds
+
+Reproduce with:
+
+    curl -X GET http://localhost:8080/fetch</error>
+      <skipped type="skipped">No examples in schema</skipped>
+    </testcase>
+    <testcase name="GET /health" time="4.730402" />
+    <testcase name="GET /health.json" time="3.605725" />
+    <testcase name="GET /init" time="3.573179" />
+    <testcase name="GET /languages" time="10.644020">
+      <failure type="failure" message="ST101, ST103">1. Test Case ID: l7b4oT
+
+- ST101 Server error
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 0, 200, 401, 403, 404
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795541884222,"status":500,"error":"Internal Server Error","exception":"java.lang.IllegalArgumentException","message":"-2147483648","path":"/languages"}`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8080/languages?organizations=&amp;limit=-2147483648&amp;offset=-2147483648&amp;q='</failure>
+    </testcase>
+    <testcase name="GET /projects" time="11.583486">
+      <failure type="failure" message="ST101, ST103">1. Test Case ID: hJsDR0
+
+- ST101 Server error
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 0, 200, 401, 403, 404
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795541884258,"status":500,"error":"Internal Server Error","exception":"java.lang.IllegalArgumentException","message":"-2147483648","path":"/projects"}`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8080/projects?organizations=&amp;limit=-2147483648&amp;offset=-2147483648&amp;start_date=2000-01-01T00%3A00%3A00Z&amp;end_date=2000-01-01T00%3A00%3A00Z&amp;sortBy=&amp;q=&amp;language='</failure>
+    </testcase>
+    <testcase name="GET /statistics" time="9.825844">
+      <failure type="failure" message="ST103, ST202">1. Test Case ID: 1bKu1d
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+- ST103 Undocumented status code
+
+    Received: 400
+    Documented: 0, 200, 401, 403, 404
+
+[400] Bad Request:
+
+    `Invalid date format for stardDate`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8080/statistics?organizations=&amp;start_date=&amp;end_date='</failure>
+    </testcase>
+    <testcase name="GET /statistics/contributors" time="32.563490">
+      <failure type="failure" message="ST103, ST202">1. Test Case ID: y4NZ5p
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+- ST103 Undocumented status code
+
+    Received: 400
+    Documented: 200, 401, 403, 404
+
+[400] Bad Request:
+
+    `Couldn't parse date string .`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8080/statistics/contributors?organizations=&amp;start_date=&amp;end_date='</failure>
+      <failure type="failure" message="ST101, ST103">1. Test Case ID: 0kNPt9
+
+- ST101 Server error
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 401, 403, 404
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795541918677,"status":500,"error":"Internal Server Error","exception":"java.lang.IndexOutOfBoundsException","message":"toIndex = 10","path":"/statistics/contributors"}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8080/statistics/contributors</failure>
+    </testcase>
+    <testcase name="GET /statistics/languages" time="9.972873">
+      <failure type="failure" message="ST103, ST202">1. Test Case ID: cXRNiL
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+- ST103 Undocumented status code
+
+    Received: 400
+    Documented: 200, 401, 403, 404
+
+[400] Bad Request:
+
+    `Couldn't parse date string .`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8080/statistics/languages?organizations=&amp;start_date=&amp;end_date='</failure>
+    </testcase>
+    <testcase name="GET /statistics/projects" time="20.183233">
+      <failure type="failure" message="ST103, ST202">1. Test Case ID: JuCR07
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+- ST103 Undocumented status code
+
+    Received: 400
+    Documented: 200, 401, 403, 404
+
+[400] Bad Request:
+
+    `Couldn't parse date string .`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8080/statistics/projects?organizations=&amp;start_date=&amp;end_date='</failure>
+      <failure type="failure" message="ST101, ST103">1. Test Case ID: pW6B3L
+
+- ST101 Server error
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 401, 403, 404
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795541919053,"status":500,"error":"Internal Server Error","exception":"java.lang.IndexOutOfBoundsException","message":"toIndex = 10","path":"/statistics/projects"}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8080/statistics/projects</failure>
+    </testcase>
+    <testcase name="DELETE /error" time="9.053846">
+      <failure type="failure" message="ST101, ST103, ST105">1. Test Case ID: DYCnZQ
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/json;charset=UTF-8
+    Documented: text/html
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 204, 401, 403
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795541884322,"status":999,"error":"None","message":"No message available"}`
+
+Reproduce with:
+
+    curl -X DELETE http://localhost:8080/error</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

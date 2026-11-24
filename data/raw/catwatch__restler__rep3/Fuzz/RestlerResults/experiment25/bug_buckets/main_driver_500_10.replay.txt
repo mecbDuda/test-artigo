@@ -1,0 +1,21 @@
+################################################################################
+ main_driver_500
+
+ Hash: main_driver_500_69349c33ec578aad52ec6c87cf0971d617d607a7
+
+ To attempt to reproduce this bug using restler, run restler with the command
+ line option of --replay_log <path_to_this_log>.
+ If an authentication token is required, you must also specify the token_refresh_cmd.
+
+ This log may contain specific values for IDs or names that were generated
+ during fuzzing, using the fuzzing dictionary. Such names will be re-played
+ without modification. You must update the replay log manually with any changes
+ required to execute the requests in your environment (for example, replacing
+ pre-created account, subscription, or other resource IDs, as needed).
+################################################################################
+
+-> GET /statistics/projects HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\n\r\n
+! producer_timing_delay 0
+! max_async_wait_time 0
+PREVIOUS RESPONSE: 'HTTP/1.1 500 \r\nX-Content-Type-Options: nosniff\r\nX-XSS-Protection: 1; mode=block\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nPragma: no-cache\r\nExpires: 0\r\nX-Frame-Options: DENY\r\nAccess-Control-Allow-Origin: *\r\nAccess-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\nAccess-Control-Max-Age: 3600\r\nAccess-Control-Allow-Headers: x-requested-with\r\nX-Application-Context: application:8080\r\nContent-Type: application/json;charset=UTF-8\r\nTransfer-Encoding: chunked\r\nDate: Tue, 24 Nov 2026 20:26:31 GMT\r\nConnection: close\r\n\r\nb1\r\n{"timestamp":1795551991404,"status":500,"error":"Internal Server Error","exception":"java.lang.IndexOutOfBoundsException","message":"toIndex = 10","path":"/statistics/projects"}\r\n0\r\n\r\n'
+

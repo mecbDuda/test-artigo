@@ -1,0 +1,76 @@
+Warning: could not parse request in line 19495: GET /languages?organizations="\r(L9Sf 7#a}[#P^"_&limit=1&offset=1&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 19519: GET /languages?organizations=sn:6NQTYc<@ (fHP#{3|&limit=1&offset=1&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 19527: GET /languages?organizations=p6\r$3{:76f?Eb<0Z\x0b{Eci&limit=1&offset=1&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 19583: GET /languages?organizations="\t\r.\n2ov|jul r\r{pvo.&limit=1&offset=1&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 19599: GET /languages?organizations=52gZ.$&-o_n,?*{5qxE+ODj\r9j;-[&limit=1&offset=1&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 19623: GET /languages?organizations=Bw<\rL9Zk?L;e{]FMDemay6G>N&limit=1&offset=1&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 19647: GET /languages?organizations=lY?\n.I8ib{\n0Y"\n>yc\\^7wP}IjG*))!)&limit=1&offset=1&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 19655: GET /languages?organizations=tMblYow=}\x0b]y5~}iG]OK({|$xm)Z\nC,?C.](S}&limit=1&offset=1&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 19687: GET /languages?organizations=3>e5+=;z1V#g\niEKu[Fu#0Y+?K]4uiZ+NYc\n"sm;Lv&limit=1&offset=1&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 19711: GET /languages?organizations=RU-#!.3h8+-C_X?"82$(TP;-(E]IH)c#`=Dm&limit=1&offset=1&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 19727: GET /languages?organizations=d3d3}`0X=\x0cDH0x\rWNUNm3uG+;N_|#R; Uj=K2.L.e&limit=1&offset=1&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 19751: GET /languages?organizations=+Zf&\x0cw|8ILv\rPS[\x0c?W0Ji|il+|[4Bu\x0cMqxHNn2S$|0Q&limit=1&offset=1&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 19775: GET /languages?organizations=Dpo"pJi*;]I`~~!(j.X\n7YA#W,r?vubNAB]FA`5rgXP&limit=1&offset=1&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 19791: GET /languages?organizations=6wW-<C9dAWp`*w(/tY\nA\x0b-m,>LgV_uV^f^[]ssU"wJJ0Z;O; sxO&limit=1&offset=1&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 19807: GET /languages?organizations=O,~V9/j/qX?{_xmw7dV ;^Y:=\t"nJ;,0y3=KOc%\tD;+1(tbe&limit=1&offset=1&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 21078: GET /languages?organizations=fuzzstring&limit=1&offset=1&q="\r(L9Sf 7#a}[#P^"_ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 21102: GET /languages?organizations=fuzzstring&limit=1&offset=1&q=sn:6NQTYc<@ (fHP#{3| HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 21110: GET /languages?organizations=fuzzstring&limit=1&offset=1&q=p6\r$3{:76f?Eb<0Z\x0b{Eci HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 21166: GET /languages?organizations=fuzzstring&limit=1&offset=1&q="\t\r.\n2ov|jul r\r{pvo. HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 21182: GET /languages?organizations=fuzzstring&limit=1&offset=1&q=52gZ.$&-o_n,?*{5qxE+ODj\r9j;-[ HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 21206: GET /languages?organizations=fuzzstring&limit=1&offset=1&q=Bw<\rL9Zk?L;e{]FMDemay6G>N HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 21230: GET /languages?organizations=fuzzstring&limit=1&offset=1&q=lY?\n.I8ib{\n0Y"\n>yc\\^7wP}IjG*))!) HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 21238: GET /languages?organizations=fuzzstring&limit=1&offset=1&q=tMblYow=}\x0b]y5~}iG]OK({|$xm)Z\nC,?C.](S} HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 21270: GET /languages?organizations=fuzzstring&limit=1&offset=1&q=3>e5+=;z1V#g\niEKu[Fu#0Y+?K]4uiZ+NYc\n"sm;Lv HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 21294: GET /languages?organizations=fuzzstring&limit=1&offset=1&q=RU-#!.3h8+-C_X?"82$(TP;-(E]IH)c#`=Dm HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 21310: GET /languages?organizations=fuzzstring&limit=1&offset=1&q=d3d3}`0X=\x0cDH0x\rWNUNm3uG+;N_|#R; Uj=K2.L.e HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 21334: GET /languages?organizations=fuzzstring&limit=1&offset=1&q=+Zf&\x0cw|8ILv\rPS[\x0c?W0Ji|il+|[4Bu\x0cMqxHNn2S$|0Q HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 21358: GET /languages?organizations=fuzzstring&limit=1&offset=1&q=Dpo"pJi*;]I`~~!(j.X\n7YA#W,r?vubNAB]FA`5rgXP HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 21374: GET /languages?organizations=fuzzstring&limit=1&offset=1&q=6wW-<C9dAWp`*w(/tY\nA\x0b-m,>LgV_uV^f^[]ssU"wJJ0Z;O; sxO HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Warning: could not parse request in line 21390: GET /languages?organizations=fuzzstring&limit=1&offset=1&q=O,~V9/j/qX?{_xmw7dV ;^Y:=\t"nJ;,0y3=KOc%\tD;+1(tbe HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nContent-Length: 0\r\nUser-Agent: restler/9.2.4\r\n\r\n
+Unhandled exception. System.Exception: Unexpected response without prior request at 11/24/2026 20:48:47: { version = "HTTP/1.1"
+  statusCode = 400
+  statusDescription = "Bad Request"
+  headers =
+           map
+             [("Connection", "close"); ("Content-Type", "text/html");
+              ("Server", "mitmproxy 10.3.0"); ("content-length", "264")]
+  body =
+        "<html>
+<head>
+    <title>400 Bad Request</title>
+</head>
+<body>
+    <h1>400 Bad Request</h1>
+    <p>Bad HTTP request line: b&quot;GET /languages?organizations=g&gt;gYK&lt;TyqK\
+&#x27;p`P_&amp;limit=1&amp;offset=1&amp;q=fuzzstring HTTP/1.1&quot;</p>
+</body>
+</html>"
+  str = None }
+   at Microsoft.FSharp.Core.PrintfModule.PrintFormatToStringThenFail@1639.Invoke(String message) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\printf.fs:line 1639
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.choose@171.System-Collections-IEnumerator-MoveNext() in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 179
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.map@75.DoMoveNext(b& curr) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 81
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.MapEnumerator`1.System-Collections-IEnumerator-MoveNext() in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 68
+   at Microsoft.FSharp.Core.CompilerServices.RuntimeHelpers.takeInner@266[T,TResult](ConcatEnumerator`2 x, Unit unitVar0) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seqcore.fs:line 268
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.map@75.DoMoveNext(b& curr) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 81
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.MapEnumerator`1.System-Collections-IEnumerator-MoveNext() in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 68
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.map@75.DoMoveNext(b& curr) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 81
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.MapEnumerator`1.System-Collections-IEnumerator-MoveNext() in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 68
+   at Microsoft.FSharp.Core.CompilerServices.RuntimeHelpers.takeInner@266[T,TResult](ConcatEnumerator`2 x, Unit unitVar0) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seqcore.fs:line 268
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.next@193[T](FSharpFunc`2 f, IEnumerator`1 e, FSharpRef`1 started, Unit unitVar0) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 194
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.filter@188.System-Collections-IEnumerator-MoveNext() in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 196
+   at Microsoft.FSharp.Collections.SeqModule.oneStepTo@987[T](IEnumerable`1 source, List`1 prefix, FSharpRef`1 enumeratorR, Int32 i) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 996
+   at Microsoft.FSharp.Collections.SeqModule.action@4164-1[T](IEnumerable`1 source, List`1 prefix, FSharpRef`1 enumeratorR, Int32 i, Unit unitVar0) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 1011
+   at Microsoft.FSharp.Collections.SeqModule.result@1003.Invoke(Int32 i)
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.unfold@205.DoMoveNext(b& curr) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 207
+   at Microsoft.FSharp.Collections.Internal.IEnumerator.MapEnumerator`1.System-Collections-IEnumerator-MoveNext() in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 68
+   at Microsoft.FSharp.Collections.SeqModule.Iterate[T](FSharpFunc`2 action, IEnumerable`1 source) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 496
+   at Microsoft.FSharp.Collections.SeqModule.groupByValueType[T,TKey](FSharpFunc`2 keyf, IEnumerable`1 seq) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 1068
+   at Microsoft.FSharp.Collections.SeqModule.GroupBy@1076.Invoke(Unit unitVar0) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 1076
+   at Microsoft.FSharp.Collections.SeqModule.mkDelayedSeq@471.Invoke(Unit unitVar0) in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seq.fs:line 471
+   at Restler.ResultsAnalyzer.Analyze.Buckets.getBuckets@98.GenerateNext(IEnumerable`1& next) in D:\a\1\s\src\ResultsAnalyzer\Analyze\Buckets.fs:line 98
+   at Microsoft.FSharp.Core.CompilerServices.GeneratedSequenceBase`1.MoveNextImpl() in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seqcore.fs:line 371
+   at Microsoft.FSharp.Core.CompilerServices.GeneratedSequenceBase`1.System-Collections-IEnumerator-MoveNext() in F:\workspace\_work\1\s\src\fsharp\FSharp.Core\seqcore.fs:line 403
+   at Microsoft.FSharp.Collections.SeqModule.ToList[T](IEnumerable`1 source)
+   at Restler.ResultsAnalyzer.Analyze.Main.main(AnalyzeArgs args) in D:\a\1\s\src\ResultsAnalyzer\Analyze\Main.fs:line 103
+   at Restler.ResultsAnalyzer.Program.main(String[] argv) in D:\a\1\s\src\ResultsAnalyzer\Program.fs:line 223

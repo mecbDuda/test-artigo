@@ -1,0 +1,587 @@
+Schemathesis v4.34.0
+━━━━━━━━━━━━━━━━━━━━
+
+ ✅  Loaded specification from http://localhost:8100/openapi.json (in 1.04s)
+
+     Base URL:         http://localhost:8081
+     Specification:    Open API 2.0
+     Operations:       23 selected / 23 total
+
+ ✅  API capabilities:
+
+     Supports NULL byte in headers:                            ✓
+     Accepts backslash and control characters in URL paths:    ✘
+
+ ⏭   Examples (in 0.01s)
+
+     ⏭  23 skipped
+
+ 🚫  Coverage (in 12.49s)
+
+     ✅  5 passed  ❌ 17 failed  🚫  1 error
+
+ 🚫  Fuzzing (in 1787.20s)
+
+     ✅  6 passed  ❌ 13 failed  🚫  4 errors
+
+==================================== ERRORS ====================================
+__________________________________ GET /fetch __________________________________
+Network Error
+
+Read timed out after 10 seconds
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/fetch
+
+Need more help?
+    Join our Discord server: https://discord.gg/R9ASRAmHnA
+
+=================================== FAILURES ===================================
+________________________________ DELETE /error _________________________________
+1. Test Case ID: 87JUPU
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/json;charset=UTF-8
+    Documented: text/html
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 204, 401, 403
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795547518183,"status":999,"error":"None","message":"No message available"}`
+
+Reproduce with:
+
+    curl -X DELETE http://localhost:8081/error
+
+    st replay 87JUPU
+
+_________________________________ GET /config __________________________________
+1. Test Case ID: RnjnfJ
+
+- ST108 Response violates schema
+
+    null is not of type "string"
+
+    Validated against the response schema for status code 200.
+
+    Schema at /additionalProperties:
+
+        {
+            "type": "string"
+        }
+
+    Value:
+
+        null
+
+[200] OK:
+
+    `{"cache.path":"target/cache","cache.size":"50","endpoints.enabled":"false","endpoints.health.enabled":"true","github.login":null,"organization.list":"zalando,zalando-stups,zalando-incubator","schedule":"0 1 8 * * *","scoring.project":"function(project) {var daysSinceLastPush = 0;if (project.lastPushed) {var tokens = project.lastPushed.split(\" \");var day = tokens[2];var month = tokens[1];var year = tokens[5];var lastPushedDate = new Date(day + ' ' + month + ' ' + year);var millisInDay = 86400000;daysSinceL // Output truncated...`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/config
+
+    st replay RnjnfJ
+
+______________________________ GET /contributors _______________________________
+1. Test Case ID: 6DqlEV
+
+- ST101 Server error
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 0, 200, 401, 403, 404
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795547507532,"status":500,"error":"Internal Server Error","exception":"java.lang.IllegalArgumentException","message":"offset must be greater than zero but was -2147483648","path":"/contributors"}`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/contributors?organizations=&limit=-2147483648&offset=-2147483648&start_date=&end_date=&sortBy=&q='
+
+    st replay 6DqlEV
+
+2. Test Case ID: XN61ko
+
+- ST103 Undocumented status code
+
+    Received: 400
+    Documented: 0, 200, 401, 403, 404
+
+[400] Bad Request:
+
+    `{"timestamp":1795547520328,"status":400,"error":"Bad Request","exception":"org.springframework.web.bind.MissingServletRequestParameterException","message":"Required String parameter 'organizations' is not present","path":"/contributors"}`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/contributors?end_date=&=null'
+
+    st replay XN61ko
+
+__________________________________ GET /error __________________________________
+1. Test Case ID: epGQBJ
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/json;charset=UTF-8
+    Documented: text/html
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 401, 403, 404
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795547507620,"status":999,"error":"None","message":"No message available"}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/error
+
+    st replay epGQBJ
+
+________________________________ GET /languages ________________________________
+1. Test Case ID: sdYFxw
+
+- ST101 Server error
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 0, 200, 401, 403, 404
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795547518095,"status":500,"error":"Internal Server Error","exception":"java.lang.IllegalArgumentException","message":"-2147483648","path":"/languages"}`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/languages?organizations=&limit=-2147483648&offset=-2147483648&q='
+
+    st replay sdYFxw
+
+________________________________ GET /projects _________________________________
+1. Test Case ID: R8zNeS
+
+- ST101 Server error
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 0, 200, 401, 403, 404
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795547518127,"status":500,"error":"Internal Server Error","exception":"java.lang.IllegalArgumentException","message":"-2147483648","path":"/projects"}`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/projects?organizations=&limit=-2147483648&offset=-2147483648&start_date=2000-01-01T00%3A00%3A00Z&end_date=2000-01-01T00%3A00%3A00Z&sortBy=&q=&language='
+
+    st replay R8zNeS
+
+2. Test Case ID: rrJDYw
+
+- ST103 Undocumented status code
+
+    Received: 400
+    Documented: 0, 200, 401, 403, 404
+
+[400] Bad Request:
+
+    `{"timestamp":1795547556254,"status":400,"error":"Bad Request","exception":"org.springframework.web.method.annotation.MethodArgumentTypeMismatchException","message":"Failed to convert value of type 'java.lang.String' to required type 'java.util.Date'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@io.swagger.annotations.ApiParam @org.springframework.web.bind.annotation.RequestParam @org.springframework.format.annotation // Output truncated...`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/projects?start_date=0'
+
+    st replay rrJDYw
+
+3. Test Case ID: lDXBau
+
+- ST201 Schema-violating request accepted
+
+    Invalid data should have been rejected
+    Expected: 400, 401, 403, 404, 405, 406, 409, 415, 422, 428, 429, 5xx
+    Invalid component: parameter `start_date` in query - violates `format` at /properties/start_date
+
+[200] OK:
+
+    `[]`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/projects?start_date='
+
+    st replay lDXBau
+
+_______________________________ GET /statistics ________________________________
+1. Test Case ID: SyV35z
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+- ST103 Undocumented status code
+
+    Received: 400
+    Documented: 0, 200, 401, 403, 404
+
+[400] Bad Request:
+
+    `Invalid date format for stardDate`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/statistics?organizations=&start_date=&end_date='
+
+    st replay SyV35z
+
+_________________________ GET /statistics/contributors _________________________
+1. Test Case ID: vUvOtZ
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+- ST103 Undocumented status code
+
+    Received: 400
+    Documented: 200, 401, 403, 404
+
+[400] Bad Request:
+
+    `Couldn't parse date string .`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/statistics/contributors?organizations=&start_date=&end_date='
+
+    st replay vUvOtZ
+
+2. Test Case ID: xIN4NI
+
+- ST101 Server error
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 401, 403, 404
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795547557373,"status":500,"error":"Internal Server Error","exception":"java.lang.IndexOutOfBoundsException","message":"toIndex = 10","path":"/statistics/contributors"}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/statistics/contributors
+
+    st replay xIN4NI
+
+__________________________ GET /statistics/languages ___________________________
+1. Test Case ID: S09tvT
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+- ST103 Undocumented status code
+
+    Received: 400
+    Documented: 200, 401, 403, 404
+
+[400] Bad Request:
+
+    `Couldn't parse date string .`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/statistics/languages?organizations=&start_date=&end_date='
+
+    st replay S09tvT
+
+___________________________ GET /statistics/projects ___________________________
+1. Test Case ID: h29oEQ
+
+- ST202 Schema-valid request rejected
+
+    Valid data should have been accepted
+    Expected: 2xx, 3xx, 401, 403, 404, 409, 429, 5xx
+
+- ST103 Undocumented status code
+
+    Received: 400
+    Documented: 200, 401, 403, 404
+
+[400] Bad Request:
+
+    `Couldn't parse date string .`
+
+Reproduce with:
+
+    curl -X GET 'http://localhost:8081/statistics/projects?organizations=&start_date=&end_date='
+
+    st replay h29oEQ
+
+2. Test Case ID: Cq8RQN
+
+- ST101 Server error
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 401, 403, 404
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795547558199,"status":500,"error":"Internal Server Error","exception":"java.lang.IndexOutOfBoundsException","message":"toIndex = 10","path":"/statistics/projects"}`
+
+Reproduce with:
+
+    curl -X GET http://localhost:8081/statistics/projects
+
+    st replay Cq8RQN
+
+_________________________________ HEAD /error __________________________________
+1. Test Case ID: C8LkAn
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/json;charset=UTF-8
+    Documented: text/html
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 204, 401, 403
+
+[500] Internal Server Error:
+
+    <EMPTY>
+
+Reproduce with:
+
+    curl -X HEAD http://localhost:8081/error
+
+    st replay C8LkAn
+
+________________________________ OPTIONS /error ________________________________
+1. Test Case ID: K01wss
+
+- ST109 JSON deserialization error
+
+    Response must be valid JSON with 'Content-Type: application/json' header:
+
+      Expecting value: line 1 column 1 (char 0)
+
+- ST104 Missing Content-Type header
+
+    The following media types are documented in the schema:
+    - `text/html`
+
+[200] OK:
+
+    <EMPTY>
+
+Reproduce with:
+
+    curl -X OPTIONS http://localhost:8081/error
+
+    st replay K01wss
+
+_________________________________ PATCH /error _________________________________
+1. Test Case ID: JVNizR
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/json;charset=UTF-8
+    Documented: text/html
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 204, 401, 403
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795547507646,"status":999,"error":"None","message":"No message available"}`
+
+Reproduce with:
+
+    curl -X PATCH http://localhost:8081/error
+
+    st replay JVNizR
+
+_________________________ POST /config/scoring.project _________________________
+1. Test Case ID: HRltH2
+
+- ST102 Server error on undeclared request Content-Type
+
+    `Content-Type: multipart/form-data` without a boundary returned 500, expected 400 Bad Request or 415 Unsupported Media Type
+
+    Reject a malformed `Content-Type` before parsing the request body
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795547504209,"status":500,"error":"Internal Server Error","exception":"org.springframework.web.multipart.MultipartException","message":"Could not parse multipart servlet request; nested exception is java.io.IOException: org.apache.tomcat.util.http.fileupload.FileUploadException: the request was rejected because no multipart boundary was found","path":"/config/scoring.project"}`
+
+Reproduce with:
+
+    curl -X POST -H 'X-Organizations;' -H 'Content-Type: multipart/form-data' -d '""' http://localhost:8081/config/scoring.project
+
+    st replay HRltH2
+
+_________________________________ POST /error __________________________________
+1. Test Case ID: Hxn88O
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/json;charset=UTF-8
+    Documented: text/html
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 201, 401, 403, 404
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795547504265,"status":999,"error":"None","message":"No message available"}`
+
+Reproduce with:
+
+    curl -X POST http://localhost:8081/error
+
+    st replay Hxn88O
+
+_________________________________ POST /import _________________________________
+1. Test Case ID: wM1GHF
+
+- ST103 Undocumented status code
+
+    Received: 400
+    Documented: 200, 201, 401, 403, 404
+
+[400] Bad Request:
+
+    `{"timestamp":1795547507414,"status":400,"error":"Bad Request","exception":"org.springframework.http.converter.HttpMessageNotReadableException","message":"Required request body is missing: public java.lang.String org.zalando.catwatch.backend.web.admin.AdminController.importJson(org.zalando.catwatch.backend.web.admin.DatabaseDto)","path":"/import"}`
+
+Reproduce with:
+
+    curl -X POST http://localhost:8081/import
+
+    st replay wM1GHF
+
+__________________________________ PUT /error __________________________________
+1. Test Case ID: VnfDBM
+
+- ST101 Server error
+
+- ST105 Undocumented Content-Type
+
+    Received: application/json;charset=UTF-8
+    Documented: text/html
+
+- ST103 Undocumented status code
+
+    Received: 500
+    Documented: 200, 201, 401, 403, 404
+
+[500] Internal Server Error:
+
+    `{"timestamp":1795547504274,"status":999,"error":"None","message":"No message available"}`
+
+Reproduce with:
+
+    curl -X PUT http://localhost:8081/error
+
+    st replay VnfDBM
+
+=================================== WARNINGS ===================================
+
+Authentication failed: 3 operations returned only 401/403 responses
+
+403 Forbidden (1 operation):
+  - POST /config/scoring.project
+401 Unauthorized (2 operations):
+  - GET /delete
+  - GET /init
+
+💡 Ensure valid authentication credentials are set via `--auth` or `-H`
+
+=================================== SUMMARY ====================================
+
+API Operations:
+  Selected: 23/23
+  Tested: 22
+  Errored: 1
+
+Test Phases:
+  ⏭  Examples
+  🚫 Coverage
+  🚫 Fuzzing
+  ⏭  Stateful (not applicable)
+
+Failures:
+  ❌ ST101 Server error: 11
+  ❌ ST102 Server error on undeclared request Content-Type: 1
+  ❌ ST108 Response violates schema: 1
+  ❌ ST109 JSON deserialization error: 1
+  ❌ ST104 Missing Content-Type header: 1
+  ❌ ST202 Schema-valid request rejected: 4
+  ❌ ST201 Schema-violating request accepted: 1
+  ❌ ST105 Undocumented Content-Type: 6
+  ❌ ST103 Undocumented status code: 18
+
+For more information, run `st explain <code>` for ST101, ST102, ST103, ST104, ST105, ST108, ST109, ST201, ST202.
+
+Errors:
+  🚫 Network Error: 1
+
+Warnings:
+  ⚠️ Authentication failed: 3 operations returned only 401/403 responses
+
+_______________________________ Schema Coverage ________________________________
+
+Operations           23/23   100.0%
+Parameters           31/34    91.1%  (3 partial)
+Keywords             38/144   26.3%  (51 partial)
+Responses            13/96    13.5%
+Response Keywords    13/281    4.6%
+
+Spec problems       4 (see the full report)
+
+HTML report         ./schema-coverage.html
+
+Test cases:
+  68895 generated, 22 found 44 unique failures, 901 errored
+
+Reports:
+  - JUnit: /out/junit-20261124T191140Z.xml
+
+Seed: 1003
+
+================= 44 failures, 1 error, 1 warning in 1800.13s ==================

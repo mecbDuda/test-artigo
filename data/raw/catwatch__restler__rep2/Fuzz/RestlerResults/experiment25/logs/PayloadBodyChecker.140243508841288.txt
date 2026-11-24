@@ -1,0 +1,98 @@
+fuzzing valid True
+fuzzing invalid True
+start with examples True
+size dep budget True
+use feedback True
+skip_uuid_substitution False
+recipe None
+Start fuzzing request: POST /config/scoring.project
+#node: 0
+Fuzz using dynamic feedback
+#N: 0, #max: 200, #width: 20
+Task begin Invalid-JSON
+Tracker begin (Invalid-JSON):
+    Valid: 0
+    Invalid: 2
+    403_UnknownResponse: 1 (2: 2)
+Tracker end
+Task end Invalid-JSON
+
+Task begin Structure
+Tracker begin (Structure):
+    Valid: 0
+    Invalid: 2
+    403_UnknownResponse: 1 (2: 2)
+Tracker end
+Task end Structure
+
+Task begin Type
+Tracker begin (Type):
+    Valid: 0
+    Invalid: 8
+    403_UnknownResponse: 1 (8: 8)
+Tracker end
+Task end Type
+Skip visited request /config/scoring.project
+Start fuzzing request: POST /import
+#node: 64
+Fuzz using dynamic feedback
+#N: 64, #max: 640, #width: 64
+Task begin Invalid-JSON
+Tracker begin (Invalid-JSON):
+    Valid: 0
+    Invalid: 108
+    400_UnknownResponse: 4 (108: 103 1 2 2)
+Tracker end
+Task end Invalid-JSON
+
+Task begin Structure
+Tracker begin (Structure):
+    Valid: 0
+    Invalid: 128
+    400_UnknownResponse: 4 (76: 4 2 44 26)
+    403_UnknownResponse: 1 (52: 52)
+Tracker end
+Task end Structure
+
+Task begin Type
+Tracker begin (Type):
+    Valid: 0
+    Invalid: 1018
+    400_UnknownResponse: 142 (1010: 2 4 10 3 2 2 4 2 2 29 2 2 2 2 13 2 2 2 2 419 2 4 2 2 4 2 230 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 4 2 2 2 2 4 4 4 4 2 4 2 2 2 4 4 4 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 1 2 2 2 2 2 2 4 2 2 4 4 2 2 4 3 4 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2)
+    403_UnknownResponse: 1 (8: 8)
+Tracker end
+Task end Type
+Skip visited request /import
+Skip visited request /config/scoring.project
+Skip visited request /config/scoring.project
+Skip visited request /import
+Skip visited request /import
+Skip visited request /config/scoring.project
+Skip visited request /config/scoring.project
+Skip visited request /import
+Skip visited request /import
+Skip visited request /config/scoring.project
+Skip visited request /config/scoring.project
+Skip visited request /import
+Skip visited request /import
+Skip visited request /config/scoring.project
+Skip visited request /config/scoring.project
+Skip visited request /import
+Skip visited request /import
+Skip visited request /config/scoring.project
+Skip visited request /config/scoring.project
+Skip visited request /import
+Skip visited request /import
+Skip visited request /config/scoring.project
+Skip visited request /config/scoring.project
+Skip visited request /import
+Skip visited request /import
+Skip visited request /config/scoring.project
+Skip visited request /config/scoring.project
+Skip visited request /import
+Skip visited request /import
+Skip visited request /config/scoring.project
+Skip visited request /config/scoring.project
+Skip visited request /import
+Skip visited request /import
+Skip visited request /config/scoring.project

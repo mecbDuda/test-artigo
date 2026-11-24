@@ -1,0 +1,56 @@
+main_driver_500: 10
+InvalidValueChecker_500: 3
+Total Buckets: 13
+-------------
+main_driver_500 - Bug was reproduced - main_driver_500_1.replay.txt
+Hash: main_driver_500_21b8ef63f222ed81bca5ae54a629ab8071bf59aa
+GET /contributors?organizations=fuzzstring&limit=1&offset=1&start_date=fuzzstring&end_date=fuzzstring&sortBy=fuzzstring&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_2.replay.txt
+Hash: main_driver_500_4529fc99abaa5e429fc2d24755708e922835ce08
+GET /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_3.replay.txt
+Hash: main_driver_500_b132917329ac45af3b1246079255511790a850ff
+HEAD /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_4.replay.txt
+Hash: main_driver_500_9fa861207c76cacb9bf31eafaead33fe61700029
+POST /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_5.replay.txt
+Hash: main_driver_500_0ac27bae4fb7ff139a04080efaec3b1ad17b7557
+PUT /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_6.replay.txt
+Hash: main_driver_500_466355e5df7bf4f9991edea02c9de4a7ba21eeca
+DELETE /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_7.replay.txt
+Hash: main_driver_500_0ca47436ea4dd5571a2769109a7993a6238184de
+PATCH /error HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_8.replay.txt
+Hash: main_driver_500_80674733fc4c96800aff52c8b1d114c20ca4c986
+GET /fetch HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_9.replay.txt
+Hash: main_driver_500_dae3ed67f9bd6dd6083ce7ec316ddb62df1d65ed
+GET /statistics/contributors?organizations=fuzzstring&start_date=fuzzstring&end_date=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+main_driver_500 - Bug was reproduced - main_driver_500_10.replay.txt
+Hash: main_driver_500_69349c33ec578aad52ec6c87cf0971d617d607a7
+GET /statistics/projects?organizations=fuzzstring&start_date=fuzzstring&end_date=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidValueChecker_500 - Bug was reproduced - InvalidValueChecker_500_1.replay.txt
+Hash: InvalidValueChecker_500_21b8ef63f222ed81bca5ae54a629ab8071bf59aa
+GET /contributors?organizations=fuzzstring&limit=1&offset=1&start_date=fuzzstring&end_date=fuzzstring&sortBy=fuzzstring&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidValueChecker_500 - Bug was reproduced - InvalidValueChecker_500_2.replay.txt
+Hash: InvalidValueChecker_500_739d1f28e84f0cab62dc6fd04f93b42f8dab9d3f
+GET /languages?organizations=fuzzstring&limit=1&offset=1&q=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidValueChecker_500 - Bug was reproduced - InvalidValueChecker_500_3.replay.txt
+Hash: InvalidValueChecker_500_3efd9ac1065fb1af3cade21f14a4a28a5ba53df7
+GET /projects?organizations=fuzzstring&limit=1&offset=1&start_date=2019-06-26T20:20:39+00:00&end_date=2019-06-26T20:20:39+00:00&sortBy=fuzzstring&q=fuzzstring&language=fuzzstring HTTP/1.1\r\nAccept: application/json\r\nHost: localhost:8080\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
