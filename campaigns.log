@@ -1,0 +1,447 @@
+##### início: 2026-11-23T20:53:29-03:00
+[2026-11-23T20:53:29-03:00] TOOLS=[schemathesis restler evomaster] APIS=[vampi petclinic-rest catwatch] REPS=3 BUDGET_MIN=30 SLOTS=2
+[2026-11-23T20:53:29-03:00] limites por contêiner: TOOL_CPUS=4.00 API_CPUS=2.00 PROXY_CPUS=1.00 TOOL_MEM=3038m API_MEM=1536m PROXY_MEM=384m API_JAVA_OPTS=-Xmx1152m HOST_NPROC=16 HOST_MEM_MIB=11964 SLOTS=2
+[2026-11-23T20:53:40-03:00] 0 de 27 já concluídas; 27 na fila
+[2026-11-23T20:53:40-03:00] estimativa (sem contar a folga de minimização do EvoMaster): ~7.4 h
+[2026-11-23T20:53:40-03:00] slot 0: iniciando catwatch__restler__rep1 (vizinhos agora: nenhum)
+[2026-11-23T20:53:40-03:00] slot 1: iniciando petclinic-rest__evomaster__rep1 (vizinhos agora: catwatch__restler__rep1)
+[s0] === catwatch__restler__rep1 slot=0 (2026-11-23T20:53:40-03:00) ===
+[s1] === petclinic-rest__evomaster__rep1 slot=1 (2026-11-23T20:53:40-03:00) ===
+[s0]  Network fuzzexp_0_default  Creating
+[s1]  Network fuzzexp_1_default  Creating
+[s0]  Network fuzzexp_0_default  Created
+[s0]  Network fuzzexp_0_sut  Creating
+[s1]  Network fuzzexp_1_default  Created
+[s0]  Network fuzzexp_0_sut  Created
+[s1]  Network fuzzexp_1_sut  Creating
+[s0]  Container fuzzexp_0-api-1  Creating
+[s1]  Network fuzzexp_1_sut  Created
+[s1]  Container fuzzexp_1-api-1  Creating
+[s0]  Container fuzzexp_0-api-1  Created
+[s0]  Container fuzzexp_0-proxy-1  Creating
+[s1]  Container fuzzexp_1-api-1  Created
+[s1]  Container fuzzexp_1-proxy-1  Creating
+[s0]  Container fuzzexp_0-proxy-1  Created
+[s0]  Container fuzzexp_0-api-1  Starting
+[s1]  Container fuzzexp_1-proxy-1  Created
+[s1]  Container fuzzexp_1-api-1  Starting
+[s0]  Container fuzzexp_0-api-1  Started
+[s0]  Container fuzzexp_0-proxy-1  Starting
+[s1]  Container fuzzexp_1-api-1  Started
+[s1]  Container fuzzexp_1-proxy-1  Starting
+[s0]  Container fuzzexp_0-proxy-1  Started
+[s1]  Container fuzzexp_1-proxy-1  Started
+[s0] === catwatch__restler__rep1 concluída (2026-11-23T21:24:12-03:00) ===
+[2026-11-23T21:24:14-03:00] slot 0: catwatch__restler__rep1 concluída em 30.6 min
+[2026-11-23T21:24:14-03:00] slot 0: iniciando vampi__schemathesis__rep1 (vizinhos agora: petclinic-rest__evomaster__rep1)
+[s0] === vampi__schemathesis__rep1 slot=0 (2026-11-23T21:24:14-03:00) ===
+[s0]  Network fuzzexp_0_sut  Creating
+[s0]  Network fuzzexp_0_sut  Created
+[s0]  Network fuzzexp_0_default  Creating
+[s0]  Network fuzzexp_0_default  Created
+[s0]  Container fuzzexp_0-api-1  Creating
+[s0]  Container fuzzexp_0-api-1  Created
+[s0]  Container fuzzexp_0-proxy-1  Creating
+[s0]  Container fuzzexp_0-proxy-1  Created
+[s0]  Container fuzzexp_0-api-1  Starting
+[s0]  Container fuzzexp_0-api-1  Started
+[s0]  Container fuzzexp_0-proxy-1  Starting
+[s0]  Container fuzzexp_0-proxy-1  Started
+[s1] === petclinic-rest__evomaster__rep1 concluída (2026-11-23T21:25:25-03:00) ===
+[2026-11-23T21:25:29-03:00] slot 1: petclinic-rest__evomaster__rep1 concluída em 31.8 min
+[2026-11-23T21:25:29-03:00] slot 1: iniciando petclinic-rest__restler__rep1 (vizinhos agora: vampi__schemathesis__rep1)
+[s1] === petclinic-rest__restler__rep1 slot=1 (2026-11-23T21:25:29-03:00) ===
+[s1]  Network fuzzexp_1_sut  Creating
+[s1]  Network fuzzexp_1_sut  Created
+[s1]  Network fuzzexp_1_default  Creating
+[s1]  Network fuzzexp_1_default  Created
+[s1]  Container fuzzexp_1-api-1  Creating
+[s1]  Container fuzzexp_1-api-1  Created
+[s1]  Container fuzzexp_1-proxy-1  Creating
+[s1]  Container fuzzexp_1-proxy-1  Created
+[s1]  Container fuzzexp_1-api-1  Starting
+[s1]  Container fuzzexp_1-api-1  Started
+[s1]  Container fuzzexp_1-proxy-1  Starting
+[s1]  Container fuzzexp_1-proxy-1  Started
+[s1] === petclinic-rest__restler__rep1 concluída (2026-11-23T21:56:25-03:00) ===
+[2026-11-23T21:56:30-03:00] slot 1: petclinic-rest__restler__rep1 concluída em 31.0 min
+[2026-11-23T21:56:30-03:00] slot 1: iniciando vampi__evomaster__rep1 (vizinhos agora: vampi__schemathesis__rep1)
+[s1] === vampi__evomaster__rep1 slot=1 (2026-11-23T21:56:30-03:00) ===
+[s1]  Network fuzzexp_1_sut  Creating
+[s1]  Network fuzzexp_1_sut  Created
+[s1]  Network fuzzexp_1_default  Creating
+[s1]  Network fuzzexp_1_default  Created
+[s1]  Container fuzzexp_1-api-1  Creating
+[s1]  Container fuzzexp_1-api-1  Created
+[s1]  Container fuzzexp_1-proxy-1  Creating
+[s1]  Container fuzzexp_1-proxy-1  Created
+[s1]  Container fuzzexp_1-api-1  Starting
+[s1]  Container fuzzexp_1-api-1  Started
+[s1]  Container fuzzexp_1-proxy-1  Starting
+[s1]  Container fuzzexp_1-proxy-1  Started
+[s0] === vampi__schemathesis__rep1 concluída (2026-11-23T21:56:36-03:00) ===
+[2026-11-23T21:56:40-03:00] slot 0: vampi__schemathesis__rep1 concluída em 32.4 min
+[2026-11-23T21:56:40-03:00] slot 0: iniciando catwatch__schemathesis__rep1 (vizinhos agora: vampi__evomaster__rep1)
+[s0] === catwatch__schemathesis__rep1 slot=0 (2026-11-23T21:56:40-03:00) ===
+[s0]  Network fuzzexp_0_default  Creating
+[s0]  Network fuzzexp_0_default  Created
+[s0]  Network fuzzexp_0_sut  Creating
+[s0]  Network fuzzexp_0_sut  Created
+[s0]  Container fuzzexp_0-api-1  Creating
+[s0]  Container fuzzexp_0-api-1  Created
+[s0]  Container fuzzexp_0-proxy-1  Creating
+[s0]  Container fuzzexp_0-proxy-1  Created
+[s0]  Container fuzzexp_0-api-1  Starting
+[s0]  Container fuzzexp_0-api-1  Started
+[s0]  Container fuzzexp_0-proxy-1  Starting
+[s0]  Container fuzzexp_0-proxy-1  Started
+[s1] === vampi__evomaster__rep1 concluída (2026-11-23T22:26:49-03:00) ===
+[2026-11-23T22:26:53-03:00] slot 1: vampi__evomaster__rep1 concluída em 30.4 min
+[2026-11-23T22:26:53-03:00] slot 1: iniciando vampi__restler__rep1 (vizinhos agora: catwatch__schemathesis__rep1)
+[s1] === vampi__restler__rep1 slot=1 (2026-11-23T22:26:53-03:00) ===
+[s1]  Network fuzzexp_1_sut  Creating
+[s1]  Network fuzzexp_1_sut  Created
+[s1]  Network fuzzexp_1_default  Creating
+[s1]  Network fuzzexp_1_default  Created
+[s1]  Container fuzzexp_1-api-1  Creating
+[s1]  Container fuzzexp_1-api-1  Created
+[s1]  Container fuzzexp_1-proxy-1  Creating
+[s1]  Container fuzzexp_1-proxy-1  Created
+[s1]  Container fuzzexp_1-api-1  Starting
+[s1]  Container fuzzexp_1-api-1  Started
+[s1]  Container fuzzexp_1-proxy-1  Starting
+[s1]  Container fuzzexp_1-proxy-1  Started
+[s0] === catwatch__schemathesis__rep1 concluída (2026-11-23T22:30:02-03:00) ===
+[2026-11-23T22:30:05-03:00] slot 0: catwatch__schemathesis__rep1 concluída em 33.4 min
+[2026-11-23T22:30:05-03:00] slot 0: iniciando catwatch__evomaster__rep1 (vizinhos agora: vampi__restler__rep1)
+[s0] === catwatch__evomaster__rep1 slot=0 (2026-11-23T22:30:05-03:00) ===
+[s0]  Network fuzzexp_0_sut  Creating
+[s0]  Network fuzzexp_0_sut  Created
+[s0]  Network fuzzexp_0_default  Creating
+[s0]  Network fuzzexp_0_default  Created
+[s0]  Container fuzzexp_0-api-1  Creating
+[s0]  Container fuzzexp_0-api-1  Created
+[s0]  Container fuzzexp_0-proxy-1  Creating
+[s0]  Container fuzzexp_0-proxy-1  Created
+[s0]  Container fuzzexp_0-api-1  Starting
+[s0]  Container fuzzexp_0-api-1  Started
+[s0]  Container fuzzexp_0-proxy-1  Starting
+[s0]  Container fuzzexp_0-proxy-1  Started
+[s1] === vampi__restler__rep1 concluída (2026-11-23T22:58:25-03:00) ===
+[2026-11-23T22:58:27-03:00] slot 1: vampi__restler__rep1 concluída em 31.6 min
+[2026-11-23T22:58:27-03:00] slot 1: iniciando petclinic-rest__schemathesis__rep1 (vizinhos agora: catwatch__evomaster__rep1)
+[s1] === petclinic-rest__schemathesis__rep1 slot=1 (2026-11-23T22:58:27-03:00) ===
+[s1]  Network fuzzexp_1_default  Creating
+[s1]  Network fuzzexp_1_default  Created
+[s1]  Network fuzzexp_1_sut  Creating
+[s1]  Network fuzzexp_1_sut  Created
+[s1]  Container fuzzexp_1-api-1  Creating
+[s1]  Container fuzzexp_1-api-1  Created
+[s1]  Container fuzzexp_1-proxy-1  Creating
+[s1]  Container fuzzexp_1-proxy-1  Created
+[s1]  Container fuzzexp_1-api-1  Starting
+[s1]  Container fuzzexp_1-api-1  Started
+[s1]  Container fuzzexp_1-proxy-1  Starting
+[s1]  Container fuzzexp_1-proxy-1  Started
+[s0] === catwatch__evomaster__rep1 concluída (2026-11-23T23:03:52-03:00) ===
+[2026-11-23T23:03:54-03:00] slot 0: catwatch__evomaster__rep1 concluída em 33.8 min
+[2026-11-23T23:03:54-03:00] slot 0: iniciando catwatch__restler__rep2 (vizinhos agora: petclinic-rest__schemathesis__rep1)
+[s0] === catwatch__restler__rep2 slot=0 (2026-11-23T23:03:54-03:00) ===
+[s0]  Network fuzzexp_0_default  Creating
+[s0]  Network fuzzexp_0_default  Created
+[s0]  Network fuzzexp_0_sut  Creating
+[s0]  Network fuzzexp_0_sut  Created
+[s0]  Container fuzzexp_0-api-1  Creating
+[s0]  Container fuzzexp_0-api-1  Created
+[s0]  Container fuzzexp_0-proxy-1  Creating
+[s0]  Container fuzzexp_0-proxy-1  Created
+[s0]  Container fuzzexp_0-api-1  Starting
+[s0]  Container fuzzexp_0-api-1  Started
+[s0]  Container fuzzexp_0-proxy-1  Starting
+[s0]  Container fuzzexp_0-proxy-1  Started
+[s1] === petclinic-rest__schemathesis__rep1 concluída (2026-11-23T23:32:15-03:00) ===
+[2026-11-23T23:32:16-03:00] slot 1: petclinic-rest__schemathesis__rep1 concluída em 33.8 min
+[2026-11-23T23:32:16-03:00] slot 1: iniciando petclinic-rest__schemathesis__rep2 (vizinhos agora: catwatch__restler__rep2)
+[s1] === petclinic-rest__schemathesis__rep2 slot=1 (2026-11-23T23:32:16-03:00) ===
+[s1]  Network fuzzexp_1_sut  Creating
+[s1]  Network fuzzexp_1_sut  Created
+[s1]  Network fuzzexp_1_default  Creating
+[s1]  Network fuzzexp_1_default  Created
+[s1]  Container fuzzexp_1-api-1  Creating
+[s1]  Container fuzzexp_1-api-1  Created
+[s1]  Container fuzzexp_1-proxy-1  Creating
+[s1]  Container fuzzexp_1-proxy-1  Created
+[s1]  Container fuzzexp_1-api-1  Starting
+[s1]  Container fuzzexp_1-api-1  Started
+[s1]  Container fuzzexp_1-proxy-1  Starting
+[s1]  Container fuzzexp_1-proxy-1  Started
+[s0] === catwatch__restler__rep2 concluída (2026-11-23T23:34:27-03:00) ===
+[2026-11-23T23:34:32-03:00] slot 0: catwatch__restler__rep2 concluída em 30.6 min
+[2026-11-23T23:34:32-03:00] slot 0: iniciando vampi__evomaster__rep2 (vizinhos agora: petclinic-rest__schemathesis__rep2)
+[s0] === vampi__evomaster__rep2 slot=0 (2026-11-23T23:34:32-03:00) ===
+[s0]  Network fuzzexp_0_sut  Creating
+[s0]  Network fuzzexp_0_sut  Created
+[s0]  Network fuzzexp_0_default  Creating
+[s0]  Network fuzzexp_0_default  Created
+[s0]  Container fuzzexp_0-api-1  Creating
+[s0]  Container fuzzexp_0-api-1  Created
+[s0]  Container fuzzexp_0-proxy-1  Creating
+[s0]  Container fuzzexp_0-proxy-1  Created
+[s0]  Container fuzzexp_0-api-1  Starting
+[s0]  Container fuzzexp_0-api-1  Started
+[s0]  Container fuzzexp_0-proxy-1  Starting
+[s0]  Container fuzzexp_0-proxy-1  Started
+[2026-11-23T23:58:51-03:00] PAUSAR detectado: nenhuma execução nova; aguardando 2 em andamento: petclinic-rest__schemathesis__rep2, vampi__evomaster__rep2
+[s0] === vampi__evomaster__rep2 concluída (2026-11-24T00:04:51-03:00) ===
+[2026-11-24T00:04:59-03:00] slot 0: vampi__evomaster__rep2 concluída em 30.4 min
+[s1] === petclinic-rest__schemathesis__rep2 concluída (2026-11-24T00:05:14-03:00) ===
+[2026-11-24T00:05:19-03:00] slot 1: petclinic-rest__schemathesis__rep2 concluída em 33.0 min
+[2026-11-24T00:05:19-03:00] PAUSADO COM SEGURANÇA – pode desligar
+##### fim: 2026-11-24T00:05:19-03:00
+##### início: 2026-11-24T14:37:25-03:00
+[2026-11-24T14:37:25-03:00] TOOLS=[schemathesis restler evomaster] APIS=[vampi petclinic-rest catwatch] REPS=3 BUDGET_MIN=30 SLOTS=2
+[2026-11-24T14:37:25-03:00] limites por contêiner: TOOL_CPUS=4.00 API_CPUS=2.00 PROXY_CPUS=1.00 TOOL_MEM=3038m API_MEM=1536m PROXY_MEM=384m API_JAVA_OPTS=-Xmx1152m HOST_NPROC=16 HOST_MEM_MIB=11964 SLOTS=2
+[2026-11-24T14:37:31-03:00] 12 de 27 já concluídas; 15 na fila
+[2026-11-24T14:37:31-03:00] estimativa (sem contar a folga de minimização do EvoMaster): ~4.1 h
+[2026-11-24T14:37:31-03:00] slot 0: iniciando catwatch__schemathesis__rep2 (vizinhos agora: nenhum)
+[2026-11-24T14:37:31-03:00] slot 1: iniciando vampi__restler__rep2 (vizinhos agora: catwatch__schemathesis__rep2)
+[s1] === vampi__restler__rep2 slot=1 (2026-11-24T14:37:31-03:00) ===
+[s0] === catwatch__schemathesis__rep2 slot=0 (2026-11-24T14:37:31-03:00) ===
+[s1]  Network fuzzexp_1_sut  Creating
+[s0]  Network fuzzexp_0_default  Creating
+[s1]  Network fuzzexp_1_sut  Created
+[s1]  Network fuzzexp_1_default  Creating
+[s0]  Network fuzzexp_0_default  Created
+[s0]  Network fuzzexp_0_sut  Creating
+[s1]  Network fuzzexp_1_default  Created
+[s1]  Container fuzzexp_1-api-1  Creating
+[s0]  Network fuzzexp_0_sut  Created
+[s0]  Container fuzzexp_0-api-1  Creating
+[s0]  Container fuzzexp_0-api-1  Created
+[s0]  Container fuzzexp_0-proxy-1  Creating
+[s1]  Container fuzzexp_1-api-1  Created
+[s1]  Container fuzzexp_1-proxy-1  Creating
+[s0]  Container fuzzexp_0-proxy-1  Created
+[s1]  Container fuzzexp_1-proxy-1  Created
+[s1]  Container fuzzexp_1-api-1  Starting
+[s0]  Container fuzzexp_0-api-1  Starting
+[s0]  Container fuzzexp_0-api-1  Started
+[s0]  Container fuzzexp_0-proxy-1  Starting
+[s1]  Container fuzzexp_1-api-1  Started
+[s1]  Container fuzzexp_1-proxy-1  Starting
+[s0]  Container fuzzexp_0-proxy-1  Started
+[s1]  Container fuzzexp_1-proxy-1  Started
+[s1] === vampi__restler__rep2 concluída (2026-11-24T15:08:35-03:00) ===
+[2026-11-24T15:08:40-03:00] slot 1: vampi__restler__rep2 concluída em 31.2 min
+[2026-11-24T15:08:40-03:00] slot 1: iniciando petclinic-rest__evomaster__rep2 (vizinhos agora: catwatch__schemathesis__rep2)
+[s1] === petclinic-rest__evomaster__rep2 slot=1 (2026-11-24T15:08:40-03:00) ===
+[s1]  Network fuzzexp_1_default  Creating
+[s1]  Network fuzzexp_1_default  Created
+[s1]  Network fuzzexp_1_sut  Creating
+[s1]  Network fuzzexp_1_sut  Created
+[s1]  Container fuzzexp_1-api-1  Creating
+[s1]  Container fuzzexp_1-api-1  Created
+[s1]  Container fuzzexp_1-proxy-1  Creating
+[s1]  Container fuzzexp_1-proxy-1  Created
+[s1]  Container fuzzexp_1-api-1  Starting
+[s1]  Container fuzzexp_1-api-1  Started
+[s1]  Container fuzzexp_1-proxy-1  Starting
+[s1]  Container fuzzexp_1-proxy-1  Started
+[s0] === catwatch__schemathesis__rep2 concluída (2026-11-24T15:10:40-03:00) ===
+[2026-11-24T15:10:42-03:00] slot 0: catwatch__schemathesis__rep2 concluída em 33.2 min
+[2026-11-24T15:10:42-03:00] slot 0: iniciando vampi__schemathesis__rep2 (vizinhos agora: petclinic-rest__evomaster__rep2)
+[s0] === vampi__schemathesis__rep2 slot=0 (2026-11-24T15:10:42-03:00) ===
+[s0]  Network fuzzexp_0_sut  Creating
+[s0]  Network fuzzexp_0_sut  Created
+[s0]  Network fuzzexp_0_default  Creating
+[s0]  Network fuzzexp_0_default  Created
+[s0]  Container fuzzexp_0-api-1  Creating
+[s0]  Container fuzzexp_0-api-1  Created
+[s0]  Container fuzzexp_0-proxy-1  Creating
+[s0]  Container fuzzexp_0-proxy-1  Created
+[s0]  Container fuzzexp_0-api-1  Starting
+[s0]  Container fuzzexp_0-api-1  Started
+[s0]  Container fuzzexp_0-proxy-1  Starting
+[s0]  Container fuzzexp_0-proxy-1  Started
+[s1] === petclinic-rest__evomaster__rep2 concluída (2026-11-24T15:40:22-03:00) ===
+[2026-11-24T15:40:28-03:00] slot 1: petclinic-rest__evomaster__rep2 concluída em 31.8 min
+[2026-11-24T15:40:28-03:00] slot 1: iniciando petclinic-rest__restler__rep2 (vizinhos agora: vampi__schemathesis__rep2)
+[s1] === petclinic-rest__restler__rep2 slot=1 (2026-11-24T15:40:28-03:00) ===
+[s1]  Network fuzzexp_1_sut  Creating
+[s1]  Network fuzzexp_1_sut  Created
+[s1]  Network fuzzexp_1_default  Creating
+[s1]  Network fuzzexp_1_default  Created
+[s1]  Container fuzzexp_1-api-1  Creating
+[s1]  Container fuzzexp_1-api-1  Created
+[s1]  Container fuzzexp_1-proxy-1  Creating
+[s1]  Container fuzzexp_1-proxy-1  Created
+[s1]  Container fuzzexp_1-api-1  Starting
+[s1]  Container fuzzexp_1-api-1  Started
+[s1]  Container fuzzexp_1-proxy-1  Starting
+[s1]  Container fuzzexp_1-proxy-1  Started
+[s0] === vampi__schemathesis__rep2 concluída (2026-11-24T15:43:45-03:00) ===
+[2026-11-24T15:43:50-03:00] slot 0: vampi__schemathesis__rep2 concluída em 33.1 min
+[2026-11-24T15:43:50-03:00] slot 0: iniciando catwatch__evomaster__rep2 (vizinhos agora: petclinic-rest__restler__rep2)
+[s0] === catwatch__evomaster__rep2 slot=0 (2026-11-24T15:43:50-03:00) ===
+[s0]  Network fuzzexp_0_default  Creating
+[s0]  Network fuzzexp_0_default  Created
+[s0]  Network fuzzexp_0_sut  Creating
+[s0]  Network fuzzexp_0_sut  Created
+[s0]  Container fuzzexp_0-api-1  Creating
+[s0]  Container fuzzexp_0-api-1  Created
+[s0]  Container fuzzexp_0-proxy-1  Creating
+[s0]  Container fuzzexp_0-proxy-1  Created
+[s0]  Container fuzzexp_0-api-1  Starting
+[s0]  Container fuzzexp_0-api-1  Started
+[s0]  Container fuzzexp_0-proxy-1  Starting
+[s0]  Container fuzzexp_0-proxy-1  Started
+[s1] === petclinic-rest__restler__rep2 concluída (2026-11-24T16:11:21-03:00) ===
+[2026-11-24T16:11:25-03:00] slot 1: petclinic-rest__restler__rep2 concluída em 31.0 min
+[2026-11-24T16:11:25-03:00] slot 1: iniciando catwatch__schemathesis__rep3 (vizinhos agora: catwatch__evomaster__rep2)
+[s1] === catwatch__schemathesis__rep3 slot=1 (2026-11-24T16:11:25-03:00) ===
+[s1]  Network fuzzexp_1_sut  Creating
+[s1]  Network fuzzexp_1_sut  Created
+[s1]  Network fuzzexp_1_default  Creating
+[s1]  Network fuzzexp_1_default  Created
+[s1]  Container fuzzexp_1-api-1  Creating
+[s1]  Container fuzzexp_1-api-1  Created
+[s1]  Container fuzzexp_1-proxy-1  Creating
+[s1]  Container fuzzexp_1-proxy-1  Created
+[s1]  Container fuzzexp_1-api-1  Starting
+[s1]  Container fuzzexp_1-api-1  Started
+[s1]  Container fuzzexp_1-proxy-1  Starting
+[s1]  Container fuzzexp_1-proxy-1  Started
+[s0] === catwatch__evomaster__rep2 concluída (2026-11-24T16:15:36-03:00) ===
+[2026-11-24T16:15:41-03:00] slot 0: catwatch__evomaster__rep2 concluída em 31.8 min
+[2026-11-24T16:15:41-03:00] slot 0: iniciando petclinic-rest__evomaster__rep3 (vizinhos agora: catwatch__schemathesis__rep3)
+[s0] === petclinic-rest__evomaster__rep3 slot=0 (2026-11-24T16:15:41-03:00) ===
+[s0]  Network fuzzexp_0_default  Creating
+[s0]  Network fuzzexp_0_default  Created
+[s0]  Network fuzzexp_0_sut  Creating
+[s0]  Network fuzzexp_0_sut  Created
+[s0]  Container fuzzexp_0-api-1  Creating
+[s0]  Container fuzzexp_0-api-1  Created
+[s0]  Container fuzzexp_0-proxy-1  Creating
+[s0]  Container fuzzexp_0-proxy-1  Created
+[s0]  Container fuzzexp_0-api-1  Starting
+[s0]  Container fuzzexp_0-api-1  Started
+[s0]  Container fuzzexp_0-proxy-1  Starting
+[s0]  Container fuzzexp_0-proxy-1  Started
+[s1] === catwatch__schemathesis__rep3 concluída (2026-11-24T16:44:45-03:00) ===
+[2026-11-24T16:44:47-03:00] slot 1: catwatch__schemathesis__rep3 concluída em 33.4 min
+[2026-11-24T16:44:47-03:00] slot 1: iniciando vampi__restler__rep3 (vizinhos agora: petclinic-rest__evomaster__rep3)
+[s1] === vampi__restler__rep3 slot=1 (2026-11-24T16:44:47-03:00) ===
+[s1]  Network fuzzexp_1_default  Creating
+[s1]  Network fuzzexp_1_default  Created
+[s1]  Network fuzzexp_1_sut  Creating
+[s1]  Network fuzzexp_1_sut  Created
+[s1]  Container fuzzexp_1-api-1  Creating
+[s1]  Container fuzzexp_1-api-1  Created
+[s1]  Container fuzzexp_1-proxy-1  Creating
+[s1]  Container fuzzexp_1-proxy-1  Created
+[s1]  Container fuzzexp_1-api-1  Starting
+[s1]  Container fuzzexp_1-api-1  Started
+[s1]  Container fuzzexp_1-proxy-1  Starting
+[s1]  Container fuzzexp_1-proxy-1  Started
+[s0] === petclinic-rest__evomaster__rep3 concluída (2026-11-24T16:47:26-03:00) ===
+[2026-11-24T16:47:31-03:00] slot 0: petclinic-rest__evomaster__rep3 concluída em 31.8 min
+[2026-11-24T16:47:31-03:00] slot 0: iniciando petclinic-rest__schemathesis__rep3 (vizinhos agora: vampi__restler__rep3)
+[s0] === petclinic-rest__schemathesis__rep3 slot=0 (2026-11-24T16:47:31-03:00) ===
+[s0]  Network fuzzexp_0_sut  Creating
+[s0]  Network fuzzexp_0_sut  Created
+[s0]  Network fuzzexp_0_default  Creating
+[s0]  Network fuzzexp_0_default  Created
+[s0]  Container fuzzexp_0-api-1  Creating
+[s0]  Container fuzzexp_0-api-1  Created
+[s0]  Container fuzzexp_0-proxy-1  Creating
+[s0]  Container fuzzexp_0-proxy-1  Created
+[s0]  Container fuzzexp_0-api-1  Starting
+[s0]  Container fuzzexp_0-api-1  Started
+[s0]  Container fuzzexp_0-proxy-1  Starting
+[s0]  Container fuzzexp_0-proxy-1  Started
+[s1] === vampi__restler__rep3 concluída (2026-11-24T17:16:02-03:00) ===
+[2026-11-24T17:16:07-03:00] slot 1: vampi__restler__rep3 concluída em 31.3 min
+[2026-11-24T17:16:07-03:00] slot 1: iniciando vampi__evomaster__rep3 (vizinhos agora: petclinic-rest__schemathesis__rep3)
+[s1] === vampi__evomaster__rep3 slot=1 (2026-11-24T17:16:07-03:00) ===
+[s1]  Network fuzzexp_1_sut  Creating
+[s1]  Network fuzzexp_1_sut  Created
+[s1]  Network fuzzexp_1_default  Creating
+[s1]  Network fuzzexp_1_default  Created
+[s1]  Container fuzzexp_1-api-1  Creating
+[s1]  Container fuzzexp_1-api-1  Created
+[s1]  Container fuzzexp_1-proxy-1  Creating
+[s1]  Container fuzzexp_1-proxy-1  Created
+[s1]  Container fuzzexp_1-api-1  Starting
+[s1]  Container fuzzexp_1-api-1  Started
+[s1]  Container fuzzexp_1-proxy-1  Starting
+[s1]  Container fuzzexp_1-proxy-1  Started
+[s0] === petclinic-rest__schemathesis__rep3 concluída (2026-11-24T17:20:56-03:00) ===
+[2026-11-24T17:20:58-03:00] slot 0: petclinic-rest__schemathesis__rep3 concluída em 33.4 min
+[2026-11-24T17:20:58-03:00] slot 0: iniciando catwatch__restler__rep3 (vizinhos agora: vampi__evomaster__rep3)
+[s0] === catwatch__restler__rep3 slot=0 (2026-11-24T17:20:58-03:00) ===
+[s0]  Network fuzzexp_0_sut  Creating
+[s0]  Network fuzzexp_0_sut  Created
+[s0]  Network fuzzexp_0_default  Creating
+[s0]  Network fuzzexp_0_default  Created
+[s0]  Container fuzzexp_0-api-1  Creating
+[s0]  Container fuzzexp_0-api-1  Created
+[s0]  Container fuzzexp_0-proxy-1  Creating
+[s0]  Container fuzzexp_0-proxy-1  Created
+[s0]  Container fuzzexp_0-api-1  Starting
+[s0]  Container fuzzexp_0-api-1  Started
+[s0]  Container fuzzexp_0-proxy-1  Starting
+[s0]  Container fuzzexp_0-proxy-1  Started
+[s1] === vampi__evomaster__rep3 concluída (2026-11-24T17:46:25-03:00) ===
+[2026-11-24T17:46:29-03:00] slot 1: vampi__evomaster__rep3 concluída em 30.4 min
+[2026-11-24T17:46:29-03:00] slot 1: iniciando vampi__schemathesis__rep3 (vizinhos agora: catwatch__restler__rep3)
+[s1] === vampi__schemathesis__rep3 slot=1 (2026-11-24T17:46:29-03:00) ===
+[s1]  Network fuzzexp_1_default  Creating
+[s1]  Network fuzzexp_1_default  Created
+[s1]  Network fuzzexp_1_sut  Creating
+[s1]  Network fuzzexp_1_sut  Created
+[s1]  Container fuzzexp_1-api-1  Creating
+[s1]  Container fuzzexp_1-api-1  Created
+[s1]  Container fuzzexp_1-proxy-1  Creating
+[s1]  Container fuzzexp_1-proxy-1  Created
+[s1]  Container fuzzexp_1-api-1  Starting
+[s1]  Container fuzzexp_1-api-1  Started
+[s1]  Container fuzzexp_1-proxy-1  Starting
+[s1]  Container fuzzexp_1-proxy-1  Started
+[s0] === catwatch__restler__rep3 concluída (2026-11-24T17:51:29-03:00) ===
+[2026-11-24T17:51:30-03:00] slot 0: catwatch__restler__rep3 concluída em 30.5 min
+[2026-11-24T17:51:30-03:00] slot 0: iniciando catwatch__evomaster__rep3 (vizinhos agora: vampi__schemathesis__rep3)
+[s0] === catwatch__evomaster__rep3 slot=0 (2026-11-24T17:51:30-03:00) ===
+[s0]  Network fuzzexp_0_sut  Creating
+[s0]  Network fuzzexp_0_sut  Created
+[s0]  Network fuzzexp_0_default  Creating
+[s0]  Network fuzzexp_0_default  Created
+[s0]  Container fuzzexp_0-api-1  Creating
+[s0]  Container fuzzexp_0-api-1  Created
+[s0]  Container fuzzexp_0-proxy-1  Creating
+[s0]  Container fuzzexp_0-proxy-1  Created
+[s0]  Container fuzzexp_0-api-1  Starting
+[s0]  Container fuzzexp_0-api-1  Started
+[s0]  Container fuzzexp_0-proxy-1  Starting
+[s0]  Container fuzzexp_0-proxy-1  Started
+[s1] === vampi__schemathesis__rep3 concluída (2026-11-24T18:19:32-03:00) ===
+[2026-11-24T18:19:36-03:00] slot 1: vampi__schemathesis__rep3 concluída em 33.1 min
+[2026-11-24T18:19:36-03:00] slot 1: iniciando petclinic-rest__restler__rep3 (vizinhos agora: catwatch__evomaster__rep3)
+[s1] === petclinic-rest__restler__rep3 slot=1 (2026-11-24T18:19:36-03:00) ===
+[s1]  Network fuzzexp_1_default  Creating
+[s1]  Network fuzzexp_1_default  Created
+[s1]  Network fuzzexp_1_sut  Creating
+[s1]  Network fuzzexp_1_sut  Created
+[s1]  Container fuzzexp_1-api-1  Creating
+[s1]  Container fuzzexp_1-api-1  Created
+[s1]  Container fuzzexp_1-proxy-1  Creating
+[s1]  Container fuzzexp_1-proxy-1  Created
+[s1]  Container fuzzexp_1-api-1  Starting
+[s1]  Container fuzzexp_1-api-1  Started
+[s1]  Container fuzzexp_1-proxy-1  Starting
+[s1]  Container fuzzexp_1-proxy-1  Started
+[s0] === catwatch__evomaster__rep3 concluída (2026-11-24T18:24:09-03:00) ===
+[2026-11-24T18:24:14-03:00] slot 0: catwatch__evomaster__rep3 concluída em 32.7 min
+[s1] === petclinic-rest__restler__rep3 concluída (2026-11-24T18:50:28-03:00) ===
+[2026-11-24T18:50:31-03:00] slot 1: petclinic-rest__restler__rep3 concluída em 30.9 min
+[2026-11-24T18:50:31-03:00] CAMPANHA CONCLUÍDA: 27 execuções. Próximo passo: python3 analysis/extract_findings.py
+##### fim: 2026-11-24T18:50:31-03:00
