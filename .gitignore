@@ -48,3 +48,5 @@ __pycache__/
 /data/raw/petclinic-rest__schemathesis__rep2/flows.jsonl
 /data/raw/petclinic-rest__schemathesis__rep3/api.log
 /data/raw/petclinic-rest__schemathesis__rep3/flows.jsonl
+[C]LAUDE.md
+.[c]laude/
